@@ -1,0 +1,32 @@
+.jorge-bio{
+    height: 100vh !important;
+    width: 100vw;
+    overflow: hidden;
+    background-color: aquamarine;
+}
+
+.jorge-bio-p1{
+    animation: aparecer 4s;
+}
+
+.jorge-bio-p1-des{
+    animation: desaparecer 1s forwards;
+}
+
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes desaparecer{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
