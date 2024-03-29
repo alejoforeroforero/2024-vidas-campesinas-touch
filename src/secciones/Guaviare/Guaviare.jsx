@@ -1,7 +1,7 @@
-import { useState } from 'react'
 import { useSelector } from 'react-redux';
 import Cargando from '../../components/Cargando';
 
+import IntroGuaviare from './Intro/Intro';
 import JorgeBio from './Jorge/Bio';
 import RelatosJorge from './Jorge/Relatos';
 import YoutubeJorge from './Jorge/Youtube';
@@ -10,17 +10,17 @@ import './Guaviare.css';
 
 
 const Guaviare = () => {
-  let seccion = useSelector(state => state.managerReducer.seccionGuaviare);
-  const [showPopup, setShowpopup] = useState(false);
+  let seccion = useSelector(state => state.managerReducer.seccion);
+  const descargando = useSelector(state => state.managerReducer.descargando);
 
   return (
     <div className='capitulo'>
-      {seccion} {JSON.stringify(showPopup)}
-      {showPopup && <Cargando />}
-      {seccion == 1 && <JorgeBio />}
-      {seccion == 2 && <RelatosJorge />}
-      {seccion == 3 && <YoutubeJorge />}
-      {seccion == 4 && <Galeria />}
+      {descargando && <Cargando />}
+      {seccion == 'guaviare-intro' && <IntroGuaviare />}
+      {seccion == 'jorge-bio' && <JorgeBio />}
+      {seccion == 'jorge-relatos' && <RelatosJorge />}
+      {seccion == 4 && <YoutubeJorge />}
+      {seccion == 5 && <Galeria />}
     </div>
   )
 }

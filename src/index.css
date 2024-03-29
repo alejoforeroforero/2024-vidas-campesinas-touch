@@ -1,10 +1,52 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+@font-face {
+  font-family: 'oldnews';
+  src: url('./assets/fonts/OldNewspaperTypes.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'chinese';
+  src: url('./assets/fonts/chinese.otf') format('truetype');
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+html {
+  font-size: 16px; 
+}
+
+body {
   height: 100vh;
   overflow: hidden;
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 4.8rem;
+  font-weight: bold;
+  font-family: 'chinese', sans-serif;
+  font-optical-sizing: auto;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: 'oldnews', sans-serif;
+  font-optical-sizing: auto;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+pre{
+  font-family: 'oldnews', sans-serif; 
 }

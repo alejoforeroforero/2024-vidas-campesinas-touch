@@ -4,22 +4,31 @@ export const manager = createSlice({
   name: "Manager",
   initialState: {
     departamento: "Ninguno",
-    contador:0,
-    seccionGuaviare: "1",
+    contador: 0,
+    seccion:'guaviare-intro',
+    descargando: true,
   },
   reducers: {
     cambiarDepartamento: (state, action) => {},
     establecerPersonaje: (state, action) => {},
-    cambiarSeccionGuaviare: (state, action) => {
-      state.seccionGuaviare = action.payload;
+    cambiarSeccion: (state, action) => {
+      state.seccion = action.payload;
       console.log(state.seccionGuaviare);
     },
     sumar: (state, action) => {
       state.contador = action.payload;
     },
+    cambiarDescargando: (state, action) => {
+      state.descargando = action.payload;
+    },
   },
 });
 
-export const { cambiarDepartamento, establecerPersonaje, cambiarSeccionGuaviare, sumar } =
-  manager.actions;
+export const {
+  cambiarDepartamento,
+  establecerPersonaje,
+  cambiarSeccion,
+  sumar,
+  cambiarDescargando,
+} = manager.actions;
 export default manager.reducer;

@@ -5,6 +5,9 @@ import Guaviare from './secciones/Guaviare/Guaviare';
 import Caqueta from './secciones/Caqueta/Caqueta';
 import Cauca from './secciones/Cauca/Cauca';
 import NotFound from './components/NotFound';
+
+import abajo from './assets/generales/abajo.png';
+
 import './App.css'
 import './CanalA.css'
 
@@ -22,6 +25,9 @@ function App() {
           <li><NavLink to='/Cauca'>Cauca</NavLink></li>
         </ul>
       </nav>
+      <div className='abajo'>
+        <img src={abajo} alt="abajo" />
+      </div>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Guaviare' element={<Guaviare />} />

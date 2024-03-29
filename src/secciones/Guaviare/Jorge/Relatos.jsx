@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { cambiarSeccionGuaviare, sumar } from '../../../Redux/states/managerSlice';
+import { cambiarSeccion, sumar, cambiarDescargando } from '../../../Redux/states/managerSlice';
 
 import './Relatos.css';
 
@@ -8,6 +8,14 @@ const Relatos = () => {
   const dispatch = useDispatch();
   let contador = useSelector(state => state.managerReducer.contador);
   const [startY, setStartY] = useState(null);
+
+  useEffect(()=>{
+    const timer =   setTimeout(()=>{
+      dispatch(cambiarDescargando(false));
+    }, 1000)
+
+    return ()=> clearTimeout(timer)
+  })
 
   useEffect(() => {
     let isScrolling;
@@ -26,10 +34,10 @@ const Relatos = () => {
 
         if (contador > 0) {
           dispatch(sumar(0));
-          dispatch(cambiarSeccionGuaviare(3));
+          dispatch(cambiarSeccion(3));
         } else if (contador < 0) {
           dispatch(sumar(2));
-          dispatch(cambiarSeccionGuaviare(1));
+          dispatch(cambiarSeccion(1));
         }
       }, 100);
     }
@@ -59,10 +67,10 @@ const Relatos = () => {
 
     if (contador > 0) {
       dispatch(sumar(0));
-      dispatch(cambiarSeccionGuaviare(3));
+      dispatch(cambiarSeccion(3));
     } else if (contador < 0) {
       dispatch(sumar(2));
-      dispatch(cambiarSeccionGuaviare(1));
+      dispatch(cambiarSeccion(1));
     }
   }
 
