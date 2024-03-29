@@ -5,7 +5,7 @@ export const manager = createSlice({
   initialState: {
     departamento: "Ninguno",
     contador: 0,
-    seccion:'guaviare-intro',
+    seccion:'jorge-bio',
     descargando: true,
   },
   reducers: {

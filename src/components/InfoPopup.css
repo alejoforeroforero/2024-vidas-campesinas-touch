@@ -1,0 +1,34 @@
+.info-popup-bg{
+    position: absolute;
+    z-index: 100;
+    left:0;
+    top:0;
+    width: 100vw !important;
+    height: 100vh;    
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    .info-popup-interior{
+        width:80vw;
+        height: auto;
+        max-width: 900px;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 12px;
+    }
+    .info-salida{
+        text-align: right;
+        img{
+            width:50px;
+            cursor: pointer;
+        }
+    }
+
+    p{
+        width:80%;
+        margin: auto;
+        padding: 0px !important;
+        margin-bottom: 50px;
+    }
+}
