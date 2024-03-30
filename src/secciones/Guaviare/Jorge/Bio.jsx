@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import useDelta from '../../../hooks/useDelta';
 import { cambiarDescargando } from '../../../Redux/states/managerSlice';
 import InfoPopup from '../../../components/InfoPopup';
 
@@ -7,7 +8,6 @@ import infoImg from '../../../assets/generales/biografia.png';
 import { Jorge } from '../../../data/Guaviare';
 
 import './Bio.css';
-import useDelta from '../../../hooks/useDelta';
 
 
 const Bio = () => {
@@ -33,16 +33,15 @@ const Bio = () => {
   return (
     <div className='seccion jorge-bio' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
       <div className='mask-general'>
-        <div className='bio-contenido'>
-          <h1 className='jorge-titulo-h1'>Jorge <br />Luis Cano</h1>
-          <div className='info jorge-info'>
-            <img onClick={() => setShowingPopup(true)} src={infoImg} alt="info" />
-          </div>
+        <div className="contenido-general">
+            <h2 className='jorge-titulo-h1'>Jorge <br />Luis Cano</h2>
+            <div className='info jorge-info'>
+              <img onClick={() => setShowingPopup(true)} src={infoImg} alt="info" />
+            </div>         
         </div>
+        {showingPopup && <InfoPopup biografia={Jorge.bio} handleClosePopup={handleClosePopup} />}
       </div>
-      {showingPopup && <InfoPopup biografia={Jorge.bio} handleClosePopup={handleClosePopup} />}
     </div>
-
   )
 }
 

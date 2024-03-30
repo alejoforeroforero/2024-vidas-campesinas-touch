@@ -1,0 +1,24 @@
+.audio-contenedor {
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    color: #fff;
+  }
+
+  img {
+    width: 40px;
+    margin-right: 12px;
+    cursor: pointer;
+  }
+}
+
+.mostrar{
+    visibility: visible;
+
+}
+
+.esconder{
+    visibility: hidden;
+}

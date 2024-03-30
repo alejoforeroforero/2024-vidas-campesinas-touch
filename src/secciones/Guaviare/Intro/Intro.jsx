@@ -34,7 +34,7 @@ const Intro = () => {
 
             const direction = event.deltaY > 0 ? 'down' : 'up';
 
-            if (contador > 0 && direction == 'up') {
+            if (contador >= 0 && direction == 'down') {
                 setDesaparecer(true);
             }
 
@@ -42,7 +42,7 @@ const Intro = () => {
 
             isScrolling = setTimeout(function () {
 
-                setDesaparecer(false)
+                setDesaparecer(false);
 
                 if (direction == 'up') {
                     contador--;

@@ -1,82 +1,49 @@
-import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { cambiarSeccion, sumar, cambiarDescargando } from '../../../Redux/states/managerSlice';
+import { useRef } from 'react';
+import useDelta from '../../../hooks/useDelta';
+import Audio from '../../../components/Audio';
+
+import relatosVideo from '../../../assets/guaviare/jorge/loop-jorge.mp4';
 
 import './Relatos.css';
 
 const Relatos = () => {
-  const dispatch = useDispatch();
-  let contador = useSelector(state => state.managerReducer.contador);
-  const [startY, setStartY] = useState(null);
 
-  useEffect(()=>{
-    const timer =   setTimeout(()=>{
-      dispatch(cambiarDescargando(false));
-    }, 1000)
+  const videoRef = useRef();
 
-    return ()=> clearTimeout(timer)
-  })
+  const { handleTouchStart, handleTouchEnd } = useDelta('jorge-bio', 'jorge-relatos');
 
-  useEffect(() => {
-    let isScrolling;
-    function handleScroll(event) {
-      const direction = event.deltaY > 0 ? 'down' : 'up';
 
-      clearInterval(isScrolling);
-
-      isScrolling = setTimeout(function () {
-
-        if (direction == 'up') {
-          contador--;
-        } else {
-          contador++;
-        }
-
-        if (contador > 0) {
-          dispatch(sumar(0));
-          dispatch(cambiarSeccion(3));
-        } else if (contador < 0) {
-          dispatch(sumar(2));
-          dispatch(cambiarSeccion(1));
-        }
-      }, 100);
-    }
-    window.addEventListener('wheel', handleScroll);
-
-    return () => {
-      window.removeEventListener('wheel', handleScroll);
-    };
-  }, []);
-
-  const handleTouchStart = (event) => {
-
-    setStartY(event.touches[0].clientY);
+  const handleVideoReady = () => {
+    videoRef.current.play();
   }
 
-  const handleTouchEnd = (event) => {
-    const endY = event.changedTouches[0].clientY;
-    const deltaY = startY - endY;
-
-    if (deltaY > 0) {
-      contador++;
-    } else if (deltaY < 0) {
-      contador--
-    } else {
-      console.log('No vertical swipe');
-    }
-
-    if (contador > 0) {
-      dispatch(sumar(0));
-      dispatch(cambiarSeccion(3));
-    } else if (contador < 0) {
-      dispatch(sumar(2));
-      dispatch(cambiarSeccion(1));
-    }
+  const pintarVideo = () => {
+    return (
+      <div className="guaviare-video">
+        <video
+          onCanPlayThrough={handleVideoReady}
+          ref={videoRef}
+          loop
+          playsInline
+          muted
+          className="guaviare-video-video"
+          src={relatosVideo}>
+        </video>
+      </div>
+    )
   }
 
   return (
     <div className='seccion jorge-relatos' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
-      Relatos {contador} sipa
+      {pintarVideo()}
+      <div className='mask-general'>
+        <div className="contenido-general">
+          <div className='jorge-relatos-audio'>
+            <Audio id='jorge2' titulo='"Cuando llegué al Raudal"' />
+            <Audio id='jorge3' titulo='Jorge 2' />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

@@ -3,10 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 export const manager = createSlice({
   name: "Manager",
   initialState: {
-    departamento: "Ninguno",
+    departamento: "guaviare",
     contador: 0,
-    seccion:'guaviare-intro',
-    descargando: true,
+    seccion:'jorge-relatos',
+    descargando: false,
+    cancionActual:''
   },
   reducers: {
     cambiarDepartamento: (state, action) => {},
@@ -21,6 +22,17 @@ export const manager = createSlice({
     cambiarDescargando: (state, action) => {
       state.descargando = action.payload;
     },
+    cambiarCancion:(state, action)=>{
+      state.cancionActual = action.payload;
+    },
+    pararAudios:(state, action)=>{
+      const audios = document.getElementsByTagName('audio');
+
+        for(let i=0; i< audios.length; i++){
+            const audio = audios[i];
+            audio.pause();
+        }
+    }
   },
 });
 
@@ -30,5 +42,7 @@ export const {
   cambiarSeccion,
   sumar,
   cambiarDescargando,
+  cambiarCancion,
+  pararAudios
 } = manager.actions;
 export default manager.reducer;

@@ -1,0 +1,16 @@
+.canal-b{
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 1s;
+}
+
+.canal-b-on{
+    left:0;
+}
+
+.canal-b-off{
+    left: 100vw;
+}

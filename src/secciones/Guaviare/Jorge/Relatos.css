@@ -1,3 +1,9 @@
 .jorge-relatos{
-    background-color: brown;
+    background-color: black;
+    animation: aparecer 6s;
+}
+
+.jorge-relatos-audio{
+    position: relative;
+    margin-top: 65vh;
 }

@@ -83,11 +83,11 @@
 }
 
 .guaviare-intro-p1 {
-  animation: aparecer 4s;
+  animation: aparecerTxt 4s;
 }
 
 .guaviare-intro-p1-des {
-  animation: desaparecer 1s forwards;
+  animation: desaparecerTxt 1s forwards;
 }
 
 .guaviare-descripcion-grafica {

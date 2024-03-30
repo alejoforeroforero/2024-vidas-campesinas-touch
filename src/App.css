@@ -41,6 +41,31 @@
     position: relative;
 }
 
+.ejeA{
+  position: fixed;
+  z-index: 20;
+  top:30vh;
+  height: 40vh;
+
+  img{
+    height: 100%;
+    cursor:pointer;
+  }
+}
+
+.ejeB{
+  position: fixed;
+  z-index: 20;
+  top:30vh;
+  right: 0;
+  height: 40vh;
+
+  img{
+    height: 100%;
+    cursor:pointer;
+  }
+}
+
 .abajo{
   position: fixed;
   bottom: 2vh;
@@ -70,5 +95,27 @@
   }
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes aparecerTxt {
+  0% {
+    opacity: 0;
+    transform: translate(0, 40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes desaparecerTxt {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -40px);
   }
 }
