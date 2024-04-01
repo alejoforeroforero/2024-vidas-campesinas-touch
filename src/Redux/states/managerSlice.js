@@ -31,6 +31,7 @@ export const manager = createSlice({
         for(let i=0; i< audios.length; i++){
             const audio = audios[i];
             audio.pause();
+            document.body.removeChild(audio);
         }
     }
   },

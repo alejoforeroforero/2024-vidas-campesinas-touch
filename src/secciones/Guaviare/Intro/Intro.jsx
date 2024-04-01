@@ -18,6 +18,7 @@ const Intro = () => {
         const timer = setTimeout(() => {
             dispatch(cambiarDescargando(false));
             setMostrar(true);
+            videoRef.current.play();
         }, 1000)
 
         return () => clearTimeout(timer)
@@ -75,6 +76,7 @@ const Intro = () => {
     }
 
     const handleTouchEnd = (event) => {
+        
         const endY = event.changedTouches[0].clientY;
         const deltaY = startY - endY;
 
@@ -99,15 +101,10 @@ const Intro = () => {
         }
     }
 
-    const handleVideoReady = () => {
-        videoRef.current.play();
-    }
-
     const pintarVideo = () => {
         return (
             <div className="guaviare-video">
                 <video
-                    onCanPlayThrough={handleVideoReady}
                     ref={videoRef}
                     loop
                     playsInline

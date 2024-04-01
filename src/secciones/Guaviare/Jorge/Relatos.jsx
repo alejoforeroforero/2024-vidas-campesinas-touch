@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import useDelta from '../../../hooks/useDelta';
 import Audio from '../../../components/Audio';
 
@@ -12,16 +12,14 @@ const Relatos = () => {
 
   const { handleTouchStart, handleTouchEnd } = useDelta('jorge-bio', 'jorge-relatos');
 
-
-  const handleVideoReady = () => {
+  useEffect(()=>{
     videoRef.current.play();
-  }
+  }, [])
 
   const pintarVideo = () => {
     return (
       <div className="guaviare-video">
         <video
-          onCanPlayThrough={handleVideoReady}
           ref={videoRef}
           loop
           playsInline
