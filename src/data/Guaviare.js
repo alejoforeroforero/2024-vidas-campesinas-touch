@@ -5,5 +5,5 @@ export const GuaviareIntro = {
     p2:'Hoy en día, la comunidad le apuesta a la protección del patrimonio arqueológico, a la conservación de la biodiversidad de la Amazonía y al turismo comunitario y sostenible convirtiéndose en los Guardianes del Yurupari.'
 }
 export const Jorge={
-    bio:'Es un gran tipo',
+    titulo:'Jorge\nLuis Cano',
 }

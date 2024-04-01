@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import useDelta from '../../../hooks/useDelta';
 import { cambiarDescargando } from '../../../Redux/states/managerSlice';
@@ -9,10 +9,10 @@ import { Jorge } from '../../../data/Guaviare';
 
 import './Bio.css';
 
-
 const Bio = () => {
 
   const dispatch = useDispatch();
+  const elementRef = useRef();
 
   const [showingPopup, setShowingPopup] = useState(false);
 
@@ -24,17 +24,17 @@ const Bio = () => {
     return () => clearTimeout(timer)
   })
 
-  const { handleTouchStart, handleTouchEnd } = useDelta('guaviare-intro', 'jorge-relatos');
+  const { handleTouchStart, handleTouchEnd } = useDelta('guaviare-intro', 'jorge-youtube', elementRef);
 
   const handleClosePopup = () => {
     setShowingPopup(false)
   }
 
   return (
-    <div className='seccion jorge-bio' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
+    <div ref={elementRef} className='seccion jorge-bio' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
       <div className='mask-general'>
         <div className="contenido-general">
-            <h2 className='jorge-titulo-h1'>Jorge <br />Luis Cano</h2>
+            <h2 className='jorge-titulo-h1'><pre>{Jorge.titulo}</pre></h2>
             <div className='info jorge-info'>
               <img onClick={() => setShowingPopup(true)} src={infoImg} alt="info" />
             </div>         

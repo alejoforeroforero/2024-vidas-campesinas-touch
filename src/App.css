@@ -119,3 +119,18 @@
     transform: translate(0, -40px);
   }
 }
+
+@keyframes cambiarEscena {
+  0% {
+    opacity: 1;
+    transform: scale(1)
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.05)
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1.08)
+  }
+}

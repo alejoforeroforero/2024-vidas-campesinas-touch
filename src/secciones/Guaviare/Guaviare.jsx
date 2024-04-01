@@ -18,8 +18,9 @@ const Guaviare = () => {
       {descargando && <Cargando />}
       {seccion == 'guaviare-intro' && <IntroGuaviare />}
       {seccion == 'jorge-bio' && <JorgeBio />}
+      {seccion == 'jorge-youtube' && <YoutubeJorge />}
       {seccion == 'jorge-relatos' && <RelatosJorge />}
-      {seccion == 4 && <YoutubeJorge />}
+      
       {seccion == 5 && <Galeria />}
     </div>
   )

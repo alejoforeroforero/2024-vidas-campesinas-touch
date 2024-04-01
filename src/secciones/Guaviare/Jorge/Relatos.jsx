@@ -10,7 +10,7 @@ const Relatos = () => {
 
   const videoRef = useRef();
 
-  const { handleTouchStart, handleTouchEnd } = useDelta('jorge-bio', 'jorge-relatos');
+  const { handleTouchStart, handleTouchEnd } = useDelta('jorge-bio', 'jorge-youtube', videoRef);
 
   useEffect(()=>{
     videoRef.current.play();
@@ -24,7 +24,6 @@ const Relatos = () => {
           loop
           playsInline
           muted
-          className="guaviare-video-video"
           src={relatosVideo}>
         </video>
       </div>

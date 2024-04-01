@@ -109,7 +109,6 @@ const Intro = () => {
                     loop
                     playsInline
                     muted
-                    className="guaviare-video-video"
                     src={videoGuaviareM}>
                 </video>
             </div>

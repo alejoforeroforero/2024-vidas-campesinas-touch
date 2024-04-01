@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { cambiarSeccion, sumar } from "../Redux/states/managerSlice";
+import { cambiarSeccion, sumar, pararAudios } from "../Redux/states/managerSlice";
 
-export default function useDelta(prevSection, nextSection) {
+export default function useDelta(prevSection, nextSection, elementRef) {
   const dispatch = useDispatch();
   const [startY, setStartY] = useState(null);
 
@@ -12,16 +12,20 @@ export default function useDelta(prevSection, nextSection) {
     function handleScroll(event) {
       const direction = event.deltaY > 0 ? "down" : "up";
 
+      if(elementRef){
+        elementRef.current.style.animation = 'cambiarEscena 2s';
+      }
+
       clearInterval(isScrolling);
 
       isScrolling = setTimeout(function () {
+        dispatch(sumar(0));
+        dispatch(pararAudios());
         if (direction == "up") {
-          dispatch(sumar(0));
-          dispatch(cambiarSeccion(prevSection));
-        } else {
-          dispatch(sumar(0));
+            dispatch(cambiarSeccion(prevSection));
+        } else {  
           dispatch(cambiarSeccion(nextSection));
-        }
+        }        
       }, 100);
     }
     window.addEventListener("wheel", handleScroll);

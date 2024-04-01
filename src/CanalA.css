@@ -1,12 +1,59 @@
-.capitulo{
-    width: 100vw;
-    height: 100vh;
+.capitulo {
+  width: 100vw;
+  height: 100vh;
 }
 
-.seccion{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+.seccion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
+
+.youtube-contenido {
+  width: 100%;
+  height: 100%;
+
+  div:first-child {    
+    text-align: center;
+    margin-top: 40vh;
+    height: 10vh;
+
+    p{
+      font-size: 1rem;
+    }
+
+    img {
+      width: 80px;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &&:hover{
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  div:nth-child(2){
+    text-align: center;
+    margin-top: 10vh;
+    padding: 12%;
+
+    h3{
+      text-align: left;
+    }
+  }
+}
+
+.youtube-video{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 30;
+  visibility: hidden;
+}
+
+/* .desaparecer-txt {
+  animation: desaparecerTxt 1s forwards;
+} */
