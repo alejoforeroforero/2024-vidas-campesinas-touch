@@ -1,7 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import useDelta from '../../../hooks/useDelta';
-import { cambiarDescargando, establecerMostrarLineasA, establecerPersonaje } from '../../../Redux/states/managerSlice';
+import {
+  cambiarDescargando,
+  establecerMostrarLineasA,
+  establecerPersonaje,
+  establecerMostrarFlechasCanales
+} from '../../../Redux/states/managerSlice';
 import InfoPopup from '../../../components/InfoPopup';
 
 import infoImg from '../../../assets/generales/biografia.png';
@@ -14,12 +19,12 @@ const Bio = () => {
   const dispatch = useDispatch();
   const elementRef = useRef();
 
-
   const [showingPopup, setShowingPopup] = useState(false);
 
   useEffect(() => {
     dispatch(establecerMostrarLineasA(true));
     dispatch(establecerPersonaje('linea-jorge'));
+    dispatch(establecerMostrarFlechasCanales(true));
     const timer = setTimeout(() => {
       dispatch(cambiarDescargando(false));
     }, 2000)

@@ -11,7 +11,8 @@ export const manager = createSlice({
     descargando: false,
     cancionActual:'',
     mostrarAbajo:true,
-    mostrarLineasA:false
+    mostrarLineasA:false,
+    mostrarFlechasCanales:false
   },
   reducers: {
     cambiarDepartamento: (state, action) => {},
@@ -69,7 +70,11 @@ export const manager = createSlice({
     },
     establecerMostrarLineasA(state, action){
       state.mostrarLineasA = action.payload;
-    }
+    },
+    establecerMostrarFlechasCanales(state, action){
+      state.mostrarFlechasCanales = action.payload;
+    },
+
   },
 });
 
@@ -84,6 +89,8 @@ export const {
   pararAudios,
   changeVideo,
   establecerMostrarAbajo,
-  establecerMostrarLineasA
+  establecerMostrarLineasA,
+  establecerMostrarFlechasCanales
+  
 } = manager.actions;
 export default manager.reducer;

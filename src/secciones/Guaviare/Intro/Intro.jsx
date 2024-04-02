@@ -5,7 +5,8 @@ import {
     sumar,
     cambiarDescargando,
     establecerMostrarAbajo,
-    establecerMostrarLineasA
+    establecerMostrarLineasA,
+    establecerMostrarFlechasCanales
 } from '../../../Redux/states/managerSlice';
 import videoGuaviareM from '../../../assets/guaviare/home/guaviare-m.mp4';
 import guaviareGrafica from '../../../assets/guaviare/home/pictograma.png';
@@ -20,13 +21,13 @@ const Intro = () => {
     const contenedorGRef = useRef();
     const [mostrar, setMostrar] = useState(false);
 
-    
-
     useEffect(() => {
         dispatch(establecerMostrarLineasA(false));
+        dispatch(establecerMostrarFlechasCanales(false));
+
         const timer = setTimeout(() => {
             dispatch(cambiarDescargando(false));
-            dispatch(establecerMostrarAbajo(true));            
+            dispatch(establecerMostrarAbajo(true));                        
             setMostrar(true);
             videoRef.current.play();
         }, 1000)

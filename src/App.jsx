@@ -8,6 +8,7 @@ import Caqueta from './secciones/Caqueta/Caqueta';
 import Cauca from './secciones/Cauca/Cauca';
 import NotFound from './components/NotFound';
 
+import menu from './assets/generales/menu.png';
 import abajo from './assets/generales/abajo.png';
 import ejeAImg from './assets/generales/ejeA.png'
 import ejeBImg from './assets/generales/ejeB.png'
@@ -23,7 +24,10 @@ function App() {
 
   const departamento = useSelector(state => state.managerReducer.departamento);
   const mostrarAbajo = useSelector(state => state.managerReducer.mostrarAbajo);
+  const mostrarFlechasCanales = useSelector(state => state.managerReducer.mostrarFlechasCanales);
   const canalBOn = useSelector(state => state.managerReducer.canalBOn);
+  const [showingMenu, setShowingMenu] = useState(false);
+
   const dispatch = useDispatch();
 
   const showCanalB = () => {
@@ -40,20 +44,25 @@ function App() {
 
   return (
     <>
-      <nav className='menu'>
-        <ul>
-          <li><NavLink to='/'>Home</NavLink></li>
-          <li><NavLink to='/Guaviare'>Guaviare</NavLink></li>
-          <li><NavLink to='/Caqueta/'>Caqueta</NavLink></li>
-          <li><NavLink to='/Cauca'>Cauca</NavLink></li>
-        </ul>
-      </nav>
+      <div className='menu-hamburguesa'>
+        <img onClick={() => { setShowingMenu(!showingMenu) }} src={menu} alt="menu" />
+      </div>
+      {showingMenu &&
+        <nav className='menu'>
+          <ul>
+            <li><NavLink onClick={() => { setShowingMenu(false) }}  to='/'>Home</NavLink></li>
+            <li><NavLink onClick={() => { setShowingMenu(false) }}  to='/Guaviare'>Guaviare</NavLink></li>
+            <li><NavLink onClick={() => { setShowingMenu(false) }}  to='/Caqueta/'>Caqueta</NavLink></li>
+            <li><NavLink onClick={() => { setShowingMenu(false) }}  to='/Cauca'>Cauca</NavLink></li>
+          </ul>
+        </nav>
+      }
       {canalBOn &&
         <div className='ejeA'>
           <img onClick={hideCanalB} src={ejeAImg} alt="ejeA" />
         </div>
       }
-      {!canalBOn &&
+      {!canalBOn && mostrarFlechasCanales &&
         <div className='ejeB'>
           <img onClick={showCanalB} src={ejeBImg} alt="ejeB" />
         </div>

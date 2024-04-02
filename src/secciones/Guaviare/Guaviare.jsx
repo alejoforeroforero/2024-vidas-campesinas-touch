@@ -1,4 +1,6 @@
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { cambiarSeccion } from '../../Redux/states/managerSlice';
 import Cargando from '../../components/Cargando';
 
 import IntroGuaviare from './Intro/Intro';
@@ -44,14 +46,20 @@ const lineas = [
 
 
 const Guaviare = () => {
-  let seccion = useSelector(state => state.managerReducer.seccion);
+  const seccion = useSelector(state => state.managerReducer.seccion);
   const personaje = useSelector(state => state.managerReducer.personaje);
   const descargando = useSelector(state => state.managerReducer.descargando);
   const mostrarLineasA = useSelector(state => state.managerReducer.mostrarLineasA);
 
+  const dispatch = useDispatch();
+
   const handleNavegacion = (id) => {
     //window.scrollTo({ top: 7000, behavior: 'auto' });
   }
+
+  useEffect(()=>{
+    dispatch(cambiarSeccion('guaviare-intro'));
+  }, []);
 
   return (
     <div className='capitulo'>
