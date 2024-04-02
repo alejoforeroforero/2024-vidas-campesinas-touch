@@ -3,8 +3,7 @@ import { useDispatch } from 'react-redux';
 import { pararAudios } from '../../../Redux/states/managerSlice';
 import CaceriaF1 from './CaceriaF1';
 import CaceriaF2 from './CaceriaF2';
-
-// import CaceriaF3 from './CaceriaF3';
+import CaceriaF3 from './CaceriaF3';
 import flechaAdelante from '../../../assets/generales/flecha-adelante.png';
 import flechaAtras from '../../../assets/generales/flecha-atras.png';
 
@@ -33,7 +32,7 @@ const Caceria = () => {
             <div className="guaviare-caceria-contenido">
                 {currentImage == 0 && <CaceriaF1 />}
                 {currentImage == 1 && <CaceriaF2 />}
-                {/* {currentImage == 2 && <CaceriaF3 />}  */}
+                {currentImage == 2 && <CaceriaF3 />} 
             </div>
             {currentImage != 0 &&
                 <button className='flecha-atras' onClick={prevImage}>

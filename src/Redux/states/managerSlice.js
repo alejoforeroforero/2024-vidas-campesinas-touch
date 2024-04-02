@@ -5,9 +5,10 @@ export const manager = createSlice({
   initialState: {
     departamento: "guaviare",
     contador: 0,
-    seccion:'jorge-bio',
+    seccion:'guaviare-intro',
     descargando: false,
-    cancionActual:''
+    cancionActual:'',
+    mostrarAbajo:true
   },
   reducers: {
     cambiarDepartamento: (state, action) => {},
@@ -55,6 +56,9 @@ export const manager = createSlice({
         }
       }
     },
+    establecerMostrarAbajo(state, action){
+      state.mostrarAbajo = action.payload;
+    }
   },
 });
 
@@ -66,6 +70,7 @@ export const {
   cambiarDescargando,
   cambiarCancion,
   pararAudios,
-  changeVideo
+  changeVideo,
+  establecerMostrarAbajo
 } = manager.actions;
 export default manager.reducer;

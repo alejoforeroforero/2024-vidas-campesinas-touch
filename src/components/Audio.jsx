@@ -7,6 +7,10 @@ import audioJorge1 from '../assets/guaviare/jorge/jorge1.mp3';
 import audioJorge2 from '../assets/guaviare/jorge/jorge2.mp3';
 import audioJorge3 from '../assets/guaviare/jorge/jorge3.mp3';
 import audioCaceria from '../assets/guaviare/caceria/audio-caceria.mp3';
+import audioArteGuaviare from '../assets/guaviare/caceria/audio-arte-sonoro-guaviare.mp3';
+import audioGuayabero1 from '../assets/guaviare/guayabero/audio-guayabero1.mp3';
+import audioGuayabero2 from '../assets/guaviare/guayabero/audio-guayabero2.mp3';
+import audioToninas from '../assets/guaviare/guayabero/audio-toninas.mp3';
 import './Audio.css'
 
 
@@ -39,7 +43,17 @@ const Audio = ({ titulo, id, autor=''}) => {
             return audioJorge3
         }else if (id == 'caceria') {
             return audioCaceria
+        }else if (id == 'arte-guaviare') {
+            return audioArteGuaviare
+        }else if (id == 'audio-guayabero1') {
+            return audioGuayabero1
+        }else if (id == 'audio-guayabero2') {
+            return audioGuayabero2
+        }else if (id == 'audio-toninas') {
+            return audioToninas
         }
+
+        
     }
 
     const animate1 = () => {

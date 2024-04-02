@@ -1,4 +1,4 @@
-.caceria-f2 {
+.guayabero-f3 {
   background-color: rgb(0, 0, 0);
   background-repeat: no-repeat;
   background-size: cover;
@@ -7,7 +7,7 @@
   width: 100vw;
   animation: fadeIn 4s;
 
-  .caceria-f2-video{
+  .guayabero-f3-video{
     position: absolute;
     z-index: 5;
     left: 0px;
@@ -23,7 +23,7 @@
     }
   }
 
-  .caceria-f2-cocodrilo{
+  .guayabero-f3-lancha{
     position: absolute;
     left: 0px;
     top: 33vh;
@@ -38,11 +38,22 @@
     }
   }
 
-  .caceria-audio-contenedor {
+  .guayabero-f3-audio-contenedor1 {
     width: 100%;
     position: absolute;
     left: 0px;
-    top: 50vh;
+    top: 10vh;
+    cursor: pointer;
+    z-index: 300;
+    display: flex;
+    justify-content: center;
+  }
+
+  .guayabero-f3-audio-contenedor2 {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 55vh;
     cursor: pointer;
     z-index: 300;
     display: flex;

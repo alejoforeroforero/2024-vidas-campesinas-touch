@@ -1,0 +1,36 @@
+.guayabero-f2 {
+  background: url("../../../assets/guaviare/guayabero/guayabero-fondo-video.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: fadeIn 4s;
+
+  .guayabero-f2-interior{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img{
+      width:80px;
+      cursor: pointer;
+    }
+  
+    .guayabero-f2-frase{
+      margin-top: 10vh;
+  
+      p{
+        text-align: right;
+        transform: translate(25px, 0);
+      }
+  
+    }
+
+  }
+
+  
+}

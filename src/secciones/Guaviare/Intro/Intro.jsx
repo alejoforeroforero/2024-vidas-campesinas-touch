@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { cambiarSeccion, sumar, cambiarDescargando } from '../../../Redux/states/managerSlice';
+import { cambiarSeccion, sumar, cambiarDescargando, establecerMostrarAbajo } from '../../../Redux/states/managerSlice';
 import videoGuaviare from '../../../assets/guaviare/home/guaviare.mp4';
 import videoGuaviareM from '../../../assets/guaviare/home/guaviare-m.mp4';
 import guaviareGrafica from '../../../assets/guaviare/home/pictograma.png';
@@ -18,12 +18,13 @@ const Intro = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             dispatch(cambiarDescargando(false));
+            dispatch(establecerMostrarAbajo(true));
             setMostrar(true);
             videoRef.current.play();
         }, 1000)
 
         return () => clearTimeout(timer)
-    })
+    }, [])
 
     let contador = useSelector(state => state.managerReducer.contador);
     const [startY, setStartY] = useState(null);
@@ -71,7 +72,6 @@ const Intro = () => {
             if (contenedorGRef.current) {
                 contenedorGRef.current.removeEventListener('wheel', handleScroll);
             }
-
         };
     }, []);
 

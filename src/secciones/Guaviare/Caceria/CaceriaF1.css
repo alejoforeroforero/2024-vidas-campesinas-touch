@@ -15,16 +15,6 @@
     animation: mymove 50s linear infinite alternate;
   }
 
-  .caceria-f1-contenido {
-    width: 100vw;
-    height: 100vh;
-    max-width: 900px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   .caceria-f1-top {
     height: 30vh;
     width: 100%;

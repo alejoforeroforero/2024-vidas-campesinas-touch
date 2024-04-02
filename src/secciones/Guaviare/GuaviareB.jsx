@@ -33,7 +33,7 @@ const GuaviareB = () => {
         <Caceria />
       </div>
       <div ref={targetRef}>
-        <p>{isVisible ? 'Visible' : 'Not visible'}</p>
+        {/* <p>{isVisible ? 'Visible' : 'Not visible'}</p> */}
         <Guayabero />
       </div>
     </div>

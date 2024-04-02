@@ -32,51 +32,67 @@
   justify-content: center;
 }
 
-.contenido-general{
-    width: 100vw;
-    height: 100vh;
-    max-height: 100vh;
-    max-width: 800px;
-    padding: 0 10%;
-    position: relative;
+.contenido-general {
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  max-width: 800px;
+  padding: 0 10%;
+  position: relative;
 }
 
-.ejeA{
+.ejeA {
   position: fixed;
   z-index: 20;
-  top:30vh;
+  top: 30vh;
   height: 40vh;
+  width: 40px;
+  display: flex;
+  align-items: center;
 
-  img{
-    height: 100%;
-    cursor:pointer;
+  img {
+    width: 100%;
+    cursor: pointer;
   }
 }
 
-.ejeB{
+.ejeB {
   position: fixed;
   z-index: 20;
-  top:30vh;
+  top: 30vh;
   right: 0;
   height: 40vh;
+  width: 40px;
+  display: flex;
+  align-items: center;
 
-  img{
-    height: 100%;
-    cursor:pointer;
+  img {
+    width: 100%;
+    cursor: pointer;
   }
 }
 
-.abajo{
+@media (max-width: 500px) {
+  .ejeA {
+    width: 25px;
+  }
+
+  .ejeB {
+    width: 25px;
+  }
+}
+
+.abajo {
   position: fixed;
   bottom: 2vh;
-  width:10vw;
+  width: 10vw;
   left: 45vw;
   z-index: 20;
   display: flex;
   justify-content: center;
 
-  img{
-    width:40px;
+  img {
+    width: 40px;
   }
 }
 
@@ -122,33 +138,33 @@
 
 @keyframes cambiarEscena {
   0% {
-    filter:blur(0)
+    filter: blur(0);
   }
   100% {
-    filter:blur(4px)
+    filter: blur(4px);
   }
 }
 
 @keyframes fadeIn {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
-  } 
+  }
 }
 
 @keyframes fadeFoto {
-  0%{
+  0% {
     opacity: 0;
   }
   40% {
     opacity: 1;
   }
-  80%{
+  80% {
     opacity: 1;
   }
-  100%{
+  100% {
     opacity: 0;
   }
 }
