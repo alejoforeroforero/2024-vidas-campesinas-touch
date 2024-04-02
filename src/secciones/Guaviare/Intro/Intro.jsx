@@ -1,7 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { cambiarSeccion, sumar, cambiarDescargando, establecerMostrarAbajo } from '../../../Redux/states/managerSlice';
-import videoGuaviare from '../../../assets/guaviare/home/guaviare.mp4';
+import {
+    cambiarSeccion,
+    sumar,
+    cambiarDescargando,
+    establecerMostrarAbajo,
+    establecerMostrarLineasA
+} from '../../../Redux/states/managerSlice';
 import videoGuaviareM from '../../../assets/guaviare/home/guaviare-m.mp4';
 import guaviareGrafica from '../../../assets/guaviare/home/pictograma.png';
 
@@ -15,10 +20,13 @@ const Intro = () => {
     const contenedorGRef = useRef();
     const [mostrar, setMostrar] = useState(false);
 
+    
+
     useEffect(() => {
+        dispatch(establecerMostrarLineasA(false));
         const timer = setTimeout(() => {
             dispatch(cambiarDescargando(false));
-            dispatch(establecerMostrarAbajo(true));
+            dispatch(establecerMostrarAbajo(true));            
             setMostrar(true);
             videoRef.current.play();
         }, 1000)

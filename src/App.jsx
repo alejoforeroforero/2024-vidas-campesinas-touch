@@ -1,7 +1,7 @@
 import React, { useState, Suspense } from 'react';
 import { NavLink, Route, Routes } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
-import { pararAudios, establecerMostrarAbajo } from './Redux/states/managerSlice';
+import { pararAudios, establecerMostrarAbajo, establecerCanalBOn } from './Redux/states/managerSlice';
 import Home from './secciones/Home/Home';
 import Guaviare from './secciones/Guaviare/Guaviare';
 import Caqueta from './secciones/Caqueta/Caqueta';
@@ -23,20 +23,19 @@ function App() {
 
   const departamento = useSelector(state => state.managerReducer.departamento);
   const mostrarAbajo = useSelector(state => state.managerReducer.mostrarAbajo);
+  const canalBOn = useSelector(state => state.managerReducer.canalBOn);
   const dispatch = useDispatch();
-
-  const [showingCanalB, setShowingCanalB] = useState(false);
 
   const showCanalB = () => {
     dispatch(pararAudios());
     dispatch(establecerMostrarAbajo(false));
-    setShowingCanalB(true);
+    dispatch(establecerCanalBOn(true))
   }
 
   const hideCanalB = () => {
     dispatch(pararAudios());
-    setShowingCanalB(false);
     dispatch(establecerMostrarAbajo(true));
+    dispatch(establecerCanalBOn(false))
   }
 
   return (
@@ -49,18 +48,18 @@ function App() {
           <li><NavLink to='/Cauca'>Cauca</NavLink></li>
         </ul>
       </nav>
-      {showingCanalB &&
+      {canalBOn &&
         <div className='ejeA'>
           <img onClick={hideCanalB} src={ejeAImg} alt="ejeA" />
         </div>
       }
-      {!showingCanalB &&
+      {!canalBOn &&
         <div className='ejeB'>
           <img onClick={showCanalB} src={ejeBImg} alt="ejeB" />
         </div>
       }
 
-      <div className={showingCanalB ? 'canal-b canal-b-on' : 'canal-b canal-b-off'}>
+      <div className={canalBOn ? 'canal-b canal-b-on' : 'canal-b canal-b-off'}>
         {departamento == 'guaviare' &&
           <GuaviareB />
         }

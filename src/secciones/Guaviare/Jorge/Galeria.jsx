@@ -11,7 +11,7 @@ import flechaAtras from '../../../assets/generales/flecha-atras.png';
 import './Galeria.css'
 
 const Galeria = () => {
-  const dispatch = useDispatch();
+
   const elementRef = useRef();
 
   const { handleTouchStart, handleTouchEnd } = useDelta('jorge-relatos', 'jorge-bio', elementRef);
@@ -20,8 +20,6 @@ const Galeria = () => {
 
   const [currentImage, setCurrentImage] = useState(0);
   const [booleanImg, setBooleanImg] = useState(false);
-  let indexImg = 0;
-
 
   useEffect(() => {
     const interval = setInterval(() => {

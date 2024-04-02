@@ -1,24 +1,40 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useSelector } from 'react-redux';
 import Caceria from './Caceria/Caceria'
 import Guayabero from './Guayabero/Guayabero'
 import './GuaviareB.css'
 
+const lineasB = [
+  {
+    id: 'linea-caceria',
+    titulo: 'Caceria',
+    navegacion: 'guaviare-caceria-navegacion'
+  },
+  {
+    id: 'linea-guayabero',
+    titulo: 'Guayabero',
+    navegacion: 'guaviare-guyabero-navegacion'
+  }
+]
+
 const GuaviareB = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const canalBOn = useSelector(state => state.managerReducer.canalBOn);
+
+  const [lineaS, setLineaS] = useState('linea-caceria')
   const divRef = useRef(null);
-  const targetRef = useRef(null);
+  const guayaberoRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
 
-      if (targetRef.current) {
-        const { top, bottom } = targetRef.current.getBoundingClientRect();
+      if (divRef.current) {
+        const { top, bottom } = guayaberoRef.current.getBoundingClientRect();
         const windowHeight = window.innerHeight;
 
         if (top < windowHeight / 2 && bottom >= 0) {
-          setIsVisible(true);
+          setLineaS('linea-guayabero')
         } else {
-          setIsVisible(false);
+          setLineaS('linea-caceria')
         }
       }
     };
@@ -29,10 +45,20 @@ const GuaviareB = () => {
 
   return (
     <div ref={divRef} className='guaviare-b'>
+      {canalBOn &&
+        <div className='lineas-b'>
+          {lineasB.map(linea => {
+            return <div
+              key={linea.id}
+              className={lineaS === linea.id ? 'linea linea-seleccionada' : 'linea'}
+            />
+          })}
+        </div>
+      }
       <div>
         <Caceria />
       </div>
-      <div ref={targetRef}>
+      <div ref={guayaberoRef}>
         {/* <p>{isVisible ? 'Visible' : 'Not visible'}</p> */}
         <Guayabero />
       </div>

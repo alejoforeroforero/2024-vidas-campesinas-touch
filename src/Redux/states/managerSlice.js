@@ -4,21 +4,29 @@ export const manager = createSlice({
   name: "Manager",
   initialState: {
     departamento: "guaviare",
+    personaje:'',
     contador: 0,
     seccion:'guaviare-intro',
+    canalBOn:false,
     descargando: false,
     cancionActual:'',
-    mostrarAbajo:true
+    mostrarAbajo:true,
+    mostrarLineasA:false
   },
   reducers: {
     cambiarDepartamento: (state, action) => {},
-    establecerPersonaje: (state, action) => {},
+    establecerPersonaje(state, action) {
+      state.personaje = action.payload;
+    },
     cambiarSeccion: (state, action) => {
       state.seccion = action.payload;
       console.log(state.seccionGuaviare);
     },
     sumar: (state, action) => {
       state.contador = action.payload;
+    },
+    establecerCanalBOn(state, action) {
+      state.canalBOn = action.payload;
     },
     cambiarDescargando: (state, action) => {
       state.descargando = action.payload;
@@ -58,6 +66,9 @@ export const manager = createSlice({
     },
     establecerMostrarAbajo(state, action){
       state.mostrarAbajo = action.payload;
+    },
+    establecerMostrarLineasA(state, action){
+      state.mostrarLineasA = action.payload;
     }
   },
 });
@@ -66,11 +77,13 @@ export const {
   cambiarDepartamento,
   establecerPersonaje,
   cambiarSeccion,
+  establecerCanalBOn,
   sumar,
   cambiarDescargando,
   cambiarCancion,
   pararAudios,
   changeVideo,
-  establecerMostrarAbajo
+  establecerMostrarAbajo,
+  establecerMostrarLineasA
 } = manager.actions;
 export default manager.reducer;
