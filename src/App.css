@@ -122,15 +122,33 @@
 
 @keyframes cambiarEscena {
   0% {
+    filter:blur(0)
+  }
+  100% {
+    filter:blur(4px)
+  }
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
     opacity: 1;
-    transform: scale(1)
+  } 
+}
+
+@keyframes fadeFoto {
+  0%{
+    opacity: 0;
   }
   40% {
     opacity: 1;
-    transform: scale(1.05)
   }
-  100% {
-    opacity: 0.5;
-    transform: scale(1.08)
+  80%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
   }
 }

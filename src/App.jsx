@@ -1,5 +1,6 @@
-import { NavLink, Link, Route, Routes } from 'react-router-dom'
+import { NavLink, Route, Routes } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
+import { pararAudios } from './Redux/states/managerSlice';
 import Home from './secciones/Home/Home';
 import Guaviare from './secciones/Guaviare/Guaviare';
 import Caqueta from './secciones/Caqueta/Caqueta';
@@ -19,14 +20,17 @@ import GuaviareB from './secciones/Guaviare/GuaviareB';
 function App() {
 
   const departamento = useSelector(state => state.managerReducer.departamento);
+  const dispatch = useDispatch();
 
   const [showingCanalB, setShowingCanalB] = useState(false);
 
   const showCanalB = () => {
+    dispatch(pararAudios());
     setShowingCanalB(true);
   }
 
   const hideCanalB = () => {
+    dispatch(pararAudios());
     setShowingCanalB(false);
   }
 

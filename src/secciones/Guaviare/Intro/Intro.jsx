@@ -12,6 +12,7 @@ import './Intro.css';
 const Intro = () => {
     const dispatch = useDispatch();
     const videoRef = useRef();
+    const contenedorGRef = useRef();
     const [mostrar, setMostrar] = useState(false);
 
     useEffect(() => {
@@ -64,10 +65,13 @@ const Intro = () => {
                 }
             }, 100);
         }
-        window.addEventListener('wheel', handleScroll);
+        contenedorGRef.current.addEventListener('wheel', handleScroll);
 
         return () => {
-            window.removeEventListener('wheel', handleScroll);
+            if (contenedorGRef.current) {
+                contenedorGRef.current.removeEventListener('wheel', handleScroll);
+            }
+
         };
     }, []);
 
@@ -76,7 +80,7 @@ const Intro = () => {
     }
 
     const handleTouchEnd = (event) => {
-        
+
         const endY = event.changedTouches[0].clientY;
         const deltaY = startY - endY;
 
@@ -116,7 +120,7 @@ const Intro = () => {
     }
 
     return (
-        <div className='seccion guaviare-intro' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
+        <div ref={contenedorGRef} className='seccion guaviare-intro' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
             {pintarVideo()}
             <div className="mask-general">
                 {mostrar &&

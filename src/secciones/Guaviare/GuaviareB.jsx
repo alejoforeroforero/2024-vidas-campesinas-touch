@@ -10,12 +10,12 @@ const GuaviareB = () => {
 
   useEffect(() => {
     const handleScroll = () => {
- 
+
       if (targetRef.current) {
         const { top, bottom } = targetRef.current.getBoundingClientRect();
         const windowHeight = window.innerHeight;
 
-        if (top < windowHeight/2 && bottom >= 0) {
+        if (top < windowHeight / 2 && bottom >= 0) {
           setIsVisible(true);
         } else {
           setIsVisible(false);
@@ -23,15 +23,15 @@ const GuaviareB = () => {
       }
     };
 
-    // Attach the scroll event listener
     divRef.current.addEventListener('scroll', handleScroll);
-    // Detach the scroll event listener on cleanup
     return () => divRef.current.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <div ref={divRef} className='guaviare-b'>
-      <Caceria />
+      <div>
+        <Caceria />
+      </div>
       <div ref={targetRef}>
         <p>{isVisible ? 'Visible' : 'Not visible'}</p>
         <Guayabero />

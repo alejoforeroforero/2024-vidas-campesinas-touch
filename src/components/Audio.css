@@ -1,10 +1,17 @@
 .audio-contenedor {
+  max-width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
   div {
     display: flex;
     flex-direction: row;
     justify-content: left;
     align-items: center;
     color: #fff;
+ 
   }
 
   img {
@@ -13,22 +20,27 @@
     cursor: pointer;
   }
 
-  canvas{
-    width:300px;
+  h4{
+    text-align: right;
+    margin-right: 80px;
+  }
+
+  canvas {
+    margin: auto;
+    width: 80%;
     height: 40px;
   }
 
-  audio{
+  audio {
     visibility: hidden;
     display: none;
   }
 }
 
-.mostrar{
-    visibility: visible;
-
+.mostrar {
+  visibility: visible;
 }
 
-.esconder{
-    visibility: hidden;
+.esconder {
+  visibility: hidden;
 }

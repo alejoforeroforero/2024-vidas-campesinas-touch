@@ -5,7 +5,7 @@ export const manager = createSlice({
   initialState: {
     departamento: "guaviare",
     contador: 0,
-    seccion:'jorge-youtube',
+    seccion:'jorge-bio',
     descargando: false,
     cancionActual:''
   },
@@ -26,6 +26,7 @@ export const manager = createSlice({
       state.cancionActual = action.payload;
     },
     pararAudios:(state, action)=>{
+      state.cancionActual = null;
       const audios = document.getElementsByTagName('audio');
 
         for(let i=0; i< audios.length; i++){
@@ -33,7 +34,27 @@ export const manager = createSlice({
             audio.pause();
             document.body.removeChild(audio);
         }
-    }
+    },
+    changeVideo(state, action) {
+      if (state.videoActual !== action.payload) {
+        if (state.videoActual != null) {
+          const prevVideo = document.getElementById(state.videoActual);
+
+          if(prevVideo){
+            if (!prevVideo.paused) {
+              prevVideo?.pause();
+            }
+          }
+        }
+      }
+      state.videoActual = action.payload;
+      if (state.videoActual != null) {
+        const currentVideo = document.getElementById(action.payload);
+        if (currentVideo.paused) {
+          currentVideo.play();
+        }
+      }
+    },
   },
 });
 
@@ -44,6 +65,7 @@ export const {
   sumar,
   cambiarDescargando,
   cambiarCancion,
-  pararAudios
+  pararAudios,
+  changeVideo
 } = manager.actions;
 export default manager.reducer;

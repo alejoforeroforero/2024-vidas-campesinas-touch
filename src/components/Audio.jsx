@@ -6,10 +6,11 @@ import audioImg from '../assets/generales/audio.png';
 import audioJorge1 from '../assets/guaviare/jorge/jorge1.mp3';
 import audioJorge2 from '../assets/guaviare/jorge/jorge2.mp3';
 import audioJorge3 from '../assets/guaviare/jorge/jorge3.mp3';
+import audioCaceria from '../assets/guaviare/caceria/audio-caceria.mp3';
 import './Audio.css'
 
 
-const Audio = ({ titulo, id }) => {
+const Audio = ({ titulo, id, autor=''}) => {
     const cancionActual = useSelector(state => state.managerReducer.cancionActual);
 
     const dispatch = useDispatch();
@@ -36,6 +37,8 @@ const Audio = ({ titulo, id }) => {
             return audioJorge2;
         } else if (id == 'jorge3') {
             return audioJorge3
+        }else if (id == 'caceria') {
+            return audioCaceria
         }
     }
 
@@ -116,6 +119,8 @@ const Audio = ({ titulo, id }) => {
                 <img src={(audioS) ? audioOnImg : audioImg} onClick={() => { playAudio() }} ></img>
                 <h3>{titulo}</h3>
             </div>
+            {autor != '' && <h4>{autor}</h4>}
+            
             <canvas className={audioS ? 'mostrar' : 'esconder'} ref={canvasRef}></canvas>
         </div>
     )

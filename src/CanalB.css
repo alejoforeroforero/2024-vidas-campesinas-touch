@@ -5,6 +5,7 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     transition: 1s;
+    border: 1px solid red;
 }
 
 .canal-b-on{
@@ -14,3 +15,68 @@
 .canal-b-off{
     left: 100vw;
 }
+
+.flecha-atras {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    left: 15vw;
+    bottom: 15vh;
+    text-align: center;
+    background-color: transparent;
+    border: 0;
+    z-index: 320;
+  
+    img {
+      height: 40px;
+      cursor: pointer;
+    }
+  }
+  
+  .flecha-adelante {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    right: 15vw;
+    bottom: 15vh;
+    text-align: center;
+    background-color: transparent;
+    border: 0;
+    z-index: 320;
+  
+    img {
+      height: 40px;
+      cursor: pointer;
+    }
+  }
+  
+  .flecha-adelante-inicio {
+    position: absolute;
+    width: 100vw;
+    height: 40px;
+    overflow: hidden;
+    left: 0;
+    bottom: 15vh;
+    text-align: center;
+    background-color: transparent;
+    border: 0;
+    z-index: 320;
+  
+    img {
+      height: 40px;
+      cursor: pointer;
+    }
+  }
+  
+  .seccion-b-abajo {
+    position: absolute;
+    bottom: 10vw;
+    width: 100%;
+    text-align: center;
+    img{
+      width:50px;
+    }
+  }
+  

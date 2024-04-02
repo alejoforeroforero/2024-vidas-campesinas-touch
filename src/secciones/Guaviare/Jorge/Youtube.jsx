@@ -15,7 +15,9 @@ const Youtube = () => {
 
   const refYoutubeJorge = (video) => {
     setJorgeYoutubeRef(video);
-    setMostrarPlay(true);
+    setTimeout(()=>{
+      setMostrarPlay(true);
+    }, 1000);    
   }
 
   const pintarVideo = () => {
@@ -34,26 +36,29 @@ const Youtube = () => {
   const handleOnClick = () => {
     const div = document.getElementById('youtube-jorge');
     div.style.visibility = 'visible';
-    jorgeYoutubeRef.playVideo();
+    console.log(jorgeYoutubeRef);
+    jorgeYoutubeRef?.playVideo();
   }
 
   return (
-    <div className='seccion jorge-youtube' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
+    <>
       {pintarVideo()}
-      <div className='mask-general'>
-        <div className="contenido-general">
-          <div className='youtube-contenido'>
-            <div>
-              {mostrarPlay && <img onClick={handleOnClick} src={playImg} alt="play" /> }
-              {!mostrarPlay && <p>Descargando...</p>} 
-            </div>
-            <div>
-              <h3 ref={elementRef}>“Éramos aserradores y cazadores, pero ahora conservamos”</h3>
+      <div ref={elementRef} className='seccion jorge-youtube' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
+        <div className='mask-general'>
+          <div className="contenido-general">
+            <div className='youtube-contenido'>
+              <div>
+                {mostrarPlay && <img onClick={handleOnClick} src={playImg} alt="play" />}
+                {!mostrarPlay && <p>Espera un momento...</p>}
+              </div>
+              <div>
+                <h3>“Éramos aserradores y cazadores, pero ahora conservamos”</h3>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

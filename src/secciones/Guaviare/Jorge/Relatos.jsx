@@ -9,8 +9,9 @@ import './Relatos.css';
 const Relatos = () => {
 
   const videoRef = useRef();
+  const elementRef = useRef();
 
-  const { handleTouchStart, handleTouchEnd } = useDelta('jorge-bio', 'jorge-youtube', videoRef);
+  const { handleTouchStart, handleTouchEnd } = useDelta('jorge-youtube', 'jorge-galeria', elementRef);
 
   useEffect(()=>{
     videoRef.current.play();
@@ -31,13 +32,13 @@ const Relatos = () => {
   }
 
   return (
-    <div className='seccion jorge-relatos' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
+    <div ref={elementRef} className='seccion jorge-relatos' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
       {pintarVideo()}
       <div className='mask-general'>
         <div className="contenido-general">
           <div className='jorge-relatos-audio'>
             <Audio id='jorge2' titulo='"Cuando llegué al Raudal"' />
-            <Audio id='jorge3' titulo='Jorge 2' />
+            <Audio id='jorge3' titulo='"Somos nuestras propias ambulancias"' />
           </div>
         </div>
       </div>

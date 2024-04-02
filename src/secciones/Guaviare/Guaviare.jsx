@@ -3,9 +3,10 @@ import Cargando from '../../components/Cargando';
 
 import IntroGuaviare from './Intro/Intro';
 import JorgeBio from './Jorge/Bio';
-import RelatosJorge from './Jorge/Relatos';
-import YoutubeJorge from './Jorge/Youtube';
-import Galeria from './Jorge/Galeria';
+import JorgeYoutube from './Jorge/Youtube';
+import JorgeRelatos from './Jorge/Relatos';
+import JorgeGaleria from './Jorge/Galeria';
+
 import './Guaviare.css';
 
 
@@ -18,10 +19,9 @@ const Guaviare = () => {
       {descargando && <Cargando />}
       {seccion == 'guaviare-intro' && <IntroGuaviare />}
       {seccion == 'jorge-bio' && <JorgeBio />}
-      {seccion == 'jorge-youtube' && <YoutubeJorge />}
-      {seccion == 'jorge-relatos' && <RelatosJorge />}
-      
-      {seccion == 5 && <Galeria />}
+      {seccion == 'jorge-youtube' && <JorgeYoutube />}
+      {seccion == 'jorge-relatos' && <JorgeRelatos />}
+      {seccion == 'jorge-galeria' && <JorgeGaleria />}
     </div>
   )
 }

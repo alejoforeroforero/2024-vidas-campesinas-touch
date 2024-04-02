@@ -51,6 +51,13 @@ h3 {
   font-optical-sizing: auto;
 }
 
+h4 {
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-family: 'oldnews', sans-serif;
+  font-optical-sizing: auto;
+}
+
 p {
   font-size: 1.1rem;
   color: #fff;

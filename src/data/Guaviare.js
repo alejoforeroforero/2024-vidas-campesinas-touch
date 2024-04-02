@@ -6,4 +6,5 @@ export const GuaviareIntro = {
 }
 export const Jorge={
     titulo:'Jorge\nLuis Cano',
+    bio:'Biografía de Luis'
 }

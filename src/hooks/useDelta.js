@@ -28,10 +28,10 @@ export default function useDelta(prevSection, nextSection, elementRef) {
         }        
       }, 100);
     }
-    window.addEventListener("wheel", handleScroll);
+    elementRef.current.addEventListener("wheel", handleScroll);
 
     return () => {
-      window.removeEventListener("wheel", handleScroll);
+      //elementRef.current.removeEventListener("wheel", handleScroll);
     };
   }, []);
 

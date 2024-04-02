@@ -171,6 +171,9 @@ const YT = ({ youtubeVideoId, refYoutubeFx, imgThumbnail, id }) => {
         <div ref={parentRef} id="player-container" className='player-container'>
             {mostrarMask &&
                 <div className="player-mask">
+                    <div className="player-cerrar">
+                        <img onClick={handleOnCerrar} src={salidaImg} alt="play" />
+                    </div>
                     <div className="yt-loading">
                         <LoadingIcons.ThreeDots stroke="#888" fill="666" />
                     </div>

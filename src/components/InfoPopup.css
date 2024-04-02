@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: aparecer 2s;
  
     .info-popup-interior{
         width:80vw;
