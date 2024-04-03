@@ -6,6 +6,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    animation: aparecer 8s;
   
     .homev2-menu {
       display: flex;

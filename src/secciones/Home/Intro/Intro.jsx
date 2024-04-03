@@ -13,7 +13,7 @@ const Intro = () => {
   const videoRef = useRef();
   const elementRef = useRef();
 
-  const { handleTouchStart, handleTouchEnd } = useDelta('home-menu', 'home-menu', elementRef);
+  const { handleTouchStart, handleTouchEnd } = useDelta(null, 'home-menu', elementRef);
 
   useEffect(() => {
     dispatch(establecerMostrarAbajo(true));  

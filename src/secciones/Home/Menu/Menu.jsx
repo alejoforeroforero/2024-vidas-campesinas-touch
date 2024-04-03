@@ -31,7 +31,7 @@ const Menu = () => {
   const dispatch = useDispatch();
   const elementRef = useRef();
 
-  const { handleTouchStart, handleTouchEnd } = useDelta('home-intro', 'home-intro', elementRef);
+  const { handleTouchStart, handleTouchEnd } = useDelta('home-intro', null, elementRef);
 
   useEffect(() => {
     dispatch(establecerMostrarAbajo(false));

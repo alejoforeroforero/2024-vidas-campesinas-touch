@@ -1,6 +1,7 @@
 .home-intro{
     width: 100vw;
     height: 100vh;
+    animation: aparecer 2s;
 }
 
 .home-intro-contenido{
