@@ -4,7 +4,7 @@ const Cargando = ({seccion}) => {
 
   return (
     <div className='cargando'>
-      Cargando
+      
     </div>
   )
 }

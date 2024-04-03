@@ -29,6 +29,8 @@ const GuayaberoF3 = () => {
                 <video
                     id={vId}
                     loop
+                    playsInline
+                    muted
                     src={videoSrc}
                 />
             </div>
