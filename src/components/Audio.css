@@ -5,13 +5,12 @@
   justify-content: center;
   flex-direction: column;
 
-  div {
+  .audio-contenedor-interior {
     display: flex;
     flex-direction: row;
     justify-content: left;
     align-items: center;
-    color: #fff;
- 
+    color: #fff; 
   }
 
   img {
@@ -32,9 +31,91 @@
   }
 
   audio {
-    visibility: hidden;
-    display: none;
+
   }
+}
+
+.canvas-audio-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  div{
+    bottom: 0;
+    position: absolute;
+    width: 80% !important;
+    text-align: right !important;
+    color:rgb(217, 217, 217);
+  }
+}
+
+.mini-player{
+  position: fixed;
+  left: 0;
+  top:0vh;
+  width:100vw;
+  height: 100vh;
+  z-index: 20 !important;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column !important;
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: default;
+}
+
+.mini-player-contenedor{
+  width: 80%;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: rgba(0, 0, 0, 0.9);
+  cursor: default;
+  padding: 10px 10px 20px 10px;
+
+  div{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.mini-player-pregress-container{
+  display: flex !important;
+  flex-direction: column;
+  align-items: center !important;
+  text-align: center !important;
+  transform: translate(0px, -20px);
+}
+
+.mini-player-pregress-bar{
+  width: 80% !important;
+  height: 30px;
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  background-color: rgb(234, 51, 51, 0);
+  cursor: pointer;
+  transform: translate(0px, 20px);
+}
+
+.mini-player-pregress-bar-total{
+  width: 80% !important;
+  height: 10px;
+  background-color: rgb(67, 67, 67);
+}
+
+.mini-player-pregress-line{
+  height: 10px;
+  background-color: rgb(183, 183, 183);
+}
+
+.mini-player-salida{
+  text-align: right !important;
 }
 
 .mostrar {

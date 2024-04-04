@@ -1,8 +1,10 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { cambiarCancion, pararAudios } from '../Redux/states/managerSlice';
+import { cambiarCancion, pararAudios, establecerDuracion } from '../Redux/states/managerSlice';
 import audioOnImg from '../assets/generales/audio-on.png';
 import audioImg from '../assets/generales/audio.png';
+import salida from '../assets/generales/salida.png';
+
 import audioJorge1 from '../assets/guaviare/jorge/jorge1.mp3';
 import audioJorge2 from '../assets/guaviare/jorge/jorge2.mp3';
 import audioJorge3 from '../assets/guaviare/jorge/jorge3.mp3';
@@ -13,14 +15,20 @@ import audioGuayabero2 from '../assets/guaviare/guayabero/audio-guayabero2.mp3';
 import audioToninas from '../assets/guaviare/guayabero/audio-toninas.mp3';
 import './Audio.css'
 
-
-const Audio = ({ titulo, id, autor=''}) => {
+const Audio = ({ titulo, id, autor = '', popup = false }) => {
     const cancionActual = useSelector(state => state.managerReducer.cancionActual);
-
+    const duracion = useSelector(state => state.managerReducer.duracion);
     const dispatch = useDispatch();
 
     const canvasRef = useRef();
+    const audioRef = useRef()
     const frame1 = useRef(0);
+    const progressBarRef = useRef();
+    const progressLineRef = useRef();
+
+
+    const [contadorReg, setContadorReg] = useState(0);
+    const [audioPos, setAudioPos] = useState(0)
 
     let audioCtx = null;
     let analyser;
@@ -29,8 +37,6 @@ const Audio = ({ titulo, id, autor=''}) => {
     let bufferLength;
     let dataArray;
     let canvasCtx;
-
-    let counter = 0;
 
     const audioS = cancionActual == id ? true : false;
 
@@ -41,32 +47,45 @@ const Audio = ({ titulo, id, autor=''}) => {
             return audioJorge2;
         } else if (id == 'jorge3') {
             return audioJorge3
-        }else if (id == 'caceria') {
+        } else if (id == 'caceria') {
             return audioCaceria
-        }else if (id == 'arte-guaviare') {
+        } else if (id == 'arte-guaviare') {
             return audioArteGuaviare
-        }else if (id == 'audio-guayabero1') {
+        } else if (id == 'audio-guayabero1') {
             return audioGuayabero1
-        }else if (id == 'audio-guayabero2') {
+        } else if (id == 'audio-guayabero2') {
             return audioGuayabero2
-        }else if (id == 'audio-toninas') {
+        } else if (id == 'audio-toninas') {
             return audioToninas
         }
+    }
 
-        
+    const formatTime = (seconds) => {
+        let hours = Math.floor(seconds / 3600);
+        let minutes = Math.floor((seconds % 3600) / 60);
+        let remainingSeconds = Math.floor(seconds % 60);
+
+        // Add leading zeros if necessary
+        hours = hours < 10 ? '0' + hours : hours;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        remainingSeconds = remainingSeconds < 10 ? '0' + remainingSeconds : remainingSeconds;
+
+        return minutes + ':' + remainingSeconds;
     }
 
     const animate1 = () => {
-
-        counter++;
-
         if (audioCtx == null) {
-
             const audioEl = document.createElement('audio');
+            audioEl.id = 'audio-el';
+            audioEl.controls = true;
             audioEl.src = escogerCancion();
             document.body.appendChild(audioEl);
+            audioEl.addEventListener('canplaythrough', () => {
+                dispatch(establecerDuracion(audioEl.duration))
+            });
             audioEl.play();
-            
+
+            audioRef.current = audioEl;
 
             audioCtx = new (window.AudioContext || window.webkitAudioContext)();
             analyser = audioCtx.createAnalyser();
@@ -102,6 +121,7 @@ const Audio = ({ titulo, id, autor=''}) => {
         frame1.current = requestAnimationFrame(animate1);
     };
 
+
     useEffect(() => {
         if (audioS) {
             frame1.current = requestAnimationFrame(animate1);
@@ -114,10 +134,29 @@ const Audio = ({ titulo, id, autor=''}) => {
         }
     }, [cancionActual]);
 
+    useEffect(() => {
+        if (duracion > 0 && audioRef.current) {
+            const timer = setInterval(() => {
+                setContadorReg(formatTime(duracion - audioRef.current.currentTime));
+
+                if (popup) {
+                    const percentage = audioRef.current.currentTime * 100 / duracion;
+                    const leftPosPx = progressBarRef.current.offsetWidth * percentage / 100;
+                    progressLineRef.current.style.width = leftPosPx + 'px';
+                }
+
+            }, 200)
+
+            return () => clearInterval(timer);
+        }
+
+    }, [audioRef.current?.currentTime])
 
     const playAudio = () => {
 
         dispatch(pararAudios());
+        dispatch(establecerDuracion(0));
+        setContadorReg(0)
 
         if (cancionActual == id) {
             dispatch(cambiarCancion(null))
@@ -127,15 +166,59 @@ const Audio = ({ titulo, id, autor=''}) => {
         }
     }
 
+    const handleOnClose = () => {
+        dispatch(pararAudios());
+    }
+
+    const handleBarraOnClick = (e) => {
+        const posLeft = e.target.getBoundingClientRect().x;
+        const width = e.target.getBoundingClientRect().width;
+        let percentage = (e.pageX - posLeft) * 100 / width;
+
+        if (percentage < 1) {
+            percentage = 0;
+        }
+
+        const finalPos = percentage * duracion / 100;
+        audioRef.current.currentTime = finalPos;
+    }
+
+    const pintarMiniPlayer = () => {
+        return (
+            <div className={audioS ? 'mini-player mostrar' : 'mini-player esconder'}>
+                <div className='mini-player-contenedor'>
+                    <div className='mini-player-salida'>
+                        <img onClick={handleOnClose} src={salida} alt="salida" />
+                    </div>
+                    <div className='canvas-audio-container'>
+                        <canvas ref={canvasRef}></canvas>
+                        <div>{contadorReg} </div>
+                    </div>
+                    <div className='mini-player-pregress-container'>
+                        <div onClick={handleBarraOnClick} className='mini-player-pregress-bar'></div>
+                        <div ref={progressBarRef} className='mini-player-pregress-bar-total'>
+                            <div ref={progressLineRef} className='mini-player-pregress-line'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
     return (
         <div className='audio-contenedor'>
-            <div>
+            <div className='audio-contenedor-interior'>
                 <img src={(audioS) ? audioOnImg : audioImg} onClick={() => { playAudio() }} ></img>
                 <h3>{titulo}</h3>
             </div>
             {autor != '' && <h4>{autor}</h4>}
-            
-            <canvas className={audioS ? 'mostrar' : 'esconder'} ref={canvasRef}></canvas>
+            {popup && pintarMiniPlayer()}
+            {!popup &&
+                <div className={audioS ? 'canvas-audio-container mostrar': 'canvas-audio-container esconder'}>
+                    <canvas ref={canvasRef}></canvas>
+                    <div>{contadorReg} </div>
+                </div>
+            }
         </div>
     )
 }

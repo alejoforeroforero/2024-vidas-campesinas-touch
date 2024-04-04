@@ -32,6 +32,7 @@ const CaceriaF3 = () => {
                             id='arte-guaviare'
                             titulo='“En ese tiempo se trabajaba con las pieles del tigrillo y el cachirre”'
                             autor='- Carlos Mancera'
+                            popup={true}
                         />
                     </div>
                     <p className='caceria-f3-p'>
