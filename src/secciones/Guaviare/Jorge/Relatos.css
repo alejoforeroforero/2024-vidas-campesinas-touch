@@ -4,6 +4,7 @@
 }
 
 .jorge-relatos-audio{
+    width: 100% !important;
     position: relative;
-    margin-top: 35vh;
+    margin-top: 50vh;
 }

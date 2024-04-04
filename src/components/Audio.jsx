@@ -192,7 +192,7 @@ const Audio = ({ titulo, id, autor = '', popup = false }) => {
                     </div>
                     <div className='canvas-audio-container'>
                         <canvas ref={canvasRef}></canvas>
-                        <div>{contadorReg} </div>
+                        <div><span>{contadorReg}</span></div>
                     </div>
                     <div className='mini-player-pregress-container'>
                         <div onClick={handleBarraOnClick} className='mini-player-pregress-bar'></div>
@@ -216,7 +216,7 @@ const Audio = ({ titulo, id, autor = '', popup = false }) => {
             {!popup &&
                 <div className={audioS ? 'canvas-audio-container mostrar': 'canvas-audio-container esconder'}>
                     <canvas ref={canvasRef}></canvas>
-                    <div>{contadorReg} </div>
+                    <div><span>{contadorReg}</span></div>
                 </div>
             }
         </div>

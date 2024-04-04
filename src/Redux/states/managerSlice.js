@@ -22,7 +22,6 @@ export const manager = createSlice({
     },
     cambiarSeccion: (state, action) => {
       state.seccion = action.payload;
-      console.log(state.seccionGuaviare);
     },
     sumar: (state, action) => {
       state.contador = action.payload;
