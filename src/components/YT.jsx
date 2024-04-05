@@ -8,7 +8,7 @@ import { FaMobileAlt } from 'react-icons/fa';
 
 import './YT.css';
 
-const YT = ({ youtubeVideoId, refYoutubeFx, imgThumbnail, id }) => {
+const YT = ({ youtubeVideoId, refYoutubeFx, imgThumbnail, id, vertical=true }) => {
 
     const [video, setVideo] = useState(null);
     const [showControls, setShowControls] = useState(false);
@@ -168,7 +168,7 @@ const YT = ({ youtubeVideoId, refYoutubeFx, imgThumbnail, id }) => {
     }
 
     return (
-        <div ref={parentRef} id="player-container" className='player-container'>
+        <div ref={parentRef} id="player-container" className={vertical ? 'player-vertical' :'player-container'}>
             {mostrarMask &&
                 <div className="player-mask">
                     <div className="player-cerrar">

@@ -6,7 +6,8 @@ import {
     cambiarDescargando,
     establecerMostrarAbajo,
     establecerMostrarLineasA,
-    establecerMostrarFlechasCanales
+    establecerMostrarFlechasCanales,
+    pararAudios
 } from '../../../Redux/states/managerSlice';
 import videoGuaviareM from '../../../assets/guaviare/home/guaviare-m.mp4';
 import guaviareGrafica from '../../../assets/guaviare/home/pictograma.png';
@@ -24,6 +25,7 @@ const Intro = () => {
     useEffect(() => {
         dispatch(establecerMostrarLineasA(false));
         dispatch(establecerMostrarFlechasCanales(false));
+        dispatch(pararAudios());
 
         const timer = setTimeout(() => {
             dispatch(cambiarDescargando(false));

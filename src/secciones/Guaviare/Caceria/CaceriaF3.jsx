@@ -31,15 +31,15 @@ const CaceriaF3 = () => {
                         <div className='caceria-f3-audio-contenedor'>
                             <Audio
                                 id='arte-guaviare'
-                                titulo='“En ese tiempo se trabajaba con las pieles del tigrillo y el cachirre”'
-                                autor='- Carlos Mancera'
+                                titulo='La tecnología del jaguar'
+                                autor=''
                                 popup={true}
                             />
                         </div>
                         <p className='caceria-f3-p'>
                             Cae la noche en Raudal del Guayabero, misteriosa, imponente, y con ella, sus peligros.
                             No se vale tener miedo, el jaguar sabe rastrearlo con su tecnología infalible, posando su pata sobre las huellas del caminante. Seguir el paso con valentía es la única defensa.
-                            Ciertamente, después de la noche vendrá el día y con él la luz del sol que todo ilumina.”
+                            Ciertamente, después de la noche vendrá el día y con él la luz del sol que todo ilumina.
                         </p>
                     </div>
                 </div>

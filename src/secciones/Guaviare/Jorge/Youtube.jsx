@@ -1,4 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { pararAudios } from '../../../Redux/states/managerSlice';
 import YT from '../../../components/YT';
 import useDelta from '../../../hooks/useDelta';
 import playImg from '../../../assets/generales/play_video.png'
@@ -7,6 +9,7 @@ import jorgeThumbnail from '../../../assets/guaviare/jorge/fondo-video.jpg';
 import './Youtube.css'
 
 const Youtube = () => {
+  const dispatch = useDispatch();
 
   const [jorgeYoutubeRef, setJorgeYoutubeRef] = useState(null);
   const [mostrarPlay, setMostrarPlay] = useState(false);
@@ -15,6 +18,7 @@ const Youtube = () => {
 
   const refYoutubeJorge = (video) => {
     setJorgeYoutubeRef(video);
+    dispatch(pararAudios());
     setTimeout(()=>{
       setMostrarPlay(true);
     }, 1000);    

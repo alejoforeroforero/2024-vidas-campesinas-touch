@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { establecerMostrarAbajo } from '../../Redux/states/managerSlice';
 import Caceria from './Caceria/Caceria'
 import Guayabero from './Guayabero/Guayabero'
 import './GuaviareB.css'
@@ -20,6 +21,8 @@ const lineasB = [
 const GuaviareB = () => {
   const canalBOn = useSelector(state => state.managerReducer.canalBOn);
 
+  const dispatch = useDispatch();
+
   const [lineaS, setLineaS] = useState('linea-caceria')
   const divRef = useRef(null);
   const guayaberoRef = useRef(null);
@@ -32,6 +35,7 @@ const GuaviareB = () => {
         const windowHeight = window.innerHeight;
 
         if (top < windowHeight / 2 && bottom >= 0) {
+          dispatch(establecerMostrarAbajo(false));
           setLineaS('linea-guayabero')
         } else {
           setLineaS('linea-caceria')

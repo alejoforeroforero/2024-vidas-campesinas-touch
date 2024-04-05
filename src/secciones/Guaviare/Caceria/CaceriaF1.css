@@ -22,10 +22,11 @@
     width: 100%;
 
     img {
-      width: 50vw;
+      width: 60%;
       transform: rotate(80deg);
+      margin-left: -35px;
       margin-top: 8vh;
-      max-width: 200px;
+      max-width: 180px;
     }
   }
 
@@ -36,21 +37,22 @@
     justify-content: left;
     align-items: left;
     flex-direction: column;
+    padding: 0 5%;
 
     h2 {
       text-align: left;
-      width: 70%;
-      margin: auto;
+      width: 100%;
       color: #00a397;
-      font-size: 2.2rem;
+      font-size: 2rem;
+      font-weight: 100;
+      margin-bottom: 16px; 
     }
 
     hr {
       background-color: #00a397;
       height: 6px;
-      width: 40%;
+      width: 50%;
       border: none;
-      margin-left: 15vw;
     }
 
     @media screen and (orientation: landscape) {
@@ -81,15 +83,15 @@
 
   .danta {
     width: 40vw;
-    max-width: 300px;
+    max-width: 200px;
   }
 
   .hoja-b {
     position: absolute;
-    width: 40vw;
+    width: 40%;
     top: 80px;
-    right: -10px;
-    max-width: 200px;
+    right: -14px;
+    max-width: 140px;
   }
 }
 

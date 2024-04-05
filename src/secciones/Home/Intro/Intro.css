@@ -8,10 +8,59 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 
     p{
         text-align: center;
+    }
+}
+.home-intro-top{
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        width: 70%;
+        max-width: 250px;
+    }
+}
+
+.home-intro-textos{
+    height: 38vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    img{
+        position: absolute;
+    }
+
+    img:nth-child(1){
+        right: -35px;
+        top:-120px;
+        width: 90px;
+    }
+
+    img:nth-child(2){
+        left: 0;
+        width: 70px;
+        bottom: 0;
+    }
+
+    p{
+        width: 80%;
+        font-size: 1rem;
+    }
+}
+
+
+
+.home-intro-bottom{
+    height: 20vh;
+    text-align: center;
+
+    img{
+        width: 200px;
     }
 }

@@ -33,7 +33,7 @@
   text-align: center;
   width: 100%;
   opacity: 0;
-  animation: aparecer 2s ease-in forwards;
+  animation: aparecer 3s ease-in forwards;
 
   img{
     width:50vw;
@@ -56,7 +56,7 @@
   display: flex;
   justify-content: center;
   opacity: 0;
-  animation: aparecer 3s ease-in-out forwards;
+  animation: aparecer 3s ease-in-out 1s forwards;
 }
 
 .guayabero-f3-audio-contenedor2 {
@@ -69,5 +69,5 @@
   display: flex;
   justify-content: center;
   opacity: 0;
-  animation: aparecer 3s ease-in-out 1s forwards;
+  animation: aparecer 1s ease-in-out 2s forwards;
 }

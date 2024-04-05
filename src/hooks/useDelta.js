@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { cambiarSeccion, sumar, pararAudios } from "../Redux/states/managerSlice";
+import {
+  cambiarSeccion,
+  sumar,
+  pararAudios,
+} from "../Redux/states/managerSlice";
 
 export default function useDelta(prevSection, nextSection, elementRef) {
   const dispatch = useDispatch();
@@ -9,32 +13,30 @@ export default function useDelta(prevSection, nextSection, elementRef) {
   useEffect(() => {
     let isScrolling;
 
-    
     function handleScroll(event) {
       const direction = event.deltaY > 0 ? "down" : "up";
 
-      if(direction == 'down' && nextSection == null){
-        console.log( 'no continuar')
-      }else if(direction == 'up' && prevSection == null){
-        console.log( 'no continuar')
-      }else{
-        if(elementRef){
-          elementRef.current.style.animation = 'cambiarEscena 2s';
+      if (direction == "down" && nextSection == null) {
+        console.log("no continuar");
+      } else if (direction == "up" && prevSection == null) {
+        console.log("no continuar");
+      } else {
+        if (elementRef) {
+          elementRef.current.style.animation = "cambiarEscena 2s";
         }
-  
+
         clearInterval(isScrolling);
-  
+
         isScrolling = setTimeout(function () {
           dispatch(sumar(0));
           dispatch(pararAudios());
           if (direction == "up") {
-              dispatch(cambiarSeccion(prevSection));
-          } else {  
+            dispatch(cambiarSeccion(prevSection));
+          } else {
             dispatch(cambiarSeccion(nextSection));
-          }        
+          }
         }, 100);
       }
-
     }
     elementRef.current.addEventListener("wheel", handleScroll);
 
@@ -53,10 +55,19 @@ export default function useDelta(prevSection, nextSection, elementRef) {
 
     if (deltaY > 0) {
       dispatch(sumar(0));
-      dispatch(cambiarSeccion(nextSection));
+      if(nextSection == null){
+        console.log( 'no continuar')
+      }else{
+        dispatch(cambiarSeccion(nextSection));
+      }
+      
     } else if (deltaY < 0) {
       dispatch(sumar(0));
-      dispatch(cambiarSeccion(prevSection));
+      if(prevSection == null){
+        console.log( 'no continuar')
+      }else{
+        dispatch(cambiarSeccion(prevSection));
+      }
     } else {
       console.log("No vertical swipe");
     }

@@ -1,11 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import useDelta from '../../../hooks/useDelta';
+import audioJorge1 from '../../../assets/guaviare/jorge/jorge1.mp3';
+
 import {
   cambiarDescargando,
   establecerMostrarLineasA,
   establecerPersonaje,
-  establecerMostrarFlechasCanales
+  establecerMostrarFlechasCanales,
+  pararAudios
 } from '../../../Redux/states/managerSlice';
 import InfoPopup from '../../../components/InfoPopup';
 
@@ -18,6 +21,7 @@ const Bio = () => {
 
   const dispatch = useDispatch();
   const elementRef = useRef();
+  const audioRef = useRef(null);
 
   const [showingPopup, setShowingPopup] = useState(false);
 
@@ -25,8 +29,11 @@ const Bio = () => {
     dispatch(establecerMostrarLineasA(true));
     dispatch(establecerPersonaje('linea-jorge'));
     dispatch(establecerMostrarFlechasCanales(true));
+    dispatch(pararAudios());
     const timer = setTimeout(() => {
       dispatch(cambiarDescargando(false));
+      audioRef.current.play();
+
     }, 2000)
 
     return () => clearTimeout(timer)
@@ -40,6 +47,7 @@ const Bio = () => {
 
   return (
     <div ref={elementRef} className='seccion jorge-bio' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
+      <audio ref={audioRef} src={audioJorge1}></audio>
       <div className='mask-general'>
         <div className="contenido-general">
           <h2 className='jorge-titulo-h1'><pre>{Jorge.titulo}</pre></h2>

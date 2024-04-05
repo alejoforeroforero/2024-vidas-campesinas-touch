@@ -1,4 +1,6 @@
 import { useEffect, useRef } from 'react';
+import { useDispatch } from 'react-redux';
+import { pararAudios } from '../../../Redux/states/managerSlice';
 import useDelta from '../../../hooks/useDelta';
 import Audio from '../../../components/Audio';
 
@@ -7,15 +9,20 @@ import relatosVideo from '../../../assets/guaviare/jorge/loop-jorge.mp4';
 import './Relatos.css';
 
 const Relatos = () => {
-
+  const dispatch = useDispatch();
   const videoRef = useRef();
   const elementRef = useRef();
 
   const { handleTouchStart, handleTouchEnd } = useDelta('jorge-youtube', 'jorge-galeria', elementRef);
 
   useEffect(()=>{
+    dispatch(pararAudios());
     videoRef.current.play();
   }, [])
+
+  const handleOnClick = ()=>{
+    videoRef.current.pause();
+  }
 
   const pintarVideo = () => {
     return (
@@ -36,7 +43,7 @@ const Relatos = () => {
       {pintarVideo()}
       <div className='mask-general'>
         <div className="contenido-general">
-          <div className='jorge-relatos-audio'>
+          <div onClick={handleOnClick} className='jorge-relatos-audio'>
             <Audio id='jorge2' titulo='"Cuando llegué al Raudal"' />
             <Audio id='jorge3' titulo='"Somos nuestras propias ambulancias"' />
           </div>

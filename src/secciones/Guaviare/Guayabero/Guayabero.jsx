@@ -10,42 +10,46 @@ import flechaAtras from '../../../assets/generales/flecha-atras.png';
 import './Guayabero.css'
 
 const Guayabero = () => {
-  const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
-  const secciones = ['intro', 'video', 'audio1', 'audio2']
+    const secciones = ['intro', 'video', 'audio1', 'audio2']
 
-  const [currentImage, setCurrentImage] = useState(0);
+    const [currentImage, setCurrentImage] = useState(0);
 
-  const prevImage = () => {
-      dispatch(pararAudios())
-      setCurrentImage((currentImage - 1 + secciones.length) % secciones.length);
-  };
+    const prevImage = () => {
+        dispatch(pararAudios())
+        setCurrentImage((currentImage - 1 + secciones.length) % secciones.length);
+    };
 
-  const nextImage = () => {
-      dispatch(pararAudios())
-      setCurrentImage((currentImage + 1) % secciones.length);
-  };
+    const nextImage = () => {
+        dispatch(pararAudios())
+        setCurrentImage((currentImage + 1) % secciones.length);
+    };
 
-  return (
-    <div className='guaviare-caceria'>
-        <div className="guaviare-caceria-contenido">
-            {currentImage == 0 && <GuayaberoF1 />}
-            {currentImage == 1 && <GuayaberoF2 />}
-            {currentImage == 2 && <GuayaberoF3 />}  
-            {currentImage == 3 && <GuayaberoF4 />}
+    return (
+        <div className='guaviare-caceria'>
+            <div className="guaviare-caceria-contenido">
+                {currentImage == 0 && <GuayaberoF1 />}
+                {currentImage == 1 && <GuayaberoF2 />}
+                {currentImage == 2 && <GuayaberoF3 />}
+                {currentImage == 3 && <GuayaberoF4 />}
+            </div>
+            <div className='botones-flechas-b'>
+                <div>
+                    {currentImage != 0 &&
+                        <button className='flecha-atras' onClick={prevImage}>
+                            <img src={flechaAtras} alt='flecha'></img>
+                        </button>
+                    }
+                    {currentImage != secciones.length - 1 &&
+                        <button className={currentImage == 0 ? 'flecha-adelante-inicio' : 'flecha-adelante'} onClick={nextImage}>
+                            <img src={flechaAdelante} alt='flecha'></img>
+                        </button>
+                    }
+                </div>
+            </div>
         </div>
-        {currentImage != 0 &&
-            <button className='flecha-atras' onClick={prevImage}>
-                <img src={flechaAtras} alt='flecha'></img>
-            </button>
-        }
-        {currentImage != secciones.length - 1 &&
-            <button className={currentImage == 0 ? 'flecha-adelante-inicio' : 'flecha-adelante'} onClick={nextImage}>
-                <img src={flechaAdelante} alt='flecha'></img>
-            </button>
-        }
-    </div>
-)
+    )
 }
 
 export default Guayabero
