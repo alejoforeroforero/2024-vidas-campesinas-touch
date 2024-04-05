@@ -1,25 +1,25 @@
-.canal-b{
-    position: fixed;
-    z-index: 10;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: 1s;
+.canal-b {
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 1s;
 }
 
-.canal-b-on{
-    left:0;
+.canal-b-on {
+  left: 0;
 }
 
-.canal-b-off{
-    left: 100vw;
+.canal-b-off {
+  left: 100vw;
 }
 
 .lineas-b {
   position: fixed;
   height: 100%;
-  right:0px;
-  top:0px;
+  right: 0px;
+  top: 0px;
   width: 10vw;
   z-index: 190;
   display: flex;
@@ -30,67 +30,81 @@
   opacity: 1;
 }
 
-.flecha-atras {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
-    left: 15vw;
-    bottom: 15vh;
-    text-align: center;
-    background-color: transparent;
-    border: 0;
-    z-index: 320;
-  
-    img {
-      height: 40px;
-      cursor: pointer;
-    }
-  }
-  
-  .flecha-adelante {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
-    right: 15vw;
-    bottom: 15vh;
-    text-align: center;
-    background-color: transparent;
-    border: 0;
-    z-index: 320;
-  
-    img {
-      height: 40px;
-      cursor: pointer;
-    }
-  }
-  
-  .flecha-adelante-inicio {
-    position: absolute;
-    width: 100vw;
-    height: 40px;
-    overflow: hidden;
-    left: 0;
-    bottom: 15vh;
-    text-align: center;
-    background-color: transparent;
-    border: 0;
-    z-index: 320;
-  
-    img {
-      height: 40px;
-      cursor: pointer;
-    }
-  }
-  
-  .seccion-b-abajo {
-    position: absolute;
-    bottom: 10vw;
+.botones-flechas-b {
+  position: absolute;
+  width: 100vw;
+  height: 30vh;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+
+  div:nth-child(1){
+    position: relative;
     width: 100%;
-    text-align: center;
-    img{
-      width:50px;
-    }
+    max-width: 600px;
   }
-  
+}
+
+.flecha-atras {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  left: 10%;
+  bottom: 15vh;
+  text-align: center;
+  background-color: transparent;
+  border: 0;
+  z-index: 320;
+
+  img {
+    height: 40px;
+    cursor: pointer;
+  }
+}
+
+.flecha-adelante {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  right: 10%;
+  bottom: 15vh;
+  text-align: center;
+  background-color: transparent;
+  border: 0;
+  z-index: 320;
+
+  img {
+    height: 40px;
+    cursor: pointer;
+  }
+}
+
+.flecha-adelante-inicio {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  left: 0;
+  bottom: 15vh;
+  text-align: center;
+  background-color: transparent;
+  border: 0;
+  z-index: 320;
+
+  img {
+    height: 40px;
+    cursor: pointer;
+  }
+}
+
+.seccion-b-abajo {
+  position: absolute;
+  bottom: 10vw;
+  width: 100%;
+  text-align: center;
+  img {
+    width: 50px;
+  }
+}

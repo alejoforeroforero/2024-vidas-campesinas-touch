@@ -30,9 +30,11 @@ const CaceriaF2 = () => {
                         src={videoSrc}
                     />
                 </div>
+            </div>
 
-                <div className='mask-general'>
-                    <div className="contenido-general">
+            <div className='mask-general'>
+                <div className="contenido-general">
+                    <div className='caceria-f2-interior'>
                         <div className='caceria-f2-cocodrilo'>
                             <img src={cocodriloImg} alt="cocodrilo" />
                         </div>
@@ -46,6 +48,7 @@ const CaceriaF2 = () => {
                     </div>
                 </div>
             </div>
+
         </>
     )
 }

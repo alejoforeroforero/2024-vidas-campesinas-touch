@@ -5,13 +5,13 @@
   position: absolute;
   height: 100vh;
   width: 100vw;
-  animation: fadeIn 4s;
+  animation: fadeIn 4s forwards;
 
-  .caceria-f2-video{
+  .caceria-f2-video {
     position: absolute;
     z-index: 5;
     left: 0px;
-    top:0px;
+    top: 0px;
     width: 100vw;
     height: 100vh;
 
@@ -22,30 +22,34 @@
       opacity: 1;
     }
   }
+}
 
-  .caceria-f2-cocodrilo{
-    position: absolute;
-    left: 0px;
-    top: 33vh;
-    cursor: pointer;
-    z-index: 300;
-    text-align: center;
-    width: 100%;
+.caceria-f2-interior {
+  position: relative;
+}
 
-    img{
-      width:50vw;
-      max-width:250px;
-    }
+.caceria-f2-cocodrilo {
+  position: absolute;
+  left: 0px;
+  top: 25vh;
+  cursor: pointer;
+  z-index: 300;
+  text-align: center;
+  width: 100%;
+
+  img {
+    width: 60%;
+    max-width: 250px;
   }
+}
 
-  .caceria-audio-contenedor {
-    width: 100%;
-    position: absolute;
-    left: 0px;
-    top: 50vh;
-    cursor: pointer;
-    z-index: 300;
-    display: flex;
-    justify-content: center;
-  }
+.caceria-audio-contenedor {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 50vh;
+  cursor: pointer;
+  z-index: 300;
+  display: flex;
+  justify-content: center;
 }

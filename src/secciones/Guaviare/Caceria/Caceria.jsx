@@ -32,18 +32,22 @@ const Caceria = () => {
             <div className="guaviare-caceria-contenido">
                 {currentImage == 0 && <CaceriaF1 />}
                 {currentImage == 1 && <CaceriaF2 />}
-                {currentImage == 2 && <CaceriaF3 />} 
+                {currentImage == 2 && <CaceriaF3 />}
             </div>
-            {currentImage != 0 &&
-                <button className='flecha-atras' onClick={prevImage}>
-                    <img src={flechaAtras} alt='flecha'></img>
-                </button>
-            }
-            {currentImage != secciones.length - 1 &&
-                <button className={currentImage == 0 ? 'flecha-adelante-inicio' : 'flecha-adelante'} onClick={nextImage}>
-                    <img src={flechaAdelante} alt='flecha'></img>
-                </button>
-            }
+            <div className='botones-flechas-b'>
+                <div>
+                    {currentImage != 0 &&
+                        <button className='flecha-atras' onClick={prevImage}>
+                            <img src={flechaAtras} alt='flecha'></img>
+                        </button>
+                    }
+                    {currentImage != secciones.length - 1 &&
+                        <button className={currentImage == 0 ? 'flecha-adelante-inicio' : 'flecha-adelante'} onClick={nextImage}>
+                            <img src={flechaAdelante} alt='flecha'></img>
+                        </button>
+                    }
+                </div>
+            </div>
         </div>
     )
 }
