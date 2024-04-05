@@ -26,6 +26,8 @@
 
 .caceria-f2-interior {
   position: relative;
+  opacity: 0;
+  animation: aparecer 4s ease-in-out 2s forwards;
 }
 
 .caceria-f2-cocodrilo {

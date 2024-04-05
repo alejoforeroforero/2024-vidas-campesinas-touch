@@ -16,7 +16,7 @@ const GuayaberoF1 = () => {
                         <img src={ramaImg} alt="Rama" />
                     </div>
                     <div className='guayabero-f1-titulo'>
-                        <h1>El río Guayabero</h1>
+                        <h2>El río Guayabero</h2>
                         <hr />
                     </div>
                     <div className='guayabero-f1-bottom'>

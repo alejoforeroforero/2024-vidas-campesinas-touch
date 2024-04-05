@@ -18,6 +18,8 @@
 
 .caceria-f3-interior{
   position: relative;
+  opacity: 0;
+  animation: aparecer 3s ease-in-out forwards;
 }
 
 .caceria-f3-ilustraciones {
@@ -66,6 +68,8 @@
   top: 54vh;
   width: 80%;
   margin: auto;
+  opacity: 0;
+  animation: aparecer 4s ease-out 2s forwards;
 }
 
 

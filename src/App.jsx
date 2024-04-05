@@ -1,7 +1,9 @@
-import React, { useState, Suspense } from 'react';
+import React, { useState, Suspense, useRef } from 'react';
 import { NavLink, Route, Routes } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { pararAudios, establecerMostrarAbajo, establecerCanalBOn } from './Redux/states/managerSlice';
+
+import Portada from './secciones/Portada/Portada';
 import Home from './secciones/Home/Home';
 import Guaviare from './secciones/Guaviare/Guaviare';
 import Caqueta from './secciones/Caqueta/Caqueta';
@@ -26,7 +28,9 @@ function App() {
   const mostrarAbajo = useSelector(state => state.managerReducer.mostrarAbajo);
   const mostrarFlechasCanales = useSelector(state => state.managerReducer.mostrarFlechasCanales);
   const canalBOn = useSelector(state => state.managerReducer.canalBOn);
+  const [yaEmpezo, setYaEmpezo] = useState(false);
   const [showingMenu, setShowingMenu] = useState(false);
+  const PortadaRef = useRef(null);
 
   const dispatch = useDispatch();
 
@@ -42,18 +46,33 @@ function App() {
     dispatch(establecerCanalBOn(false))
   }
 
+  const handleEmpezar = () => {
+
+    PortadaRef.current.style.animation = 'desaparecer 3s';
+
+    setTimeout(()=>{
+      setYaEmpezo(true);
+    }, 3000)
+    
+  }
+
   return (
     <>
+      {!yaEmpezo &&
+        <section ref={PortadaRef} className='portada-bg'>
+          <Portada handleEmpezar={handleEmpezar} />
+        </section>
+      }
       <div className='menu-hamburguesa'>
         <img onClick={() => { setShowingMenu(!showingMenu) }} src={menu} alt="menu" />
       </div>
       {showingMenu &&
         <nav className='menu'>
           <ul>
-            <li><NavLink onClick={() => { setShowingMenu(false) }}  to='/'>Home</NavLink></li>
-            <li><NavLink onClick={() => { setShowingMenu(false) }}  to='/Guaviare'>Guaviare</NavLink></li>
-            <li><NavLink onClick={() => { setShowingMenu(false) }}  to='/Caqueta/'>Caqueta</NavLink></li>
-            <li><NavLink onClick={() => { setShowingMenu(false) }}  to='/Cauca'>Cauca</NavLink></li>
+            <li><NavLink onClick={() => { setShowingMenu(false) }} to='/'>Home</NavLink></li>
+            <li><NavLink onClick={() => { setShowingMenu(false) }} to='/Guaviare'>Guaviare</NavLink></li>
+            <li><NavLink onClick={() => { setShowingMenu(false) }} to='/Caqueta/'>Caqueta</NavLink></li>
+            <li><NavLink onClick={() => { setShowingMenu(false) }} to='/Cauca'>Cauca</NavLink></li>
           </ul>
         </nav>
       }

@@ -1,6 +1,8 @@
 .guayabero-f1 {
   width: 100%;
   height: 100%;
+  opacity:0;
+  animation: aparecer 1s ease-in forwards;
 
 
   .guayabero-f1-fondo {
@@ -41,7 +43,7 @@
     align-items: left;
     flex-direction: column;
 
-    h1 {
+    h2 {
       width: 70vw;
       margin: auto;
       color: #ef8538;
@@ -57,7 +59,7 @@
     }
 
     @media screen and (orientation: landscape) {
-      h1 {
+      h2 {
         text-align: center;
         width: 70%;
       }

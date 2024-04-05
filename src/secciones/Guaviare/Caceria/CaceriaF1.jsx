@@ -22,7 +22,7 @@ const CaceriaF1 = () => {
                         <img src={hojaTop} alt="" />
                     </div>
                     <div className='caceria-f1-titulo'>
-                        <h1>En los tiempos de la cacería</h1>
+                        <h2>En los tiempos de la cacería</h2>
                         <hr />
                     </div>
                     <div className='caceria-f1-bottom'>

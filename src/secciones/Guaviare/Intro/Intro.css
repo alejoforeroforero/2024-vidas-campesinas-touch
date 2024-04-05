@@ -6,6 +6,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  opacity:0;
+  animation: aparecer 1s ease-in forwards;
 }
 
 .guaviare-video {

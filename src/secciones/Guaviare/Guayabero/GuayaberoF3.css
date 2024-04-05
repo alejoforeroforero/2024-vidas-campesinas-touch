@@ -32,6 +32,8 @@
   z-index: 300;
   text-align: center;
   width: 100%;
+  opacity: 0;
+  animation: aparecer 2s ease-in forwards;
 
   img{
     width:50vw;
@@ -42,7 +44,6 @@
 .guayabero-f3-interior{
   position: relative;
   width: 100%;
-  border:1px solid blue;
 }
 
 .guayabero-f3-audio-contenedor1 {
@@ -54,6 +55,8 @@
   z-index: 300;
   display: flex;
   justify-content: center;
+  opacity: 0;
+  animation: aparecer 3s ease-in-out forwards;
 }
 
 .guayabero-f3-audio-contenedor2 {
@@ -65,4 +68,6 @@
   z-index: 300;
   display: flex;
   justify-content: center;
+  opacity: 0;
+  animation: aparecer 3s ease-in-out 1s forwards;
 }
