@@ -58,8 +58,8 @@ const Guaviare = () => {
   }
 
   useEffect(()=>{
-    //dispatch(cambiarSeccion('guaviare-intro'));
-    dispatch(cambiarSeccion('jorge-youtube'));
+    dispatch(cambiarSeccion('guaviare-intro'));
+    //dispatch(cambiarSeccion('jorge-youtube'));
   }, []);
 
   return (

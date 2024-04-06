@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from "react";
+import { useDispatch } from 'react-redux';
+import { establecerMostrarFlechasCanales } from "../Redux/states/managerSlice";
 import YouTube from "react-youtube";
 import playImg from '../assets/generales/play_video.png';
 import salidaImg from '../assets/generales/salida.png';
@@ -8,7 +10,8 @@ import { FaMobileAlt } from 'react-icons/fa';
 
 import './YT.css';
 
-const YT = ({ youtubeVideoId, refYoutubeFx, imgThumbnail, id, vertical=true }) => {
+const YT = ({ youtubeVideoId, refYoutubeFx, imgThumbnail, id, vertical = false }) => {
+    const dispatch = useDispatch();
 
     const [video, setVideo] = useState(null);
     const [showControls, setShowControls] = useState(false);
@@ -73,8 +76,10 @@ const YT = ({ youtubeVideoId, refYoutubeFx, imgThumbnail, id, vertical=true }) =
     }
 
     const handleOnPlay = (e) => {
+
         setShowControls(false);
         setIsPlaying(true);
+        dispatch(establecerMostrarFlechasCanales(false));
         imgThumbnailRef.current.style.visibility = 'hidden';
 
         setTimeout(() => {
@@ -123,6 +128,7 @@ const YT = ({ youtubeVideoId, refYoutubeFx, imgThumbnail, id, vertical=true }) =
             setIsPlaying(false);
             setShowControls(false);
             setMostrarMask(true);
+            dispatch(establecerMostrarFlechasCanales(true));
             video.pauseVideo();
             setBooleano(!booleano);
             imgThumbnailRef.current.style.visibility = 'hidden';
@@ -168,7 +174,7 @@ const YT = ({ youtubeVideoId, refYoutubeFx, imgThumbnail, id, vertical=true }) =
     }
 
     return (
-        <div ref={parentRef} id="player-container" className={vertical ? 'player-vertical' :'player-container'}>
+        <div ref={parentRef} id="player-container" className={vertical ? 'player-vertical' : 'player-container'}>
             {mostrarMask &&
                 <div className="player-mask">
                     <div className="player-cerrar">
@@ -177,10 +183,12 @@ const YT = ({ youtubeVideoId, refYoutubeFx, imgThumbnail, id, vertical=true }) =
                     <div className="yt-loading">
                         <LoadingIcons.ThreeDots stroke="#888" fill="666" />
                     </div>
-                    <div className="rotate-device-icon">
-                        <FaMobileAlt className="rotate-icon" />
-                        <span className="rotate-span" >Gira tu dispositivo</span>
-                    </div>
+                    {!vertical &&
+                        <div className="rotate-device-icon">
+                            <FaMobileAlt className="rotate-icon" />
+                            <span className="rotate-span" >Gira tu dispositivo</span>
+                        </div>
+                    }
                 </div>
             }
 

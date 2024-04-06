@@ -74,10 +74,12 @@
 }
 
 .youtube-video{
+  left:0;
+  top:0;
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 200;
+  z-index: 800;
   visibility: hidden;
 }
 

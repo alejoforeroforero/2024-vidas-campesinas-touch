@@ -1,0 +1,26 @@
+.youtube-portal{
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 1000;
+
+    /* .close-portal{
+        position: absolute;
+        right:0px;
+        top:0px;
+        z-index: 1200;
+        background-color:#fff;
+        color:#999;
+        border-radius: 50%;
+        width:30px;
+        height: 30px;
+        border: none;
+        cursor: pointer;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    } */
+}

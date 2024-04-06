@@ -29,7 +29,7 @@ const Youtube = () => {
       <div id='youtube-jorge' className="youtube-video">
         <YT
           refYoutubeFx={refYoutubeJorge}
-          youtubeVideoId="-9AvYOpalrk"
+          youtubeVideoId="-9AvYOpalrk" //MN_RlCT-WFQ  -9AvYOpalrk
           imgThumbnail={jorgeThumbnail}
           id='youtube-jorge'
         />

@@ -28,7 +28,7 @@ function App() {
   const mostrarAbajo = useSelector(state => state.managerReducer.mostrarAbajo);
   const mostrarFlechasCanales = useSelector(state => state.managerReducer.mostrarFlechasCanales);
   const canalBOn = useSelector(state => state.managerReducer.canalBOn);
-  const [yaEmpezo, setYaEmpezo] = useState(false);
+  const [yaEmpezo, setYaEmpezo] = useState(true);
   const [showingMenu, setShowingMenu] = useState(false);
   const PortadaRef = useRef(null);
 
@@ -76,7 +76,7 @@ function App() {
           </ul>
         </nav>
       }
-      {canalBOn &&
+      {canalBOn && mostrarFlechasCanales &&
         <div className='ejeA'>
           <img onClick={hideCanalB} src={ejeAImg} alt="ejeA" />
         </div>
