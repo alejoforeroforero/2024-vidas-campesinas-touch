@@ -27,6 +27,7 @@ function App() {
   const departamento = useSelector(state => state.managerReducer.departamento);
   const mostrarAbajo = useSelector(state => state.managerReducer.mostrarAbajo);
   const mostrarFlechasCanales = useSelector(state => state.managerReducer.mostrarFlechasCanales);
+  const mostrarHamburguesa = useSelector(state => state.managerReducer.mostrarHamburguesa);
   const canalBOn = useSelector(state => state.managerReducer.canalBOn);
   const [yaEmpezo, setYaEmpezo] = useState(true);
   const [showingMenu, setShowingMenu] = useState(false);
@@ -50,10 +51,10 @@ function App() {
 
     PortadaRef.current.style.animation = 'desaparecer 3s';
 
-    setTimeout(()=>{
+    setTimeout(() => {
       setYaEmpezo(true);
     }, 3000)
-    
+
   }
 
   return (
@@ -63,9 +64,11 @@ function App() {
           <Portada handleEmpezar={handleEmpezar} />
         </section>
       }
-      <div className='menu-hamburguesa'>
-        <img onClick={() => { setShowingMenu(!showingMenu) }} src={menu} alt="menu" />
-      </div>
+      {mostrarHamburguesa &&
+        <div className='menu-hamburguesa'>
+          <img onClick={() => { setShowingMenu(!showingMenu) }} src={menu} alt="menu" />
+        </div>
+      }
       {showingMenu &&
         <nav className='menu'>
           <ul>
@@ -76,6 +79,7 @@ function App() {
           </ul>
         </nav>
       }
+
       {canalBOn && mostrarFlechasCanales &&
         <div className='ejeA'>
           <img onClick={hideCanalB} src={ejeAImg} alt="ejeA" />

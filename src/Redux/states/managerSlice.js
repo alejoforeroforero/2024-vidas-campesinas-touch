@@ -13,6 +13,7 @@ export const manager = createSlice({
     mostrarAbajo:true,
     mostrarLineasA:false,
     mostrarFlechasCanales:false,
+    mostrarHamburguesa:true,
     duracion:0
   },
   reducers: {
@@ -73,6 +74,9 @@ export const manager = createSlice({
     establecerMostrarFlechasCanales(state, action){
       state.mostrarFlechasCanales = action.payload;
     },
+    establecerMostrarHamburguesa(state, action){
+      state.mostrarHamburguesa = action.payload;
+    },
     establecerDuracion(state, action){
       state.duracion = action.payload;
     },
@@ -92,7 +96,8 @@ export const {
   establecerMostrarAbajo,
   establecerMostrarLineasA,
   establecerMostrarFlechasCanales,
-  establecerDuracion
+  establecerDuracion,
+  establecerMostrarHamburguesa
   
 } = manager.actions;
 export default manager.reducer;

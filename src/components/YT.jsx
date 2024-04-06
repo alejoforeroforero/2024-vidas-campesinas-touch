@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useDispatch } from 'react-redux';
-import { establecerMostrarFlechasCanales } from "../Redux/states/managerSlice";
+import { establecerMostrarFlechasCanales, establecerMostrarHamburguesa } from "../Redux/states/managerSlice";
 import YouTube from "react-youtube";
 import playImg from '../assets/generales/play_video.png';
 import salidaImg from '../assets/generales/salida.png';
@@ -76,10 +76,10 @@ const YT = ({ youtubeVideoId, refYoutubeFx, imgThumbnail, id, vertical = false }
     }
 
     const handleOnPlay = (e) => {
-
         setShowControls(false);
         setIsPlaying(true);
         dispatch(establecerMostrarFlechasCanales(false));
+        dispatch(establecerMostrarHamburguesa(false));
         imgThumbnailRef.current.style.visibility = 'hidden';
 
         setTimeout(() => {
@@ -129,6 +129,7 @@ const YT = ({ youtubeVideoId, refYoutubeFx, imgThumbnail, id, vertical = false }
             setShowControls(false);
             setMostrarMask(true);
             dispatch(establecerMostrarFlechasCanales(true));
+            dispatch(establecerMostrarHamburguesa(true));
             video.pauseVideo();
             setBooleano(!booleano);
             imgThumbnailRef.current.style.visibility = 'hidden';
