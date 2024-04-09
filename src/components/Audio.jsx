@@ -13,6 +13,11 @@ import audioArteGuaviare from '../assets/guaviare/caceria/audio-arte-sonoro-guav
 import audioGuayabero1 from '../assets/guaviare/guayabero/audio-guayabero1.mp3';
 import audioGuayabero2 from '../assets/guaviare/guayabero/audio-guayabero2.mp3';
 import audioToninas from '../assets/guaviare/guayabero/audio-toninas.mp3';
+import audioMarihuana from '../assets/guaviare/bonanzas/la-marihuana.mp3';
+import audioCocaDisney from '../assets/guaviare/bonanzas/la-coca-disney.mp3';
+import audioCocaIvan from '../assets/guaviare/bonanzas/la-coca-ivan.mp3';
+import audioLaMadera from '../assets/guaviare/bonanzas/la-madera.mp3';
+
 import './Audio.css'
 
 const Audio = ({ titulo, id, autor = '', popup = false }) => {
@@ -57,6 +62,14 @@ const Audio = ({ titulo, id, autor = '', popup = false }) => {
             return audioGuayabero2
         } else if (id == 'audio-toninas') {
             return audioToninas
+        }else if (id == 'audio-marihuana') {
+            return audioMarihuana
+        }else if (id == 'audio-coca-disney') {
+            return audioCocaDisney
+        }else if (id == 'audio-coca-ivan') {
+            return audioCocaIvan
+        }else if (id == 'audio-madera') {
+            return audioLaMadera
         }
     }
 

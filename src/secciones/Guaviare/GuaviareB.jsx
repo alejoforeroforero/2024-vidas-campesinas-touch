@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { establecerMostrarAbajo } from '../../Redux/states/managerSlice';
 import Caceria from './Caceria/Caceria'
 import Guayabero from './Guayabero/Guayabero'
+import Bonanzas from './Bonanzas/Bonanzas';
 import './GuaviareB.css'
 
 const lineasB = [
@@ -15,6 +16,11 @@ const lineasB = [
     id: 'linea-guayabero',
     titulo: 'Guayabero',
     navegacion: 'guaviare-guyabero-navegacion'
+  },
+  {
+    id: 'linea-bonanzas',
+    titulo: 'Bonanzas',
+    navegacion: 'guaviare-bonanzas-navegacion'
   }
 ]
 
@@ -25,22 +31,42 @@ const GuaviareB = () => {
 
   const [lineaS, setLineaS] = useState('linea-caceria')
   const divRef = useRef(null);
+  const caceriaRef = useRef(null);
   const guayaberoRef = useRef(null);
+  const bonanzasRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
 
       if (divRef.current) {
-        const { top, bottom } = guayaberoRef.current.getBoundingClientRect();
+
+        const top1 = caceriaRef.current.getBoundingClientRect().top;
+        const bottom1 = caceriaRef.current.getBoundingClientRect().bottom;
+
+        const top2 = guayaberoRef.current.getBoundingClientRect().top;
+        const bottom2 = guayaberoRef.current.getBoundingClientRect().bottom;
+      
+
+        const top3 = bonanzasRef.current.getBoundingClientRect().top;
+        const bottom3 = bonanzasRef.current.getBoundingClientRect().bottom;
+
         const windowHeight = window.innerHeight;
 
-        if (top < windowHeight / 2 && bottom >= 0) {
+        if (top1 < windowHeight / 2 && bottom1 >= 0) {
           dispatch(establecerMostrarAbajo(false));
-          setLineaS('linea-guayabero')
-        } else {
           setLineaS('linea-caceria')
         }
-      }
+        
+        if (top2 < windowHeight / 2 && bottom2 >= 0) {
+          dispatch(establecerMostrarAbajo(false));
+          setLineaS('linea-guayabero')
+        }
+
+        if(top3 < windowHeight / 2 && bottom3 >= 0){
+          dispatch(establecerMostrarAbajo(false));
+          setLineaS('linea-bonanzas')
+        }
+      }      
     };
 
     divRef.current.addEventListener('scroll', handleScroll);
@@ -59,12 +85,14 @@ const GuaviareB = () => {
           })}
         </div>
       }
-      <div>
+      <div ref={caceriaRef}>
         <Caceria />
       </div>
       <div ref={guayaberoRef}>
-        {/* <p>{isVisible ? 'Visible' : 'Not visible'}</p> */}
         <Guayabero />
+      </div>
+      <div ref={bonanzasRef}>
+        <Bonanzas />
       </div>
     </div>
   )

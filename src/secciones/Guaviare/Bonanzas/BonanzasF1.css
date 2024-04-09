@@ -1,0 +1,109 @@
+.bonanzas-f1 {
+    /* background: url("../../../assets/guaviare/caceria/fondo-caceria.jpg"); */
+    width: 100%;
+    height: 100%;
+    opacity:0;
+    animation: aparecer 1s ease-in forwards;
+  
+  
+    .bonanzas-f1-fondo {
+      background: url("../../../assets/guaviare/bonanzas/fondo-bonanzas.jpg");
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      animation: mymove 50s linear infinite alternate;
+    }
+  
+    .bonanzas-f1-top {
+      height: 30vh;
+      width: 100%;
+  
+      img {
+        width: 60%;
+        transform: rotate(80deg);
+        margin-left: -35px;
+        margin-top: 8vh;
+        max-width: 180px;
+      }
+    }
+  
+    .bonanzas-f1-titulo {
+      height: 20vh;
+      width: 100%;
+      display: flex;
+      justify-content: left;
+      align-items: left;
+      flex-direction: column;
+      padding: 0 5%;
+  
+      h2 {
+        text-align: left;
+        width: 100%;
+        color: #00a397;
+        font-size: 2rem;
+        font-weight: 100;
+        margin-bottom: 16px; 
+      }
+  
+      hr {
+        background-color: #00a397;
+        height: 6px;
+        width: 50%;
+        border: none;
+      }
+  
+      @media screen and (orientation: landscape) {
+        h2 {
+          text-align: center;
+          width: 70%;
+          margin: auto;
+          color: #00a397;
+          font-size: 2.5rem;
+        }
+  
+        hr {
+          background-color: #00a397;
+          height: 6px;
+          width: 60%;
+          border: none;
+          margin: -20px auto 0;
+        }
+      }
+    }
+  
+    .bonanzas-f1-bottom {
+      position: relative;
+      height: 50vh;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .danta {
+      width: 40vw;
+      max-width: 200px;
+    }
+  
+    .hoja-b {
+      position: absolute;
+      width: 40%;
+      top: 80px;
+      right: -14px;
+      max-width: 140px;
+    }
+  }
+  
+  @keyframes mymove {
+    0% {
+      transform: scale(1, 1) translate(0px,0px)
+    }
+    50% {
+      transform: scale(1.3, 1.3) translate(-50px,40px);
+    }
+    100% {
+      transform: scale(1.6, 1.6) translate(50px,-40px);
+    }
+  }
+  
