@@ -8,6 +8,7 @@ import salida from '../assets/generales/salida.png';
 import audioJorge1 from '../assets/guaviare/jorge/jorge1.mp3';
 import audioJorge2 from '../assets/guaviare/jorge/jorge2.mp3';
 import audioJorge3 from '../assets/guaviare/jorge/jorge3.mp3';
+import audioCarlos from '../assets/guaviare/carlos/carlos1.mp3'
 import audioCaceria from '../assets/guaviare/caceria/audio-caceria.mp3';
 import audioArteGuaviare from '../assets/guaviare/caceria/audio-arte-sonoro-guaviare.mp3';
 import audioGuayabero1 from '../assets/guaviare/guayabero/audio-guayabero1.mp3';
@@ -52,6 +53,8 @@ const Audio = ({ titulo, id, autor = '', popup = false }) => {
             return audioJorge2;
         } else if (id == 'jorge3') {
             return audioJorge3
+        } else if (id == 'carlos') {
+            return audioCarlos
         } else if (id == 'caceria') {
             return audioCaceria
         } else if (id == 'arte-guaviare') {
@@ -62,13 +65,13 @@ const Audio = ({ titulo, id, autor = '', popup = false }) => {
             return audioGuayabero2
         } else if (id == 'audio-toninas') {
             return audioToninas
-        }else if (id == 'audio-marihuana') {
+        } else if (id == 'audio-marihuana') {
             return audioMarihuana
-        }else if (id == 'audio-coca-disney') {
+        } else if (id == 'audio-coca-disney') {
             return audioCocaDisney
-        }else if (id == 'audio-coca-ivan') {
+        } else if (id == 'audio-coca-ivan') {
             return audioCocaIvan
-        }else if (id == 'audio-madera') {
+        } else if (id == 'audio-madera') {
             return audioLaMadera
         }
     }
@@ -229,7 +232,7 @@ const Audio = ({ titulo, id, autor = '', popup = false }) => {
             {autor != '' && <h4>{autor}</h4>}
             {popup && pintarMiniPlayer()}
             {!popup &&
-                <div className={audioS ? 'canvas-audio-container mostrar': 'canvas-audio-container esconder'}>
+                <div className={audioS ? 'canvas-audio-container mostrar' : 'canvas-audio-container esconder'}>
                     <canvas ref={canvasRef}></canvas>
                     <div><span>{contadorReg}</span></div>
                 </div>

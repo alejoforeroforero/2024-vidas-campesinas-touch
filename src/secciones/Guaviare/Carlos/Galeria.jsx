@@ -2,10 +2,11 @@ import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { establecerPersonaje, pararAudios } from '../../../Redux/states/managerSlice';
 import useDelta from '../../../hooks/useDelta';
-import img1 from '../../../assets/guaviare/jorge/foto1.jpg';
-import img2 from '../../../assets/guaviare/jorge/foto2.jpg';
-import img3 from '../../../assets/guaviare/jorge/foto3.jpg';
-import img4 from '../../../assets/guaviare/jorge/foto4.jpg';
+import img1 from '../../../assets/guaviare/carlos/foto1.jpg';
+import img2 from '../../../assets/guaviare/carlos/foto2.jpg';
+import img3 from '../../../assets/guaviare/carlos/foto3.jpg';
+import img4 from '../../../assets/guaviare/carlos/foto4.jpg';
+import img5 from '../../../assets/guaviare/carlos/foto5.jpg';
 import flechaAdelante from '../../../assets/generales/flecha-adelante.png';
 import flechaAtras from '../../../assets/generales/flecha-atras.png';
 
@@ -16,15 +17,15 @@ const Galeria = () => {
   const dispatch = useDispatch();
   const elementRef = useRef();
 
-  const { handleTouchStart, handleTouchEnd } = useDelta('jorge-relatos', 'carlos-bio', elementRef);
+  const { handleTouchStart, handleTouchEnd } = useDelta('carlos-relatos', 'carlos-bio', elementRef);
 
-  const images = [img1, img2, img3, img4];
+  const images = [img1, img2, img3, img4, img5];
 
   const [currentImage, setCurrentImage] = useState(0);
   const [booleanImg, setBooleanImg] = useState(false);
 
   useEffect(()=>{
-    dispatch(establecerPersonaje('linea-jorge'));
+    dispatch(establecerPersonaje('linea-carlos'));
   }, [])
 
   useEffect(() => {

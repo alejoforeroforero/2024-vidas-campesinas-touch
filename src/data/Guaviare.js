@@ -8,3 +8,8 @@ export const Jorge={
     titulo:'Jorge\nLuis Cano',
     bio:'Biografía de Luis'
 }
+
+export const Carlos={
+    titulo:'Carlos\nJulio Mancera',
+    bio:'Biografía de Carlos'
+}

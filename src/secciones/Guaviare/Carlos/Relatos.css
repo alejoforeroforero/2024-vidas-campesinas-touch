@@ -1,11 +1,10 @@
-.jorge-relatos{
+.carlos-relatos{
     background-color: black;
     animation: aparecer 6s;
 }
 
-.jorge-relatos-audio{
+.carlos-relatos-audio{
     width: 100% !important;
     position: relative;
-    margin-top: 50vh;
+    margin-top: 55vh;
 }
-

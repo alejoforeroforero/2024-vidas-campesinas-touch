@@ -9,6 +9,11 @@ import JorgeYoutube from './Jorge/Youtube';
 import JorgeRelatos from './Jorge/Relatos';
 import JorgeGaleria from './Jorge/Galeria';
 
+import CarlosBio from './Carlos/Bio';
+import CarlosYoutube from './Carlos/Youtube';
+import CarlosRelatos from './Carlos/Relatos';
+import CarlosGaleria from './Carlos/Galeria';
+
 import './Guaviare.css';
 
 const lineas = [
@@ -58,9 +63,11 @@ const Guaviare = () => {
   }
 
   useEffect(()=>{
-    //dispatch(cambiarSeccion('guaviare-intro'));
-    dispatch(cambiarSeccion('jorge-bio'));
+    dispatch(cambiarSeccion('guaviare-intro'));
+    //dispatch(cambiarSeccion('jorge-galeria'));
   }, []);
+
+  console.log(seccion);
 
   return (
     <div className='capitulo'>
@@ -81,6 +88,11 @@ const Guaviare = () => {
       {seccion == 'jorge-youtube' && <JorgeYoutube />}
       {seccion == 'jorge-relatos' && <JorgeRelatos />}
       {seccion == 'jorge-galeria' && <JorgeGaleria />}
+      {seccion == 'carlos-bio' && <CarlosBio />}
+      {seccion == 'carlos-youtube' && <CarlosYoutube />}
+      {seccion == 'carlos-relatos' && <CarlosRelatos />}
+      {seccion == 'carlos-galeria' && <CarlosGaleria />}
+      
     </div>
   )
 }
