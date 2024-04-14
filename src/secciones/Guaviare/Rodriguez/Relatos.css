@@ -1,0 +1,8 @@
+.rodriguez-relatos{
+    background-color: black;
+    animation: aparecer 6s;
+
+    h3{
+        margin-top: 65vh;
+    }
+}

@@ -47,7 +47,7 @@ const Bio = () => {
 
   return (
     <div ref={elementRef} className='seccion jorge-bio' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
-      <audio ref={audioRef} src={audioJorge1}></audio>
+      <audio ref={audioRef} src={audioJorge1} crossorigin="anonymous"></audio>
       <div className='mask-general'>
         <div className="contenido-general">
           <h2><pre>{Jorge.titulo}</pre></h2>

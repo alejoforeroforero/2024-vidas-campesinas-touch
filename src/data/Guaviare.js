@@ -18,3 +18,23 @@ export const Dayana={
     titulo:'Dayana\nNovoa',
     bio:'Biografía de Dayana'
 }
+
+export const William={
+    titulo:'William\nMora',
+    bio:'Biografía de Mora'
+}
+
+export const Marisol={
+    titulo:'Marisol\nMontero',
+    bio:'Biografía de Marisol'
+}
+
+export const Elias={
+    titulo:'Elías\nLozano',
+    bio:'Biografía de Elias'
+}
+
+export const Rodriguez={
+    titulo:'Familia\nRodríguez Díaz',
+    bio:'Biografía de Familia'
+}

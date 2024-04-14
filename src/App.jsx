@@ -29,7 +29,7 @@ function App() {
   const mostrarFlechasCanales = useSelector(state => state.managerReducer.mostrarFlechasCanales);
   const mostrarHamburguesa = useSelector(state => state.managerReducer.mostrarHamburguesa);
   const canalBOn = useSelector(state => state.managerReducer.canalBOn);
-  const [yaEmpezo, setYaEmpezo] = useState(false);
+  const [yaEmpezo, setYaEmpezo] = useState(true);
   const [showingMenu, setShowingMenu] = useState(false);
   const PortadaRef = useRef(null);
 

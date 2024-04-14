@@ -1,0 +1,47 @@
+.cierre-relatos{
+    background-color: black;
+    animation: aparecer 6s;
+
+    h3{
+        margin-top: 65vh;
+    }
+}
+
+.cierre-titulo{
+    margin-top: 50vh;
+    text-align: center;
+    opacity: 0;
+    animation: aparecer-desaparecer 8s ease-in 3s forwards;
+
+    h2{
+        font-size: 1.3rem;
+    }
+}
+
+.cierre-extra{
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 60vh;
+    width: 100vw;
+    margin-top: 20vh;
+    opacity:0;
+
+    animation: aparecer 8s ease-in 11s forwards;
+    
+
+    h2{
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    div{
+        text-align: center;
+    }
+
+    img{
+        width: 60%;
+        margin-top: 10vh;
+        cursor: pointer;
+    }
+}

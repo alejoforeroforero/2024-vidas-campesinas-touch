@@ -1,0 +1,10 @@
+.william-relatos{
+    background-color: black;
+    animation: aparecer 6s;
+}
+
+.william-relatos-audio{
+    width: 100% !important;
+    position: relative;
+    margin-top: 55vh;
+}

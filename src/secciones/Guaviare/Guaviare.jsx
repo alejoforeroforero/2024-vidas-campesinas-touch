@@ -19,8 +19,29 @@ import DayanaYoutube1 from './Dayana/Youtube';
 import DayanaYoutube2 from './Dayana/Youtube2';
 import DayanaGaleria from './Dayana/Galeria';
 
+import WilliamBio from './William/Bio';
+import WilliamYoutube from './William/Youtube';
+import WilliamRelatos from './William/Relatos';
+import WilliamGaleria from './William/Galeria';
+
+import MarisolBio from './Marisol/Bio';
+import MarisolYoutube from './Marisol/Youtube';
+import MarisolGaleria from './Marisol/Galeria';
+
+import EliasBio from './Elias/Bio';
+import EliasYoutube from './Elias/Youtube';
+import EliasRelatos from './Elias/Relatos';
+
+import RodriguezBio from './Rodriguez/Bio';
+import RodriguezYoutube from './Rodriguez/Youtube';
+import RodriguezRelatos from './Rodriguez/Relatos';
+import RodriguezYoutube2 from './Rodriguez/Youtube2';
+
+import CierreGaleria from './Cierre/Galeria';
+import CierreVideo from './Cierre/Relatos';
 
 import './Guaviare.css';
+
 
 const lineas = [
   {
@@ -53,6 +74,16 @@ const lineas = [
     titulo: 'Elías Lozano',
     navegacion: 'guaviare-elias-navegacion'
   },
+  {
+    id: 'linea-rodriguez',
+    titulo: 'Familia Rodriguez',
+    navegacion: 'guaviare-rodriguez-navegacion'
+  },
+  {
+    id: 'linea-cierre',
+    titulo: 'Cierre',
+    navegacion: 'guaviare-cierre-navegacion'
+  },
 ]
 
 
@@ -69,8 +100,8 @@ const Guaviare = () => {
   }
 
   useEffect(()=>{
-    dispatch(cambiarSeccion('guaviare-intro'));
-    //dispatch(cambiarSeccion('dayana-bio'));
+    //dispatch(cambiarSeccion('guaviare-intro'));
+    dispatch(cambiarSeccion('cierre-video'));
   }, []);
 
   console.log(seccion);
@@ -102,6 +133,23 @@ const Guaviare = () => {
       {seccion == 'dayana-youtube-1' && <DayanaYoutube1 />}
       {seccion == 'dayana-youtube-2' && <DayanaYoutube2 />}
       {seccion == 'dayana-galeria' && <DayanaGaleria />}
+      {seccion == 'william-bio' && <WilliamBio />}
+      {seccion == 'william-youtube' && <WilliamYoutube />}
+      {seccion == 'william-relatos' && <WilliamRelatos />}
+      {seccion == 'william-galeria' && <WilliamGaleria />}
+      {seccion == 'marisol-bio' && <MarisolBio />}
+      {seccion == 'marisol-youtube' && <MarisolYoutube />}
+      {seccion == 'marisol-galeria' && <MarisolGaleria />}
+      {seccion == 'elias-bio' && <EliasBio />}
+      {seccion == 'elias-youtube' && <EliasYoutube />}
+      {seccion == 'elias-relatos' && <EliasRelatos />}
+      {seccion == 'rodriguez-bio' && <RodriguezBio />}
+      {seccion == 'rodriguez-youtube' && <RodriguezYoutube />}
+      {seccion == 'rodriguez-relatos' && <RodriguezRelatos />}
+      {seccion == 'rodriguez-youtube-2' && <RodriguezYoutube2 />}
+      {seccion == 'cierre-galeria' && <CierreGaleria />}
+      {seccion == 'cierre-video' && <CierreVideo />}
+      
     </div>
   )
 }
