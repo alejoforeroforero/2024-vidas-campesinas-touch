@@ -4,7 +4,8 @@ import { pararAudios } from '../../../Redux/states/managerSlice';
 import useDelta from '../../../hooks/useDelta';
 import Audio from '../../../components/Audio';
 
-import relatosVideo from '../../../assets/guaviare/jorge/loop-jorge.mp4';
+//import relatosVideo from '../../../assets/guaviare/jorge/loop-jorge.mp4';
+const relatosVideo = 'https://res.cloudinary.com/dfwhzadxa/video/upload/v1713054262/vidas-campesinas/jorge/loop-jorge_omquls.mp4'
 
 import './Relatos.css';
 

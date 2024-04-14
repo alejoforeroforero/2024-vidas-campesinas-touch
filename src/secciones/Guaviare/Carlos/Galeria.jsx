@@ -17,7 +17,7 @@ const Galeria = () => {
   const dispatch = useDispatch();
   const elementRef = useRef();
 
-  const { handleTouchStart, handleTouchEnd } = useDelta('carlos-relatos', 'carlos-bio', elementRef);
+  const { handleTouchStart, handleTouchEnd } = useDelta('carlos-relatos', 'dayana-bio', elementRef);
 
   const images = [img1, img2, img3, img4, img5];
 

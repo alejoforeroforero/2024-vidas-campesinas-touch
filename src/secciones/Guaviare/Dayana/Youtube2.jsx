@@ -5,20 +5,19 @@ import YT from '../../../components/YT';
 import useDelta from '../../../hooks/useDelta';
 import playImg from '../../../assets/generales/play_video.png'
 
-//import jorgeThumbnail from '../../../assets/guaviare/jorge/fondo-video.jpg';
-const jorgeThumbnail = 'https://res.cloudinary.com/dfwhzadxa/image/upload/v1713054244/vidas-campesinas/jorge/fondo-video_gwhapf.jpg'
-import './Youtube.css'
+import thumbnail from '../../../assets/guaviare/carlos/fondo-video.jpg';
+import './Youtube2.css'
 
 const Youtube = () => {
   const dispatch = useDispatch();
 
-  const [jorgeYoutubeRef, setJorgeYoutubeRef] = useState(null);
+  const [youtubeRef, setYoutubeRef] = useState(null);
   const [mostrarPlay, setMostrarPlay] = useState(false);
   const elementRef = useRef(null);
-  const { handleTouchStart, handleTouchEnd } = useDelta('jorge-bio', 'jorge-relatos', elementRef);
+  const { handleTouchStart, handleTouchEnd } = useDelta('dayana-youtube-1', 'dayana-galeria', elementRef);
 
-  const refYoutubeJorge = (video) => {
-    setJorgeYoutubeRef(video);
+  const refYoutube = (video) => {
+    setYoutubeRef(video);
     dispatch(pararAudios());
     setTimeout(()=>{
       setMostrarPlay(true);
@@ -27,28 +26,28 @@ const Youtube = () => {
 
   const pintarVideo = () => {
     return (
-      <div id='youtube-jorge' className="youtube-video">
+      <div id='youtube-dayana-2' className="youtube-video">
         <YT
-          refYoutubeFx={refYoutubeJorge}
-          youtubeVideoId="-9AvYOpalrk" //MN_RlCT-WFQ  -9AvYOpalrk
-          imgThumbnail={jorgeThumbnail}
-          id='youtube-jorge'
+          refYoutubeFx={refYoutube}
+          youtubeVideoId="1922XFwLkcw"
+          imgThumbnail={thumbnail}
+          id='youtube-dayana-2'
         />
       </div>
     )
   }
 
   const handleOnClick = () => {
-    const div = document.getElementById('youtube-jorge');
+    const div = document.getElementById('youtube-dayana-2');
     div.style.visibility = 'visible';
-    console.log(jorgeYoutubeRef);
-    jorgeYoutubeRef?.playVideo();
+    console.log(youtubeRef);
+    youtubeRef?.playVideo();
   }
 
   return (
     <>
       {pintarVideo()}
-      <div ref={elementRef} className='seccion jorge-youtube' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
+      <div ref={elementRef} className='seccion dayana-youtube-2' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
         <div className='mask-general'>
           <div className="contenido-general">
             <div className='youtube-contenido'>
@@ -57,7 +56,7 @@ const Youtube = () => {
                 {!mostrarPlay && <p>Espera un momento...</p>}
               </div>
               <div>
-                <h3>“Éramos aserradores y cazadores, pero ahora conservamos”</h3>
+                <h3>“Señor Pronto alivio”</h3>
               </div>
             </div>
           </div>

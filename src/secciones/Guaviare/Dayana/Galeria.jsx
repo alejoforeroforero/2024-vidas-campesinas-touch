@@ -2,14 +2,11 @@ import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { establecerPersonaje, pararAudios } from '../../../Redux/states/managerSlice';
 import useDelta from '../../../hooks/useDelta';
-//import img1 from '../../../assets/guaviare/jorge/foto1.jpg';
-const img1 = 'https://res.cloudinary.com/dfwhzadxa/image/upload/v1713054251/vidas-campesinas/jorge/foto1_cs0pdv.jpg'
-const img2 = 'https://res.cloudinary.com/dfwhzadxa/image/upload/v1713054246/vidas-campesinas/jorge/foto2_mwklo2.jpg'
-const img3 = 'https://res.cloudinary.com/dfwhzadxa/image/upload/v1713054247/vidas-campesinas/jorge/foto3_g4q0vd.jpg'
-const img4 = 'https://res.cloudinary.com/dfwhzadxa/image/upload/v1713054255/vidas-campesinas/jorge/foto4_xsifp4.jpg'
-//import img2 from '../../../assets/guaviare/jorge/foto2.jpg';
-//import img3 from '../../../assets/guaviare/jorge/foto3.jpg';
-//import img4 from '../../../assets/guaviare/jorge/foto4.jpg';
+import img1 from '../../../assets/guaviare/dayana/foto1.jpg';
+import img2 from '../../../assets/guaviare/dayana/foto2.jpg';
+import img3 from '../../../assets/guaviare/dayana/foto3.jpg';
+import img4 from '../../../assets/guaviare/dayana/foto4.jpg';
+const img5 = 'https://res.cloudinary.com/dfwhzadxa/image/upload/v1709724830/visitantesonoro/buuqrvguzadzueyzpzjd.jpg'
 import flechaAdelante from '../../../assets/generales/flecha-adelante.png';
 import flechaAtras from '../../../assets/generales/flecha-atras.png';
 
@@ -20,15 +17,15 @@ const Galeria = () => {
   const dispatch = useDispatch();
   const elementRef = useRef();
 
-  const { handleTouchStart, handleTouchEnd } = useDelta('jorge-relatos', 'carlos-bio', elementRef);
+  const { handleTouchStart, handleTouchEnd } = useDelta('dayana-youtube-2', 'carlos-bio', elementRef);
 
-  const images = [img1, img2, img3, img4];
+  const images = [img1, img2, img3, img4, img5];
 
   const [currentImage, setCurrentImage] = useState(0);
   const [booleanImg, setBooleanImg] = useState(false);
 
   useEffect(()=>{
-    dispatch(establecerPersonaje('linea-jorge'));
+    dispatch(establecerPersonaje('linea-dayana'));
   }, [])
 
   useEffect(() => {

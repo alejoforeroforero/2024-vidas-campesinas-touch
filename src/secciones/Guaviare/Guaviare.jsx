@@ -14,6 +14,12 @@ import CarlosYoutube from './Carlos/Youtube';
 import CarlosRelatos from './Carlos/Relatos';
 import CarlosGaleria from './Carlos/Galeria';
 
+import DayanaBio from './Dayana/Bio';
+import DayanaYoutube1 from './Dayana/Youtube';
+import DayanaYoutube2 from './Dayana/Youtube2';
+import DayanaGaleria from './Dayana/Galeria';
+
+
 import './Guaviare.css';
 
 const lineas = [
@@ -64,7 +70,7 @@ const Guaviare = () => {
 
   useEffect(()=>{
     dispatch(cambiarSeccion('guaviare-intro'));
-    //dispatch(cambiarSeccion('jorge-galeria'));
+    //dispatch(cambiarSeccion('dayana-bio'));
   }, []);
 
   console.log(seccion);
@@ -92,7 +98,10 @@ const Guaviare = () => {
       {seccion == 'carlos-youtube' && <CarlosYoutube />}
       {seccion == 'carlos-relatos' && <CarlosRelatos />}
       {seccion == 'carlos-galeria' && <CarlosGaleria />}
-      
+      {seccion == 'dayana-bio' && <DayanaBio />}
+      {seccion == 'dayana-youtube-1' && <DayanaYoutube1 />}
+      {seccion == 'dayana-youtube-2' && <DayanaYoutube2 />}
+      {seccion == 'dayana-galeria' && <DayanaGaleria />}
     </div>
   )
 }

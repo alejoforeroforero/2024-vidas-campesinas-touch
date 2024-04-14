@@ -13,3 +13,8 @@ export const Carlos={
     titulo:'Carlos\nJulio Mancera',
     bio:'Biografía de Carlos'
 }
+
+export const Dayana={
+    titulo:'Dayana\nNovoa',
+    bio:'Biografía de Dayana'
+}

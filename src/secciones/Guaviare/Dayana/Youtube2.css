@@ -1,0 +1,10 @@
+.dayana-youtube-2{
+    background: url("../../../assets/guaviare/dayana/fondo-video2.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
