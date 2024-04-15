@@ -6,7 +6,6 @@ import img1 from '../../../assets/guaviare/dayana/foto1.jpg';
 import img2 from '../../../assets/guaviare/dayana/foto2.jpg';
 import img3 from '../../../assets/guaviare/dayana/foto3.jpg';
 import img4 from '../../../assets/guaviare/dayana/foto4.jpg';
-const img5 = 'https://res.cloudinary.com/dfwhzadxa/image/upload/v1709724830/visitantesonoro/buuqrvguzadzueyzpzjd.jpg'
 import flechaAdelante from '../../../assets/generales/flecha-adelante.png';
 import flechaAtras from '../../../assets/generales/flecha-atras.png';
 
@@ -17,9 +16,9 @@ const Galeria = () => {
   const dispatch = useDispatch();
   const elementRef = useRef();
 
-  const { handleTouchStart, handleTouchEnd } = useDelta('dayana-youtube-2', 'carlos-bio', elementRef);
+  const { handleTouchStart, handleTouchEnd } = useDelta('dayana-youtube-2', 'william-bio', elementRef);
 
-  const images = [img1, img2, img3, img4, img5];
+  const images = [img1, img2, img3, img4];
 
   const [currentImage, setCurrentImage] = useState(0);
   const [booleanImg, setBooleanImg] = useState(false);

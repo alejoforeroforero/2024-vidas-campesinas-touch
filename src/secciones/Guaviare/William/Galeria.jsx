@@ -6,7 +6,6 @@ import img1 from '../../../assets/guaviare/william/foto1.jpg';
 import img2 from '../../../assets/guaviare/william/foto2.jpg';
 import img3 from '../../../assets/guaviare/william/foto3.jpg';
 import img4 from '../../../assets/guaviare/william/foto4.jpg';
-import img5 from '../../../assets/guaviare/william/foto5.jpg';
 import flechaAdelante from '../../../assets/generales/flecha-adelante.png';
 import flechaAtras from '../../../assets/generales/flecha-atras.png';
 
@@ -19,7 +18,7 @@ const Galeria = () => {
 
   const { handleTouchStart, handleTouchEnd } = useDelta('william-relatos', 'marisol-bio', elementRef);
 
-  const images = [img1, img2, img3, img4, img5];
+  const images = [img1, img2, img3, img4];
 
   const [currentImage, setCurrentImage] = useState(0);
   const [booleanImg, setBooleanImg] = useState(false);

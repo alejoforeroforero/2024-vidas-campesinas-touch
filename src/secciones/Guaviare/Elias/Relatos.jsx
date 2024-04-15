@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { pararAudios } from '../../../Redux/states/managerSlice';
+import { pararAudios, establecerPersonaje } from '../../../Redux/states/managerSlice';
 import useDelta from '../../../hooks/useDelta';
 import Audio from '../../../components/Audio';
 
@@ -16,6 +16,7 @@ const Relatos = () => {
   const { handleTouchStart, handleTouchEnd } = useDelta('elias-youtube', 'rodriguez-bio', elementRef);
 
   useEffect(() => {
+    dispatch(establecerPersonaje('linea-elias'));
     dispatch(pararAudios());
     videoRef.current.play();
   }, [])

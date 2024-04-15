@@ -14,7 +14,7 @@ const Youtube = () => {
   const [youtubeRef, setYoutubeRef] = useState(null);
   const [mostrarPlay, setMostrarPlay] = useState(false);
   const elementRef = useRef(null);
-  const { handleTouchStart, handleTouchEnd } = useDelta('rodriguez-youtube', 'cierre-galeria', elementRef);
+  const { handleTouchStart, handleTouchEnd } = useDelta('rodriguez-relatos', 'cierre-galeria', elementRef);
 
   const refYoutube = (video) => {
     setYoutubeRef(video);
@@ -29,7 +29,7 @@ const Youtube = () => {
       <div id='youtube-rodriguez-2' className="youtube-video">
         <YT
           refYoutubeFx={refYoutube}
-          youtubeVideoId="xmIVSXpGNNI" 
+          youtubeVideoId="5l4O5I07yEw" 
           imgThumbnail={thumbnail}
           id='youtube-rodriguez-2'
           vertical='true'

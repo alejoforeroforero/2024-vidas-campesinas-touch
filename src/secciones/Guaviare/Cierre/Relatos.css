@@ -1,47 +1,102 @@
-.cierre-relatos{
-    background-color: black;
-    animation: aparecer 6s;
-
-    h3{
-        margin-top: 65vh;
-    }
+.cierre-relatos {
+  background-color: black;
+  animation: aparecer 6s;
 }
 
-.cierre-titulo{
-    margin-top: 50vh;
+.cierre-titulo {
+  margin-top: 50vh;
+  text-align: center;
+  opacity: 0;
+  animation: aparecer-desaparecer 8s ease-in 3s forwards;
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+.cierre-extra {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60vh;
+  width: 100%;
+  margin-top: 20vh;
+  opacity: 0;
+
+  animation: aparecer 8s ease-in 14s forwards;
+
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
     text-align: center;
-    opacity: 0;
-    animation: aparecer-desaparecer 8s ease-in 3s forwards;
+  }
 
-    h2{
-        font-size: 1.3rem;
-    }
+  div {
+    text-align: center;
+  }
+
+  img {
+    width: 60%;
+    margin-top: 4vh;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid rgb(235, 235, 235);
+    padding: 8px;
+  }
 }
 
-.cierre-extra{
+.youtube-animacion {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  background-color: black;
+  background: url("../../../assets/guaviare/cierre/animacion.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.youtube-animacion-interior {
+  position: relative;
+
+  div:first-child {
+    text-align: center;
+    margin-top: 40vh;
+    height: 10vh;
+
+    p {
+      font-size: 1rem;
+    }
+
+    img {
+      width: 80px;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &&:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  div:nth-child(2) {
+    text-align: center;
+    margin-top: 10vh;
+    padding: 12%;
+
+    h3 {
+      text-align: center;
+    }
+  }
+}
+
+.youtube-animacion-interior-salida{
     position: absolute;
     left: 0;
     top:0;
-    height: 60vh;
-    width: 100vw;
-    margin-top: 20vh;
-    opacity:0;
-
-    animation: aparecer 8s ease-in 11s forwards;
-    
-
-    h2{
-        font-size: 1.4rem;
-        text-align: center;
-    }
-
-    div{
-        text-align: center;
-    }
-
-    img{
-        width: 60%;
-        margin-top: 10vh;
-        cursor: pointer;
-    }
+    width: 60px;
+    cursor: pointer;
 }

@@ -39,6 +39,7 @@ import RodriguezYoutube2 from './Rodriguez/Youtube2';
 
 import CierreGaleria from './Cierre/Galeria';
 import CierreVideo from './Cierre/Relatos';
+import Menu from './Cierre/Menu';
 
 import './Guaviare.css';
 
@@ -100,8 +101,8 @@ const Guaviare = () => {
   }
 
   useEffect(()=>{
-    //dispatch(cambiarSeccion('guaviare-intro'));
-    dispatch(cambiarSeccion('cierre-video'));
+    dispatch(cambiarSeccion('guaviare-intro'));
+    //dispatch(cambiarSeccion('cierre-video'));
   }, []);
 
   console.log(seccion);
@@ -149,7 +150,7 @@ const Guaviare = () => {
       {seccion == 'rodriguez-youtube-2' && <RodriguezYoutube2 />}
       {seccion == 'cierre-galeria' && <CierreGaleria />}
       {seccion == 'cierre-video' && <CierreVideo />}
-      
+      {seccion == 'guaviare-menu' && <Menu />}      
     </div>
   )
 }
