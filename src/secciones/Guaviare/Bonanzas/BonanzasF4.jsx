@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { changeVideo, establecerMostrarAbajo } from '../../../Redux/states/managerSlice';
 import Audio from '../../../components/Audio'
 
-import delfinImg from '../../../assets/guaviare/guayabero/delfin.png';
+import hacha from '../../../assets/guaviare/bonanzas/hacha.png';
 
 import './BonanzasF4.css';
 
@@ -24,7 +24,7 @@ const BonanzasF4 = () => {
                 <div className="contenido-general">
                     <div className='bonanzas-f4-interior'>
                         <div className='bonanzas-f4-ilustraciones'>
-                            <img src={delfinImg} alt="" />
+                            <img src={hacha} alt="" />
                         </div>
                         <div className='bonanzas-audio-contenedor'>
                             <Audio

@@ -30,9 +30,6 @@ const BonanzasF3 = () => {
                                 autor='- Disney Ardila'
                             />
                         </div>
-                        <div className='bonanzas-f3-ilustraciones'>
-                            <img src={delfinImg} alt="" />
-                        </div>
                         <div className='bonanzas-audio-contenedor2'>
                             <Audio
                                 id='audio-coca-ivan'

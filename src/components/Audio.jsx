@@ -21,6 +21,9 @@ import audioMarihuana from '../assets/guaviare/bonanzas/la-marihuana.mp3';
 import audioCocaDisney from '../assets/guaviare/bonanzas/la-coca-disney.mp3';
 import audioCocaIvan from '../assets/guaviare/bonanzas/la-coca-ivan.mp3';
 import audioLaMadera from '../assets/guaviare/bonanzas/la-madera.mp3';
+import audioPaz1 from '../assets/guaviare/paz/audio-paz-1.mp3';
+import audioPaz2 from '../assets/guaviare/paz/audio-paz-2.mp3';
+import audioPaz3 from '../assets/guaviare/paz/audio-paz-3.mp3';
 
 import './Audio.css'
 
@@ -78,6 +81,12 @@ const Audio = ({ titulo, id, autor = '', popup = false }) => {
             return audioCocaIvan
         } else if (id == 'audio-madera') {
             return audioLaMadera
+        }else if (id == 'audio-paz-1') {
+            return audioPaz1
+        }else if (id == 'audio-paz-2') {
+            return audioPaz2
+        }else if (id == 'audio-paz-3') {
+            return audioPaz3
         }
     }
 

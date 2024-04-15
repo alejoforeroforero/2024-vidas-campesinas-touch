@@ -1,0 +1,64 @@
+.paz-f2 {
+  background: url("../../../assets/guaviare/paz/fondo-paz-f2.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  animation: mymove 120s linear infinite alternate;
+}
+
+.paz-f2-ilustraciones {
+  position: absolute;
+  left: 0px;
+  top: 25vh;
+  cursor: pointer;
+  z-index: 300;
+  text-align: center;
+  width: 100%;
+  height: 20vh;
+  opacity: 0;
+  animation: aparecer 3s ease-in forwards;
+}
+
+.paz-f2-libelula{
+  width: 25%;
+  transform: translate(-30px, 30px);
+}
+
+.paz-f2-planta{
+  transform: translate(0px, 10px);
+  width: 25%;
+}
+
+.paz-f2-interior {
+  position: relative;
+  width: 100%;
+}
+
+.paz-f2-audio-contenedor1 {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 10vh;
+  cursor: pointer;
+  z-index: 300;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  animation: aparecer 3s ease-in-out 1s forwards;
+}
+
+.paz-f2-audio-contenedor2 {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 45vh;
+  cursor: pointer;
+  z-index: 300;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  animation: aparecer 1s ease-in-out 2s forwards;
+}

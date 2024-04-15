@@ -4,6 +4,7 @@ import { establecerMostrarAbajo } from '../../Redux/states/managerSlice';
 import Caceria from './Caceria/Caceria'
 import Guayabero from './Guayabero/Guayabero'
 import Bonanzas from './Bonanzas/Bonanzas';
+import Paz from './Paz/Paz';
 import './GuaviareB.css'
 
 const lineasB = [
@@ -21,6 +22,11 @@ const lineasB = [
     id: 'linea-bonanzas',
     titulo: 'Bonanzas',
     navegacion: 'guaviare-bonanzas-navegacion'
+  },
+  {
+    id: 'linea-paz',
+    titulo: 'Paz',
+    navegacion: 'guaviare-paz-navegacion'
   }
 ]
 
@@ -34,6 +40,7 @@ const GuaviareB = () => {
   const caceriaRef = useRef(null);
   const guayaberoRef = useRef(null);
   const bonanzasRef = useRef(null);
+  const pazRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,11 +51,13 @@ const GuaviareB = () => {
         const bottom1 = caceriaRef.current.getBoundingClientRect().bottom;
 
         const top2 = guayaberoRef.current.getBoundingClientRect().top;
-        const bottom2 = guayaberoRef.current.getBoundingClientRect().bottom;
-      
+        const bottom2 = guayaberoRef.current.getBoundingClientRect().bottom;      
 
         const top3 = bonanzasRef.current.getBoundingClientRect().top;
         const bottom3 = bonanzasRef.current.getBoundingClientRect().bottom;
+
+        const top4 = pazRef.current.getBoundingClientRect().top;
+        const bottom4 = pazRef.current.getBoundingClientRect().bottom;
 
         const windowHeight = window.innerHeight;
 
@@ -65,6 +74,11 @@ const GuaviareB = () => {
         if(top3 < windowHeight / 2 && bottom3 >= 0){
           dispatch(establecerMostrarAbajo(false));
           setLineaS('linea-bonanzas')
+        }
+
+        if(top4 < windowHeight / 2 && bottom4 >= 0){
+          dispatch(establecerMostrarAbajo(false));
+          setLineaS('linea-paz')
         }
       }      
     };
@@ -93,6 +107,9 @@ const GuaviareB = () => {
       </div>
       <div ref={bonanzasRef}>
         <Bonanzas />
+      </div>
+      <div ref={pazRef}>
+        <Paz />
       </div>
     </div>
   )

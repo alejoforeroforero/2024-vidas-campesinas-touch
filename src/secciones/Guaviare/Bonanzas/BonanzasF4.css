@@ -20,7 +20,7 @@
   .bonanzas-f4-ilustraciones {
     position: absolute;
     left: 0px;
-    top: 34vh;
+    top: 24vh;
     cursor: pointer;
     z-index: 300;
     text-align: center;
@@ -40,7 +40,7 @@
   .bonanzas-audio-contenedor {
     position: absolute;
     left: 0px;
-    top: 58vh;
+    top: 48vh;
     cursor: pointer;
     z-index: 300;
     width: 100%;

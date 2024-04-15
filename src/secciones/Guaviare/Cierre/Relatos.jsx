@@ -8,7 +8,7 @@ import relatosVideo from '../../../assets/guaviare/cierre/video-cierre.mp4';
 import animacion from '../../../assets/guaviare/cierre/animacion.jpg';
 import playImg from '../../../assets/generales/play_video.png'
 import salidaImg from '../../../assets/generales/salida.png';
-const jorgeThumbnail = 'https://res.cloudinary.com/dfwhzadxa/image/upload/v1713054244/vidas-campesinas/jorge/fondo-video_gwhapf.jpg'
+import jorgeThumbnail from '../../../assets/guaviare/cierre/animacion.jpg'
 
 import './Relatos.css';
 
@@ -80,20 +80,7 @@ const Relatos = () => {
     <div ref={elementRef} className='seccion cierre-relatos' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
       {pintarVideo()}
       {pintarAnimacion()}
-      <div className='mask-general'>
-        <div className="contenido-general">
-          <div className='cierre-titulo'>
-            <h2>RAUDAL DEL GUAYABERO</h2>
-            <h2>Territorio de paz</h2>
-          </div>
-          <div className='cierre-extra'>
-            <h2>[EXTRA]</h2>
-            <h2>Evocaciones del Raudal</h2>
-            <div>
-              <img onClick={handleOnClickPopup} src={animacion} alt="" />
-            </div>
-          </div>
-          {mostrarPopup &&
+      {mostrarPopup &&
             <div className='youtube-animacion'>
               <div className='mask-general'>
                 <div className='youtube-animacion-interior'>
@@ -108,6 +95,19 @@ const Relatos = () => {
               </div>
             </div>
           }
+      <div className='mask-general'>
+        <div className="contenido-general">
+          <div className='cierre-titulo'>
+            <h2>RAUDAL DEL GUAYABERO</h2>
+            <h2>Territorio de paz</h2>
+          </div>
+          <div className='cierre-extra'>
+            <h2>[EXTRA]</h2>
+            <h2>Evocaciones del Raudal</h2>
+            <div>
+              <img onClick={handleOnClickPopup} src={animacion} alt="" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
