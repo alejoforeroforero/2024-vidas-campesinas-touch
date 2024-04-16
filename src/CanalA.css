@@ -50,13 +50,15 @@
     text-align: center;
     margin-top: 40vh;
     height: 10vh;
+   
 
     p {
       font-size: 1rem;
     }
 
     img {
-      width: 80px;
+      width: 25%;
+      min-width: 80px;
       cursor: pointer;
       transition: 0.5s;
 

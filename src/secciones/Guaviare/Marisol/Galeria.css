@@ -1,0 +1,19 @@
+.galeria-marisol-frase {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  margin-top: 50vh;
+  display: flex;
+  justify-content: center;
+
+  h3 {
+    width: 65vw;
+    max-width: 400px;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .galeria-marisol-frase {
+    margin-top: 60vh;
+  }
+}

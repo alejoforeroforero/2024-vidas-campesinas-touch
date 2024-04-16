@@ -87,7 +87,7 @@ const Relatos = () => {
                   <div>
                     <img onClick={handleOnClick} src={playImg} alt="play" />
                   </div>
-                  <div>
+                  <div className='cierre-animacion-frase'>
                     <h3>“Evocación poética a Raudal del Guayabero a partir del movimiento, el color y las formas, mediante el uso de materiales propios del lugar como piedras y hojas, sumados a la arena.”</h3>
                   </div>
                 </div>

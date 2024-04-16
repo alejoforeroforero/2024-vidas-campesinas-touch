@@ -8,3 +8,10 @@
     position: absolute;
 }
 
+@media screen and (orientation: portrait) {
+    .elias-youtube-frase{
+        transform: translate(0, -85px);
+    }    
+}
+
+

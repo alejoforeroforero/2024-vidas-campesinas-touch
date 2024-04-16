@@ -3,60 +3,45 @@
   height: 100%;
   opacity: 0;
   animation: aparecer 1s ease-in forwards;
+}
 
-  .guardianes-f1-fondo {
-    background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713242750/assets/guaviare/guardianes/fondo-guardianes_b9vtu2.jpg");
+.guardianes-f1-fondo {
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713242750/assets/guaviare/guardianes/fondo-guardianes_b9vtu2.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  animation: mymove 350s linear infinite alternate;
+}
+
+.guardianes-f1-titulo {
+  height: 35vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  padding: 0 5%;
+
+  h2 {
+    text-align: left;
     width: 100%;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    animation: mymove 350s linear infinite alternate;
+    color: #dbda4e;
+    font-size: 2.2rem;
+    font-weight: 100;
+    margin-bottom: 16px;
   }
 
-  .guardianes-f1-titulo {
-    height: 35vh;
-    width: 100%;
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    flex-direction: column;
-    padding: 20% 5% 5% 5%;
+  hr {
+    background-color: #dbda4e;
+    height: 6px;
+    width: 50%;
+    border: none;
+  }
 
-    h2 {
-      text-align: left;
-      width: 100%;
-      color: #dbda4e;
-      font-size: 2rem;
-      font-weight: 100;
-      margin-bottom: 16px;
-    }
-
-    hr {
-      background-color: #dbda4e;
-      height: 6px;
-      width: 50%;
-      border: none;
-    }
-
-    @media screen and (orientation: landscape) {
-      h2 {
-        text-align: center;
-        width: 70%;
-        margin: auto;
-        color: #dbda4e;
-        font-size: 2.5rem;
-      }
-
-      hr {
-        background-color: #dbda4e;
-        height: 6px;
-        width: 60%;
-        border: none;
-        margin: -20px auto 0;
-      }
-    }
+  @media screen and (orientation: landscape) {
   }
 }
 

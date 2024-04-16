@@ -55,7 +55,7 @@ const Youtube = () => {
                 {mostrarPlay && <img onClick={handleOnClick} src={playImg} alt="play" />}
                 {!mostrarPlay && <p>Espera un momento...</p>}
               </div>
-              <div>
+              <div className='elias-youtube-frase'>
                 <h3>“Estas pinturas significan una cultura muy valiosa, a la cual admiro y respeto. Nadie sabe exactamente cómo se hicieron”</h3>
               </div>
             </div>

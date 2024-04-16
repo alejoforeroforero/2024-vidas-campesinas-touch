@@ -102,7 +102,7 @@ const Guaviare = () => {
 
   useEffect(()=>{
     dispatch(cambiarSeccion('guaviare-intro'));
-    //dispatch(cambiarSeccion('jorge-bio'));
+    //dispatch(cambiarSeccion('cierre-video'));
   }, []);
 
   console.log(seccion);

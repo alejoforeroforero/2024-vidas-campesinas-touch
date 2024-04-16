@@ -15,9 +15,13 @@ const Portada = ({ handleEmpezar }) => {
     return (
         <>
             <div className="portada">
-                <div className='portada-imgs'>
+                <div className='portada-logo'>
                     <img src={logo} alt="logo" />
+                </div>
+                <div className='portada-audifonos'>
                     <img className='portada-audifonos-img' src={audifonos} alt="audifonos" />
+                </div>
+                <div className='portada-texto'>
                     <p>Esta experiencia</p>
                     <p>tiene sonido</p>
                 </div>

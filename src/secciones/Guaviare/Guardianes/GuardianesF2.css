@@ -22,8 +22,15 @@
   animation: aparecer 3s ease-in forwards;
 }
 
+@media screen and (orientation: landscape) {
+  .guardianes-f2-ilustraciones {
+    top: 18vh;
+  }
+}
+
 .guardianes-f2-grafica{
   width: 30%;
+  max-width:140px;
 }
 
 

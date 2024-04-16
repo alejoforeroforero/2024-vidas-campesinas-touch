@@ -22,14 +22,14 @@ const Galeria = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [booleanImg, setBooleanImg] = useState(false);
 
-  useEffect(()=>{
+  useEffect(() => {
     dispatch(establecerPersonaje('linea-marisol'));
   }, [])
 
   useEffect(() => {
     const interval = setInterval(() => {
       nextImage();
-    },5800);
+    }, 5800);
     return () => clearInterval(interval);
   }, [currentImage])
 
@@ -54,6 +54,11 @@ const Galeria = () => {
         <div className="image-container">
           {booleanImg && <img className='image-s' src={images[currentImage]} alt='images' />}
           {!booleanImg && <img className='image-n' src={images[currentImage]} alt='images' />}
+          {currentImage == 0 &&
+            <div className='galeria-marisol-frase'>
+              <h3>“No todos los campesinos siembran comida. Yo soy campesina, pero en el momento no tenemos una tierra para cultivar”</h3>
+            </div>
+          }
         </div>
         <div className='carousel-botones'>
           <div>

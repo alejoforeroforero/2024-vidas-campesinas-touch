@@ -44,7 +44,9 @@ const Relatos = () => {
       {pintarVideo()}
       <div className='mask-general'>
         <div className="contenido-general">
-          <h3>"Actualmente nuestro sustento depende de estas pinturas, si no las cuidamos, no vamos a tener de qué sobrevivir"</h3>
+          <div className='elias-relatos-frase'>
+            <h3>"Actualmente nuestro sustento depende de estas pinturas, si no las cuidamos, no vamos a tener de qué sobrevivir"</h3>
+          </div>
         </div>
       </div>
     </div>

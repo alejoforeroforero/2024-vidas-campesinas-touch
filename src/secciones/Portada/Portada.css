@@ -26,7 +26,7 @@
   animation: aparecer 2s ease-in forwards;
 }
 
-.portada-imgs {
+/* .portada-imgs {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,11 +61,69 @@
   p:nth-child(4) {
     opacity: 0;
     animation: aparecer 1s ease-in-out 5s forwards;
+  } 
+}*/
+
+.portada-logo {
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0;
+  animation: aparecer 2s ease-in-out 2s forwards;
+
+  img {
+    width: 80%;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .portada-logo {
+    img {
+      width: 25%;
+    }
+  }
+}
+
+.portada-audifonos {
+  height: 18vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0;
+  animation: aparecer 2s ease-in-out 3s forwards;
+
+  img {
+    width: 25%;
+    max-width: 120px;
+  }
+}
+
+.portada-texto {
+  height: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0;
+  animation: aparecer 2s ease-in-out 4s forwards;
+
+  p {
+    width: 100%;
+    text-align: center;
+    color: #c99f49;
+    margin: 0;
   }
 }
 
 .portada-entrar {
-  margin-top: 10vh;
+  height: 20vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,21 +139,4 @@
     cursor: pointer;
     border-radius: 12px;
   }
-}
-
-@media screen and (orientation: landscape) {
-  .portada-imgs {
-    margin-top: 12vh;
-  
-    img:nth-child(1) {
-      width: 30%;
-      max-width: 350px;
-    }
-  
-    img:nth-child(2) {
-      width: 20%;
-      max-width: 120px; 
-    }
-  }
-
 }

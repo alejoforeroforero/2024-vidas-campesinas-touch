@@ -100,3 +100,8 @@
     width: 60px;
     cursor: pointer;
 }
+
+.cierre-animacion-frase{
+  transform: translate(0, -95px);
+}  
+

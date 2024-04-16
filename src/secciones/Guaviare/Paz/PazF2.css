@@ -22,14 +22,22 @@
   animation: aparecer 3s ease-in forwards;
 }
 
+@media screen and (orientation: landscape) {
+  .paz-f2-ilustraciones {
+    top: 15vh;
+  }
+}
+
 .paz-f2-libelula{
   width: 25%;
+  max-width: 70px;
   transform: translate(-30px, 30px);
 }
 
 .paz-f2-planta{
   transform: translate(0px, 10px);
   width: 25%;
+  max-width: 120px;
 }
 
 .paz-f2-interior {

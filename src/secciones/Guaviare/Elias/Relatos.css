@@ -6,3 +6,9 @@
         margin-top: 65vh;
     }
 }
+
+@media screen and (orientation: portrait) {
+    .elias-relatos-frase{
+        transform: translate(0, -25px);
+    }    
+}

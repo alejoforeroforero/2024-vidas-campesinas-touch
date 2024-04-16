@@ -3,61 +3,47 @@
   height: 100%;
   opacity: 0;
   animation: aparecer 1s ease-in forwards;
+}
 
-  .bonanzas-f1-fondo {
-    background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713230263/assets/guaviare/bonanzas/fondo-bonanzas_ghxrzb.jpg");
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    animation: mymove 50s linear infinite alternate;
+.bonanzas-f1-fondo {
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713230263/assets/guaviare/bonanzas/fondo-bonanzas_ghxrzb.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  animation: mymove 50s linear infinite alternate;
+}
+
+.bonanzas-f1-titulo {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  padding: 0 5%;
+
+  h2 {
+    text-align: left;
+    width: 80%;
+    color: #00fffe;
+    font-size: 2.2rem;
+    font-weight: 100;
+    margin-bottom: 16px;
   }
 
-  .bonanzas-f1-titulo {
-    height: 35vh;
-    width: 100%;
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    flex-direction: column;
-    padding: 20% 5%;
-
-    h2 {
-      text-align: left;
-      width: 100%;
-      color: #00fffe;
-      font-size: 2rem;
-      font-weight: 100;
-      margin-bottom: 16px;
-    }
-
-    hr {
-      background-color: #00fffe;
-      height: 6px;
-      width: 50%;
-      border: none;
-    }
-
-    @media screen and (orientation: landscape) {
-      h2 {
-        text-align: center;
-        width: 70%;
-        margin: auto;
-        color: #00fffe;
-        font-size: 2.5rem;
-      }
-
-      hr {
-        background-color: #00fffe;
-        height: 6px;
-        width: 60%;
-        border: none;
-        margin: -20px auto 0;
-      }
-    }
+  hr {
+    background-color: #00fffe;
+    height: 6px;
+    width: 50%;
+    border: none;
   }
+}
+
+@media screen and (orientation: landscape) {
+
 }
 
 .bonanzas-f1-bottom {
