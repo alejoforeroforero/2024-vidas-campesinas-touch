@@ -6,7 +6,7 @@ import useDelta from '../../../hooks/useDelta';
 import playImg from '../../../assets/generales/play_video.png'
 
 //import jorgeThumbnail from '../../../assets/guaviare/jorge/fondo-video.jpg';
-const jorgeThumbnail = 'https://res.cloudinary.com/dfwhzadxa/image/upload/v1713054244/vidas-campesinas/jorge/fondo-video_gwhapf.jpg'
+const jorgeThumbnail = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230303/assets/guaviare/jorge/fondo-video_gpfnkz.jpg'
 import './Youtube.css'
 
 const Youtube = () => {

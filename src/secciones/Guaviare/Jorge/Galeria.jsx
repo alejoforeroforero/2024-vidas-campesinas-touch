@@ -3,10 +3,10 @@ import { useDispatch } from 'react-redux';
 import { establecerPersonaje, pararAudios } from '../../../Redux/states/managerSlice';
 import useDelta from '../../../hooks/useDelta';
 //import img1 from '../../../assets/guaviare/jorge/foto1.jpg';
-const img1 = 'https://res.cloudinary.com/dfwhzadxa/image/upload/v1713054251/vidas-campesinas/jorge/foto1_cs0pdv.jpg'
-const img2 = 'https://res.cloudinary.com/dfwhzadxa/image/upload/v1713054246/vidas-campesinas/jorge/foto2_mwklo2.jpg'
-const img3 = 'https://res.cloudinary.com/dfwhzadxa/image/upload/v1713054247/vidas-campesinas/jorge/foto3_g4q0vd.jpg'
-const img4 = 'https://res.cloudinary.com/dfwhzadxa/image/upload/v1713054255/vidas-campesinas/jorge/foto4_xsifp4.jpg'
+const img1 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230304/assets/guaviare/jorge/foto1_xqvrrj.jpg'
+const img2 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230309/assets/guaviare/jorge/foto2_wxkpvk.jpg'
+const img3 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230304/assets/guaviare/jorge/foto3_jcvxsz.jpg'
+const img4 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230309/assets/guaviare/jorge/foto4_jsmsld.jpg'
 //import img2 from '../../../assets/guaviare/jorge/foto2.jpg';
 //import img3 from '../../../assets/guaviare/jorge/foto3.jpg';
 //import img4 from '../../../assets/guaviare/jorge/foto4.jpg';

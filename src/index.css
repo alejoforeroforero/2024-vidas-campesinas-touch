@@ -23,7 +23,7 @@ html {
 body {
   height: 100vh;
   overflow: hidden;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed";
   font-optical-sizing: auto;
   font-style: normal;
   background-color: #333;
@@ -37,11 +37,23 @@ h1 {
   font-optical-sizing: auto;
 }
 
+@media screen and (min-width: 1300px) {
+  h1 {
+    font-size: 5.3rem;
+  }
+}
+
 h2 {
   font-size: 1.8rem;
   font-weight: bold;
   font-family: 'oldnews', sans-serif;
   font-optical-sizing: auto;
+}
+
+@media screen and (min-width: 1300px) {
+  h2 {
+    font-size: 2.3rem;
+  }
 }
 
 h3 {
@@ -51,6 +63,12 @@ h3 {
   font-optical-sizing: auto;
 }
 
+@media screen and (min-width: 1300px) {
+  h3 {
+    font-size: 2rem;
+  }
+}
+
 h4 {
   font-size: 0.8rem;
   font-weight: bold;
@@ -58,11 +76,27 @@ h4 {
   font-optical-sizing: auto;
 }
 
+@media screen and (min-width: 1300px) {
+  h4 {
+    font-size: 1.3rem;
+  }
+}
+
 p {
   font-size: 1.1rem;
   color: #fff;
 }
 
+@media screen and (min-width: 1300px) {
+  p {
+    font-size: 1.5rem;
+  }
+}
+
 pre{
   font-family: 'oldnews', sans-serif; 
+}
+
+audio{
+  visibility: hidden;
 }

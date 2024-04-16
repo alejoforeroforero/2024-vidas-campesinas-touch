@@ -10,8 +10,8 @@
 }
 .menu-hamburguesa{
   position: fixed;
-  right: 0;
-  top:0;
+  right: 1vh;
+  top:1vw;
   z-index: 110 !important;
   width: 40px;
   height: 40px;
@@ -23,6 +23,25 @@
     cursor: pointer;
   }
 }
+
+@media screen and (orientation: landscape) {
+  .menu-hamburguesa{
+    position: fixed;
+    right: 2vw;
+    top:2vh;
+    z-index: 110 !important;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  
+    img{
+      width:100%;
+      cursor: pointer;
+    }
+  }
+}
+
 .menu {
   width: 100vw;
   height: 100vh;
@@ -71,6 +90,12 @@
   max-width: 800px;
   padding: 0 10%;
   position: relative;
+}
+
+@media screen and (min-width: 1300px) {
+  .contenido-general {
+    max-width: 1000px;
+  }
 }
 
 .video-bg-general {

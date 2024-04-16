@@ -1,0 +1,59 @@
+.guardianes-f2 {
+  background: url("../../../assets/guaviare/guardianes/fondo-guardianes-f2.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  animation: mymove 120s linear infinite alternate;
+}
+
+.guardianes-f2-ilustraciones {
+  position: absolute;
+  left: 0px;
+  top: 25vh;
+  cursor: pointer;
+  z-index: 300;
+  text-align: center;
+  width: 100%;
+  height: 20vh;
+  opacity: 0;
+  animation: aparecer 3s ease-in forwards;
+}
+
+.guardianes-f2-grafica{
+  width: 30%;
+}
+
+
+.guardianes-f2-interior {
+  position: relative;
+  width: 100%;
+}
+
+.guardianes-f2-audio-contenedor1 {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 10vh;
+  cursor: pointer;
+  z-index: 300;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  animation: aparecer 3s ease-in-out 1s forwards;
+}
+
+.guardianes-f2-audio-contenedor2 {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 50vh;
+  cursor: pointer;
+  z-index: 300;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  animation: aparecer 1s ease-in-out 2s forwards;
+}

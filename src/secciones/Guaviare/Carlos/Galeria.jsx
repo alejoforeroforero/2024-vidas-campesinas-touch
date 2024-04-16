@@ -2,11 +2,17 @@ import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { establecerPersonaje, pararAudios } from '../../../Redux/states/managerSlice';
 import useDelta from '../../../hooks/useDelta';
-import img1 from '../../../assets/guaviare/carlos/foto1.jpg';
-import img2 from '../../../assets/guaviare/carlos/foto2.jpg';
-import img3 from '../../../assets/guaviare/carlos/foto3.jpg';
-import img4 from '../../../assets/guaviare/carlos/foto4.jpg';
-import img5 from '../../../assets/guaviare/carlos/foto5.jpg';
+const img1 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230291/assets/guaviare/carlos/foto1_les8iu.jpg';
+const img2 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230298/assets/guaviare/carlos/foto2_pxvum2.jpg';
+const img3 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230292/assets/guaviare/carlos/foto3_qbqap1.jpg';
+const img4 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230299/assets/guaviare/carlos/foto4_iqw8ze.jpg';
+const img5 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230299/assets/guaviare/carlos/foto5_sdtawm.jpg';
+
+// import img1 from '../../../assets/guaviare/carlos/foto1.jpg';
+// import img2 from '../../../assets/guaviare/carlos/foto2.jpg';
+// import img3 from '../../../assets/guaviare/carlos/foto3.jpg';
+// import img4 from '../../../assets/guaviare/carlos/foto4.jpg';
+// import img5 from '../../../assets/guaviare/carlos/foto5.jpg';
 import flechaAdelante from '../../../assets/generales/flecha-adelante.png';
 import flechaAtras from '../../../assets/generales/flecha-atras.png';
 

@@ -10,7 +10,7 @@ import {
     pararAudios
 } from '../../../Redux/states/managerSlice';
 //import videoGuaviareM from '../../../assets/guaviare/home/guaviare.mp4';
-const videoGuaviareM = 'https://res.cloudinary.com/dfwhzadxa/video/upload/v1713054119/vidas-campesinas/home/guaviare_yec7de.mp4'
+const videoGuaviareM = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230577/assets/guaviare/home/guaviare_pnsy0u.mp4'
 import guaviareGrafica from '../../../assets/guaviare/home/pictograma.png';
 
 import { GuaviareIntro } from '../../../data/Guaviare';

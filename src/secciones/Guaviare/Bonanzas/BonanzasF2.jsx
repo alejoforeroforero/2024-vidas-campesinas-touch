@@ -2,7 +2,8 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { changeVideo, establecerMostrarAbajo } from '../../../Redux/states/managerSlice'
 import Audio from '../../../components/Audio'
-import videoSrc from '../../../assets/guaviare/bonanzas/loop-bonanzas-f2.mp4';
+//import videoSrc from '../../../assets/guaviare/bonanzas/loop-bonanzas-f2.mp4';
+const videoSrc = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230507/assets/guaviare/bonanzas/loop-bonanzas-f2_vrthd9.mp4'
 import hoja from '../../../assets/guaviare/bonanzas/hoja-coca.png';
 
 import './BonanzasF2.css';

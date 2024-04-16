@@ -11,7 +11,7 @@ const audioJorge2 = 'https://res.cloudinary.com/dfwhzadxa/video/upload/v17130542
 //import audioJorge3 from '../assets/guaviare/jorge/jorge3.mp3';
 const audioJorge3 = 'https://res.cloudinary.com/dfwhzadxa/video/upload/v1713054261/vidas-campesinas/jorge/jorge3_mbvsln.mp3'
 import audioCarlos from '../assets/guaviare/carlos/carlos1.mp3'
-import audioWilliam1 from '../assets/guaviare/william/william1.mp3';
+import audioWilliam1 from '../assets/guaviare/william/william2.mp3';
 import audioCaceria from '../assets/guaviare/caceria/audio-caceria.mp3';
 import audioArteGuaviare from '../assets/guaviare/caceria/audio-arte-sonoro-guaviare.mp3';
 import audioGuayabero1 from '../assets/guaviare/guayabero/audio-guayabero1.mp3';
@@ -24,6 +24,10 @@ import audioLaMadera from '../assets/guaviare/bonanzas/la-madera.mp3';
 import audioPaz1 from '../assets/guaviare/paz/audio-paz-1.mp3';
 import audioPaz2 from '../assets/guaviare/paz/audio-paz-2.mp3';
 import audioPaz3 from '../assets/guaviare/paz/audio-paz-3.mp3';
+import audioGuardianes1 from '../assets/guaviare/guardianes/audio-guardianes-1.mp3';
+import audioGuardianes2 from '../assets/guaviare/guardianes/audio-guardianes-2.mp3';
+import audioGuardianes3 from '../assets/guaviare/guardianes/audio-guardianes-3.mp3';
+import audioGuardianes4 from '../assets/guaviare/guardianes/audio-guardianes-4.mp3';
 
 import './Audio.css'
 
@@ -87,6 +91,14 @@ const Audio = ({ titulo, id, autor = '', popup = false }) => {
             return audioPaz2
         }else if (id == 'audio-paz-3') {
             return audioPaz3
+        }else if (id == 'audio-guardianes-1') {
+            return audioGuardianes1
+        }else if (id == 'audio-guardianes-2') {
+            return audioGuardianes2
+        }else if (id == 'audio-guardianes-3') {
+            return audioGuardianes3
+        }else if (id == 'audio-guardianes-4') {
+            return audioGuardianes4
         }
     }
 

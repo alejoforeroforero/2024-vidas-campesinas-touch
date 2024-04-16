@@ -5,6 +5,7 @@ import Caceria from './Caceria/Caceria'
 import Guayabero from './Guayabero/Guayabero'
 import Bonanzas from './Bonanzas/Bonanzas';
 import Paz from './Paz/Paz';
+import Guardianes from './Guardianes/Guardianes';
 import './GuaviareB.css'
 
 const lineasB = [
@@ -27,6 +28,11 @@ const lineasB = [
     id: 'linea-paz',
     titulo: 'Paz',
     navegacion: 'guaviare-paz-navegacion'
+  },
+  {
+    id: 'linea-guardianes',
+    titulo: 'Paz',
+    navegacion: 'guaviare-guardianes-navegacion'
   }
 ]
 
@@ -41,6 +47,7 @@ const GuaviareB = () => {
   const guayaberoRef = useRef(null);
   const bonanzasRef = useRef(null);
   const pazRef = useRef(null);
+  const guardianesRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,6 +65,9 @@ const GuaviareB = () => {
 
         const top4 = pazRef.current.getBoundingClientRect().top;
         const bottom4 = pazRef.current.getBoundingClientRect().bottom;
+
+        const top5 = guardianesRef.current.getBoundingClientRect().top;
+        const bottom5 = guardianesRef.current.getBoundingClientRect().bottom;
 
         const windowHeight = window.innerHeight;
 
@@ -79,6 +89,11 @@ const GuaviareB = () => {
         if(top4 < windowHeight / 2 && bottom4 >= 0){
           dispatch(establecerMostrarAbajo(false));
           setLineaS('linea-paz')
+        }
+
+        if(top5 < windowHeight / 2 && bottom5 >= 0){
+          dispatch(establecerMostrarAbajo(false));
+          setLineaS('linea-guardianes')
         }
       }      
     };
@@ -110,6 +125,9 @@ const GuaviareB = () => {
       </div>
       <div ref={pazRef}>
         <Paz />
+      </div>
+      <div ref={guardianesRef}>
+        <Guardianes />
       </div>
     </div>
   )

@@ -8,7 +8,8 @@ import hoja from '../../../assets/home/hoja.png';
 import scroll from '../../../assets/generales/scroll.png'
 
 
-import homeVideo from '../../../assets/home/guaviare3.mp4';
+//import homeVideo from '../../../assets/home/guaviare3.mp4';
+const homeVideo = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230516/assets/home/guaviare3_whjehs.mp4';
 
 import './Intro.css';
 

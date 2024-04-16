@@ -19,7 +19,7 @@
   height: 100vh;
   width: 100vw;
   background-color: rgb(131, 172, 70);
-  background: url("../../assets/generales/portada-fondo.jpg");
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713230438/assets/generales/portada-fondo_nmfqkj.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -38,7 +38,7 @@
     max-width: 250px;
     opacity: 0;
     animation: aparecer 2s ease-in-out 2s forwards;
-    margin-bottom: 20px;
+    margin-bottom: 5vh;
   }
 
   img:nth-child(2) {
@@ -46,7 +46,7 @@
     max-width: 80px;
     opacity: 0;
     animation: aparecer 2s ease-in-out 3s forwards;
-    margin-bottom: 20px;
+    margin-bottom: 5vh;
   }
 
   p {
@@ -65,7 +65,7 @@
 }
 
 .portada-entrar {
-  margin-top: 60px;
+  margin-top: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,4 +81,21 @@
     cursor: pointer;
     border-radius: 12px;
   }
+}
+
+@media screen and (orientation: landscape) {
+  .portada-imgs {
+    margin-top: 12vh;
+  
+    img:nth-child(1) {
+      width: 30%;
+      max-width: 350px;
+    }
+  
+    img:nth-child(2) {
+      width: 20%;
+      max-width: 120px; 
+    }
+  }
+
 }

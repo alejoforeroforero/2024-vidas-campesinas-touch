@@ -38,6 +38,10 @@
   border: 1px solid #fff;
 }
 
+.info{
+  display:none !important;
+}
+
 .youtube-contenido {
   width: 100%;
   height: 100%;

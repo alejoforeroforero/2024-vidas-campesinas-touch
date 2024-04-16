@@ -1,5 +1,5 @@
-.guayabero-f2 {
-  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713230403/assets/guaviare/guayabero/guayabero-fondo-video_pezpmb.jpg");
+.guardianes-f4 {
+  background: url("../../../assets/guaviare/guardianes/fondo-guardianes-f4.jpg");
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -8,7 +8,7 @@
   position: absolute;
   animation: fadeIn 4s;
 
-  .guayabero-f2-interior{
+  .guardianes-f4-interior{
     width: 100%;
     height: 100%;
     display: flex;
@@ -20,12 +20,12 @@
       cursor: pointer;
     }
   
-    .guayabero-f2-frase{
+    .guardianes-f4-frase{
       margin-top: 10vh;
-  
-      p{
-        text-align: right;
-        transform: translate(25px, 0);
+      text-align: center;
+
+      h3{
+        font-size: 1.1rem;
       }
     }
   }
