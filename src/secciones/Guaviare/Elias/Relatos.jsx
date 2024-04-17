@@ -4,7 +4,7 @@ import { pararAudios, establecerPersonaje } from '../../../Redux/states/managerS
 import useDelta from '../../../hooks/useDelta';
 import Audio from '../../../components/Audio';
 
-import relatosVideo from '../../../assets/guaviare/elias/loop-elias.mp4';
+const relatosVideo = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230587/assets/guaviare/elias/loop-elias_igqccz.mp4';
 
 import './Relatos.css';
 

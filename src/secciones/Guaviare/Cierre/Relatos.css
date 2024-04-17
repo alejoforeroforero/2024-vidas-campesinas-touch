@@ -37,6 +37,7 @@
 
   img {
     width: 60%;
+    max-width: 400px;
     margin-top: 4vh;
     cursor: pointer;
     border-radius: 12px;

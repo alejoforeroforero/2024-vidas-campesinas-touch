@@ -97,12 +97,29 @@ const Guaviare = () => {
   const dispatch = useDispatch();
 
   const handleNavegacion = (id) => {
-    //window.scrollTo({ top: 7000, behavior: 'auto' });
+
+    if(id == 'guaviare-jorge-navegacion'){
+      dispatch(cambiarSeccion('jorge-bio'));
+    }else if(id == 'guaviare-carlos-navegacion'){
+      dispatch(cambiarSeccion('carlos-bio'));
+    }else if(id == 'guaviare-dayana-navegacion'){
+      dispatch(cambiarSeccion('dayana-bio'));
+    }else if(id == 'guaviare-william-navegacion'){
+      dispatch(cambiarSeccion('william-bio'));
+    }else if(id == 'guaviare-marisol-navegacion'){
+      dispatch(cambiarSeccion('marisol-bio'));
+    }else if(id == 'guaviare-elias-navegacion'){
+      dispatch(cambiarSeccion('elias-bio'));
+    }else if(id == 'guaviare-rodriguez-navegacion'){
+      dispatch(cambiarSeccion('rodriguez-bio'));
+    }else if(id == 'guaviare-cierre-navegacion'){
+      dispatch(cambiarSeccion('cierre-galeria'));
+    }    
   }
 
   useEffect(()=>{
     dispatch(cambiarSeccion('guaviare-intro'));
-    //dispatch(cambiarSeccion('cierre-video'));
+    //dispatch(cambiarSeccion('guaviare-menu'));
   }, []);
 
   console.log(seccion);

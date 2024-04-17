@@ -3,8 +3,6 @@ import { useDispatch } from 'react-redux';
 import { changeVideo, establecerMostrarAbajo } from '../../../Redux/states/managerSlice';
 import Audio from '../../../components/Audio'
 
-import delfinImg from '../../../assets/guaviare/guayabero/delfin.png';
-
 import './BonanzasF3.css';
 
 const BonanzasF3 = () => {

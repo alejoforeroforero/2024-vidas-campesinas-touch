@@ -11,19 +11,19 @@ const menu = [
     id: 'h-m1',
     titulo: 'GUAVIARE',
     color: '#d05137',
-    ir: 'guaviare'
+    ir: '/guaviare'
   },
   {
     id: 'h-m2',
     titulo: 'CAQUETÁ',
     color: '#d7de51',
-    ir: 'caqueta'
+    ir: '/caqueta'
   },
   {
     id: 'h-m3',
     titulo: 'CAUCA',
     color: '#00a89d',
-    ir: 'cauca'
+    ir: '/cauca'
   }
 ]
 

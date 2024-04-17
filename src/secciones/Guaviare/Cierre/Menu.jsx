@@ -32,8 +32,8 @@ const Menu = () => {
   }, [])
 
   return (
-    <div ref={elementRef} className='seccion homev2' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
-      <div className="homev2-menu">
+    <div ref={elementRef} className='seccion home-guaviare' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
+      <div className="home-guaviare-menu">
         {menu.map(item => {
           return (
             <div key={item.id}>

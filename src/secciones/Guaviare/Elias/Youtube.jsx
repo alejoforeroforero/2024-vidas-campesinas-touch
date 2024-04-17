@@ -5,7 +5,7 @@ import YT from '../../../components/YT';
 import useDelta from '../../../hooks/useDelta';
 import playImg from '../../../assets/generales/play_video.png'
 
-import thumbnail from '../../../assets/guaviare/elias/fondo-video.jpg';
+const thumbnail = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230286/assets/guaviare/elias/fondo-video_c0bay8.jpg';
 import './Youtube.css'
 
 const Youtube = () => {

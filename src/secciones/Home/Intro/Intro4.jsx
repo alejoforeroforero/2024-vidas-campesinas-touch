@@ -13,16 +13,15 @@ const homeVideo = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230516
 
 import './Intro.css';
 
-const Intro = () => {
+const Intro4 = () => {
   const dispatch = useDispatch();
   const videoRef = useRef();
   const elementRef = useRef();
 
-  const { handleTouchStart, handleTouchEnd } = useDelta(null, 'home-intro2', elementRef);
+  const { handleTouchStart, handleTouchEnd } = useDelta('home-intro3', 'home-intro5', elementRef);
 
   useEffect(() => {
     dispatch(establecerMostrarAbajo(false));
-    videoRef.current.play();
   }, [])
 
   const pintarVideo = () => {
@@ -40,8 +39,7 @@ const Intro = () => {
   }
 
   return (
-    <div ref={elementRef} className='seccion home-intro' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
-      {pintarVideo()}
+    <div ref={elementRef} className='seccion home-intro home-intro-4' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
       <div className='mask-general'>
         <div className="contenido-general">
           <div className='home-intro-contenido'>
@@ -52,12 +50,7 @@ const Intro = () => {
               <img src={hoja} alt="" />
               <img src={libelula} alt="" />
               <div className='home-intro-textos-p'>
-                <p>Campesinos y campesinas se nombran por los distintos rincones y centros del país. Han puesto su atención sobre su vínculo directo con la tierra y la naturaleza, llamando la atención sobre sus formas de vivir mientras se hacen familia y comunidad, mientras estudian, trabajan e inventan opciones de vida. </p>
-                {/* <p>Las vidas campesinas se desenvuelven en páramos y costas, valles y montañas, en la vera de los ríos, ciénagas y selvas. Se han ido haciendo a lo largo de la historia moviéndose de un lado a otro, permaneciendo en otros momentos, mientras vuelven la tierra finca y hacen del playón un lugar de pastoreo, un punto de pesca. </p>
-                <p>Las vidas campesinas habitan las veredas, los corregimientos, los pueblos, las ciudades. Están en los caminos, transitan corredores para llevar de un lado al otro lo que producen, y tejen compadrazgos entre calendarios festivos y visitas.</p>
                 <p>Las vidas campesinas son interculturales y resultan de procesos continuos de poblamiento, donde confluyen las trayectorias indígenas, con las de comunidades negras, con las de gentes que han hecho de los lugares su hogar.</p>
-                <p>Las campesinas y los campesinos cultivan, crían especies menores, ven por sus animales, pescan, recolectan frutos y moluscos, tejen, hacen canastos y bultos de distintas fibras, también trabajan en el turismo comunitario y transforman en pequeña escala algunos alimentos. Participan de los mercados y van por temporadas a las ciudades a vender sus productos, a ofrecer servicios. </p> 
-                <p>Campesinos y campesinas se han organizado de muchas maneras, en juntas de acción comunal, en asociaciones y cooperativas, siendo partes activas de la vida política de la nación.</p> */}
               </div>
             </div>
             <div className='home-intro-bottom'>
@@ -70,4 +63,4 @@ const Intro = () => {
   )
 }
 
-export default Intro
+export default Intro4

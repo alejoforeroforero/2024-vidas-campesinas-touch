@@ -1,16 +1,19 @@
 import React, { useState, Suspense, useRef } from 'react';
-import { NavLink, Route, Routes } from 'react-router-dom'
+import { NavLink, Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { pararAudios, establecerMostrarAbajo, establecerCanalBOn } from './Redux/states/managerSlice';
+import { pararAudios, establecerMostrarAbajo, establecerCanalBOn, establecerMostrarFlechasCanales } from './Redux/states/managerSlice';
 
 import Portada from './secciones/Portada/Portada';
+import Creditos from './secciones/Creditos/Creditos';
 import Home from './secciones/Home/Home';
 import Guaviare from './secciones/Guaviare/Guaviare';
 import Caqueta from './secciones/Caqueta/Caqueta';
 import Cauca from './secciones/Cauca/Cauca';
+import Menu from './secciones/Home/Menu/Menu';
 import NotFound from './components/NotFound';
 
 import menu from './assets/generales/menu.png';
+import salida from './assets/generales/salida.png';
 import abajo from './assets/generales/abajo.png';
 import ejeAImg from './assets/generales/ejeA.png'
 import ejeBImg from './assets/generales/ejeB.png'
@@ -57,6 +60,12 @@ function App() {
 
   }
 
+  const handleShowingMenu = ()=>{
+    setShowingMenu(!showingMenu);
+    dispatch(establecerCanalBOn(false))
+    dispatch(establecerMostrarFlechasCanales(false));
+  }
+
   return (
     <>
       {!yaEmpezo &&
@@ -66,17 +75,13 @@ function App() {
       }
       {mostrarHamburguesa &&
         <div className='menu-hamburguesa'>
-          <img onClick={() => { setShowingMenu(!showingMenu) }} src={menu} alt="menu" />
+          {!showingMenu && <img onClick={() => { setShowingMenu(!showingMenu) }} src={menu} alt="menu" />}
+          {showingMenu && <img onClick={() => { setShowingMenu(!showingMenu) }} src={salida} alt="menu" />}
         </div>
       }
       {showingMenu &&
         <nav className='menu'>
-          <ul>
-            <li><NavLink onClick={() => { setShowingMenu(false) }} to='/'>Home</NavLink></li>
-            <li><NavLink onClick={() => { setShowingMenu(false) }} to='/Guaviare'>Guaviare</NavLink></li>
-            <li><NavLink onClick={() => { setShowingMenu(false) }} to='/Caqueta/'>Caqueta</NavLink></li>
-            <li><NavLink onClick={() => { setShowingMenu(false) }} to='/Cauca'>Cauca</NavLink></li>
-          </ul>
+          <Creditos handleShowingMenu={handleShowingMenu} />
         </nav>
       }
 
@@ -105,9 +110,10 @@ function App() {
       <Suspense>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/Guaviare' element={<Guaviare />} />
-          <Route path='/Caqueta' element={<Caqueta />} />
-          <Route path='/Cauca' element={<Cauca />} />
+          <Route path='/guaviare' element={<Guaviare />} />
+          <Route path='/caqueta' element={<Caqueta />} />
+          <Route path='/cauca' element={<Cauca />} />
+          <Route path='/menu' element={<Menu />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Suspense>

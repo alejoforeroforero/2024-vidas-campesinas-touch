@@ -5,7 +5,7 @@ import YT from '../../../components/YT';
 import useDelta from '../../../hooks/useDelta';
 import playImg from '../../../assets/generales/play_video.png'
 
-import thumbnail from '../../../assets/guaviare/carlos/fondo-video.jpg';
+const thumbnail = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230362/assets/guaviare/marisol/fondo-video_hb58u5.jpg';
 import './Youtube.css'
 
 const Youtube = () => {
@@ -38,7 +38,7 @@ const Youtube = () => {
   }
 
   const handleOnClick = () => {
-    const div = document.getElementById('youtube-william');
+    const div = document.getElementById('youtube-marisol');
     div.style.visibility = 'visible';
     console.log(youtubeRef);
     youtubeRef?.playVideo();

@@ -1,0 +1,15 @@
+.cauca {
+    background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713362604/assets/cauca/home/cauca_wngqm3.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    color: #fafafa;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

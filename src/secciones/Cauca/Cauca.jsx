@@ -1,8 +1,10 @@
-import React from 'react'
+import './Cauca.css';
 
 const Cauca = () => {
   return (
-    <div>Cauca</div>
+    <div className='cauca'>
+      <h2>PROXIMAMENTE</h2>
+    </div>
   )
 }
 

@@ -95,7 +95,7 @@ const Relatos = () => {
               </div>
             </div>
           }
-      <div className='mask-general'>
+     
         <div className="contenido-general">
           <div className='cierre-titulo'>
             <h2>RAUDAL DEL GUAYABERO</h2>
@@ -109,7 +109,7 @@ const Relatos = () => {
             </div>
           </div>
         </div>
-      </div>
+      
     </div>
   )
 }

@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { establecerPersonaje, pararAudios } from '../../../Redux/states/managerSlice';
 import useDelta from '../../../hooks/useDelta';
-import img1 from '../../../assets/guaviare/dayana/foto1.jpg';
+const img1 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230383/assets/guaviare/dayana/foto1_j9ij9d.jpg';
 import img2 from '../../../assets/guaviare/dayana/foto2.jpg';
 import img3 from '../../../assets/guaviare/dayana/foto3.jpg';
 import img4 from '../../../assets/guaviare/dayana/foto4.jpg';
