@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { changeVideo, establecerMostrarAbajo } from '../../../Redux/states/managerSlice'
 import Audio from '../../../components/Audio'
-// import videoSrc from '../../../assets/guaviare/caceria/loop-caceria.mp4';
 const videoSrc = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230519/assets/guaviare/caceria/loop-caceria_lqyp9g.mp4'
 import cocodriloImg from '../../../assets/guaviare/caceria/cocodrilo.png';
 

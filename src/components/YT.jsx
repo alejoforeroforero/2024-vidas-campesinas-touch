@@ -10,7 +10,7 @@ import { FaMobileAlt } from 'react-icons/fa';
 
 import './YT.css';
 
-const YT = ({ youtubeVideoId, refYoutubeFx, imgThumbnail, id, vertical = false }) => {
+const YT = ({ youtubeVideoId, refYoutubeFx, imgThumbnail, id, vertical = false, mostrarFlechas = true }) => {
     const dispatch = useDispatch();
 
     const [video, setVideo] = useState(null);
@@ -72,7 +72,7 @@ const YT = ({ youtubeVideoId, refYoutubeFx, imgThumbnail, id, vertical = false }
     }
 
     const onStateChange = (e) => {
-        // console.log('entro state change');
+       
     }
 
     const handleOnPlay = (e) => {
@@ -128,7 +128,7 @@ const YT = ({ youtubeVideoId, refYoutubeFx, imgThumbnail, id, vertical = false }
             setIsPlaying(false);
             setShowControls(false);
             setMostrarMask(true);
-            dispatch(establecerMostrarFlechasCanales(true));
+            dispatch(establecerMostrarFlechasCanales(mostrarFlechas));
             dispatch(establecerMostrarHamburguesa(true));
             video.pauseVideo();
             setBooleano(!booleano);

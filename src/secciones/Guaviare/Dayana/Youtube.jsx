@@ -40,7 +40,7 @@ const Youtube = () => {
   const handleOnClick = () => {
     const div = document.getElementById('youtube-dayana-1');
     div.style.visibility = 'visible';
-    console.log(youtubeRef);
+  
     youtubeRef?.playVideo();
   }
 

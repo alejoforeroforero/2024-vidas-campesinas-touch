@@ -1,11 +1,16 @@
-.jorge-relatos{
-    background-color: black;
-    animation: aparecer 6s;
+.jorge-relatos {
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713448712/assets/guaviare/jorge/loop-jorge_lpl8go.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: aparecer 6s;
 }
 
-.jorge-relatos-audio{
-    width: 100% !important;
-    position: relative;
-    margin-top: 50vh;
+.jorge-relatos-audio {
+  width: 100% !important;
+  position: relative;
+  margin-top: 50vh;
 }
-

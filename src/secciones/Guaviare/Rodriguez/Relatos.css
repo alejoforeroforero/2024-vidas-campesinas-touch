@@ -1,8 +1,14 @@
-.rodriguez-relatos{
-    background-color: black;
-    animation: aparecer 6s;
+.rodriguez-relatos {
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713446634/assets/guaviare/rodriguez/loop-circo_lem0hd.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: aparecer 6s;
 
-    h3{
-        margin-top: 65vh;
-    }
+  h3 {
+    margin-top: 65vh;
+  }
 }

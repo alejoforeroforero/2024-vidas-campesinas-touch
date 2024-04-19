@@ -101,7 +101,6 @@ const Intro = () => {
         } else if (deltaY < 0) {
             contador--
         } else {
-            console.log('No vertical swipe');
         }
 
         if (contador < 0) {

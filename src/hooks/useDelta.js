@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import {
   cambiarSeccion,
@@ -9,6 +10,7 @@ import {
 export default function useDelta(prevSection, nextSection, elementRef) {
   const dispatch = useDispatch();
   const [startY, setStartY] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     let isScrolling;
@@ -17,9 +19,9 @@ export default function useDelta(prevSection, nextSection, elementRef) {
       const direction = event.deltaY > 0 ? "down" : "up";
 
       if (direction == "down" && nextSection == null) {
-        console.log("no continuar");
+       
       } else if (direction == "up" && prevSection == null) {
-        console.log("no continuar");
+      
       } else {
         if (elementRef) {
           elementRef.current.style.animation = "cambiarEscena 2s";
@@ -33,6 +35,10 @@ export default function useDelta(prevSection, nextSection, elementRef) {
           if (direction == "up") {
             dispatch(cambiarSeccion(prevSection));
           } else {
+            if(nextSection == 'guaviare-menu'){
+              navigate('/menu'); 
+              return;
+            }
             dispatch(cambiarSeccion(nextSection));
           }
         }, 100);
@@ -55,21 +61,25 @@ export default function useDelta(prevSection, nextSection, elementRef) {
 
     if (deltaY > 0) {
       dispatch(sumar(0));
-      if(nextSection == null){
-        console.log( 'no continuar')
+      if(nextSection == null){       
+        
       }else{
+        if(nextSection == 'guaviare-menu'){
+          navigate('/menu'); 
+          return;
+        }
         dispatch(cambiarSeccion(nextSection));
       }
       
     } else if (deltaY < 0) {
       dispatch(sumar(0));
       if(prevSection == null){
-        console.log( 'no continuar')
+       
       }else{
         dispatch(cambiarSeccion(prevSection));
       }
     } else {
-      console.log("No vertical swipe");
+      
     }
   };
 

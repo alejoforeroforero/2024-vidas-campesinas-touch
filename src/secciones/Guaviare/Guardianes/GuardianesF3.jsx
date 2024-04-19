@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { changeVideo, establecerMostrarAbajo } from '../../../Redux/states/managerSlice'
 import Audio from '../../../components/Audio'
 import planta from '../../../assets/guaviare/guardianes/planta.png';
-import videoSrc from '../../../assets/guaviare/guardianes/guardianes-loop.mp4';
+const videoSrc = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713449485/assets/guaviare/guardianes/loop-guarianes_kq6tfo.mp4';
 
 import './GuardianesF3.css';
 

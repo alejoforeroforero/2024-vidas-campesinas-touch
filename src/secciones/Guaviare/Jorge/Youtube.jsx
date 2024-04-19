@@ -41,7 +41,6 @@ const Youtube = () => {
   const handleOnClick = () => {
     const div = document.getElementById('youtube-jorge');
     div.style.visibility = 'visible';
-    console.log(jorgeYoutubeRef);
     jorgeYoutubeRef?.playVideo();
   }
 

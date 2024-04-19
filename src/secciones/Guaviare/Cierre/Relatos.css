@@ -1,5 +1,11 @@
 .cierre-relatos {
-  background-color: black;
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713447233/assets/guaviare/cierre/loop-guaviare-cierre_ejt9fz.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 100%;
   animation: aparecer 6s;
 }
 
@@ -22,6 +28,7 @@
   width: 100%;
   margin-top: 20vh;
   opacity: 0;
+  visibility: hidden;
 
   animation: aparecer 8s ease-in 14s forwards;
 
@@ -52,7 +59,7 @@
   left: 0;
   top: 0;
   background-color: black;
-  background: url("../../../assets/guaviare/cierre/animacion.jpg");
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713230337/assets/guaviare/cierre/animacion_iwn7lp.jpg");
   width: 100vw;
   height: 100vh;
   background-size: cover;

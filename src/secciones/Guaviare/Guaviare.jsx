@@ -122,7 +122,7 @@ const Guaviare = () => {
     //dispatch(cambiarSeccion('guaviare-menu'));
   }, []);
 
-  console.log(seccion);
+
 
   return (
     <div className='capitulo'>

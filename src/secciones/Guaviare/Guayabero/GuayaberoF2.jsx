@@ -22,7 +22,6 @@ const GuayaberoF2 = () => {
     const handleOnClick = () => {
         const div = document.getElementById('youtube-guayabero');
         div.style.visibility = 'visible';
-        console.log(jorgeYoutubeRef);
         jorgeYoutubeRef?.playVideo();
       }
 

@@ -1,6 +1,10 @@
 .home-intro {
-  width: 100vw;
-  height: 100vh;
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713449768/assets/home/loop-intro_t26bz2.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   animation: aparecer 2s;
 }
 
@@ -23,7 +27,7 @@
 }
 
 .home-intro-4 {
-  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713373703/assets/home/home-intro-4_qcinmt.jpg");
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713456721/assets/home/home-intro-4_qwpbkm.jpg");
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -32,7 +36,7 @@
 }
 
 .home-intro-5 {
-  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713373704/assets/home/home-intro-5_salx7i.jpg");
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713456712/assets/home/home-intro-5_al1yg8.jpg");
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -59,6 +63,7 @@
     text-align: center;
   }
 }
+
 .home-intro-top {
   height: 30vh;
   display: flex;
@@ -110,5 +115,15 @@
 
   img {
     width: 200px;
+  }
+}
+
+.home-intro-bottom-2 {
+  height: 20vh;
+  text-align: center;
+
+  img {
+    width: 50px;
+    transform: translate(0, 5vh);
   }
 }

@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { establecerPersonaje, pararAudios } from '../../../Redux/states/managerSlice';
 import useDelta from '../../../hooks/useDelta';
-import img1 from '../../../assets/guaviare/marisol/foto1.jpg';
-import img2 from '../../../assets/guaviare/marisol/foto2.jpg';
-import img3 from '../../../assets/guaviare/marisol/foto3.jpg';
+const img1 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230363/assets/guaviare/marisol/foto1_euepkd.jpg';
+const img2 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230368/assets/guaviare/marisol/foto2_humocg.jpg';
+const img3 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230363/assets/guaviare/marisol/foto3_gz5rwr.jpg';
 import flechaAdelante from '../../../assets/generales/flecha-adelante.png';
 import flechaAtras from '../../../assets/generales/flecha-atras.png';
 

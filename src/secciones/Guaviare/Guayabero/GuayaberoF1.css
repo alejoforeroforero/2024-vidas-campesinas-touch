@@ -37,8 +37,9 @@
 .guayabero-f1-titulo {
   height: 20vh;
   width: 100%;
+ 
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: left;
   flex-direction: column;
   padding: 0 5%;
@@ -46,6 +47,7 @@
   h2 {
     text-align: left;
     width: 80%;
+    max-width:180px;
     color: #ef8538;
     font-size: 2.2rem;
     font-weight: 100;
@@ -55,7 +57,7 @@
   hr {
     background-color: #ef8538;
     height: 6px;
-    width: 50%;
+    width: 40%;
     border: none;
   }
 }

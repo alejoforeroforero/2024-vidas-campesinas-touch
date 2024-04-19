@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { establecerMostrarAbajo } from '../../../Redux/states/managerSlice'
 import Audio from '../../../components/Audio'
-import libelula from '../../../assets/guaviare/paz/libelula.png';
+const libelula = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713229870/assets/home/libelula_mze5lz.png';
 import planta from '../../../assets/guaviare/paz/planta-1.png';
 
 import './PazF2.css';
@@ -38,7 +38,7 @@ const PazF2 = () => {
                         <div className='paz-f2-audio-contenedor2'>
                             <Audio
                                 id='audio-paz-2'
-                                titulo='“El proceso de paz hizo que fuéramos visibles. Nos sentimos felices de que vengan y se lleven otra imagen del Guaviare”.'
+                                titulo='“El proceso de paz hizo que fuéramos visibles”.'
                                 autor='- Disney Ardila'
                             />
                         </div>

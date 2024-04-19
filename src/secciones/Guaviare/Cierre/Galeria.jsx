@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { establecerPersonaje, pararAudios } from '../../../Redux/states/managerSlice';
+import { establecerPersonaje, establecerMostrarLineasA, establecerMostrarFlechasCanales, pararAudios } from '../../../Redux/states/managerSlice';
 import useDelta from '../../../hooks/useDelta';
 
 const img1 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230310/assets/guaviare/cierre/foto1_qpm0m3.jpg'
@@ -39,6 +39,8 @@ const Galeria = () => {
 
   useEffect(()=>{
     dispatch(establecerPersonaje('linea-cierre'));
+    dispatch(establecerMostrarLineasA(true));
+    dispatch(establecerMostrarFlechasCanales(true));
   }, [])
 
   useEffect(() => {

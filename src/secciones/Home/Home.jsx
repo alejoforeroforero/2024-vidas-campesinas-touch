@@ -26,7 +26,7 @@ const Home = () => {
       {seccion == 'home-intro4' && <HomeIntro4 />}
       {seccion == 'home-intro5' && <HomeIntro5 />}
       {seccion == 'home-intro6' && <HomeIntro6 />}
-      {seccion == 'home-menu' && <HomeMenu />}
+      {seccion == 'home-menu' && <HomeMenu pintarIntro={false} />}
     </div>
   )
 }

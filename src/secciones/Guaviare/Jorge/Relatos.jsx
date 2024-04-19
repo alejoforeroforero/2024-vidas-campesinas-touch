@@ -5,7 +5,7 @@ import useDelta from '../../../hooks/useDelta';
 import Audio from '../../../components/Audio';
 
 //import relatosVideo from '../../../assets/guaviare/jorge/loop-jorge.mp4';
-const relatosVideo = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230572/assets/guaviare/jorge/loop-jorge_sekrq0.mp4'
+const relatosVideo = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713448720/assets/guaviare/jorge/loop-jorge_c77hks.mp4'
 
 import './Relatos.css';
 

@@ -3,9 +3,9 @@ import { useDispatch } from 'react-redux';
 import { establecerPersonaje, pararAudios } from '../../../Redux/states/managerSlice';
 import useDelta from '../../../hooks/useDelta';
 const img1 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230269/assets/guaviare/william/foto1_leihi9.jpg';
-import img2 from '../../../assets/guaviare/william/foto2.jpg';
-import img3 from '../../../assets/guaviare/william/foto3.jpg';
-import img4 from '../../../assets/guaviare/william/foto4.jpg';
+const img2 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230272/assets/guaviare/william/foto2_uldvcg.jpg';
+const img3 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230270/assets/guaviare/william/foto3_ft1wqe.jpg';
+const img4 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230275/assets/guaviare/william/foto4_mictvc.jpg';
 import flechaAdelante from '../../../assets/generales/flecha-adelante.png';
 import flechaAtras from '../../../assets/generales/flecha-atras.png';
 

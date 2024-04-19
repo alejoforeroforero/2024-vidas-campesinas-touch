@@ -28,6 +28,7 @@
   h2 {
     text-align: left;
     width: 100%;
+    max-width: 280px;
     color: #dbda4e;
     font-size: 2.2rem;
     font-weight: 100;

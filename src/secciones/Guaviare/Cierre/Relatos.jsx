@@ -1,21 +1,20 @@
 import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { pararAudios } from '../../../Redux/states/managerSlice';
+import { pararAudios, establecerMostrarLineasA, establecerMostrarFlechasCanales } from '../../../Redux/states/managerSlice';
 import YT from '../../../components/YT';
 import useDelta from '../../../hooks/useDelta';
 
-import relatosVideo from '../../../assets/guaviare/cierre/video-cierre.mp4';
-import animacion from '../../../assets/guaviare/cierre/animacion.jpg';
+const relatosVideo = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230501/assets/guaviare/cierre/video-cierre_tfdzvy.mp4';
+const animacion = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230337/assets/guaviare/cierre/animacion_iwn7lp.jpg';
 import playImg from '../../../assets/generales/play_video.png'
 import salidaImg from '../../../assets/generales/salida.png';
-import jorgeThumbnail from '../../../assets/guaviare/cierre/animacion.jpg'
+const jorgeThumbnail = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230337/assets/guaviare/cierre/animacion_iwn7lp.jpg'
 
 import './Relatos.css';
 
 const Relatos = () => {
   const dispatch = useDispatch();
   const [mostrarPopup, setMostrarPopup] = useState(null);
-  const [mostrarPlay, setMostrarPlay] = useState(null);
   const [youtubeRef, setYoutubeRef] = useState(null);
   const videoRef = useRef();
   const elementRef = useRef();
@@ -24,6 +23,8 @@ const Relatos = () => {
 
   useEffect(() => {
     dispatch(pararAudios());
+    dispatch(establecerMostrarLineasA(false));
+    dispatch(establecerMostrarFlechasCanales(false));
     videoRef.current.play();
   }, [])
 
@@ -45,7 +46,7 @@ const Relatos = () => {
     setYoutubeRef(video);
     dispatch(pararAudios());
     setTimeout(() => {
-      console.log('se puede dar play');
+
     }, 1000);
   }
 
@@ -54,9 +55,10 @@ const Relatos = () => {
       <div id='youtube-animacion' className="youtube-video">
         <YT
           refYoutubeFx={refYoutube}
-          youtubeVideoId="JOa_pbsklr8" 
+          youtubeVideoId="JOa_pbsklr8"
           imgThumbnail={jorgeThumbnail}
           id='youtube-animacion'
+          mostrarFlechas = {false}
         />
       </div>
     )
@@ -74,6 +76,7 @@ const Relatos = () => {
 
   const handleSalir = () => {
     setMostrarPopup(false);
+    dispatch(establecerMostrarFlechasCanales(false));
   }
 
   return (
@@ -81,35 +84,34 @@ const Relatos = () => {
       {pintarVideo()}
       {pintarAnimacion()}
       {mostrarPopup &&
-            <div className='youtube-animacion'>
-              <div className='mask-general'>
-                <div className='youtube-animacion-interior'>
-                  <div>
-                    <img onClick={handleOnClick} src={playImg} alt="play" />
-                  </div>
-                  <div className='cierre-animacion-frase'>
-                    <h3>“Evocación poética a Raudal del Guayabero a partir del movimiento, el color y las formas, mediante el uso de materiales propios del lugar como piedras y hojas, sumados a la arena.”</h3>
-                  </div>
-                </div>
-                <img onClick={handleSalir} className='youtube-animacion-interior-salida' src={salidaImg} alt="" />
+        <div className='youtube-animacion'>
+          <div className='mask-general'>
+            <div className='youtube-animacion-interior'>
+              <div>
+                <img onClick={handleOnClick} src={playImg} alt="play" />
+              </div>
+              <div className='cierre-animacion-frase'>
+                <h3>“Evocación poética a Raudal del Guayabero a partir del movimiento, el color y las formas, mediante el uso de materiales propios del lugar como piedras y hojas, sumados a la arena.”</h3>
               </div>
             </div>
-          }
-     
-        <div className="contenido-general">
-          <div className='cierre-titulo'>
-            <h2>RAUDAL DEL GUAYABERO</h2>
-            <h2>Territorio de paz</h2>
-          </div>
-          <div className='cierre-extra'>
-            <h2>[EXTRA]</h2>
-            <h2>Evocaciones del Raudal</h2>
-            <div>
-              <img onClick={handleOnClickPopup} src={animacion} alt="" />
-            </div>
+            <img onClick={handleSalir} className='youtube-animacion-interior-salida' src={salidaImg} alt="" />
           </div>
         </div>
-      
+      }
+
+      <div className="contenido-general">
+        <div className='cierre-titulo'>
+          <h2>RAUDAL DEL GUAYABERO</h2>
+          <h2>Territorio de paz</h2>
+        </div>
+        <div className='cierre-extra'>
+          <h2>[EXTRA]</h2>
+          <h2>Evocaciones del Raudal</h2>
+          <div>
+            <img onClick={handleOnClickPopup} src={animacion} alt="" />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

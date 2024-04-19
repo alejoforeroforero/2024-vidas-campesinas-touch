@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { establecerMostrarAbajo } from '../../../Redux/states/managerSlice';
 import useDelta from '../../../hooks/useDelta';
+import introImg from '../../../assets/generales/intro.png'
 import { NavLink } from 'react-router-dom';
 
 import './Menu.css';
@@ -27,7 +28,7 @@ const menu = [
   }
 ]
 
-const Menu = () => {
+const Menu = ({ pintarIntro = true }) => {
   const dispatch = useDispatch();
   const elementRef = useRef();
 
@@ -39,14 +40,15 @@ const Menu = () => {
 
   return (
     <div ref={elementRef} className='seccion homev2' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
+      {pintarIntro &&
+        <div className="homev2-intro">
+          <NavLink to='/'><img src={introImg} alt="" /> </NavLink>
+        </div>
+      }
       <div className="homev2-menu">
         {menu.map(item => {
           return (
             <div key={item.id}>
-              {/* {(item.id == 'h-m3') &&
-                <img src={cenafaAbajo} alt='home' />
-              } */}
-
               <NavLink
                 id={item.id}
                 style={{ color: item.color }}

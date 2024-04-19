@@ -48,7 +48,7 @@
   height: 100vh;
   position: fixed;
   z-index: 100 !important;
-  background-color: rgba(73, 73, 73, 0.98);
+  background-color: rgba(0, 0, 0, 0.98);
   z-index: 20;
   visibility: visible;
   color:#fff;
@@ -164,17 +164,40 @@
   display: flex;
   justify-content: center;
 
-  img {
-    width: 40px;
+  img{
+    width:40px;
+  }
+}
+
+.regresar{
+  position: absolute;
+  left:5vh;
+  bottom:5vh;
+
+  img{
+    width:120px;
+  }
+}
+
+.saltar{
+  position: absolute;
+  right:5vh;
+  bottom:5vh;
+
+  img{
+    width:120px;
   }
 }
 
 @keyframes aparecer {
   0% {
     opacity: 0;
+    visibility: visible;
+  
   }
   100% {
     opacity: 1;
+    visibility: visible;
   }
 }
 

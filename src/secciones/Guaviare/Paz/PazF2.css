@@ -1,5 +1,5 @@
 .paz-f2 {
-  background: url("../../../assets/guaviare/paz/fondo-paz-f2.jpg");
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713230373/assets/guaviare/paz/fondo-paz-f2_i0tg5l.jpg");
   width: 100%;
   height: 100%;
   background-position: center;
@@ -24,7 +24,7 @@
 
 @media screen and (orientation: landscape) {
   .paz-f2-ilustraciones {
-    top: 15vh;
+    top: 22vh;
   }
 }
 
@@ -62,7 +62,7 @@
   width: 100%;
   position: absolute;
   left: 0px;
-  top: 45vh;
+  top: 55vh;
   cursor: pointer;
   z-index: 300;
   display: flex;

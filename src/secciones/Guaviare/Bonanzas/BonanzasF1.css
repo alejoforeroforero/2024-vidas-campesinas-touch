@@ -18,7 +18,7 @@
 
 .bonanzas-f1-titulo {
   height: 40vh;
-  width: 100%;
+  width: 100%;  
   display: flex;
   justify-content: center;
   align-items: left;
@@ -28,6 +28,7 @@
   h2 {
     text-align: left;
     width: 80%;
+    max-width: 40px;
     color: #00fffe;
     font-size: 2.2rem;
     font-weight: 100;

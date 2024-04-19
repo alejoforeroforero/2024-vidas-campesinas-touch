@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { pararAudios } from '../../../Redux/states/managerSlice';
 import YT from '../../../components/YT';
 import playImg from '../../../assets/generales/play_video.png';
-import guayaberoThumbnail from '../../../assets/guaviare/guardianes/fondo-guardianes-f4.jpg';
+const guayaberoThumbnail = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713242761/assets/guaviare/guardianes/fondo-guardianes-f4_tphytr.jpg';
 import './GuardianesF4.css';
 
 const GuardianesF4 = () => {
@@ -22,7 +22,7 @@ const GuardianesF4 = () => {
     const handleOnClick = () => {
         const div = document.getElementById('youtube-alirio');
         div.style.visibility = 'visible';
-        console.log(jorgeYoutubeRef);
+
         jorgeYoutubeRef?.playVideo();
       }
 

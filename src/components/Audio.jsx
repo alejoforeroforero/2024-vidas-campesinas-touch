@@ -117,7 +117,6 @@ const Audio = ({ titulo, id, autor = '', popup = false }) => {
 
     const animate1 = () => {
         if (audioCtx == null) {
-            console.log('creea audio')
             const audioEl = document.createElement('audio');
             audioEl.crossOrigin="anonymous"
             audioEl.id = 'audio-el';

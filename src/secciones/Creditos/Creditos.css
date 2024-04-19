@@ -1,64 +1,122 @@
 .creditos {
   display: flex;
-  justify-content: center;
-  padding-top: 10vh;
-  flex-direction: column;
   align-items: center;
+  padding-top: 1vh;
+  flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  height: 100vh;  
+}
+
+.creditos-img {
+  text-align: center;
+  img {
+    width: 85%;
+    max-width: 350px;
+  }
 }
 
 .creditos-btn {
-  padding: 20px 0;
+  padding: 15px 0;
   width: 100%;
   text-align: center;
-  transform: translate(0, -10vh);
+
+  hr {
+    background-color: #d9dad0;
+    width: 80%;
+    max-width: 200px;
+    margin: auto;
+  }
 
   button {
-    font-family: oldnews;
-    color: #fdfdfd;
-    font-size: 1.2rem;
-    padding: 8px 17px;
-    border-radius: 12px;
+    font-family: "Roboto Slab";
+    color: #d9dad0;
+    font-size: 1.6rem;
     border: none;
     background-color: transparent;
-    border: 1px solid #8f8f8f;
     cursor: pointer;
     transition: 1s;
+    margin-top: 2vh;
 
     &&:hover {
-        background-color: rgb(107, 107, 107);
+      color: rgb(95, 185, 238);
     }
 
     a {
       text-decoration: none;
-      color: #fdfdfd;
+      color: #d9dad0;
+
+      &&:hover {
+        color: rgb(95, 185, 238);
+      }
     }
   }
 }
 
 .creditos-interior {
   width: 80vw;
-  height: 45vh;
+  height: 55vh;
   overflow: scroll;
   color: #333;
-  border: 1px solid #c6c5c5;
-  padding: 15px;
-  border-radius: 12px;
+  background-color: rgb(0, 0, 0);
   overflow: hidden;
-  transform: translate(0, -8vh);
+  transform: translate(0, -15vh);
+}
+
+.creditos-interior {
+  scrollbar-width: thin;
+  scrollbar-color: #b3b3b3 #f0f0f0;
+}
+
+/* Define the scrollbar track */
+.creditos-interior::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+/* Define the scrollbar handle */
+.creditos-interior::-webkit-scrollbar-thumb {
+  background-color: #b3b3b3; /* Color of the scrollbar handle */
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Change scrollbar handle on hover */
+.creditos-interior::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
+/* Define the scrollbar track on the right side */
+.creditos-interior::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Color of the scrollbar track */
+}
+
+/* Define the scrollbar handle on the right side */
+.creditos-interior::-webkit-scrollbar-thumb:vertical {
+  background-color: #b3b3b3;
+}
+
+/* Define the scrollbar track on the left side */
+.creditos-interior::-webkit-scrollbar-track:vertical {
+  background: #f0f0f0;
+}
+
+/* Define the scrollbar handle on the left side */
+.creditos-interior::-webkit-scrollbar-thumb:horizontal {
+  background-color: #b3b3b3;
+}
+
+/* Define the scrollbar track on the left side */
+.creditos-interior::-webkit-scrollbar-track:horizontal {
+  background: #f0f0f0;
 }
 
 .creditos-interior-contenido {
   width: 100%;
-  height: 35vh;
+  height: 45vh;
   padding: 15px 15px 40px 0px;
   overflow: scroll;
 
   p {
-    color: #efeded;
+    color: #c9c9c9;
     text-align: center;
-    line-height: 1.6rem;
     margin-bottom: 30px;
   }
 }
@@ -75,5 +133,23 @@
     aspect-ratio: 3/2;
     object-fit: contain;
     margin: 0 10px;
+  }
+}
+
+.creditos-cerrar {
+  text-align: center;
+  padding-bottom: 60px;
+
+  span {
+    color: #c9c9c9;
+    border: 1px solid #c9c9c9;
+    padding: 1px 17px 3px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &&:hover {
+      color: rgb(95, 185, 238);
+    }
   }
 }

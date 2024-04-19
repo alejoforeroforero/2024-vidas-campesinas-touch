@@ -5,7 +5,7 @@ import YT from '../../../components/YT';
 import useDelta from '../../../hooks/useDelta';
 import playImg from '../../../assets/generales/play_video.png'
 
-import thumbnail from '../../../assets/guaviare/rodriguez/youtube2.jpg';
+const thumbnail = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230281/assets/guaviare/rodriguez/youtube2_b6wtse.jpg';
 import './Youtube2.css'
 
 const Youtube = () => {
@@ -41,7 +41,6 @@ const Youtube = () => {
   const handleOnClick = () => {
     const div = document.getElementById('youtube-rodriguez-2');
     div.style.visibility = 'visible';
-    console.log(youtubeRef);
     youtubeRef?.playVideo();
   }
 

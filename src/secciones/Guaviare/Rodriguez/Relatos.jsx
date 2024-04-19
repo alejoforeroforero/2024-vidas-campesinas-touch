@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { pararAudios } from '../../../Redux/states/managerSlice';
 import useDelta from '../../../hooks/useDelta';
 
-import relatosVideo from '../../../assets/guaviare/rodriguez/loop-rodriguez.mp4';
+const relatosVideo = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230577/assets/guaviare/rodriguez/loop-rodriguez_muhcv8.mp4';
 
 import './Relatos.css';
 

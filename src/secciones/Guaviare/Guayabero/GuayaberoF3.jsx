@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { changeVideo, establecerMostrarAbajo } from '../../../Redux/states/managerSlice'
 import Audio from '../../../components/Audio'
 import lanchaImg from '../../../assets/guaviare/guayabero/lancha.png';
-//import videoSrc from '../../../assets/guaviare/guayabero/guayabero-loop.mp4';
 const videoSrc = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230574/assets/guaviare/guayabero/guayabero-loop_qpkx1v.mp4'
 
 import './GuayaberoF3.css';
