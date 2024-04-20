@@ -119,7 +119,7 @@ const Guaviare = () => {
 
   useEffect(()=>{
     dispatch(cambiarSeccion('guaviare-intro'));
-    //dispatch(cambiarSeccion('guaviare-menu'));
+    //dispatch(cambiarSeccion('cierre-video'));
   }, []);
 
 

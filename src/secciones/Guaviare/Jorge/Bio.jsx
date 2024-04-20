@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import useDelta from '../../../hooks/useDelta';
-//import audioJorge1 from '../../../assets/guaviare/jorge/jorge1.mp3';
-const audioJorge1 = 'https://res.cloudinary.com/dfwhzadxa/video/upload/v1713054256/vidas-campesinas/jorge/jorge1_p3qcvt.mp3'
+import audioJorge1 from '../../../assets/guaviare/jorge/jorge1.mp3';
+//const audioJorge1 = 'https://res.cloudinary.com/dfwhzadxa/video/upload/v1713054256/vidas-campesinas/jorge/jorge1_p3qcvt.mp3'
+
+//const audioJorge1 = 'https://alejoforero.com/vidascampesinas/jorge1.mp3';
 
 import {
   cambiarDescargando,
@@ -47,7 +49,7 @@ const Bio = () => {
 
   return (
     <div ref={elementRef} className='seccion jorge-bio' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
-      <audio ref={audioRef} src={audioJorge1} crossOrigin="anonymous"></audio>
+      <audio ref={audioRef} src={audioJorge1}></audio>
       <div className='mask-general'>
         <div className="contenido-general">
           <h2><pre>{Jorge.titulo}</pre></h2>

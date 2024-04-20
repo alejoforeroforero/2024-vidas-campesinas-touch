@@ -58,7 +58,7 @@ const Relatos = () => {
           youtubeVideoId="JOa_pbsklr8"
           imgThumbnail={jorgeThumbnail}
           id='youtube-animacion'
-          mostrarFlechas = {false}
+          mostrarFlechas={false}
         />
       </div>
     )
@@ -80,11 +80,11 @@ const Relatos = () => {
   }
 
   return (
-    <div ref={elementRef} className='seccion cierre-relatos' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
-      {pintarVideo()}
-      {pintarAnimacion()}
+
+    <>
       {mostrarPopup &&
         <div className='youtube-animacion'>
+          {pintarAnimacion()}
           <div className='mask-general'>
             <div className='youtube-animacion-interior'>
               <div>
@@ -98,21 +98,28 @@ const Relatos = () => {
           </div>
         </div>
       }
-
-      <div className="contenido-general">
-        <div className='cierre-titulo'>
-          <h2>RAUDAL DEL GUAYABERO</h2>
-          <h2>Territorio de paz</h2>
-        </div>
-        <div className='cierre-extra'>
-          <h2>[EXTRA]</h2>
-          <h2>Evocaciones del Raudal</h2>
-          <div>
-            <img onClick={handleOnClickPopup} src={animacion} alt="" />
+      <div ref={elementRef} className='seccion cierre-relatos' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
+        {pintarVideo()}
+        
+        <div className="contenido-general">
+          <div className='cierre-titulo'>
+            <h2>RAUDAL DEL GUAYABERO</h2>
+            <h2>Territorio de paz</h2>
+          </div>
+          <div className='cierre-extra'>
+            <h2>[EXTRA]</h2>
+            <h2>Evocaciones del Raudal</h2>
+            <div>
+              <img onClick={handleOnClickPopup} src={animacion} alt="" />
+            </div>
+          </div>
+          <div className='cierre-continuar'>
+            <p>Continuar con otras regiones</p>
           </div>
         </div>
       </div>
-    </div>
+    </>
+
   )
 }
 
