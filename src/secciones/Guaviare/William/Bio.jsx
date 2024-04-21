@@ -1,8 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import useDelta from '../../../hooks/useDelta';
-import audioWilliam1 from '../../../assets/guaviare/william/william1.mp3';
-
 import {
   cambiarDescargando,
   establecerMostrarLineasA,
@@ -16,10 +14,9 @@ import { William } from '../../../data/Guaviare';
 
 import './Bio.css';
 
-const Bio = () => {
+const Bio = ({ williamAudio1 }) => {
   const dispatch = useDispatch();
   const elementRef = useRef();
-  const audioRef = useRef(null);
 
   const [showingPopup, setShowingPopup] = useState(false);
 
@@ -30,7 +27,7 @@ const Bio = () => {
     dispatch(pararAudios());
     const timer = setTimeout(() => {
       dispatch(cambiarDescargando(false));
-      audioRef.current.play();
+      williamAudio1.play();
     }, 1000)
 
     return () => clearTimeout(timer)
@@ -44,7 +41,6 @@ const Bio = () => {
 
   return (
     <div ref={elementRef} className='seccion william-bio' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
-      <audio ref={audioRef} src={audioWilliam1} crossOrigin="anonymous"></audio>
       <div className='mask-general'>
         <div className="contenido-general">
           <h2><pre>{William.titulo}</pre></h2>

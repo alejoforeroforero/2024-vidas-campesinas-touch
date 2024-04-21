@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { cambiarSeccion } from '../../Redux/states/managerSlice';
 import Cargando from '../../components/Cargando';
@@ -41,7 +41,13 @@ import CierreGaleria from './Cierre/Galeria';
 import CierreVideo from './Cierre/Relatos';
 import Menu from './Cierre/Menu';
 
+import { Howl } from 'howler';
+
 import './Guaviare.css';
+
+const audioJorge1Howl = 'https://res.cloudinary.com/dfwhzadxa/video/upload/v1713054256/vidas-campesinas/jorge/jorge1_p3qcvt.mp3'
+
+const audioWilliam1 = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230488/assets/guaviare/william/william1_houzzx.mp3'
 
 
 const lineas = [
@@ -94,6 +100,9 @@ const Guaviare = () => {
   const descargando = useSelector(state => state.managerReducer.descargando);
   const mostrarLineasA = useSelector(state => state.managerReducer.mostrarLineasA);
 
+  const [sound, setSound] = useState(null);
+  const [williamAudio1, setWilliamAudio1] = useState(null);
+
   const dispatch = useDispatch();
 
   const handleNavegacion = (id) => {
@@ -119,9 +128,26 @@ const Guaviare = () => {
 
   useEffect(()=>{
     dispatch(cambiarSeccion('guaviare-intro'));
-    //dispatch(cambiarSeccion('cierre-video'));
+    const newSound = new Howl({
+      src: [audioJorge1Howl], // Replace with your audio source
+    });
+    setSound(newSound);
+
+    const newSound2 = new Howl({
+      src: [audioWilliam1], // Replace with your audio source
+    });
+    setWilliamAudio1(newSound2);
+
+    return () => {
+      newSound.unload(); 
+      newSound2.unload();
+    }
   }, []);
 
+  useEffect(()=>{
+    sound?.pause();
+    williamAudio1?.pause();
+  }, [seccion])
 
 
   return (
@@ -139,7 +165,7 @@ const Guaviare = () => {
       }
       {descargando && <Cargando />}
       {seccion == 'guaviare-intro' && <IntroGuaviare />}
-      {seccion == 'jorge-bio' && <JorgeBio />}
+      {seccion == 'jorge-bio' && <JorgeBio sound={sound} />}
       {seccion == 'jorge-youtube' && <JorgeYoutube />}
       {seccion == 'jorge-relatos' && <JorgeRelatos />}
       {seccion == 'jorge-galeria' && <JorgeGaleria />}
@@ -151,7 +177,7 @@ const Guaviare = () => {
       {seccion == 'dayana-youtube-1' && <DayanaYoutube1 />}
       {seccion == 'dayana-youtube-2' && <DayanaYoutube2 />}
       {seccion == 'dayana-galeria' && <DayanaGaleria />}
-      {seccion == 'william-bio' && <WilliamBio />}
+      {seccion == 'william-bio' && <WilliamBio williamAudio1={williamAudio1} />}
       {seccion == 'william-youtube' && <WilliamYoutube />}
       {seccion == 'william-relatos' && <WilliamRelatos />}
       {seccion == 'william-galeria' && <WilliamGaleria />}
