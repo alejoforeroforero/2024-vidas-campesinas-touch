@@ -12,3 +12,17 @@
     }
 }
 
+.moyano-youtube-planta{
+    position: absolute;
+    text-align: center;
+    margin-top: 10vh;
+    left:0;
+    top:0;
+    width: 100%;
+
+    img{
+        width: 23%;
+        max-width: 90px;
+    }
+}
+

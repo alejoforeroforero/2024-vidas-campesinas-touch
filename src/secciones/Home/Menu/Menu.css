@@ -63,7 +63,7 @@
 
   a {
     font-size: 4.2rem;
-    font-weight: bold;
+    font-weight: 0;
     text-decoration: none;
     cursor: pointer;
     transition: 1s;

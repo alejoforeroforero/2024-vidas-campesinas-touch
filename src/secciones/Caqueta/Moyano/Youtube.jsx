@@ -3,7 +3,8 @@ import { useDispatch } from 'react-redux';
 import { pararAudios } from '../../../Redux/states/managerSlice';
 import YT from '../../../components/YT';
 import useDelta from '../../../hooks/useDelta';
-import playImg from '../../../assets/generales/play_video.png'
+import playImg from '../../../assets/generales/play_video.png';
+import planta from '../../../assets/caqueta/moyano/planta.png';
 
 const thumbnail = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713839734/assets/caqueta/moyano/moyano-youtube-1_epr1bl.jpg';
 import './Youtube.css'
@@ -29,7 +30,7 @@ const Youtube = () => {
       <div id='youtube-dayana-1' className="youtube-video">
         <YT
           refYoutubeFx={refYoutubeCarlos}
-          youtubeVideoId="yXqkGR1jqu8" //MN_RlCT-WFQ  -9AvYOpalrk
+          youtubeVideoId="AapvGlXG4nk" //MN_RlCT-WFQ  -9AvYOpalrk
           imgThumbnail={thumbnail}
           id='youtube-dayana-1'
         />
@@ -50,6 +51,9 @@ const Youtube = () => {
       <div ref={elementRef} className='seccion moyano-youtube' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
         <div className='mask-general'>
           <div className="contenido-general">
+            <div className="moyano-youtube-planta">
+              <img src={planta} alt="planta" />
+            </div>
             <div className='youtube-contenido'>
               <div>
                 {mostrarPlay && <img onClick={handleOnClick} src={playImg} alt="play" />}

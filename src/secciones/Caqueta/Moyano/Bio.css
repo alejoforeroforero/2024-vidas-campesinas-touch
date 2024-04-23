@@ -6,17 +6,11 @@
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
-  color:#fff;
+  color: #fff;
 
-  h2{
+  h2 {
     margin-top: 5vh;
   }
-
-  h3{
-
-  }
-
-
 
   .info {
     text-align: left;
@@ -30,8 +24,8 @@
   }
 }
 
-.moyano-bio-frase{
-  h2{
+.moyano-bio-frase {
+  h3 {
     margin-top: 36vh;
     text-align: center;
   }

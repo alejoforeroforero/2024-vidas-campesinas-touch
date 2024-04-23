@@ -33,7 +33,7 @@ const Bio = () => {
     return () => clearTimeout(timer)
   }, [])
 
-  const { handleTouchStart, handleTouchEnd } = useDelta('cauqueta-intro', 'moyano-youtube-1', elementRef);
+  const { handleTouchStart, handleTouchEnd } = useDelta('caqueta-intro', 'moyano-youtube-1', elementRef);
 
   const handleClosePopup = () => {
     setShowingPopup(false)
@@ -49,7 +49,7 @@ const Bio = () => {
             <img onClick={() => setShowingPopup(true)} src={infoImg} alt="info" />
           </div>
           <div className='moyano-bio-frase'>
-            <h2><pre>{Moyano.frase}</pre></h2>
+            <h3><pre>{Moyano.frase}</pre></h3>
           </div>
         </div>
         {showingPopup && <InfoPopup biografia={Moyano.bio} handleClosePopup={handleClosePopup} />}

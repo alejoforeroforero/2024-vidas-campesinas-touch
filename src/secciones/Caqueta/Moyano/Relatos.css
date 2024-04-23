@@ -15,14 +15,22 @@
   margin-top: 30vh;
 }
 
+
 .moyano-relatos-frase {
   width: 100% !important;
   position: relative;
   margin-top: 16vh;
-  padding: 0 0 0 12vw;
+  padding: 0 0 0 0vw;
 
   h3{
     text-align: left;
     width: 100%;
   }
 }
+
+@media screen and (orientation: portrait) {
+  .moyano-relatos-frase {
+    padding: 0 0 0 12vw;
+  }
+}
+

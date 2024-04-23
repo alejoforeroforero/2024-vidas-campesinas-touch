@@ -11,6 +11,9 @@ import {
 } from '../../../Redux/states/managerSlice';
 
 const videoCaquetaM = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713837162/assets/caqueta/home/caqueta_hrp6px.mp4'
+import sol from '../../../assets/caqueta/intro/sol.png';
+import luna from '../../../assets/caqueta/intro/luna.png';
+import nino from '../../../assets/caqueta/intro/nino.png';
 
 
 import { CaquetaIntro } from '../../../data/Caqueta';
@@ -30,7 +33,7 @@ const Intro = () => {
 
         const timer = setTimeout(() => {
             dispatch(cambiarDescargando(false));
-            dispatch(establecerMostrarAbajo(true));                        
+            dispatch(establecerMostrarAbajo(true));
             setMostrar(true);
             videoRef.current.play();
         }, 1000)
@@ -136,10 +139,14 @@ const Intro = () => {
             <div className="mask-general">
                 {mostrar &&
                     <div className="contenido-general">
+                        <div className='caqueta-sol'>
+                            <img src={sol} alt="" />
+                        </div>
                         <div className='caqueta-titulo'>
                             <h1 className='caqueta-titulo-h1'>{CaquetaIntro.titulo}</h1>
                         </div>
                         <div className='caqueta-descripcion'>
+                            <img src={luna} alt="" />
                             <h2 className='caqueta-descripcion-h2'><pre>{CaquetaIntro.desc}</pre></h2>
                             <hr className='caqueta-descripcion-hr' />
                             <div className='caqueta-descripcion-p-contenedor'>
@@ -155,9 +162,9 @@ const Intro = () => {
                                 }
                             </div>
                         </div>
-                        {/* <div className='caqueta-descripcion-grafica'>
-                            <img src={guaviareGrafica} alt="caqueta" />
-                        </div> */}
+                        <div className='caqueta-descripcion-grafica'>
+                            <img src={nino} alt="caqueta" />
+                        </div>
                     </div>
                 }
             </div>

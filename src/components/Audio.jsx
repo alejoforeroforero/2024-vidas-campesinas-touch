@@ -29,6 +29,7 @@ const audioGuardianes1 = 'https://res.cloudinary.com/dbqfefibl/video/upload/v171
 const audioGuardianes2 = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713242768/assets/guaviare/guardianes/audio-guardianes-2_n2pq7c.mp3';
 const audioGuardianes3 = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713242785/assets/guaviare/guardianes/audio-guardianes-3_l2pfem.mp3';
 const audioGuardianes4 = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713242777/assets/guaviare/guardianes/audio-guardianes-4_k1sd2e.mp3';
+const audioMoyano = "https://res.cloudinary.com/dbqfefibl/video/upload/v1713885415/assets/caqueta/moyano/audio-moyano_q9j3fs.mp3"
 
 import './Audio.css'
 
@@ -100,6 +101,8 @@ const Audio = ({ titulo, id, autor = '', popup = false }) => {
             return audioGuardianes3
         }else if (id == 'audio-guardianes-4') {
             return audioGuardianes4
+        }else if (id == 'audio-moyano') {
+            return audioMoyano
         }
     }
 

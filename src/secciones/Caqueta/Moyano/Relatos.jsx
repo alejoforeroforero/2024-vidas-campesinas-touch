@@ -44,7 +44,7 @@ const Relatos = () => {
       <div className='mask-general'>
         <div className="contenido-general">
           <div onClick={handleOnClick} className='moyano-relatos-audio'>
-            <Audio id='carlos' titulo='“Un santo remedio es el que le aplaca el dolor al instante”' />
+            <Audio id='audio-moyano' titulo='“Un santo remedio es el que le aplaca el dolor al instante”' />
           </div>
           <div className='moyano-relatos-frase'>
             <h3>Remedios con plantas naturales y de por aquí, de esta tierra...”</h3>
