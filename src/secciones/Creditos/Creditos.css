@@ -1,10 +1,16 @@
 .creditos {
   display: flex;
   align-items: center;
-  padding-top: 1vh;
+  padding-top: 4vh;
   flex-direction: column;
   width: 100vw;
   height: 100vh;  
+}
+
+@media screen and (orientation: landscape) {
+  .creditos {
+    padding-top: 14vh;
+  }
 }
 
 .creditos-img {
@@ -54,12 +60,13 @@
 
 .creditos-interior {
   width: 80vw;
+  max-width: 800px;
   height: 55vh;
   overflow: scroll;
   color: #333;
   background-color: rgb(0, 0, 0);
   overflow: hidden;
-  transform: translate(0, -15vh);
+  transform: translate(0, -14vh);
 }
 
 .creditos-interior {

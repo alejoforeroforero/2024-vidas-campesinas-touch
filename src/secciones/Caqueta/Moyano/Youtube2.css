@@ -1,0 +1,14 @@
+.moyano-youtube-2{
+    background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713841479/assets/caqueta/moyano/moyano-youtube-2_avbjza.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+
+    h3{
+        transform: translate(0, -8vh);
+    }
+}
+

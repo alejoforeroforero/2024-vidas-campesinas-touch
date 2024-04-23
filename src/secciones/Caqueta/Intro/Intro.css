@@ -1,0 +1,111 @@
+.caqueta-intro {
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713837434/assets/caqueta/home/loop-caqueta_purhxa.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity:0;
+  animation: aparecer 1s ease-in forwards;
+}
+
+.caqueta-video {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+
+  video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    opacity: 1;
+  }
+}
+
+.caqueta-titulo {
+  height: 24vh;
+  display: flex;
+  justify-content: center;
+  align-items: self-end;
+  animation: aparecer 2s;
+
+  h1 {
+    color: #d7de51;
+    width: 100%;
+  }
+}
+
+.caqueta-descripcion {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+ 
+
+  h2 {
+    color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: left;
+    opacity: 0;
+    animation: aparecer 3s ease-in-out 1s forwards;
+  }
+
+  hr {
+    width: 40%;
+    height: 6px;
+    background-color: #d7de51;
+    border: 0px;
+    margin-top: 2vh;
+    opacity:0;
+    animation: aparecer 3s ease-in-out 1s forwards;
+  }
+
+  .caqueta-descripcion-p-contenedor {
+    position: relative;
+    height: 40vh;
+    width: 95%;
+    opacity:0;
+    animation: aparecer 2s ease-in-out 3s forwards;
+  }
+
+  p {
+    position: absolute;
+    text-align: left;
+    margin-top: 2vh;
+  }
+
+  .caqueta-descripcion-p1 {
+    visibility: hidden;
+  }
+
+  .caqueta-descripcion-p2 {
+    visibility: hidden;
+  }
+}
+
+.caqueta-intro-p1 {
+  animation: aparecerTxt 4s;
+}
+
+.caqueta-intro-p1-des {
+  animation: desaparecerTxt 1s forwards;
+}
+
+.caqueta-descripcion-grafica {
+  position: absolute;
+  right: 0;
+  bottom: 16%;
+  width: 40%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  animation: aparecer 5s ease-in forwards;
+
+  img {
+    width: 90%;
+    max-width: 200px;
+  }
+}

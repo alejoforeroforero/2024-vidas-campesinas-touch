@@ -3,10 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 export const manager = createSlice({
   name: "Manager",
   initialState: {
-    departamento: "guaviare",
+    departamento: "null",
     personaje:'',
     contador: 0,
-    seccion:'guaviare-intro',
+    seccion:'',
     canalBOn:false,
     descargando: false,
     cancionActual:'',
@@ -17,7 +17,9 @@ export const manager = createSlice({
     duracion:0
   },
   reducers: {
-    cambiarDepartamento: (state, action) => {},
+    cambiarDepartamento: (state, action) => {
+      state.personaje = action.payload;
+    },
     establecerPersonaje(state, action) {
       state.personaje = action.payload;
     },

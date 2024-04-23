@@ -1,5 +1,5 @@
 import React, { useState, Suspense, useRef } from 'react';
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { pararAudios, establecerMostrarAbajo, establecerCanalBOn, establecerMostrarFlechasCanales } from './Redux/states/managerSlice';
 
@@ -22,12 +22,14 @@ import './App.css'
 import './CanalA.css'
 import './CanalB.css'
 
-// import GuaviareB from './secciones/Guaviare/GuaviareB';
-const GuaviareB = React.lazy(() => import('./secciones/Guaviare/GuaviareB'));
+import GuaviareB from './secciones/Guaviare/GuaviareB';
+//const GuaviareB = React.lazy(() => import('./secciones/Guaviare/GuaviareB'));
 
 function App() {
 
-  const departamento = useSelector(state => state.managerReducer.departamento);
+  const location = useLocation();
+  const path = location.pathname;
+
   const mostrarAbajo = useSelector(state => state.managerReducer.mostrarAbajo);
   const mostrarFlechasCanales = useSelector(state => state.managerReducer.mostrarFlechasCanales);
   const mostrarHamburguesa = useSelector(state => state.managerReducer.mostrarHamburguesa);
@@ -97,7 +99,7 @@ function App() {
       }
 
       <div className={canalBOn ? 'canal-b canal-b-on' : 'canal-b canal-b-off'}>
-        {departamento == 'guaviare' &&
+        {path == '/guaviare' &&
           <GuaviareB />
         }
       </div>

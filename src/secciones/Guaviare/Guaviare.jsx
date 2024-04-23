@@ -39,7 +39,6 @@ import RodriguezYoutube2 from './Rodriguez/Youtube2';
 
 import CierreGaleria from './Cierre/Galeria';
 import CierreVideo from './Cierre/Relatos';
-import Menu from './Cierre/Menu';
 
 import { Howl } from 'howler';
 
@@ -106,7 +105,6 @@ const Guaviare = () => {
   const dispatch = useDispatch();
 
   const handleNavegacion = (id) => {
-
     if(id == 'guaviare-jorge-navegacion'){
       dispatch(cambiarSeccion('jorge-bio'));
     }else if(id == 'guaviare-carlos-navegacion'){
@@ -193,7 +191,6 @@ const Guaviare = () => {
       {seccion == 'rodriguez-youtube-2' && <RodriguezYoutube2 />}
       {seccion == 'cierre-galeria' && <CierreGaleria />}
       {seccion == 'cierre-video' && <CierreVideo />}
-      {seccion == 'guaviare-menu' && <Menu />}      
     </div>
   )
 }

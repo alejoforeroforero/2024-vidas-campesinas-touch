@@ -99,7 +99,9 @@ const GuaviareB = () => {
     };
 
     divRef.current.addEventListener('scroll', handleScroll);
-    return () => divRef.current.removeEventListener('scroll', handleScroll);
+    return () => {
+      divRef.current?.removeEventListener('scroll', handleScroll);
+    }
   }, []);
 
   return (

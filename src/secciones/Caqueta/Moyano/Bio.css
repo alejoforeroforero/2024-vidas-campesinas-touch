@@ -1,0 +1,38 @@
+.moyano-bio {
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713838861/assets/caqueta/moyano/moyano_mexy7j.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  color:#fff;
+
+  h2{
+    margin-top: 5vh;
+  }
+
+  h3{
+
+  }
+
+
+
+  .info {
+    text-align: left;
+    position: relative;
+    margin-top: 3vh;
+
+    img {
+      width: 50px;
+      cursor: pointer;
+    }
+  }
+}
+
+.moyano-bio-frase{
+  h2{
+    margin-top: 36vh;
+    text-align: center;
+  }
+}
