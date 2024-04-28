@@ -43,7 +43,6 @@
   justify-content: center;
   flex-direction: column;
   align-items: start;
- 
 
   h2 {
     color: rgb(255, 255, 255);
@@ -61,6 +60,10 @@
     margin-top: 2vh;
     opacity:0;
     animation: aparecer 3s ease-in-out 1s forwards;
+  }
+
+  img{
+    width: 40%;
   }
 
   .guaviare-descripcion-p-contenedor {

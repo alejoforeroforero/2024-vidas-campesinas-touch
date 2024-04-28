@@ -15,9 +15,9 @@ const GuardianesF1 = () => {
         <div className='guardianes-f1'>
             <div className='guardianes-f1-fondo'></div>
             <div className='mask-general'>                
-                <div className='contenido-general'>                    
+                <div className='contenido-general guardianes-f1-contenedor'>                    
                     <div className='guardianes-f1-titulo'>
-                        <h2>Somos Guardianes del Yuruparí</h2>
+                        <h2>Somos <br></br> Guardianes <br></br> del Yuruparí</h2>
                         <hr />
                     </div>
                     <div className='guardianes-f1-bottom'>

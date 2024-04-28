@@ -16,19 +16,36 @@
   animation: mymove 50s linear infinite alternate;
 }
 
+.paz-f1-contenedor{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+}
+
 .paz-f1-top {
-  height: 15vh;
+  height: 10vh;
   width: 100%;
+  position: relative;
 
   img {
-    width: 30%;
-    margin-top: 10%;
-    margin-left: 70%;
+    position: absolute;
+    bottom: -8vh;
+    left: 50%;
+    height: 14vh;  
+    max-height: 120px;
   }
+
+  @media (min-height: 1400px) {
+    img {
+     bottom: -5vh;
+    }
+  }
+
+
 }
 
 .paz-f1-titulo {
-  height: 40vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -38,35 +55,46 @@
 
   h2 {
     text-align: left;
-    width: 80%;
-    max-width: 280px;
+    width: 100%;
     color: #ffffff;
-    font-size: 2.2rem;
     font-weight: 100;
     margin-bottom: 16px;
+    font-size: 2.2rem;
   }
 
   hr {
     background-color: #ffffff;
     height: 6px;
-    width: 50%;
+    width: 150px;
     border: none;
   }
 
   @media screen and (orientation: landscape) {
-  
+    h2 {
+      font-size: 2.4rem;
+      width: 60%;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    h2 {
+      font-size: 3.6rem;
+      width: 80%;
+    }
   }
 }
 
 .paz-f1-bottom {
   position: relative;
-  height: 50vh;
+  padding-top: 4vh;
+  height: 18vh;
   width: 100%;
   text-align: left;
 }
 
 .ave1 {
-  width: 80px;
+  height: 100%;
+  max-height: 180px;
 }
 
 @keyframes mymove {

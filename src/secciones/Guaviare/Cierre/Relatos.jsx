@@ -1,6 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { pararAudios, establecerMostrarLineasA, establecerMostrarFlechasCanales } from '../../../Redux/states/managerSlice';
+import { pararAudios, 
+  establecerMostrarLineasA, 
+  establecerMostrarFlechasCanales,
+  establecerMostrarHamburguesa
+} from '../../../Redux/states/managerSlice';
 import YT from '../../../components/YT';
 import useDelta from '../../../hooks/useDelta';
 
@@ -59,6 +63,7 @@ const Relatos = () => {
           imgThumbnail={jorgeThumbnail}
           id='youtube-animacion'
           mostrarFlechas={false}
+          mostrarHamburguesa={false}
         />
       </div>
     )
@@ -66,6 +71,8 @@ const Relatos = () => {
 
   const handleOnClickPopup = () => {
     setMostrarPopup(true);
+    dispatch(establecerMostrarHamburguesa(false));
+
   }
 
   const handleOnClick = () => {
@@ -77,6 +84,7 @@ const Relatos = () => {
   const handleSalir = () => {
     setMostrarPopup(false);
     dispatch(establecerMostrarFlechasCanales(false));
+    dispatch(establecerMostrarHamburguesa(true));
   }
 
   return (

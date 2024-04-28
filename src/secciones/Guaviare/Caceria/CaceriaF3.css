@@ -65,12 +65,13 @@
   position: absolute;
   text-align: center;
   font-size: 0.9rem;
-  left: 10%;
+  left: 5%;
   top: 48vh;
-  width: 80%;
+  width: 90%;
   margin: auto;
   opacity: 0;
   animation: aparecer 4s ease-out 2s forwards;
+
 }
 
 @media screen and (orientation: landscape) {

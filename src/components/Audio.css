@@ -10,7 +10,12 @@
     flex-direction: row;
     justify-content: left;
     align-items: center;
-    color: #fff; 
+    color: #fff;
+
+    p {
+      font-size: 0.9rem;
+      margin-top: 6px;
+    }
   }
 
   img {
@@ -19,7 +24,7 @@
     cursor: pointer;
   }
 
-  h4{
+  h4 {
     text-align: right;
     margin-right: 80px;
   }
@@ -31,23 +36,22 @@
   }
 
   audio {
-
   }
 }
 
-.canvas-audio-container{
+.canvas-audio-container {
   position: relative;
   display: flex;
   justify-content: center;
 
-  div{
+  div {
     bottom: 4px;
     position: absolute;
     width: 80% !important;
     text-align: right !important;
-    color:rgb(217, 217, 217);
+    color: rgb(217, 217, 217);
 
-    span{
+    span {
       padding: 4px 8px;
       border-radius: 12px;
       background-color: rgba(0, 0, 0, 0.5);
@@ -56,11 +60,11 @@
   }
 }
 
-.mini-player{
+.mini-player {
   position: fixed;
   left: 0;
-  top:0vh;
-  width:100vw;
+  top: 0vh;
+  width: 100vw;
   height: 100vh;
   z-index: 20 !important;
   display: flex;
@@ -71,7 +75,7 @@
   cursor: default;
 }
 
-.mini-player-contenedor{
+.mini-player-contenedor {
   width: 80%;
   max-width: 600px;
   overflow: hidden;
@@ -85,13 +89,13 @@
   cursor: default;
   padding: 10px 10px 20px 10px;
 
-  div{
+  div {
     width: 100%;
     text-align: center;
   }
 }
 
-.mini-player-pregress-container{
+.mini-player-pregress-container {
   display: flex !important;
   flex-direction: column;
   align-items: center !important;
@@ -99,7 +103,7 @@
   transform: translate(0px, -20px);
 }
 
-.mini-player-pregress-bar{
+.mini-player-pregress-bar {
   width: 80% !important;
   height: 30px;
   display: flex;
@@ -110,19 +114,33 @@
   transform: translate(0px, 20px);
 }
 
-.mini-player-pregress-bar-total{
+.mini-player-pregress-bar-total {
   width: 80% !important;
   height: 10px;
   background-color: rgb(67, 67, 67);
 }
 
-.mini-player-pregress-line{
+.mini-player-pregress-line {
   height: 10px;
   background-color: rgb(183, 183, 183);
 }
 
-.mini-player-salida{
-  text-align: right !important;
+.mini-player-salida {
+  position: relative;
+
+  h3 {
+    margin-left: 10%;
+    margin-top: 5px;
+    width: 80%;
+    text-align: left;
+  }
+
+  img {
+    position: absolute;
+    top:-10px;
+    right: 0px;
+    margin-right: 0px;
+  }
 }
 
 .mostrar {

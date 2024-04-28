@@ -14,7 +14,7 @@ const audioJorge3 = 'https://res.cloudinary.com/dfwhzadxa/video/upload/v17130542
 const audioCarlos = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230517/assets/guaviare/carlos/carlos1_ugfua3.mp3'
 const audioWilliam1 = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230516/assets/guaviare/william/william2_mm4h0p.mp3';
 const audioCaceria = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230572/assets/guaviare/caceria/audio-caceria_kvolpo.mp3';
-const audioArteGuaviare = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230594/assets/guaviare/caceria/audio-arte-sonoro-guaviare_oogrdx.mp3';
+const audioArteGuaviare = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1714315774/assets/guaviare/caceria/tecnologia-del-jaguar-final_zsbdtl.mp3';
 const audioGuayabero1 = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230549/assets/guaviare/guayabero/audio-guayabero1_rdroio.mp3';
 const audioGuayabero2 = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230494/assets/guaviare/guayabero/audio-guayabero2_ti3v4n.mp3';
 const audioToninas = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230497/assets/guaviare/guayabero/audio-toninas_cpcqef.mp3';
@@ -33,7 +33,7 @@ const audioMoyano = "https://res.cloudinary.com/dbqfefibl/video/upload/v17138854
 
 import './Audio.css'
 
-const Audio = ({ titulo, id, autor = '', popup = false }) => {
+const Audio = ({ titulo, id, subTitulo = '', autor = '', popup = false }) => {
     const cancionActual = useSelector(state => state.managerReducer.cancionActual);
     const duracion = useSelector(state => state.managerReducer.duracion);
     const dispatch = useDispatch();
@@ -67,9 +67,9 @@ const Audio = ({ titulo, id, autor = '', popup = false }) => {
             return audioJorge3
         } else if (id == 'carlos') {
             return audioCarlos
-        }else if (id == 'william-1') {
+        } else if (id == 'william-1') {
             return audioWilliam1
-        }else if (id == 'caceria') {
+        } else if (id == 'caceria') {
             return audioCaceria
         } else if (id == 'arte-guaviare') {
             return audioArteGuaviare
@@ -87,21 +87,21 @@ const Audio = ({ titulo, id, autor = '', popup = false }) => {
             return audioCocaIvan
         } else if (id == 'audio-madera') {
             return audioLaMadera
-        }else if (id == 'audio-paz-1') {
+        } else if (id == 'audio-paz-1') {
             return audioPaz1
-        }else if (id == 'audio-paz-2') {
+        } else if (id == 'audio-paz-2') {
             return audioPaz2
-        }else if (id == 'audio-paz-3') {
+        } else if (id == 'audio-paz-3') {
             return audioPaz3
-        }else if (id == 'audio-guardianes-1') {
+        } else if (id == 'audio-guardianes-1') {
             return audioGuardianes1
-        }else if (id == 'audio-guardianes-2') {
+        } else if (id == 'audio-guardianes-2') {
             return audioGuardianes2
-        }else if (id == 'audio-guardianes-3') {
+        } else if (id == 'audio-guardianes-3') {
             return audioGuardianes3
-        }else if (id == 'audio-guardianes-4') {
+        } else if (id == 'audio-guardianes-4') {
             return audioGuardianes4
-        }else if (id == 'audio-moyano') {
+        } else if (id == 'audio-moyano') {
             return audioMoyano
         }
     }
@@ -122,7 +122,7 @@ const Audio = ({ titulo, id, autor = '', popup = false }) => {
     const animate1 = () => {
         if (audioCtx == null) {
             const audioEl = document.createElement('audio');
-            audioEl.crossOrigin="anonymous"
+            audioEl.crossOrigin = "anonymous"
             audioEl.id = 'audio-el';
             audioEl.controls = true;
             audioEl.src = escogerCancion();
@@ -236,6 +236,7 @@ const Audio = ({ titulo, id, autor = '', popup = false }) => {
             <div className={audioS ? 'mini-player mostrar' : 'mini-player esconder'}>
                 <div className='mini-player-contenedor'>
                     <div className='mini-player-salida'>
+                        <h3>{titulo}</h3>
                         <img onClick={handleOnClose} src={salida} alt="salida" />
                     </div>
                     <div className='canvas-audio-container'>
@@ -256,8 +257,13 @@ const Audio = ({ titulo, id, autor = '', popup = false }) => {
     return (
         <div className='audio-contenedor'>
             <div className='audio-contenedor-interior'>
-                <img src={(audioS) ? audioOnImg : audioImg} onClick={() => { playAudio() }} ></img>
-                <h3>{titulo}</h3>
+                <div>
+                    <img src={(audioS) ? audioOnImg : audioImg} onClick={() => { playAudio() }} ></img>
+                </div>
+                <div>
+                    <h3>{titulo}</h3>
+                    {subTitulo != '' && <p>{subTitulo}</p>}
+                </div>
             </div>
             {autor != '' && <h4>{autor}</h4>}
             {popup && pintarMiniPlayer()}

@@ -10,7 +10,7 @@ const GuayaberoF1 = () => {
         <div className='guayabero-f1'>
             <div className='guayabero-f1-fondo'></div>
             <div className='mask-general'>
-                <div className='contenido-general'>
+                <div className='contenido-general guayabero-f1-contenedor'>
                     <div className='guayabero-f1-top'>
                         <img src={garzaImg} alt="Garza" />
                         <img src={ramaImg} alt="Rama" />

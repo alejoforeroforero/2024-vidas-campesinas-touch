@@ -15,7 +15,7 @@ const BonanzasF1 = () => {
         <div className='bonanzas-f1'>
             <div className='bonanzas-f1-fondo'></div>
             <div className='mask-general'>                
-                <div className='contenido-general'>                    
+                <div className='contenido-general bonanzas-f1-contenedor'>                    
                     <div className='bonanzas-f1-titulo'>
                         <h2>Entre bonanzas</h2>
                         <hr />

@@ -16,12 +16,12 @@ const PazF1 = () => {
         <div className='paz-f1'>
             <div className='paz-f1-fondo'></div>
             <div className='mask-general'>                
-                <div className='contenido-general'>
+                <div className='contenido-general paz-f1-contenedor'>
                     <div className='paz-f1-top'>
                         <img src={mariposa} alt="" />
                     </div>
                     <div className='paz-f1-titulo'>
-                        <h2> Después del Acuerdo de Paz</h2>
+                        <h2> Después<br></br> del Acuerdo<br></br> de Paz</h2>
                         <hr />
                     </div>
                     <div className='paz-f1-bottom'>

@@ -32,6 +32,7 @@ const CaceriaF3 = () => {
                             <Audio
                                 id='arte-guaviare'
                                 titulo='La tecnología del jaguar'
+                                subTitulo='- Etnografía sonora -'
                                 autor=''
                                 popup={true}
                             />

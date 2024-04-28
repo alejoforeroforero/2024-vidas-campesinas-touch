@@ -17,12 +17,12 @@ const CaceriaF1 = () => {
         <div className='caceria-f1'>
             <div className='caceria-f1-fondo'></div>
             <div className='mask-general'>                
-                <div className='contenido-general'>
+                <div className='contenido-general caceria-f1-contenedor'>
                     <div className='caceria-f1-top'>
                         <img src={hojaTop} alt="" />
                     </div>
                     <div className='caceria-f1-titulo'>
-                        <h2>En los tiempos de la cacería</h2>
+                        <h2>En los tiempos <br></br>de la cacería</h2>
                         <hr />
                     </div>
                     <div className='caceria-f1-bottom'>

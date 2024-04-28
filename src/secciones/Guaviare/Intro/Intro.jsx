@@ -12,6 +12,7 @@ import {
 //import videoGuaviareM from '../../../assets/guaviare/home/guaviare.mp4';
 const videoGuaviareM = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230577/assets/guaviare/home/guaviare_pnsy0u.mp4'
 import guaviareGrafica from '../../../assets/guaviare/home/pictograma.png';
+import guaviareLinea from '../../../assets/guaviare/home/linea-guaviare.png';
 
 import { GuaviareIntro } from '../../../data/Guaviare';
 
@@ -141,7 +142,7 @@ const Intro = () => {
                         </div>
                         <div className='guaviare-descripcion'>
                             <h2 className='guaviare-descripcion-h2'><pre>{GuaviareIntro.desc}</pre></h2>
-                            <hr className='guaviare-descripcion-hr' />
+                           <img src={guaviareLinea} alt="linea" />
                             <div className='guaviare-descripcion-p-contenedor'>
                                 {contador == 0 &&
                                     <p className={desaparecer ? 'guaviare-intro-p1-des' : 'guaviare-intro-p1'}>
