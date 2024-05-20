@@ -162,9 +162,6 @@ const Intro = () => {
                                 }
                             </div>
                         </div>
-                        <div className='caqueta-descripcion-grafica'>
-                            <img src={nino} alt="caqueta" />
-                        </div>
                     </div>
                 }
             </div>

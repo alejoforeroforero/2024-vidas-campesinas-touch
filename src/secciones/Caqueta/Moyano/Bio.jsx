@@ -6,6 +6,7 @@ import {
   cambiarDescargando,
   establecerMostrarLineasA,
   establecerPersonaje,
+  establecerMostrarFlechasCanales,
   pararAudios
 } from '../../../Redux/states/managerSlice';
 import InfoPopup from '../../../components/InfoPopup';
@@ -24,6 +25,7 @@ const Bio = () => {
   useEffect(() => {
     dispatch(cambiarDescargando(true));
     dispatch(establecerMostrarLineasA(true));
+    dispatch(establecerMostrarFlechasCanales(true));
     dispatch(establecerPersonaje('linea-moyano'));
     dispatch(pararAudios());
     const timer = setTimeout(() => {

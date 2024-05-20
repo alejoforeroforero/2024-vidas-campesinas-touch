@@ -1,0 +1,113 @@
+.insertoB1 {
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713840375/assets/caqueta/moyano/loop-moyano_tvohoj.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.insertoB1-logo{
+  width: 100%;
+  text-align: center;
+  margin-top: 10vh;
+
+  img{
+    width:70%;
+  }
+}
+
+.insertoB1-audio {
+  width: 100% !important;
+  position: relative;
+  margin-top: 25vh;
+}
+
+.insertoB2 {
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713242761/assets/guaviare/guardianes/fondo-guardianes-f2_tphytr.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.insertoB2-interior {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.insertoB2-logo{
+  width: 100%;
+  text-align: center;
+
+  img{
+    width:70%;
+    transform: translate(0, -14vh);
+  }
+}
+
+.insertoB2-img{
+  text-align: center;
+
+  img{
+    width:45%;
+    max-width: 400px;
+    transform: translate(0, -10vh);
+  }
+}
+
+.insertoB2-play{
+
+  img{
+    width:80px;
+  }
+}
+
+.insertoB2-frase {
+  margin-top: 13vh;
+  text-align: center;
+  width: 80%;
+
+  h3 {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  h4{
+    margin-top: 14px;
+    text-align: center;
+  }
+}
+
+
+.insertoB3 {
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713840375/assets/caqueta/moyano/loop-moyano_tvohoj.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.insertoB-logo{
+  width: 100%;
+  text-align: center;
+  margin-top: 25vh;
+
+  img{
+    width:70%;
+  }
+}
+
+.insertoB-audio {
+  width: 100% !important;
+  position: relative;
+  margin-top: 5vh;
+}

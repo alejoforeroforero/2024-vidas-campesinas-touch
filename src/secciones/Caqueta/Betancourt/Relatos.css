@@ -1,0 +1,32 @@
+.betancourt-relatos {
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713840375/assets/caqueta/moyano/loop-moyano_tvohoj.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: aparecer 6s;
+}
+
+.betancourt-relatos-audio {
+  width: 100% !important;
+  position: relative;
+  margin-top: 12vh;
+}
+
+
+.betancourt-relatos-img {
+  width: 100% !important;
+  position: relative;
+  margin-top: 0vh;
+  text-align: center;
+  
+ img{
+  height: 40vh;
+  max-width: 300px;
+ }
+}
+
+
+

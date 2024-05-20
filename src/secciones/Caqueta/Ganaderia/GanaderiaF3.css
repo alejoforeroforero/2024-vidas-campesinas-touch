@@ -1,0 +1,54 @@
+.ganaderia-f3 {
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713242753/assets/guaviare/guardianes/fondo-guardianes-f2_usgrlc.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  animation: mymove 120s linear infinite alternate;
+}
+
+.ganaderia-f3-ilustraciones {
+  position: absolute;
+  left: 0px;
+  top: 12vh;
+  cursor: pointer;
+  z-index: 300;
+  text-align: center;
+  width: 100%;
+  height: 30vh;
+  opacity: 0;
+  animation: aparecer 3s ease-in forwards;
+}
+
+@media screen and (orientation: landscape) {
+  .ganaderia-f3-ilustraciones {
+    top: 17vh;
+  }
+}
+
+.ganaderia-f3-grafica{
+  width: 60%;
+  max-width:240px;
+}
+
+
+.ganaderia-f3-interior {
+  position: relative;
+  width: 100%;
+}
+
+
+.ganaderia-f3-audio-contenedor2 {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 60vh;
+  cursor: pointer;
+  z-index: 300;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  animation: aparecer 1s ease-in-out 2s forwards;
+}

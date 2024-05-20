@@ -15,7 +15,7 @@ const Youtube = () => {
   const [youtubeRef, setYoutubeRef] = useState(null);
   const [mostrarPlay, setMostrarPlay] = useState(false);
   const elementRef = useRef(null);
-  const { handleTouchStart, handleTouchEnd } = useDelta('moyano-relatos', 'menu', elementRef);
+  const { handleTouchStart, handleTouchEnd } = useDelta('moyano-relatos', 'caqueta-inserto1', elementRef);
 
   const refYoutube = (video) => {
     setYoutubeRef(video);

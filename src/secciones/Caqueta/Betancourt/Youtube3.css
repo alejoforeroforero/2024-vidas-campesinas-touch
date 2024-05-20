@@ -1,0 +1,24 @@
+.betancourt-youtube-3{
+    background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713841479/assets/caqueta/moyano/moyano-youtube-2_avbjza.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+
+    h4{
+        transform: translate(0, -3vh);
+        text-align: left;
+    }
+}
+
+.betancourt-youtube-3-titulo{
+    position: absolute;
+    text-align: center;
+    margin-top: 17vh;
+    left:0;
+    top:0;
+    width: 100%;
+}
+

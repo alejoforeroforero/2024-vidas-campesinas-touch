@@ -12,7 +12,7 @@
     }
 }
 
-.moyano-youtube-planta{
+.moyano-youtube-ave{
     position: absolute;
     text-align: center;
     margin-top: 10vh;
@@ -21,8 +21,8 @@
     width: 100%;
 
     img{
-        width: 23%;
-        max-width: 90px;
+        width: 30%;
+        max-width: 130px;
     }
 }
 

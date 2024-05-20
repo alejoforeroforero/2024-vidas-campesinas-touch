@@ -1,0 +1,53 @@
+.ganaderia-f2 {
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713242761/assets/guaviare/guardianes/fondo-guardianes-f2_tphytr.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: fadeIn 4s;
+}
+
+.ganaderia-f2-interior {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ganaderia-f2-img{
+  text-align: center;
+
+  img{
+    width:45%;
+    max-width: 400px;
+    transform: translate(0, -10vh);
+  }
+}
+
+.ganaderia-f2-play{
+
+  img{
+    width:80px;
+  }
+}
+
+.ganaderia-f2-frase {
+  margin-top: 13vh;
+  text-align: center;
+  width: 60%;
+
+  h3 {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  h4{
+    margin-top: 14px;
+    text-align: right;
+    transform: translate(5vw, 0);
+  }
+}

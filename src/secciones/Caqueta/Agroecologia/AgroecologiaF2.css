@@ -1,0 +1,45 @@
+.agroecologia-f2 {
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713242761/assets/guaviare/guardianes/fondo-guardianes-f2_tphytr.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: fadeIn 4s;
+}
+
+.agroecologia-f2-interior {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.agroecologia-f2-img{
+  text-align: center;
+
+  img{
+    width:45%;
+    max-width: 400px;
+    transform: translate(0, -10vh);
+  }
+}
+
+.agroecologia-f2-play{
+
+  img{
+    width:80px;
+  }
+}
+
+.agroecologia-f2-frase {
+  margin-top: 13vh;
+  text-align: center;
+
+  h3 {
+    font-size: 1.1rem;
+  }
+}

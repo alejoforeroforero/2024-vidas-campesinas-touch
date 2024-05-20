@@ -11,3 +11,19 @@ export const Moyano = {
   frase:'“Vamos a cambiar\nel campo”',
   bio: "Moyano Trujillo",
 };
+
+export const Betancourt = {
+  titulo: "Familia\nBetancourt\nSánchez",
+  subTitulo:'Finca Buenos Aires.\nVereda La Paz, Florencia.',
+  frase:'“El proyecto es hacer un vivero ecológico”',
+  bio: "Betancourt Sanchez",
+};
+
+export const Caleno = {
+  titulo: "Familia\nCaleño\nOtavo",
+  subTitulo:'Finca Amazónica. \nLos Caraños.\nVereda La Paz, Florencia.',
+  frase:'“Tenemos un sistema agroforestal”',
+  bio: "Caleño Otavo",
+};
+
+

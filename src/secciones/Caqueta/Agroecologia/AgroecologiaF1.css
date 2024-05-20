@@ -1,0 +1,88 @@
+.agroecologia-f1 {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: aparecer 1s ease-in forwards;
+}
+
+.agroecologia-f1-fondo {
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713230357/assets/guaviare/caceria/fondo-caceria_vpkj9a.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  animation: mymove 50s linear infinite alternate;
+}
+
+.agroecologia-f1-contenedor{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+}
+
+.agroecologia-f1-titulo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  margin-top: 15vh;
+
+  h2 {
+    text-align: left;
+    width: 100%;
+    color: #f315ce;
+    font-weight: 100;
+    margin-bottom: 16px;
+    font-size: 2.2rem;
+  }
+
+  hr {
+    background-color: #00a397;
+    height: 6px;
+    width: 150px;
+    border: none;
+  }
+
+  @media screen and (orientation: landscape) {
+    h2 {
+      font-size: 2.4rem;
+      width: 60%;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    h2 {
+      font-size: 3.6rem;
+      width: 100%;
+    }
+  }
+}
+
+.agroecologia-f1-bottom {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.agroecologia-f1-maiz {
+  width: 40vw;
+  max-width: 200px;
+}
+
+
+@keyframes mymove {
+  0% {
+    transform: scale(1, 1) translate(0px, 0px);
+  }
+  50% {
+    transform: scale(1.3, 1.3) translate(-50px, 40px);
+  }
+  100% {
+    transform: scale(1.6, 1.6) translate(50px, -40px);
+  }
+}

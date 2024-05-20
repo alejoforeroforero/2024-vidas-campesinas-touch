@@ -47,7 +47,7 @@ const Relatos = () => {
             <Audio id='audio-moyano' titulo='“Un santo remedio es el que le aplaca el dolor al instante”' />
           </div>
           <div className='moyano-relatos-frase'>
-            <h3>Remedios con plantas naturales y de por aquí, de esta tierra...”</h3>
+            <h3>“Remedios con plantas naturales y de por aquí, de esta tierra…”</h3>
           </div>
         </div>
       </div>

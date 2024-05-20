@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { pararAudios } from '../../../Redux/states/managerSlice';
+import { pararAudios, establecerMostrarFlechasCanales } from '../../../Redux/states/managerSlice';
 import YT from '../../../components/YT';
 import useDelta from '../../../hooks/useDelta';
 import playImg from '../../../assets/generales/play_video.png';
-import planta from '../../../assets/caqueta/moyano/planta.png';
+import aveMariposa from '../../../assets/caqueta/moyano/ave-mariposa.png';
 
 const thumbnail = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713839734/assets/caqueta/moyano/moyano-youtube-1_epr1bl.jpg';
 import './Youtube.css'
@@ -20,6 +20,7 @@ const Youtube = () => {
   const refYoutubeCarlos = (video) => {
     setYoutubeRef(video);
     dispatch(pararAudios());
+    dispatch(establecerMostrarFlechasCanales(true));
     setTimeout(()=>{
       setMostrarPlay(true);
     }, 1000);    
@@ -51,8 +52,8 @@ const Youtube = () => {
       <div ref={elementRef} className='seccion moyano-youtube' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
         <div className='mask-general'>
           <div className="contenido-general">
-            <div className="moyano-youtube-planta">
-              <img src={planta} alt="planta" />
+            <div className="moyano-youtube-ave">
+              <img src={aveMariposa} alt="ave-mariposa" />
             </div>
             <div className='youtube-contenido'>
               <div>

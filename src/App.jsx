@@ -23,6 +23,7 @@ import './CanalA.css'
 import './CanalB.css'
 
 import GuaviareB from './secciones/Guaviare/GuaviareB';
+import CaquetaB from './secciones/Caqueta/CaquetaB';
 //const GuaviareB = React.lazy(() => import('./secciones/Guaviare/GuaviareB'));
 
 function App() {
@@ -101,6 +102,9 @@ function App() {
       <div className={canalBOn ? 'canal-b canal-b-on' : 'canal-b canal-b-off'}>
         {path == '/guaviare' &&
           <GuaviareB />
+        }
+        {path == '/caqueta' &&
+          <CaquetaB />
         }
       </div>
 

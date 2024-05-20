@@ -1,0 +1,59 @@
+.estigma-f3 {
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713242753/assets/guaviare/guardianes/fondo-guardianes-f2_usgrlc.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  animation: mymove 120s linear infinite alternate;
+}
+
+.estigma-f3-ilustraciones {
+  position: absolute;
+  left: 0px;
+  top: 32vh;
+  cursor: pointer;
+  z-index: 300;
+  text-align: center;
+  width: 100%;
+  height: 20vh;
+  opacity: 0;
+  animation: aparecer 3s ease-in forwards;
+}
+
+@media screen and (orientation: landscape) {
+  .estigma-f3-ilustraciones {
+    top: 33vh;
+  }
+}
+
+
+.estigma-f3-interior {
+  position: relative;
+  width: 100%;
+}
+
+.estigma-f3-audio-contenedor {
+  position: absolute;
+  left: 0px;
+  top: 48vh;
+  cursor: pointer;
+  z-index: 300;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.estigma-f3-p {
+  position: absolute;
+  text-align: center;
+  font-size: 0.9rem;
+  left: 5%;
+  top: 62vh;
+  width: 90%;
+  margin: auto;
+  opacity: 0;
+  animation: aparecer 4s ease-out 2s forwards;
+}
