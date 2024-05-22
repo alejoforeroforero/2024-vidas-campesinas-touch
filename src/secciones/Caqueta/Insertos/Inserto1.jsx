@@ -33,7 +33,7 @@ const Inserto1 = () => {
           </div>
           <div className='inserto1-audio'>
             <Audio 
-              id='inserto1-audio' 
+              id='caqueta-inserto-1-audio' 
               titulo='“Nosotras también somos científicas en nuestro territorio. Tenemos muchos saberes”' 
               autor = '- Nury Trujillo de Moyano'
             />

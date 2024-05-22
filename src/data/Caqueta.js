@@ -9,7 +9,7 @@ export const Moyano = {
   titulo: "Familia\nMoyano\nTrujillo",
   subTitulo:'Finca El Cairo.\nVereda Sinaí, Morelia.',
   frase:'“Vamos a cambiar\nel campo”',
-  bio: "Moyano Trujillo",
+  bio: "Moyano Trujillo Todos ellos buscan frenar la deforestación en las veredas, restaurar los bosques, Todos ellos buscan frenar la deforestación en las veredas, restaurar los bosques, Todos ellos buscan frenar la deforestación en las veredas, restaurar los bosques, Todos ellos buscan frenar la deforestación en las veredas, restaurar los bosques, Todos ellos buscan frenar la deforestación en las veredas, restaurar los bosques, Todos ellos buscan frenar la deforestación en las veredas, restaurar los bosques, ",
 };
 
 export const Betancourt = {

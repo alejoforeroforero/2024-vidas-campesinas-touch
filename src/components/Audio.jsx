@@ -1,280 +1,358 @@
-import { useEffect, useRef, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { cambiarCancion, pararAudios, establecerDuracion } from '../Redux/states/managerSlice';
-import audioOnImg from '../assets/generales/audio-on.png';
-import audioImg from '../assets/generales/audio.png';
-import salida from '../assets/generales/salida.png';
+import { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  cambiarCancion,
+  pararAudios,
+  establecerDuracion,
+} from "../Redux/states/managerSlice";
+import audioOnImg from "../assets/generales/audio-on.png";
+import audioImg from "../assets/generales/audio.png";
+import salida from "../assets/generales/salida.png";
 
 // import audioJorge1 from '../assets/guaviare/jorge/jorge1.mp3';
-const audioJorge2 = 'https://res.cloudinary.com/dfwhzadxa/video/upload/v1713054257/vidas-campesinas/jorge/jorge2_njk2y7.mp3'
+const audioJorge2 =
+  "https://res.cloudinary.com/dfwhzadxa/video/upload/v1713054257/vidas-campesinas/jorge/jorge2_njk2y7.mp3";
 
 // const audioJorge2 = 'https://alejoforero.com/vidascampesinas/jorge2.mp3';
 //import audioJorge3 from '../assets/guaviare/jorge/jorge3.mp3';
-const audioJorge3 = 'https://res.cloudinary.com/dfwhzadxa/video/upload/v1713054261/vidas-campesinas/jorge/jorge3_mbvsln.mp3'
-const audioCarlos = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230517/assets/guaviare/carlos/carlos1_ugfua3.mp3'
-const audioWilliam1 = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230516/assets/guaviare/william/william2_mm4h0p.mp3';
-const audioCaceria = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230572/assets/guaviare/caceria/audio-caceria_kvolpo.mp3';
-const audioArteGuaviare = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1714315774/assets/guaviare/caceria/tecnologia-del-jaguar-final_zsbdtl.mp3';
-const audioGuayabero1 = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230549/assets/guaviare/guayabero/audio-guayabero1_rdroio.mp3';
-const audioGuayabero2 = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230494/assets/guaviare/guayabero/audio-guayabero2_ti3v4n.mp3';
-const audioToninas = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230497/assets/guaviare/guayabero/audio-toninas_cpcqef.mp3';
-const audioMarihuana = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230499/assets/guaviare/bonanzas/la-marihuana_tfod9z.mp3';
-const audioCocaDisney = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230516/assets/guaviare/bonanzas/la-coca-disney_yqbsqe.mp3';
-const audioCocaIvan = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230516/assets/guaviare/bonanzas/la-coca-ivan_odo4n4.mp3';
-const audioLaMadera = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230505/assets/guaviare/bonanzas/la-madera_y6nnzb.mp3';
-const audioPaz1 = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230500/assets/guaviare/paz/audio-paz-1_khfn0z.mp3';
-const audioPaz2 = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230544/assets/guaviare/paz/audio-paz-2_bc2qo2.mp3';
-const audioPaz3 = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230546/assets/guaviare/paz/audio-paz-3_ljbvx3.mp3';
-const audioGuardianes1 = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713242780/assets/guaviare/guardianes/audio-guardianes-1_gff7nx.mp3';
-const audioGuardianes2 = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713242768/assets/guaviare/guardianes/audio-guardianes-2_n2pq7c.mp3';
-const audioGuardianes3 = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713242785/assets/guaviare/guardianes/audio-guardianes-3_l2pfem.mp3';
-const audioGuardianes4 = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713242777/assets/guaviare/guardianes/audio-guardianes-4_k1sd2e.mp3';
-const audioMoyano = "https://res.cloudinary.com/dbqfefibl/video/upload/v1713885415/assets/caqueta/moyano/audio-moyano_q9j3fs.mp3"
+const audioJorge3 =
+  "https://res.cloudinary.com/dfwhzadxa/video/upload/v1713054261/vidas-campesinas/jorge/jorge3_mbvsln.mp3";
+const audioCarlos =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713230517/assets/guaviare/carlos/carlos1_ugfua3.mp3";
+const audioWilliam1 =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713230516/assets/guaviare/william/william2_mm4h0p.mp3";
+const audioCaceria =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713230572/assets/guaviare/caceria/audio-caceria_kvolpo.mp3";
+const audioArteGuaviare =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1714315774/assets/guaviare/caceria/tecnologia-del-jaguar-final_zsbdtl.mp3";
+const audioGuayabero1 =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713230549/assets/guaviare/guayabero/audio-guayabero1_rdroio.mp3";
+const audioGuayabero2 =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713230494/assets/guaviare/guayabero/audio-guayabero2_ti3v4n.mp3";
+const audioToninas =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713230497/assets/guaviare/guayabero/audio-toninas_cpcqef.mp3";
+const audioMarihuana =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713230499/assets/guaviare/bonanzas/la-marihuana_tfod9z.mp3";
+const audioCocaDisney =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713230516/assets/guaviare/bonanzas/la-coca-disney_yqbsqe.mp3";
+const audioCocaIvan =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713230516/assets/guaviare/bonanzas/la-coca-ivan_odo4n4.mp3";
+const audioLaMadera =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713230505/assets/guaviare/bonanzas/la-madera_y6nnzb.mp3";
+const audioPaz1 =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713230500/assets/guaviare/paz/audio-paz-1_khfn0z.mp3";
+const audioPaz2 =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713230544/assets/guaviare/paz/audio-paz-2_bc2qo2.mp3";
+const audioPaz3 =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713230546/assets/guaviare/paz/audio-paz-3_ljbvx3.mp3";
+const audioGuardianes1 =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713242780/assets/guaviare/guardianes/audio-guardianes-1_gff7nx.mp3";
+const audioGuardianes2 =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713242768/assets/guaviare/guardianes/audio-guardianes-2_n2pq7c.mp3";
+const audioGuardianes3 =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713242785/assets/guaviare/guardianes/audio-guardianes-3_l2pfem.mp3";
+const audioGuardianes4 =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713242777/assets/guaviare/guardianes/audio-guardianes-4_k1sd2e.mp3";
+const audioMoyano =
+  "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267081/caqueta/moyano/moyano-santo-remedio_jwajco.mp3";
+const audioCaquetaInserto1 =
+  "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716384843/caqueta/insertos/caqueta-inserto-1_ktdqsf.mp3";
+const audioCaquetaInserto2 =
+  "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716392590/caqueta/insertos/caqueta-inserto-2_t3ncxr.mp3";
+const audioCaquetaInserto3 =
+  "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716392590/caqueta/insertos/caqueta-inserto-3_vjiwal.mp3";
+const audioBetancourt = "";
+const audioCaleno1 =
+  "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716393309/caqueta/caleno/audio-caleno-1_aldfq8.mp3";
+const audioCaleno2 =
+  "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716393309/caqueta/caleno/audio-caleno-2_fidkdf.mp3";
 
-import './Audio.css'
+import "./Audio.css";
 
-const Audio = ({ titulo, id, subTitulo = '', autor = '', popup = false }) => {
-    const cancionActual = useSelector(state => state.managerReducer.cancionActual);
-    const duracion = useSelector(state => state.managerReducer.duracion);
-    const dispatch = useDispatch();
+const Audio = ({ titulo, id, subTitulo = "", autor = "", popup = false }) => {
+  const cancionActual = useSelector(
+    (state) => state.managerReducer.cancionActual
+  );
+  const duracion = useSelector((state) => state.managerReducer.duracion);
+  const dispatch = useDispatch();
 
-    const canvasRef = useRef();
-    const audioRef = useRef()
-    const frame1 = useRef(0);
-    const progressBarRef = useRef();
-    const progressLineRef = useRef();
+  const canvasRef = useRef();
+  const audioRef = useRef();
+  const frame1 = useRef(0);
+  const progressBarRef = useRef();
+  const progressLineRef = useRef();
 
+  const [contadorReg, setContadorReg] = useState(0);
+  const [audioPos, setAudioPos] = useState(0);
 
-    const [contadorReg, setContadorReg] = useState(0);
-    const [audioPos, setAudioPos] = useState(0)
+  let audioCtx = null;
+  let analyser;
+  let gainNode;
+  let source;
+  let bufferLength;
+  let dataArray;
+  let canvasCtx;
 
-    let audioCtx = null;
-    let analyser;
-    let gainNode;
-    let source;
-    let bufferLength;
-    let dataArray;
-    let canvasCtx;
+  const audioS = cancionActual == id ? true : false;
 
-    const audioS = cancionActual == id ? true : false;
+  const escogerCancion = () => {
+    if (id == "jorge1") {
+      return null;
+    } else if (id == "jorge2") {
+      return audioJorge2;
+    } else if (id == "jorge3") {
+      return audioJorge3;
+    } else if (id == "carlos") {
+      return audioCarlos;
+    } else if (id == "william-1") {
+      return audioWilliam1;
+    } else if (id == "caceria") {
+      return audioCaceria;
+    } else if (id == "arte-guaviare") {
+      return audioArteGuaviare;
+    } else if (id == "audio-guayabero1") {
+      return audioGuayabero1;
+    } else if (id == "audio-guayabero2") {
+      return audioGuayabero2;
+    } else if (id == "audio-toninas") {
+      return audioToninas;
+    } else if (id == "audio-marihuana") {
+      return audioMarihuana;
+    } else if (id == "audio-coca-disney") {
+      return audioCocaDisney;
+    } else if (id == "audio-coca-ivan") {
+      return audioCocaIvan;
+    } else if (id == "audio-madera") {
+      return audioLaMadera;
+    } else if (id == "audio-paz-1") {
+      return audioPaz1;
+    } else if (id == "audio-paz-2") {
+      return audioPaz2;
+    } else if (id == "audio-paz-3") {
+      return audioPaz3;
+    } else if (id == "audio-guardianes-1") {
+      return audioGuardianes1;
+    } else if (id == "audio-guardianes-2") {
+      return audioGuardianes2;
+    } else if (id == "audio-guardianes-3") {
+      return audioGuardianes3;
+    } else if (id == "audio-guardianes-4") {
+      return audioGuardianes4;
+    } else if (id == "audio-moyano") {
+      return audioMoyano;
+    } else if (id == "caqueta-inserto-1-audio") {
+      return audioCaquetaInserto1;
+    } else if (id == "caqueta-inserto-2-audio") {
+      return audioCaquetaInserto2;
+    } else if (id == "caqueta-inserto-3-audio") {
+      return audioCaquetaInserto3;
+    } else if (id == "audio-caleno-1") {
+      return audioCaleno1;
+    } else if (id == "audio-caleno-2") {
+      return audioCaleno2;
+    }
+  };
 
-    const escogerCancion = () => {
-        if (id == 'jorge1') {
-            return null
-        } else if (id == 'jorge2') {
-            return audioJorge2;
-        } else if (id == 'jorge3') {
-            return audioJorge3
-        } else if (id == 'carlos') {
-            return audioCarlos
-        } else if (id == 'william-1') {
-            return audioWilliam1
-        } else if (id == 'caceria') {
-            return audioCaceria
-        } else if (id == 'arte-guaviare') {
-            return audioArteGuaviare
-        } else if (id == 'audio-guayabero1') {
-            return audioGuayabero1
-        } else if (id == 'audio-guayabero2') {
-            return audioGuayabero2
-        } else if (id == 'audio-toninas') {
-            return audioToninas
-        } else if (id == 'audio-marihuana') {
-            return audioMarihuana
-        } else if (id == 'audio-coca-disney') {
-            return audioCocaDisney
-        } else if (id == 'audio-coca-ivan') {
-            return audioCocaIvan
-        } else if (id == 'audio-madera') {
-            return audioLaMadera
-        } else if (id == 'audio-paz-1') {
-            return audioPaz1
-        } else if (id == 'audio-paz-2') {
-            return audioPaz2
-        } else if (id == 'audio-paz-3') {
-            return audioPaz3
-        } else if (id == 'audio-guardianes-1') {
-            return audioGuardianes1
-        } else if (id == 'audio-guardianes-2') {
-            return audioGuardianes2
-        } else if (id == 'audio-guardianes-3') {
-            return audioGuardianes3
-        } else if (id == 'audio-guardianes-4') {
-            return audioGuardianes4
-        } else if (id == 'audio-moyano') {
-            return audioMoyano
-        }
+  const formatTime = (seconds) => {
+    let hours = Math.floor(seconds / 3600);
+    let minutes = Math.floor((seconds % 3600) / 60);
+    let remainingSeconds = Math.floor(seconds % 60);
+
+    // Add leading zeros if necessary
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    remainingSeconds =
+      remainingSeconds < 10 ? "0" + remainingSeconds : remainingSeconds;
+
+    return minutes + ":" + remainingSeconds;
+  };
+
+  const animate1 = () => {
+    if (audioCtx == null) {
+      const audioEl = document.createElement("audio");
+      audioEl.crossOrigin = "anonymous";
+      audioEl.id = "audio-el";
+      audioEl.controls = true;
+      audioEl.src = escogerCancion();
+      document.body.appendChild(audioEl);
+      audioEl.addEventListener("canplaythrough", () => {
+        dispatch(establecerDuracion(audioEl.duration));
+      });
+      audioEl.play();
+
+      audioRef.current = audioEl;
+
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      analyser = audioCtx.createAnalyser();
+      gainNode = audioCtx.createGain();
+      analyser.fftSize = 2048;
+      source = audioCtx.createMediaElementSource(audioEl);
+      source.connect(analyser);
+      analyser.connect(gainNode);
+      gainNode.connect(audioCtx.destination);
+      bufferLength = analyser.frequencyBinCount;
+      dataArray = new Uint8Array(bufferLength);
     }
 
-    const formatTime = (seconds) => {
-        let hours = Math.floor(seconds / 3600);
-        let minutes = Math.floor((seconds % 3600) / 60);
-        let remainingSeconds = Math.floor(seconds % 60);
-
-        // Add leading zeros if necessary
-        hours = hours < 10 ? '0' + hours : hours;
-        minutes = minutes < 10 ? '0' + minutes : minutes;
-        remainingSeconds = remainingSeconds < 10 ? '0' + remainingSeconds : remainingSeconds;
-
-        return minutes + ':' + remainingSeconds;
+    if (canvasCtx == null) {
+      canvasCtx = canvasRef.current.getContext("2d");
     }
 
-    const animate1 = () => {
-        if (audioCtx == null) {
-            const audioEl = document.createElement('audio');
-            audioEl.crossOrigin = "anonymous"
-            audioEl.id = 'audio-el';
-            audioEl.controls = true;
-            audioEl.src = escogerCancion();
-            document.body.appendChild(audioEl);
-            audioEl.addEventListener('canplaythrough', () => {
-                dispatch(establecerDuracion(audioEl.duration))
-            });
-            audioEl.play();
+    analyser.getByteFrequencyData(dataArray);
 
-            audioRef.current = audioEl;
+    canvasCtx.clearRect(
+      0,
+      0,
+      canvasRef.current.width,
+      canvasRef.current.height
+    );
 
-            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-            analyser = audioCtx.createAnalyser();
-            gainNode = audioCtx.createGain();
-            analyser.fftSize = 2048;
-            source = audioCtx.createMediaElementSource(audioEl);
-            source.connect(analyser);
-            analyser.connect(gainNode);
-            gainNode.connect(audioCtx.destination);
-            bufferLength = analyser.frequencyBinCount;
-            dataArray = new Uint8Array(bufferLength);
-        }
+    var barWidth = (600 / bufferLength) * 22 - 1;
+    var x = 0;
 
-        if (canvasCtx == null) {
-            canvasCtx = canvasRef.current.getContext("2d");
-        }
+    for (var i = 0; i < bufferLength; i++) {
+      const barHeight = dataArray[i];
+      var color = "rgba(255, 255, 255, 0.4";
+      canvasCtx.fillStyle = color;
+      canvasCtx.fillRect(
+        x,
+        canvasRef.current.height - barHeight / 2,
+        4,
+        barHeight / 2
+      );
+      x += barWidth;
+    }
 
-        analyser.getByteFrequencyData(dataArray);
+    frame1.current = requestAnimationFrame(animate1);
+  };
 
-        canvasCtx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+  useEffect(() => {
+    if (audioS) {
+      frame1.current = requestAnimationFrame(animate1);
+    } else {
+      cancelAnimationFrame(frame1.current);
+    }
 
-        var barWidth = (600 / bufferLength) * 22 - 1;
-        var x = 0;
-
-        for (var i = 0; i < bufferLength; i++) {
-            const barHeight = dataArray[i];
-            var color = 'rgba(255, 255, 255, 0.4';
-            canvasCtx.fillStyle = color;
-            canvasCtx.fillRect(x, canvasRef.current.height - barHeight / 2, 4, barHeight / 2);
-            x += barWidth;
-        }
-
-        frame1.current = requestAnimationFrame(animate1);
+    return () => {
+      cancelAnimationFrame(frame1.current);
     };
+  }, [cancionActual]);
 
+  useEffect(() => {
+    if (duracion > 0 && audioRef.current) {
+      const timer = setInterval(() => {
+        setContadorReg(formatTime(duracion - audioRef.current.currentTime));
 
-    useEffect(() => {
-        if (audioS) {
-            frame1.current = requestAnimationFrame(animate1);
-        } else {
-            cancelAnimationFrame(frame1.current);
+        if (popup) {
+          const percentage = (audioRef.current.currentTime * 100) / duracion;
+          const leftPosPx =
+            (progressBarRef.current.offsetWidth * percentage) / 100;
+          progressLineRef.current.style.width = leftPosPx + "px";
         }
+      }, 200);
 
-        return () => {
-            cancelAnimationFrame(frame1.current);
-        }
-    }, [cancionActual]);
+      return () => clearInterval(timer);
+    }
+  }, [audioRef.current?.currentTime]);
 
-    useEffect(() => {
-        if (duracion > 0 && audioRef.current) {
-            const timer = setInterval(() => {
-                setContadorReg(formatTime(duracion - audioRef.current.currentTime));
+  const playAudio = () => {
+    dispatch(pararAudios());
+    dispatch(establecerDuracion(0));
+    setContadorReg(0);
 
-                if (popup) {
-                    const percentage = audioRef.current.currentTime * 100 / duracion;
-                    const leftPosPx = progressBarRef.current.offsetWidth * percentage / 100;
-                    progressLineRef.current.style.width = leftPosPx + 'px';
-                }
+    if (cancionActual == id) {
+      dispatch(cambiarCancion(null));
+    } else {
+      dispatch(cambiarCancion(id));
+    }
+  };
 
-            }, 200)
+  const handleOnClose = () => {
+    audioRef.current = null;
+    dispatch(pararAudios());
+  };
 
-            return () => clearInterval(timer);
-        }
+  const handleBarraOnClick = (e) => {
+    const posLeft = e.target.getBoundingClientRect().x;
+    const width = e.target.getBoundingClientRect().width;
+    let percentage = ((e.pageX - posLeft) * 100) / width;
 
-    }, [audioRef.current?.currentTime])
-
-    const playAudio = () => {
-
-        dispatch(pararAudios());
-        dispatch(establecerDuracion(0));
-        setContadorReg(0)
-
-        if (cancionActual == id) {
-            dispatch(cambiarCancion(null))
-
-        } else {
-            dispatch(cambiarCancion(id))
-        }
+    if (percentage < 1) {
+      percentage = 0;
     }
 
-    const handleOnClose = () => {
-        audioRef.current = null;
-        dispatch(pararAudios());
-    }
+    const finalPos = (percentage * duracion) / 100;
+    audioRef.current.currentTime = finalPos;
+  };
 
-    const handleBarraOnClick = (e) => {
-        const posLeft = e.target.getBoundingClientRect().x;
-        const width = e.target.getBoundingClientRect().width;
-        let percentage = (e.pageX - posLeft) * 100 / width;
-
-        if (percentage < 1) {
-            percentage = 0;
-        }
-
-        const finalPos = percentage * duracion / 100;
-        audioRef.current.currentTime = finalPos;
-    }
-
-    const pintarMiniPlayer = () => {
-        return (
-            <div className={audioS ? 'mini-player mostrar' : 'mini-player esconder'}>
-                <div className='mini-player-contenedor'>
-                    <div className='mini-player-salida'>
-                        <h3>{titulo}</h3>
-                        <img onClick={handleOnClose} src={salida} alt="salida" />
-                    </div>
-                    <div className='canvas-audio-container'>
-                        <canvas ref={canvasRef}></canvas>
-                        <div><span>{contadorReg}</span></div>
-                    </div>
-                    <div className='mini-player-pregress-container'>
-                        <div onClick={handleBarraOnClick} className='mini-player-pregress-bar'></div>
-                        <div ref={progressBarRef} className='mini-player-pregress-bar-total'>
-                            <div ref={progressLineRef} className='mini-player-pregress-line'></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        )
-    }
-
+  const pintarMiniPlayer = () => {
     return (
-        <div className='audio-contenedor'>
-            <div className='audio-contenedor-interior'>
-                <div>
-                    <img src={(audioS) ? audioOnImg : audioImg} onClick={() => { playAudio() }} ></img>
-                </div>
-                <div>
-                    <h3>{titulo}</h3>
-                    {subTitulo != '' && <p>{subTitulo}</p>}
-                </div>
+      <div className={audioS ? "mini-player mostrar" : "mini-player esconder"}>
+        <div className="mini-player-contenedor">
+          <div className="mini-player-salida">
+            <h3>{titulo}</h3>
+            <img onClick={handleOnClose} src={salida} alt="salida" />
+          </div>
+          <div className="canvas-audio-container">
+            <canvas ref={canvasRef}></canvas>
+            <div>
+              <span>{contadorReg}</span>
             </div>
-            {autor != '' && <h4>{autor}</h4>}
-            {popup && pintarMiniPlayer()}
-            {!popup &&
-                <div className={audioS ? 'canvas-audio-container mostrar' : 'canvas-audio-container esconder'}>
-                    <canvas ref={canvasRef}></canvas>
-                    <div><span>{contadorReg}</span></div>
-                </div>
-            }
+          </div>
+          <div className="mini-player-pregress-container">
+            <div
+              onClick={handleBarraOnClick}
+              className="mini-player-pregress-bar"
+            ></div>
+            <div
+              ref={progressBarRef}
+              className="mini-player-pregress-bar-total"
+            >
+              <div
+                ref={progressLineRef}
+                className="mini-player-pregress-line"
+              ></div>
+            </div>
+          </div>
         </div>
-    )
-}
+      </div>
+    );
+  };
 
-export default Audio
+  return (
+    <div className="audio-contenedor">
+      <div className="audio-contenedor-interior">
+        <div>
+          <img
+            src={audioS ? audioOnImg : audioImg}
+            onClick={() => {
+              playAudio();
+            }}
+          ></img>
+        </div>
+        <div>
+          <h3>{titulo}</h3>
+          {subTitulo != "" && <p>{subTitulo}</p>}
+        </div>
+      </div>
+      {autor != "" && <h4>{autor}</h4>}
+      {popup && pintarMiniPlayer()}
+      {!popup && (
+        <div
+          className={
+            audioS
+              ? "canvas-audio-container mostrar"
+              : "canvas-audio-container esconder"
+          }
+        >
+          <canvas ref={canvasRef}></canvas>
+          <div>
+            <span>{contadorReg}</span>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Audio;

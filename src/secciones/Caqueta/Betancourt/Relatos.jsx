@@ -5,7 +5,7 @@ import useDelta from '../../../hooks/useDelta';
 import Audio from '../../../components/Audio';
 import planta from '../../../assets/caqueta/betancourt/mano-planta.png'
 
-const relatosVideo = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713840396/assets/caqueta/moyano/loop-moyano_ztoaun.mp4';
+const relatosVideo = 'https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267086/caqueta/betancourt/loop-betancourt_uug9hn.mp4';
 
 import './Relatos.css';
 
@@ -45,7 +45,7 @@ const Relatos = () => {
       <div className='mask-general'>
         <div className="contenido-general">
           <div onClick={handleOnClick} className='betancourt-relatos-audio'>
-            <Audio id='audio-moyano' titulo='“Creo que hay nuevas oportunidades. Se puede producir de manera diferente y enamorarse del campo nuevamente”' />
+            <Audio id='audio-betancourt' titulo='“Creo que hay nuevas oportunidades. Se puede producir de manera diferente y enamorarse del campo nuevamente”' />
           </div>
           <div className='betancourt-relatos-img'>
             <img src={planta} alt="planta" />

@@ -7,7 +7,7 @@ import playImg from "../../../assets/generales/play_video.png";
 import manos from "../../../assets/caqueta/betancourt/manos-tierra.png";
 
 const thumbnail =
-  "https://res.cloudinary.com/dbqfefibl/image/upload/v1713230391/assets/guaviare/dayana/fondo-video2_ckb7u8.jpg";
+  "https://res.cloudinary.com/dhz9jfn78/image/upload/v1716267079/caqueta/betancourt/betancourt-youtube-3_ul4ogw.jpg";
 import "./Youtube3.css";
 
 const Youtube = () => {
@@ -32,19 +32,19 @@ const Youtube = () => {
 
   const pintarVideo = () => {
     return (
-      <div id="youtube-dayana-2" className="youtube-video">
+      <div id="youtube-betancourt-3" className="youtube-video">
         <YT
           refYoutubeFx={refYoutube}
-          youtubeVideoId="wwMI3J7TmvQ"
+          youtubeVideoId="rcVxtOXqkEQ"
           imgThumbnail={thumbnail}
-          id="youtube-dayana-2"
+          id="youtube-betancourt-3"
         />
       </div>
     );
   };
 
   const handleOnClick = () => {
-    const div = document.getElementById("youtube-dayana-2");
+    const div = document.getElementById("youtube-betancourt-3");
     div.style.visibility = "visible";
     youtubeRef?.playVideo();
   };

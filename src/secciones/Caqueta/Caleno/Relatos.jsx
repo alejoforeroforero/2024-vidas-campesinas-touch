@@ -4,7 +4,7 @@ import { pararAudios } from '../../../Redux/states/managerSlice';
 import useDelta from '../../../hooks/useDelta';
 import Audio from '../../../components/Audio';
 
-const relatosVideo = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713840396/assets/caqueta/moyano/loop-moyano_ztoaun.mp4';
+const relatosVideo = 'https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267085/caqueta/caleno/loop-caleno_z00s1y.mp4';
 
 import './Relatos.css';
 
@@ -44,8 +44,8 @@ const Relatos = () => {
       <div className='mask-general'>
         <div className="contenido-general">
           <div onClick={handleOnClick} className='caleno-relatos-audio'>
-            <Audio id='audio-moyano' titulo='“Gracias a Dios la guerra se calmó y volvimos a levantar cabeza”' />
-            <Audio id='audio-moyano' titulo='“El reto como familia es aprovechar lo que producimos en la finca”' />
+            <Audio id='audio-caleno-1' titulo='“Gracias a Dios la guerra se calmó y volvimos a levantar cabeza”' />
+            <Audio id='audio-caleno-2' titulo='“El reto como familia es aprovechar lo que producimos en la finca”' />
           </div>
         </div>
       </div>

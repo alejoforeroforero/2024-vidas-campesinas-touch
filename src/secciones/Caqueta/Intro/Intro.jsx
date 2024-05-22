@@ -10,10 +10,10 @@ import {
     pararAudios
 } from '../../../Redux/states/managerSlice';
 
-const videoCaquetaM = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713837162/assets/caqueta/home/caqueta_hrp6px.mp4'
+const videoCaquetaM = 'https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267079/caqueta/home/caqueta_alcwwn.mp4'
 import sol from '../../../assets/caqueta/intro/sol.png';
 import luna from '../../../assets/caqueta/intro/luna.png';
-import nino from '../../../assets/caqueta/intro/nino.png';
+
 
 
 import { CaquetaIntro } from '../../../data/Caqueta';

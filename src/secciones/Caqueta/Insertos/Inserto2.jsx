@@ -27,7 +27,7 @@ const Inserto2 = () => {
           </div> 
           <div className='inserto-audio'>
             <Audio 
-              id='inserto2-audio' 
+              id='caqueta-inserto-2-audio' 
               titulo='“Visitamos las fincas para ver qué sistema  se está implementando y qué impacto positivo tiene. Todos aprendemos de todos”' 
               autor = '- José Alejandro Bermeo'
             />

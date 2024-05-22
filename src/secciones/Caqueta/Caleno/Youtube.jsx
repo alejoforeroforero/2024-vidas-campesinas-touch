@@ -6,7 +6,7 @@ import useDelta from '../../../hooks/useDelta';
 import playImg from '../../../assets/generales/play_video.png';
 import planta from '../../../assets/caqueta/caleno/planta-1.png';
 
-const thumbnail = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713839734/assets/caqueta/moyano/moyano-youtube-1_epr1bl.jpg';
+const thumbnail = 'https://res.cloudinary.com/dhz9jfn78/image/upload/v1716267076/caqueta/caleno/caleno-youtube-1_wihyd1.jpg';
 import './Youtube.css'
 
 const Youtube = () => {
@@ -27,19 +27,19 @@ const Youtube = () => {
 
   const pintarVideo = () => {
     return (
-      <div id='youtube-dayana-1' className="youtube-video">
+      <div id='youtube-caleno-1' className="youtube-video">
         <YT
           refYoutubeFx={refYoutubeCarlos}
-          youtubeVideoId="AapvGlXG4nk" //MN_RlCT-WFQ  -9AvYOpalrk
+          youtubeVideoId="0t4QslBHhVw" //MN_RlCT-WFQ  -9AvYOpalrk
           imgThumbnail={thumbnail}
-          id='youtube-dayana-1'
+          id='youtube-caleno-1'
         />
       </div>
     )
   }
 
   const handleOnClick = () => {
-    const div = document.getElementById('youtube-dayana-1');
+    const div = document.getElementById('youtube-caleno-1');
     div.style.visibility = 'visible';
   
     youtubeRef?.playVideo();
