@@ -11,7 +11,7 @@ const Inserto3 = () => {
   const dispatch = useDispatch();
   const elementRef = useRef();
 
-  const { handleTouchStart, handleTouchEnd } = useDelta('caleno-youtube-2', 'caqueta-cierre', elementRef);
+  const { handleTouchStart, handleTouchEnd } = useDelta('caleno-youtube-2', 'caqueta-galeria', elementRef);
 
   useEffect(()=>{
     dispatch(pararAudios());

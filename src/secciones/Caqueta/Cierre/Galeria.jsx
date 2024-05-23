@@ -3,23 +3,17 @@ import { useDispatch } from 'react-redux';
 import { establecerPersonaje, establecerMostrarLineasA, establecerMostrarFlechasCanales, pararAudios } from '../../../Redux/states/managerSlice';
 import useDelta from '../../../hooks/useDelta';
 
-const img1 = 'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230310/assets/guaviare/cierre/foto1_qpm0m3.jpg'
-const img2 =  'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230315/assets/guaviare/cierre/foto2_imxole.jpg';
-const img3 =  'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230315/assets/guaviare/cierre/foto3_cqbwk1.jpg';
-const img4 =  'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230323/assets/guaviare/cierre/foto4_hrgryh.jpg';
-const img5 =  'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230322/assets/guaviare/cierre/foto5_clwkt2.jpg';
-const img6 =  'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230318/assets/guaviare/cierre/foto6_da5g0z.jpg';
-const img7 =  'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230319/assets/guaviare/cierre/foto7_p5jqej.jpg';
-const img8 =  'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230327/assets/guaviare/cierre/foto8_goibwe.jpg';
-const img9 =  'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230325/assets/guaviare/cierre/foto9_p6wfoc.jpg';
-const img10 =  'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230338/assets/guaviare/cierre/foto10_u6hcj4.jpg';
-const img11 =  'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230335/assets/guaviare/cierre/foto11_kcnvg7.jpg';
-const img12 =  'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230332/assets/guaviare/cierre/foto12_kbk8qs.jpg';
-const img13 =  'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230334/assets/guaviare/cierre/foto13_jbcpa2.jpg';
-const img14 =  'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230324/assets/guaviare/cierre/foto14_pl9fsr.jpg';
-const img15 =  'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230327/assets/guaviare/cierre/foto15_hhrwob.jpg';
-const img16 =  'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230330/assets/guaviare/cierre/foto16_lgfhvt.jpg';
-const img17 =  'https://res.cloudinary.com/dbqfefibl/image/upload/v1713230330/assets/guaviare/cierre/foto17_fxlvxl.jpg';
+const img1 = 'https://res.cloudinary.com/dhz9jfn78/image/upload/v1716484587/caqueta/galeria/1._Galeria_ECLjpg_fgt1dl.jpg'
+const img2 =  'https://res.cloudinary.com/dhz9jfn78/image/upload/v1716484588/caqueta/galeria/2._Galeria_ECL_mfqwix.jpg';
+const img3 =  'https://res.cloudinary.com/dhz9jfn78/image/upload/v1716484588/caqueta/galeria/3._Galeria_ECL_ze2ftz.jpg';
+const img4 =  'https://res.cloudinary.com/dhz9jfn78/image/upload/v1716484589/caqueta/galeria/4._Galeria_ECL_e9iiiq.jpg';
+const img5 =  'https://res.cloudinary.com/dhz9jfn78/image/upload/v1716484590/caqueta/galeria/5._Galeria_ECL_h0r06e.jpg';
+const img6 =  'https://res.cloudinary.com/dhz9jfn78/image/upload/v1716484591/caqueta/galeria/6._Galeria_ECL_f8cywa.jpg';
+const img7 =  'https://res.cloudinary.com/dhz9jfn78/image/upload/v1716484591/caqueta/galeria/7._Galeria_ECL_ic9kvx.jpg';
+const img8 =  'https://res.cloudinary.com/dhz9jfn78/image/upload/v1716484592/caqueta/galeria/8._Galeria_ECL_s6evhp.jpg';
+const img9 =  'https://res.cloudinary.com/dhz9jfn78/image/upload/v1716484593/caqueta/galeria/9._Galeria_ECL_s8mgct.jpg';
+const img10 =  'https://res.cloudinary.com/dhz9jfn78/image/upload/v1716484594/caqueta/galeria/10._Galeria_ECL_gdzmla.jpg';
+
 import flechaAdelante from '../../../assets/generales/flecha-adelante.png';
 import flechaAtras from '../../../assets/generales/flecha-atras.png';
 
@@ -30,9 +24,9 @@ const Galeria = () => {
   const dispatch = useDispatch();
   const elementRef = useRef();
 
-  const { handleTouchStart, handleTouchEnd } = useDelta('rodriguez-youtube-2', 'cierre-video', elementRef);
+  const { handleTouchStart, handleTouchEnd } = useDelta('caqueta-inserto3', 'caqueta-cierre', elementRef);
 
-  const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17];
+  const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
   const [currentImage, setCurrentImage] = useState(0);
   const [booleanImg, setBooleanImg] = useState(false);

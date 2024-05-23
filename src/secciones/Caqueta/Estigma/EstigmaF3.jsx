@@ -9,7 +9,7 @@ const EstigmaF3 = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(establecerMostrarAbajo(false));
+    dispatch(establecerMostrarAbajo(true));
   }, []);
 
   return (
@@ -20,7 +20,7 @@ const EstigmaF3 = () => {
           <div className="estigma-f3-interior">
             <div className="estigma-f3-audio-contenedor">
               <Audio
-                id="arte-guaviare"
+                id="estigma-etnografia"
                 titulo="En comunión con la hoja de coca"
                 subTitulo="• Etnografía sonora •"
                 autor=""

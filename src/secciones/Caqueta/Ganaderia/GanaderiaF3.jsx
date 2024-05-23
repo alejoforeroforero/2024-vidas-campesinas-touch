@@ -28,7 +28,7 @@ const GanaderiaF3 = () => {
             </div>
             <div className="ganaderia-f3-audio-contenedor2">
               <Audio
-                id="audio-guardianes-2"
+                id="audio-ganaderia-1"
                 titulo="“Somos ganaderos tradicionales, pero le hemos dado mal uso al suelo”."
                 autor="· Carlos Alfredo Moyano Trujillo"
               />

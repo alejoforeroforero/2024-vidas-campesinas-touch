@@ -24,6 +24,7 @@ import Inserto1 from "./Insertos/Inserto1";
 import Inserto2 from "./Insertos/Inserto2";
 import Inserto3 from "./Insertos/Inserto3";
 
+import Galeria from "./Cierre/Galeria";
 import CierreVideo from './Cierre/Relatos'
 
 const lineas = [
@@ -41,6 +42,11 @@ const lineas = [
     id: "linea-caleno",
     titulo: "Familia Caleno",
     navegacion: "caqueta-caleno-navegacion",
+  },
+  {
+    id: "linea-cierre",
+    titulo: "Caqueta Cierre",
+    navegacion: "caqueta-cierre-navegacion",
   },
 ];
 
@@ -61,6 +67,8 @@ const Caqueta = () => {
       dispatch(cambiarSeccion("betancourt-bio"));
     }else if (id == "caqueta-caleno-navegacion") {
       dispatch(cambiarSeccion("caleno-bio"));
+    }else if (id == "caqueta-cierre-navegacion") {
+      dispatch(cambiarSeccion("caqueta-galeria"));
     }
   };
 
@@ -105,6 +113,7 @@ const Caqueta = () => {
       {seccion == "caleno-relatos" && <CalenoRelatos />}
       {seccion == "caleno-youtube-2" && <CalenoYoutube2 />}
       {seccion == "caqueta-inserto3" && <Inserto3 />}
+      {seccion == "caqueta-galeria" && <Galeria />}
       {seccion == 'caqueta-cierre' && <CierreVideo />}
     </div>
   );

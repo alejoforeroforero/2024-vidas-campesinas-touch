@@ -34,16 +34,16 @@
   h2 {
     text-align: left;
     width: 100%;
-    color: #f315ce;
+    color: #a3fcce;
     font-weight: 100;
     margin-bottom: 16px;
     font-size: 2.2rem;
   }
 
   hr {
-    background-color: #00a397;
+    background-color: #a3fcce;
     height: 6px;
-    width: 150px;
+    width: 200px;
     border: none;
   }
 

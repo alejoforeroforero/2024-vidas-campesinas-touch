@@ -6,7 +6,7 @@
 }
 
 .estigma-f1-fondo {
-  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713230357/assets/guaviare/caceria/fondo-caceria_vpkj9a.jpg");
+  background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1716267078/caqueta/estigma/estigma_k1fa3a.jpg");
   width: 100%;
   height: 100%;
   background-position: center;
@@ -34,16 +34,16 @@
   h2 {
     text-align: left;
     width: 100%;
-    color: #f315ce;
+    color: #d5c862;
     font-weight: 100;
     margin-bottom: 16px;
     font-size: 2.2rem;
   }
 
   hr {
-    background-color: #00a397;
+    background-color: #d5c862;
     height: 6px;
-    width: 150px;
+    width: 200px;
     border: none;
   }
 

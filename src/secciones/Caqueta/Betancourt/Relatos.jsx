@@ -5,7 +5,7 @@ import useDelta from '../../../hooks/useDelta';
 import Audio from '../../../components/Audio';
 import planta from '../../../assets/caqueta/betancourt/mano-planta.png'
 
-const relatosVideo = 'https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267086/caqueta/betancourt/loop-betancourt_uug9hn.mp4';
+const relatosVideo = 'https://res.cloudinary.com/dhz9jfn78/video/upload/v1716486016/caqueta/betancourt/Loop_bosque_Flia_Betancourt_p_xnhwbt.mp4';
 
 import './Relatos.css';
 

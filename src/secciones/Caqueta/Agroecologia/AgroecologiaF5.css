@@ -1,5 +1,5 @@
 .agroecologia-f5 {
-  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713242753/assets/guaviare/guardianes/fondo-guardianes-f2_usgrlc.jpg");
+  background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1716477150/caqueta/agroecologia/fotograma-loop-finca_uqeuks.jpg");
   width: 100%;
   height: 100%;
   background-position: center;
@@ -9,10 +9,26 @@
   animation: mymove 120s linear infinite alternate;
 }
 
+.agroecologia-f5-video {
+  position: absolute;
+  z-index: 5;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+
+  video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    opacity: 1;
+  }
+}
+
 .agroecologia-f5-ilustraciones {
   position: absolute;
   left: 0px;
-  top: 32vh;
+  top: 22vh;
   cursor: pointer;
   z-index: 300;
   text-align: center;
@@ -20,12 +36,6 @@
   height: 20vh;
   opacity: 0;
   animation: aparecer 3s ease-in forwards;
-}
-
-@media screen and (orientation: landscape) {
-  .agroecologia-f5-ilustraciones {
-    top: 33vh;
-  }
 }
 
 .agroecologia-f5-grafica{
@@ -39,24 +49,12 @@
   width: 100%;
 }
 
-.agroecologia-f5-audio-contenedor1 {
-  width: 100%;
-  position: absolute;
-  left: 0px;
-  top: 14vh;
-  cursor: pointer;
-  z-index: 300;
-  display: flex;
-  justify-content: center;
-  opacity: 0;
-  animation: aparecer 3s ease-in-out 1s forwards;
-}
 
 .agroecologia-f5-audio-contenedor2 {
   width: 100%;
   position: absolute;
   left: 0px;
-  top: 60vh;
+  top: 50vh;
   cursor: pointer;
   z-index: 300;
   display: flex;

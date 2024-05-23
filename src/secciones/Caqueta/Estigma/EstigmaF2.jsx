@@ -5,7 +5,7 @@ import YT from "../../../components/YT";
 import siembra from "../../../assets/caqueta/estigma/hoja-coca-2.png";
 import playImg from "../../../assets/generales/play_video.png";
 const estigmaThumbnail =
-  "https://res.cloudinary.com/dbqfefibl/image/upload/v1713242761/assets/guaviare/guardianes/fondo-guardianes-f4_tphytr.jpg";
+  "https://res.cloudinary.com/dhz9jfn78/image/upload/v1716267078/caqueta/estigma/youtube-estigma-1_xywtgl.jpg";
 import "./EstigmaF2.css";
 
 const EstigmaF2 = () => {
@@ -22,7 +22,7 @@ const EstigmaF2 = () => {
   };
 
   const handleOnClick = () => {
-    const div = document.getElementById("youtube-alirio");
+    const div = document.getElementById("youtube-estigma");
     div.style.visibility = "visible";
 
     jorgeYoutubeRef?.playVideo();
@@ -30,12 +30,12 @@ const EstigmaF2 = () => {
 
   const pintarVideo = () => {
     return (
-      <div id="youtube-alirio" className="youtube-video">
+      <div id="youtube-estigma" className="youtube-video">
         <YT
           refYoutubeFx={refYoutubeJorge}
-          youtubeVideoId="NIgNlYvsf04"
+          youtubeVideoId="5YDrHxYUebY"
           imgThumbnail={estigmaThumbnail}
-          id="youtube-alirio"
+          id="youtube-estigma"
         />
       </div>
     );

@@ -4,7 +4,7 @@ import { pararAudios } from "../../../Redux/states/managerSlice";
 import YT from "../../../components/YT";
 import playImg from "../../../assets/generales/play_video.png";
 const ganaderiaThumbnail =
-  "https://res.cloudinary.com/dbqfefibl/image/upload/v1713242761/assets/guaviare/guardianes/fondo-guardianes-f4_tphytr.jpg";
+  "https://res.cloudinary.com/dhz9jfn78/image/upload/v1716267077/caqueta/ganaderia/ganaderia-youtube-1_xssz9y.jpg";
 import "./GanaderiaF2.css";
 
 const GanaderiaF2 = () => {
@@ -21,7 +21,7 @@ const GanaderiaF2 = () => {
   };
 
   const handleOnClick = () => {
-    const div = document.getElementById("youtube-alirio");
+    const div = document.getElementById("youtube-ganaderia-1");
     div.style.visibility = "visible";
 
     jorgeYoutubeRef?.playVideo();
@@ -29,12 +29,12 @@ const GanaderiaF2 = () => {
 
   const pintarVideo = () => {
     return (
-      <div id="youtube-alirio" className="youtube-video">
+      <div id="youtube-ganaderia-1" className="youtube-video">
         <YT
           refYoutubeFx={refYoutubeJorge}
-          youtubeVideoId="NIgNlYvsf04"
+          youtubeVideoId="ZOWzhtGmD9w"
           imgThumbnail={ganaderiaThumbnail}
-          id="youtube-alirio"
+          id="youtube-ganaderia-1"
         />
       </div>
     );

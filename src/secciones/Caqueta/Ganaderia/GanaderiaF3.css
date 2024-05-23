@@ -1,5 +1,5 @@
 .ganaderia-f3 {
-  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713242753/assets/guaviare/guardianes/fondo-guardianes-f2_usgrlc.jpg");
+  background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1716267077/caqueta/ganaderia/ganaderia-audio-1_lwlh2m.jpg");
   width: 100%;
   height: 100%;
   background-position: center;
@@ -51,4 +51,10 @@
   justify-content: center;
   opacity: 0;
   animation: aparecer 1s ease-in-out 2s forwards;
+}
+
+@media screen and (orientation: portrait) {
+  .ganaderia-f3-audio-contenedor2 {
+    top: 50vh;
+  }
 }

@@ -34,16 +34,16 @@
   h2 {
     text-align: left;
     width: 100%;
-    color: #f315ce;
+    color: #75fbfd;
     font-weight: 100;
     margin-bottom: 16px;
     font-size: 2.2rem;
   }
 
   hr {
-    background-color: #00a397;
+    background-color: #75fbfd;
     height: 6px;
-    width: 150px;
+    width: 200px;
     border: none;
   }
 
@@ -71,7 +71,7 @@
 
 .agroecologia-f1-maiz {
   width: 40vw;
-  max-width: 200px;
+  max-width: 180px;
 }
 
 

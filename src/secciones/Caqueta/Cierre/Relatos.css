@@ -9,48 +9,71 @@
   animation: aparecer 6s;
 }
 
-.cierre-titulo {
-  margin-top: 50vh;
+.cierre-titulo-caqueta {
+  margin-top: 10vh;
   text-align: center;
   opacity: 0;
   animation: aparecer-desaparecer 8s ease-in 3s forwards;
+}
 
-  h2 {
-    font-size: 1.3rem;
+.cierre-logo-caqueta{
+  img{
+    width: 70%;
+    max-width: 300px;
   }
 }
 
-.cierre-extra {
+.cierre-extra-caqueta {
   position: absolute;
   left: 0;
   top: 0;
-  height: 60vh;
+  height: 100vh;
   width: 100%;
-  margin-top: 20vh;
+  margin-top: 0;
   opacity: 0;
   visibility: hidden;
 
-  animation: aparecer 8s ease-in 14s forwards;
-
-  h2 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    text-align: center;
-  }
+  /* animation: aparecer 8s ease-in 14s forwards; */
+  animation: aparecer 1s ease-in 1s forwards;
 
   div {
     text-align: center;
   }
+}
 
-  img {
+.cierre-extra-caqueta-grafica{
+  margin-top: 5vh;
+  img{
     width: 60%;
-    max-width: 400px;
-    margin-top: 4vh;
-    cursor: pointer;
-    border-radius: 12px;
-    border: 2px solid rgb(235, 235, 235);
-    padding: 8px;
+    max-width: 180px;
   }
+}
+
+.cierre-extra-caqueta-thumbnail{
+  margin-top: 5vh;
+  img{
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .cierre-extra-caqueta-grafica{
+    margin-top: 2vh;
+    img{
+      width: 35%;
+      max-width: 180px;
+    }
+  }
+  
+  .cierre-extra-caqueta-thumbnail{
+    margin-top: 2vh;
+    img{
+      width: 60%;
+      max-width: 300px;
+    }
+  }
+
 }
 
 .youtube-animacion {

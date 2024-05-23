@@ -1,5 +1,5 @@
 .agroecologia-f2 {
-  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713242761/assets/guaviare/guardianes/fondo-guardianes-f2_tphytr.jpg");
+  background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1716474265/caqueta/agroecologia/Foto_Yolanda_huerta_b3klnh.jpg");
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -31,12 +31,12 @@
 .agroecologia-f2-play{
 
   img{
-    width:80px;
+    width:120px;
   }
 }
 
 .agroecologia-f2-frase {
-  margin-top: 13vh;
+  margin-top: 8vh;
   text-align: center;
 
   h3 {

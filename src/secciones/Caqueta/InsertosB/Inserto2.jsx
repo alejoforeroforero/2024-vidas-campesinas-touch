@@ -22,7 +22,7 @@ const InsertoB2 = () => {
   };
 
   const handleOnClick = () => {
-    const div = document.getElementById("youtube-alirio");
+    const div = document.getElementById("youtube-cientifico");
     div.style.visibility = "visible";
 
     jorgeYoutubeRef?.playVideo();
@@ -30,12 +30,12 @@ const InsertoB2 = () => {
 
   const pintarVideo = () => {
     return (
-      <div id="youtube-alirio" className="youtube-video">
+      <div id="youtube-cientifico" className="youtube-video">
         <YT
           refYoutubeFx={refYoutubeJorge}
-          youtubeVideoId="NIgNlYvsf04"
+          youtubeVideoId="MoUVAJ9w2QY"
           imgThumbnail={ganaderiaThumbnail}
-          id="youtube-alirio"
+          id="youtube-cientifico"
         />
       </div>
     );
@@ -58,7 +58,7 @@ const InsertoB2 = () => {
                 {!mostrarPlay && <p>Espera un momento...</p>}
               </div>
               <div className="insertoB2-frase">
-                <h3>Campesino científico</h3>
+                <h2>Campesino científico</h2>
                 <h4>Bashar y sus compañeros de escuela en El Caraño, explican en dibujos qué hace un científico local, y demuestran la importancia de las aves semilleras en la restauración del bosque.</h4>
               </div>
             </div>

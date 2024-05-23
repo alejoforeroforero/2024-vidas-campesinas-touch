@@ -1,5 +1,5 @@
 .insertoB1 {
-  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713840375/assets/caqueta/moyano/loop-moyano_tvohoj.jpg");
+  background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1716397071/caqueta/insertosB/caqueta-inserto-b-1_ysmxv7.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -7,24 +7,25 @@
   position: relative;
 }
 
-.insertoB1-logo{
+.insertoB1-logo {
   width: 100%;
   text-align: center;
   margin-top: 10vh;
 
-  img{
-    width:70%;
+  img {
+    width: 70%;
+    max-width: 320px;
   }
 }
 
 .insertoB1-audio {
   width: 100% !important;
   position: relative;
-  margin-top: 25vh;
+  margin-top: 10vh;
 }
 
 .insertoB2 {
-  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713242761/assets/guaviare/guardianes/fondo-guardianes-f2_tphytr.jpg");
+  background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1716397070/caqueta/insertosB/caqueta-inserto-b-2_ambfjl.jpg");
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -43,35 +44,36 @@
   flex-direction: column;
 }
 
-.insertoB2-logo{
+.insertoB2-logo {
   width: 100%;
   text-align: center;
 
-  img{
-    width:70%;
-    transform: translate(0, -14vh);
+  img {
+    width: 70%;
+    max-width: 320px;
+    transform: translate(0, -6vh);
   }
 }
 
-.insertoB2-img{
+.insertoB2-img {
   text-align: center;
 
-  img{
-    width:45%;
+  img {
+    width: 45%;
     max-width: 400px;
     transform: translate(0, -10vh);
   }
 }
 
-.insertoB2-play{
-
-  img{
-    width:80px;
+.insertoB2-play {
+  img {
+    width: 100px;
+    transform: translate(0, -4vh);
   }
 }
 
 .insertoB2-frase {
-  margin-top: 13vh;
+  margin-top: 0vh;
   text-align: center;
   width: 80%;
 
@@ -80,15 +82,14 @@
     font-size: 1.1rem;
   }
 
-  h4{
+  h4 {
     margin-top: 14px;
     text-align: center;
   }
 }
 
-
 .insertoB3 {
-  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713840375/assets/caqueta/moyano/loop-moyano_tvohoj.jpg");
+  background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1716397071/caqueta/insertosB/caqueta-inserto-b-3_tsu9ro.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -96,13 +97,14 @@
   position: relative;
 }
 
-.insertoB-logo{
+.insertoB-logo {
   width: 100%;
   text-align: center;
-  margin-top: 25vh;
+  margin-top: 12vh;
 
-  img{
-    width:70%;
+  img {
+    width: 70%;
+    max-width: 320px;
   }
 }
 

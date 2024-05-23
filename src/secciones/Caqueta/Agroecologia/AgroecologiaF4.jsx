@@ -5,7 +5,7 @@ import YT from "../../../components/YT";
 import cerdo from "../../../assets/caqueta/agroecologia/cerdo.png";
 import playImg from "../../../assets/generales/play_video.png";
 const agroecologiaThumbnail =
-  "https://res.cloudinary.com/dbqfefibl/image/upload/v1713242761/assets/guaviare/guardianes/fondo-guardianes-f4_tphytr.jpg";
+  "https://res.cloudinary.com/dhz9jfn78/image/upload/v1716476409/caqueta/agroecologia/Fotograma_Biodigestor_gk1zgd.jpg";
 import "./AgroecologiaF4.css";
 
 const AgroecologiaF4 = () => {
@@ -22,7 +22,7 @@ const AgroecologiaF4 = () => {
   };
 
   const handleOnClick = () => {
-    const div = document.getElementById("youtube-alirio");
+    const div = document.getElementById("youtube-biodigestor");
     div.style.visibility = "visible";
 
     jorgeYoutubeRef?.playVideo();
@@ -30,12 +30,12 @@ const AgroecologiaF4 = () => {
 
   const pintarVideo = () => {
     return (
-      <div id="youtube-alirio" className="youtube-video">
+      <div id="youtube-biodigestor" className="youtube-video">
         <YT
           refYoutubeFx={refYoutubeJorge}
-          youtubeVideoId="NIgNlYvsf04"
+          youtubeVideoId="Uii6xrdmifU"
           imgThumbnail={agroecologiaThumbnail}
-          id="youtube-alirio"
+          id="youtube-biodigestor"
         />
       </div>
     );

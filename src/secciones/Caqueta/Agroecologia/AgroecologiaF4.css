@@ -1,5 +1,5 @@
 .agroecologia-f4 {
-  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713242761/assets/guaviare/guardianes/fondo-guardianes-f2_tphytr.jpg");
+  background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1716476409/caqueta/agroecologia/Fotograma_Biodigestor_gk1zgd.jpg");
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -28,18 +28,35 @@
   }
 }
 
-.agroecologia-f4-play{
+@media screen and (orientation: portrait) {
+  .agroecologia-f4-img{
+    text-align: center;
+  
+    img{
+      width:45%;
+      max-width: 400px;
+      transform: translate(0, -2vh);
+    }
+  }
+}
 
+.agroecologia-f4-play{
   img{
-    width:80px;
+    width:120px;
   }
 }
 
 .agroecologia-f4-frase {
-  margin-top: 13vh;
+  margin-top: 11vh;
   text-align: center;
 
   h3 {
     font-size: 1.1rem;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .agroecologia-f3-ilustraciones {
+    top: 33vh;
   }
 }

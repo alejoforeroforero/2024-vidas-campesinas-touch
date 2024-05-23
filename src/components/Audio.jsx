@@ -66,6 +66,21 @@ const audioCaleno1 =
   "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716393309/caqueta/caleno/audio-caleno-1_aldfq8.mp3";
 const audioCaleno2 =
   "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716393309/caqueta/caleno/audio-caleno-2_fidkdf.mp3";
+const estigmaEtnografia =
+  "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267084/caqueta/estigma/estigma-etnografia-sonora_uwn4u7.mp3";
+const audioCaquetaInsertoB1 =
+  "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716398151/caqueta/insertosB/caqueta-inserto-b-1_ubcwcp.mp3";
+const audioCaquetaInsertoB3 =
+  "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716398149/caqueta/insertosB/caqueta-inserto-b-3_yb877p.mp3";
+const audioGanaderia =
+  "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267079/caqueta/ganaderia/ganaderia-audio_vxj0ks.mp3";
+const audioGanaderia2 =
+  "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716399752/caqueta/ganaderia/audio-ganaderia-2_bvdcpt.mp3";
+const audioAgroecologia1 =
+  "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267080/caqueta/agroecologia/finca-guadalupe-1_iupg7u.mp3";
+const audioAgroecologia2 =
+  "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267082/caqueta/agroecologia/finca-guadalupe-2_l0t47y.mp3";
+
 
 import "./Audio.css";
 
@@ -150,6 +165,20 @@ const Audio = ({ titulo, id, subTitulo = "", autor = "", popup = false }) => {
       return audioCaleno1;
     } else if (id == "audio-caleno-2") {
       return audioCaleno2;
+    } else if (id == "estigma-etnografia") {
+      return estigmaEtnografia;
+    } else if (id == "insertoB-audio-1") {
+      return audioCaquetaInsertoB1;
+    } else if (id == "insertoB-audio-3") {
+      return audioCaquetaInsertoB3;
+    } else if (id == "audio-ganaderia-1") {
+      return audioGanaderia;
+    } else if (id == "audio-ganaderia-2") {
+      return audioGanaderia2;
+    } else if (id == "audio-agroecologia-1") {
+      return audioAgroecologia1;
+    } else if (id == "audio-agroecologia-2") {
+      return audioAgroecologia2;
     }
   };
 

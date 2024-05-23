@@ -12,7 +12,7 @@
 .agroecologia-f3-ilustraciones {
   position: absolute;
   left: 0px;
-  top: 32vh;
+  top: 35vh;
   cursor: pointer;
   z-index: 300;
   text-align: center;
@@ -43,13 +43,19 @@
   width: 100%;
   position: absolute;
   left: 0px;
-  top: 14vh;
+  top: 8vh;
   cursor: pointer;
   z-index: 300;
   display: flex;
   justify-content: center;
   opacity: 0;
   animation: aparecer 3s ease-in-out 1s forwards;
+}
+
+@media screen and (orientation: landscape) {
+  .agroecologia-f3-audio-contenedor1 {
+    top: 12vh;
+  }
 }
 
 .agroecologia-f3-audio-contenedor2 {
