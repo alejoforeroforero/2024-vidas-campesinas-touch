@@ -11,23 +11,12 @@ const Inserto3 = () => {
   const dispatch = useDispatch();
   const elementRef = useRef();
 
-  const { handleTouchStart, handleTouchEnd } = useDelta(
-    "caleno-youtube-2",
-    "caqueta-intro",
-    elementRef
-  );
-
   useEffect(() => {
     dispatch(pararAudios());
   }, []);
 
   return (
-    <div
-      ref={elementRef}
-      className="seccion insertoB3"
-      onTouchEnd={handleTouchEnd}
-      onTouchStart={handleTouchStart}
-    >
+    <div ref={elementRef} className="seccion insertoB3">
       <div className="mask-general">
         <div className="contenido-general">
           <div className="insertoB-logo">

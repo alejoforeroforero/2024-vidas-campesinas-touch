@@ -111,12 +111,16 @@
 }
 
 .cierre-animacion-frase{
+  margin-top: 2vh;
   max-width: 800px;
   padding: 0 5%;
+
+  p{
+    font-size: 1rem;
+  }
 } 
 
 .cierre-continuar{
-
   position: absolute;
   left: 0;
   bottom: 0;

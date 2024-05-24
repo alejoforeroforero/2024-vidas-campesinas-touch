@@ -33,7 +33,7 @@ const AgroecologiaF2 = () => {
       <div id="youtube-alirio" className="youtube-video">
         <YT
           refYoutubeFx={refYoutubeJorge}
-          youtubeVideoId="NIgNlYvsf04"
+          youtubeVideoId="_UwBgUGbO-o"
           imgThumbnail={agroecologiaThumbnail}
           id="youtube-alirio"
         />

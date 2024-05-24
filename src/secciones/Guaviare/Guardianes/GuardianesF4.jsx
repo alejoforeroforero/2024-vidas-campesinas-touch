@@ -49,7 +49,8 @@ const GuardianesF4 = () => {
                             {mostrarPlay && <img onClick={handleOnClick} src={playImg} alt="play" />}
                             {!mostrarPlay && <p>Espera un momento...</p>}
                             <div className='guardianes-f4-frase'>
-                                <h3>En este video, realizado en colaboración con niños y niñas del Raudal del Guayabero, María Fernanda y Juliana nos cuentan del legado que han recibido de sus antepasados, con las pinturas rupestres de su territorio.</h3>
+                                <h3>Raudal rupestre</h3>
+                                <p>En este video, realizado en colaboración con niños y niñas del Raudal del Guayabero, María Fernanda y Juliana nos cuentan del legado que han recibido de sus antepasados, con las pinturas rupestres de su territorio.</p>
                             </div>
                         </div>
                     </div>

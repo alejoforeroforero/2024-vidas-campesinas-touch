@@ -61,7 +61,8 @@ const audioCaquetaInserto2 =
   "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716392590/caqueta/insertos/caqueta-inserto-2_t3ncxr.mp3";
 const audioCaquetaInserto3 =
   "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716392590/caqueta/insertos/caqueta-inserto-3_vjiwal.mp3";
-const audioBetancourt = "";
+const audioBetancourt =
+  "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716505097/caqueta/betancourt/Audio_1_Flia_Betancourt_n5krvr.mp3";
 const audioCaleno1 =
   "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716393309/caqueta/caleno/audio-caleno-1_aldfq8.mp3";
 const audioCaleno2 =
@@ -80,7 +81,6 @@ const audioAgroecologia1 =
   "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267080/caqueta/agroecologia/finca-guadalupe-1_iupg7u.mp3";
 const audioAgroecologia2 =
   "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267082/caqueta/agroecologia/finca-guadalupe-2_l0t47y.mp3";
-
 
 import "./Audio.css";
 
@@ -163,6 +163,8 @@ const Audio = ({ titulo, id, subTitulo = "", autor = "", popup = false }) => {
       return audioCaquetaInserto3;
     } else if (id == "audio-caleno-1") {
       return audioCaleno1;
+    } else if (id == "audio-betancourt") {
+      return audioBetancourt;
     } else if (id == "audio-caleno-2") {
       return audioCaleno2;
     } else if (id == "estigma-etnografia") {

@@ -6,6 +6,7 @@ import {
   establecerMostrarLineasA,
   establecerPersonaje,
   establecerMostrarFlechasCanales,
+  establecerMostrarAbajo,
   pararAudios
 } from '../../../Redux/states/managerSlice';
 import InfoPopup from '../../../components/InfoPopup';
@@ -27,6 +28,7 @@ const Bio = ({sound}) => {
     dispatch(establecerMostrarLineasA(true));
     dispatch(establecerPersonaje('linea-jorge'));
     dispatch(establecerMostrarFlechasCanales(true));
+    dispatch(establecerMostrarAbajo(true));  
     dispatch(pararAudios());
 
     const timer = setTimeout(() => {

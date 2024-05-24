@@ -113,6 +113,7 @@ function App() {
           <img src={abajo} alt="abajo" />
         </div>
       }
+      
       <Suspense>
         <Routes>
           <Route path='/' element={<Home />} />

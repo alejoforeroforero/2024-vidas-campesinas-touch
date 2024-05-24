@@ -21,11 +21,16 @@
     }
   
     .guardianes-f4-frase{
-      margin-top: 10vh;
+      margin-top: 4vh;
       text-align: center;
 
       h3{
-        font-size: 1.1rem;
+        font-size: 1.4rem;
+      }
+
+      p{
+        font-size: 1rem;
+        margin-top: 40px;
       }
     }
   }
