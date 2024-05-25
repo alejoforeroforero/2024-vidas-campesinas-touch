@@ -35,7 +35,7 @@ const Inserto1 = () => {
             <Audio 
               id='caqueta-inserto-1-audio' 
               titulo='“Nosotras también somos científicas en nuestro territorio. Tenemos muchos saberes”' 
-              autor = '- Nury Trujillo de Moyano'
+              autor = '· Nury Trujillo de Moyano'
             />
           </div>
         </div>

@@ -42,7 +42,7 @@ const BonanzasF2 = () => {
                             <Audio
                                 id='audio-marihuana'
                                 titulo='“El apogeo de la marihuana comenzó en el 79. Y ya en el 80 entró la coca”'
-                                autor='- Carlos Mancera'
+                                autor='· Carlos Mancera'
                             />
                         </div>
                     </div>

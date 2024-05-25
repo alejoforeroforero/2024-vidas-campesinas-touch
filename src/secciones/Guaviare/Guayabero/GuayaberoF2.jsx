@@ -50,7 +50,7 @@ const GuayaberoF2 = () => {
                             {!mostrarPlay && <p>Espera un momento...</p>}
                             <div className='guayabero-f2-frase'>
                                 <h3>“El río es fuente de vida”.</h3>
-                                <p>- Antonio Molano</p>
+                                <h4>· Antonio Molano</h4>
                             </div>
                         </div>
                     </div>

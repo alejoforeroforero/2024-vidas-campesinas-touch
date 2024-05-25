@@ -44,7 +44,7 @@ const GuayaberoF3 = () => {
                             <Audio
                                 id='audio-guayabero1'
                                 titulo='“Yo me acuerdo que en verano se escuchaba la cantidad de pescado subiendo el río”.'
-                                autor='- Disney Ardila'
+                                autor='· Disney Ardila'
                             />
                         </div>
                         <div className='guayabero-f3-lancha'>
@@ -54,7 +54,7 @@ const GuayaberoF3 = () => {
                             <Audio
                                 id='audio-guayabero2'
                                 titulo='“Uno en la noche pescaba 20 o 30 arrobas en dos horas”.'
-                                autor='- Carlos Mancera'
+                                autor='· Carlos Mancera'
                             />
                         </div>
                     </div>

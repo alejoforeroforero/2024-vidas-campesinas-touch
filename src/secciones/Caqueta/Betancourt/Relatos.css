@@ -1,5 +1,5 @@
 .betancourt-relatos {
-  background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1716386286/caqueta/betancourt/loop-betancourt_mnavav.jpg");
+  background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1716592885/caqueta/betancourt/loop-betancourt_k0utxt.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,6 +13,12 @@
   width: 100% !important;
   position: relative;
   margin-top: 12vh;
+}
+
+@media screen and (orientation: landscape) {
+  .betancourt-relatos-audio {
+    margin-top: 22vh;
+  }
 }
 
 

@@ -1,17 +1,9 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { establecerMostrarAbajo } from "../../../Redux/states/managerSlice";
 import Audio from "../../../components/Audio";
+import abajo from "../../../assets/generales/abajo.png";
 
 import "./EstigmaF3.css";
 
 const EstigmaF3 = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(establecerMostrarAbajo(true));
-  }, []);
-
   return (
     <>
       <div className="estigma-f3"></div>
@@ -28,9 +20,13 @@ const EstigmaF3 = () => {
               />
             </div>
             <p className="estigma-f3-p">
-            En este fragmento de la etnografía sonora “Aquí me amaño, gracias a Dios”, Luis Hernando Perdomo nos comparte su visión sobre la coca y el conocimiento
-            de los pueblos indígenas sobre esta planta.
+              En este fragmento de la etnografía sonora “Aquí me amaño, gracias
+              a Dios”, Luis Hernando Perdomo nos comparte su visión sobre la
+              coca y el conocimiento de los pueblos indígenas sobre esta planta.
             </p>
+            <div className="canal-b-abajo">
+              <img src={abajo} alt="abajo" />
+            </div>
           </div>
         </div>
       </div>

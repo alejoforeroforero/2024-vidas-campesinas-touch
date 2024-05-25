@@ -71,9 +71,9 @@ const Youtube = () => {
                 {!mostrarPlay && <p>Espera un momento...</p>}
               </div>
               <div>
-                <h4>
+                <p>
                   Video realizado en colaboración con niñas y niños de la vereda La Paz. Un recorrido en el que nos muestran las bondades de su vereda, hablan de sus miedos y propuestas de solución.
-                </h4>
+                </p>
               </div>
             </div>
           </div>

@@ -39,8 +39,8 @@
   border: 1px solid #fff;
 }
 
-.info{
-  display:none !important;
+.info {
+  display: none !important;
 }
 
 .youtube-contenido {
@@ -51,7 +51,6 @@
     text-align: center;
     margin-top: 40vh;
     height: 10vh;
-   
 
     p {
       font-size: 1rem;
@@ -72,7 +71,7 @@
   div:nth-child(2) {
     text-align: center;
     margin-top: 10vh;
-    padding: 12%;
+    padding: 12% 6%;
 
     h3 {
       text-align: left;
@@ -190,4 +189,8 @@
     margin-top: 2vh;
     font-size: 0.7rem;
   }
+}
+
+.h3-info-region{
+  font-size: 1rem;
 }

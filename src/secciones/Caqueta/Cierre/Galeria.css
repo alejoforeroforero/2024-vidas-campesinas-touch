@@ -1,0 +1,12 @@
+.caqueta-galeria-logo {
+  position: absolute;
+  width: 100%;
+  top: 40vh;
+  text-align: center;
+  z-index: 20;
+
+  img {
+    width: 60%;
+    max-width: 280px;
+  }
+}

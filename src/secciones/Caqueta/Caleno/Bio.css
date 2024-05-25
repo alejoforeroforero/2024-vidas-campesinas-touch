@@ -9,14 +9,22 @@
   color: #fff;
 
   h2 {
-    margin-top: 35vh;
+    margin-top: 30vh;
     margin-bottom: 5px;
+    padding-left: 5%;
+  }
+
+  h3 {
+    margin-top: 1vh;
+    text-align: left;
+    padding-left: 5%;
   }
 
   .info {
     text-align: left;
     position: relative;
     margin-top: 3vh;
+    padding-left: 5%;
 
     img {
       width: 50px;
@@ -28,6 +36,7 @@
 .caleno-bio-frase {
   h3 {
     margin-top: 13vh;
-    text-align: center;
+    text-align: left;
+    padding-left: 5%;
   }
 }

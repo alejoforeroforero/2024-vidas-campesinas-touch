@@ -108,3 +108,21 @@
     width: 50px;
   }
 }
+
+.canal-b-abajo{
+  position: absolute;
+  text-align: center;
+  top: 82vh;
+  justify-content: center;
+  width: 100%;
+
+  img{
+    width:40px;
+  }
+}
+
+@media screen and (orientation: landscape) {
+   .canal-b-abajo{  
+    top: 92vh;
+  }
+}

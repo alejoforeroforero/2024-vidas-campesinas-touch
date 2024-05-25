@@ -13,4 +13,16 @@
   width: 100% !important;
   position: relative;
   margin-top: 50vh;
+
+  div{
+    margin-bottom: 6px;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .jorge-relatos-audio {
+    width: 100% !important;
+    position: relative;
+    margin-top: 65vh;
+  }
 }

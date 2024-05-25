@@ -1,5 +1,5 @@
 .cierre-relatos {
-  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713447233/assets/guaviare/cierre/loop-guaviare-cierre_ejt9fz.jpg");
+  background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1716593255/caqueta/cierre/video-cierre-caqueta_eyuvoc.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -10,10 +10,23 @@
 }
 
 .cierre-titulo-caqueta {
-  margin-top: 10vh;
+  margin-top: 35vh;
   text-align: center;
   opacity: 0;
-  animation: aparecer-desaparecer 8s ease-in 3s forwards;
+  animation: aparecer-desaparecer 18s ease-in 3s forwards;
+
+  P{
+    padding: 0 5%;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .cierre-titulo-caqueta {
+    margin-top: 25vh;  
+    P{
+      padding: 0 0%;
+    }
+  }
 }
 
 .cierre-logo-caqueta{
@@ -33,7 +46,7 @@
   opacity: 0;
   visibility: hidden;
 
-  animation: aparecer 8s ease-in 14s forwards;
+  animation: aparecer 10s ease-in 24s forwards;
 
   div {
     text-align: center;
@@ -74,10 +87,10 @@
   }
 
   .cierre-extra-caqueta-thumbnail{
-    margin-top: 1vh;
+    margin-top: 4vh;
   
     img{
-      width: 60%;
+      width: 50%;
       max-width: 300px;
     }
 

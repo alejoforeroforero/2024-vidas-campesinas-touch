@@ -1,26 +1,13 @@
 .audio-contenedor {
-  max-width: 90%;
+  max-width: 100%;
   margin: auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
 
-  .audio-contenedor-interior {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    color: #fff;
-
-    p {
-      font-size: 0.9rem;
-      margin-top: 6px;
-    }
-  }
-
   img {
     width: 40px;
-    margin-right: 12px;
+    margin-right: 4px;
     cursor: pointer;
   }
 
@@ -34,6 +21,33 @@
     margin: auto;
     width: 80%;
     height: 40px;
+  }
+}
+
+.audio-contenedor-interior {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  padding: 0 0 0 45px;
+}
+
+.audio-contenedor-interior-icono{
+  position: absolute;
+  left: 0;
+}
+
+.audio-contenedor-interior-info{
+ 
+  h3{
+   
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-top: 6px;
   }
 }
 

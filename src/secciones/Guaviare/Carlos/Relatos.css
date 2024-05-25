@@ -12,5 +12,13 @@
 .carlos-relatos-audio {
   width: 100% !important;
   position: relative;
-  margin-top: 55vh;
+  margin-top: 60vh;
+}
+
+@media screen and (orientation: landscape) {
+  .carlos-relatos-audio {
+    width: 100% !important;
+    position: relative;
+    margin-top: 70vh;
+  }
 }

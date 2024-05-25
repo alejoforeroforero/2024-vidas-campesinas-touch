@@ -2,8 +2,6 @@ import { useDispatch } from 'react-redux';
 import { establecerMostrarAbajo } from '../../../Redux/states/managerSlice';
 import './GanaderiaF1.css';
 import grafica from '../../../assets/caqueta/ganaderia/ganado-1.png';
-// import danta from '../../../assets/guaviare/ganaderia/jaguar2.png';
-// import hojaB from '../../../assets/guaviare/ganaderia/hoja2.png';
 import { useEffect } from 'react';
 
 const EstigmaF1 = () => {

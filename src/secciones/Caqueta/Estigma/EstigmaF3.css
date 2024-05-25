@@ -9,26 +9,6 @@
   animation: mymove 120s linear infinite alternate;
 }
 
-.estigma-f3-ilustraciones {
-  position: absolute;
-  left: 0px;
-  top: 32vh;
-  cursor: pointer;
-  z-index: 300;
-  text-align: center;
-  width: 100%;
-  height: 20vh;
-  opacity: 0;
-  animation: aparecer 3s ease-in forwards;
-}
-
-@media screen and (orientation: landscape) {
-  .estigma-f3-ilustraciones {
-    top: 33vh;
-  }
-}
-
-
 .estigma-f3-interior {
   position: relative;
   width: 100%;
@@ -52,8 +32,19 @@
   font-size: 0.9rem;
   left: 5%;
   top: 62vh;
-  width: 90%;
+  width: 95%;
   margin: auto;
   opacity: 0;
   animation: aparecer 4s ease-out 2s forwards;
+}
+
+@media screen and (orientation: landscape) {
+  .estigma-f3-audio-contenedor {
+    top: 52vh;
+  }
+
+  .estigma-f3-p {
+    padding: 0 10%;
+    font-size: 1.1rem;
+  }
 }

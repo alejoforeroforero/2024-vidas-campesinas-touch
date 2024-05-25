@@ -6,14 +6,14 @@
 }
 
 .ganaderia-f1-fondo {
-  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713230357/assets/guaviare/caceria/fondo-caceria_vpkj9a.jpg");
+  background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1716267076/caqueta/ganaderia/ganaderia_kjnfi1.jpg");
   width: 100%;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  animation: mymove 50s linear infinite alternate;
+  animation: mymove 250s linear infinite alternate;
 }
 
 .ganaderia-f1-contenedor{

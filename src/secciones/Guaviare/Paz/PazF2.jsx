@@ -28,7 +28,7 @@ const PazF2 = () => {
                             <Audio
                                 id='audio-paz-1'
                                 titulo='“Ahora vivimos la tranquilidad. Hay mejores ingresos y menos zozobra”.'
-                                autor='- Jorge Cano'
+                                autor='· Jorge Cano'
                             />
                         </div>
                         <div className='paz-f2-ilustraciones'>
@@ -39,7 +39,7 @@ const PazF2 = () => {
                             <Audio
                                 id='audio-paz-2'
                                 titulo='“El proceso de paz hizo que fuéramos visibles”.'
-                                autor='- Disney Ardila'
+                                autor='· Disney Ardila'
                             />
                         </div>
                     </div>

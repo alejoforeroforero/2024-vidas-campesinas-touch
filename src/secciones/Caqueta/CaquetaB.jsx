@@ -7,10 +7,7 @@ import Inserto1 from './InsertosB/Inserto1';
 import Ganaderia from './Ganaderia/Ganaderia';
 import Inserto2 from './InsertosB/Inserto2';
 import Inserto3 from './InsertosB/Inserto3';
-// import Guayabero from './Guayabero/Guayabero'
-// import Bonanzas from './Bonanzas/Bonanzas';
-// import Paz from './Paz/Paz';
-// import Guardianes from './Guardianes/Guardianes';
+
 import './CaquetaB.css'
 
 const lineasB = [

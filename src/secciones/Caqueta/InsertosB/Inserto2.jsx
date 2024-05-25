@@ -2,8 +2,9 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { pararAudios } from "../../../Redux/states/managerSlice";
 import YT from "../../../components/YT";
-import logo from '../../../assets/caqueta/insertos/logo-inserto.png'
+import logo from "../../../assets/caqueta/insertos/logo-inserto.png";
 import playImg from "../../../assets/generales/play_video.png";
+import abajo from "../../../assets/generales/abajo.png";
 const ganaderiaThumbnail =
   "https://res.cloudinary.com/dbqfefibl/image/upload/v1713242761/assets/guaviare/guardianes/fondo-guardianes-f4_tphytr.jpg";
 import "./Inserto.css";
@@ -48,9 +49,9 @@ const InsertoB2 = () => {
         <div className="mask-general">
           <div className="contenido-general">
             <div className="insertoB2-interior">
-            <div className='insertoB2-logo'>
-            <img src={logo} alt="" />
-          </div> 
+              <div className="insertoB2-logo">
+                <img src={logo} alt="" />
+              </div>
               <div className="insertoB2-play">
                 {mostrarPlay && (
                   <img onClick={handleOnClick} src={playImg} alt="play" />
@@ -59,7 +60,15 @@ const InsertoB2 = () => {
               </div>
               <div className="insertoB2-frase">
                 <h2>Campesino científico</h2>
-                <h4>Bashar y sus compañeros de escuela en El Caraño, explican en dibujos qué hace un científico local, y demuestran la importancia de las aves semilleras en la restauración del bosque.</h4>
+                <p>
+                  Bashar y sus compañeros de escuela en El Caraño, explican en
+                  dibujos qué hace un científico local, y demuestran la
+                  importancia de las aves semilleras en la restauración del
+                  bosque.
+                </p>
+              </div>
+              <div className="canal-b-abajo">
+                <img src={abajo} alt="abajo" />
               </div>
             </div>
           </div>

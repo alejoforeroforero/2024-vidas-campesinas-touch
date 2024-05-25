@@ -32,7 +32,7 @@ body {
 }
 
 h1 {
-  font-size: 4.8rem;
+  font-size: 5.8rem;
   font-weight: 100;
   font-family: 'chinese', sans-serif;
   font-optical-sizing: auto;
@@ -40,20 +40,20 @@ h1 {
 
 @media screen and (min-width: 1300px) {
   h1 {
-    font-size: 5.3rem;
+    font-size: 8.4rem;
   }
 }
 
 h2 {
   font-size: 1.8rem;
-  font-weight: bold;
   font-family: 'oldnews', sans-serif;
   font-optical-sizing: auto;
+  font-weight: normal;
 }
 
 @media screen and (min-width: 1300px) {
   h2 {
-    font-size: 2.3rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -85,7 +85,7 @@ h4 {
 
 @media screen and (min-width: 1300px) {
   h4 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -96,12 +96,13 @@ p {
 
 @media screen and (min-width: 1300px) {
   p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
 pre{
   font-family: 'oldnews', sans-serif; 
+  font-weight: normal;
 }
 
 audio{

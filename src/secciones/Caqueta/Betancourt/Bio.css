@@ -32,9 +32,9 @@
 
 .betancourt-bio-frase {
   h3 {
-    margin-top: 6vh;
-    text-align: justify;
-    width: 50%;
+    margin-top: 12vh;
+    text-align: left;
+    width: 100%;
   }
 }
 
@@ -42,8 +42,8 @@
   .betancourt-bio-frase {
     h3 {
       margin-top: 6vh;
-      text-align: justify;
-      width: 80%;
+      text-align: left;
+      width: 75%;
     }
   }
 }

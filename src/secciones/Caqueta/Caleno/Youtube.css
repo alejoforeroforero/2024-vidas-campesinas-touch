@@ -1,28 +1,35 @@
-.caleno-youtube{
-    background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1716267076/caqueta/caleno/caleno-youtube-1_wihyd1.jpg");
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
+.caleno-youtube {
+  background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1716267076/caqueta/caleno/caleno-youtube-1_wihyd1.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
 
-    h3{
-        transform: translate(0, -7vh);
-    }
+  h3 {
+    transform: translate(0, -7vh);
+  }
 }
 
-.caleno-youtube-planta{
-    position: absolute;
-    text-align: center;
-    margin-top: 10vh;
-    left:0;
-    top:0;
-    width: 100%;
-
-    img{
-        width: 25%;
-        max-width: 100px;
+@media screen and (orientation: landscape) {
+  .caleno-youtube {
+    h3 {
+      transform: translate(0, 3vh);
     }
+  }
 }
 
+.caleno-youtube-planta {
+  position: absolute;
+  text-align: center;
+  margin-top: 10vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  img {
+    width: 25%;
+    max-width: 120px;
+  }
+}

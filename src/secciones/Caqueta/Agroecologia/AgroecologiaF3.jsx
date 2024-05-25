@@ -23,7 +23,7 @@ const AgroecologiaF3 = () => {
               <Audio
                 id="audio-agroecologia-1"
                 titulo="“Somos una superfamilia porque todos trabajamos en la finca, apuntándole al mismo campo”."
-                autor="- Yolanda Triana"
+                autor="· Yolanda Triana"
               />
             </div>
             <div className="agroecologia-f3-ilustraciones">
@@ -33,7 +33,7 @@ const AgroecologiaF3 = () => {
               <Audio
                 id="audio-agroecologia-2"
                 titulo="“En la finca tenemos diferentes unidades productivas que son microempresas”."
-                autor="- Iván Vaquero"
+                autor="· Iván Vaquero"
               />
             </div>
           </div>

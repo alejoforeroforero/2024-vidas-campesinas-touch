@@ -18,20 +18,19 @@
   flex-direction: column;
 }
 
-.ganaderia-f2-img{
+.ganaderia-f2-img {
   text-align: center;
 
-  img{
-    width:45%;
+  img {
+    width: 45%;
     max-width: 400px;
     transform: translate(0, -10vh);
   }
 }
 
-.ganaderia-f2-play{
-
-  img{
-    width:120px;
+.ganaderia-f2-play {
+  img {
+    width: 120px;
   }
 }
 
@@ -42,10 +41,9 @@
 
   h3 {
     text-align: center;
-    font-size: 1.1rem;
   }
 
-  h4{
+  h4 {
     margin-top: 14px;
     text-align: right;
     transform: translate(5vw, 0);

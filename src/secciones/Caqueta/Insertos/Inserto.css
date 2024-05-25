@@ -3,9 +3,9 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: absolute;
-  height: 100%;
-  width: 100%;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
   animation: aparecer 6s;
 }
 
@@ -22,9 +22,8 @@
 
 .inserto1-frase {
   width: 100% !important;
-  position: relative;
-  padding: 0 0 0 4vw;
-  margin-top: 4vh;
+  padding: 0 0 0 45px;
+  margin-top: 12vh;
 
   h3 {
     text-align: left;
@@ -47,7 +46,7 @@
   .inserto1-logo{
     width: 100%;
     text-align: center;
-    margin-top: 2vh;
+    margin-top: 3vh;
   
     img{
       width:70%;
@@ -55,14 +54,14 @@
   }
 
   .inserto1-frase {
-    padding: 0 0 0 6vw;
-    margin-top: 1vh;
+    padding: 0 0 0 45px;
+    margin-top: 2vh;
   }
 
   .inserto1-audio {
     width: 100% !important;
     position: relative;
-    margin-top: 2vh;
+    margin-top: 4vh;
   }
 }
 
@@ -91,7 +90,7 @@
 .inserto-logo{
   width: 100%;
   text-align: center;
-  margin-top: 8vh;
+  margin-top: 12vh;
 
   img{
     width:70%;
@@ -102,5 +101,60 @@
 .inserto-audio {
   width: 100% !important;
   position: relative;
-  margin-top: 5vh;
+  margin-top: 3vh;
+}
+
+@media screen and (orientation: landscape) {
+  .inserto-logo{
+    width: 100%;
+    text-align: center;
+    margin-top: 34vh;
+  
+    img{
+      width:70%;
+      max-width: 320px;
+    }
+  }
+
+  .inserto-audio {
+    width: 100% !important;
+    position: relative;
+    margin-top: 3vh;
+  }
+}
+
+.inserto3-logo{
+  width: 100%;
+  text-align: center;
+  margin-top: 26vh;
+
+  img{
+    width:70%;
+    max-width: 320px;
+  }
+
+  .inserto3-audio {
+    width: 100% !important;
+    position: relative;
+    margin-top: 1vh;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .inserto3-logo{
+    width: 100%;
+    text-align: center;
+    margin-top: 32vh;
+  
+    img{
+      width:70%;
+      max-width: 320px;
+    }
+  }
+
+  .inserto3-audio {
+    width: 100% !important;
+    position: relative;
+    margin-top: 3vh;
+  }
 }

@@ -47,14 +47,14 @@ const GuardianesF3 = () => {
                             <Audio
                                 id='audio-guardianes-3'
                                 titulo='“Después de creada la corporación, se empieza a fortalecer el turismo y comenzamos a ser visibles en el departamento”.'
-                                autor='- Norbey Méndez'
+                                autor='· Norbey Méndez'
                             />
                         </div>
                         <div className='guardianes-f3-audio-contenedor2'>
                             <Audio
                                 id='audio-guardianes-4'
                                 titulo='“Lo que hace que funcionen estos procesos, es la comunidad haciendo conciencia”.'
-                                autor='- Andrés González'
+                                autor='· Andrés González'
                             />
                         </div>
                     </div>

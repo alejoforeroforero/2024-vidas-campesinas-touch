@@ -30,11 +30,17 @@
   display: flex;
   justify-content: center;
   align-items: self-end;
-  animation: aparecer 2s;
+  animation: aparecer 2s; 
 
   h1 {
     color: rgb(208, 81, 55);
     width: 100%;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .guaviare-titulo {
+    margin-top: 4vh;
   }
 }
 
@@ -110,7 +116,6 @@
 }
 
 .guaviare-descripcion-grafica-img {
-
   height: 15vh;
   width: 100%;
   position: relative;

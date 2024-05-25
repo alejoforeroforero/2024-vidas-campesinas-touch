@@ -148,7 +148,7 @@ const Intro = () => {
               <h1 className="caqueta-titulo-h1">{CaquetaIntro.titulo}</h1>
             </div>
             <div className="caqueta-descripcion">
-              <img className="caqueta-descripcion-luna"src={luna} alt="" />
+              <img className="caqueta-descripcion-luna" src={luna} alt="" />
               <h2 className="caqueta-descripcion-h2">
                 <pre>{CaquetaIntro.desc}</pre>
               </h2>
@@ -173,12 +173,12 @@ const Intro = () => {
                   </p>
                 )}
               </div>
-              <div className="caqueta-intro-scroll">
-                <img src={scroll} alt="" />
-              </div>
             </div>
           </div>
         )}
+      </div>
+      <div className="caqueta-intro-scroll">
+        <img src={scroll} alt="" />
       </div>
     </div>
   );

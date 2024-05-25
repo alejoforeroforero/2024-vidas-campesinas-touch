@@ -22,14 +22,14 @@ const Inserto3 = () => {
     <div ref={elementRef} className='seccion inserto3' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
       <div className='mask-general'>
         <div className="contenido-general">  
-          <div className='inserto-logo'>
+          <div className='inserto3-logo'>
             <img src={logo} alt="" />
           </div> 
-          <div className='inserto-audio'>
+          <div className='inserto3-audio'>
             <Audio 
               id='caqueta-inserto-3-audio' 
-              titulo='“Se necesita restaurar no solo los ecosistemas, también las relaciones, la confianza, el amor propio y por el territorio”' 
-              autor = '- Yesenia Cárdenas Hernández'
+              titulo='“Restaurar también las relaciones, la confianza, el amor propio y por el territorio”' 
+              autor = '· Yesenia Cárdenas Hernández'
             />
           </div>
         </div>

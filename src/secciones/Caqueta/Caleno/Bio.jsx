@@ -44,7 +44,7 @@ const Bio = () => {
       <div className='mask-general'>
         <div className="contenido-general">
           <h2><pre>{Caleno.titulo}</pre></h2>
-          <h3><pre>{Caleno.subTitulo}</pre></h3>
+          <h3 className="h3-info-region"><pre>{Caleno.subTitulo}</pre></h3>
           <div className='info'>
             <img onClick={() => setShowingPopup(true)} src={infoImg} alt="info" />
           </div>

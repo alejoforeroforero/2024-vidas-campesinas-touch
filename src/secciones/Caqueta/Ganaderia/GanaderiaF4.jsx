@@ -1,26 +1,27 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { changeVideo, establecerMostrarAbajo } from "../../../Redux/states/managerSlice";
+import { changeVideo } from "../../../Redux/states/managerSlice";
 import Audio from "../../../components/Audio";
 import grafica from "../../../assets/caqueta/ganaderia/arbol.png";
-const videoSrc = 'https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267084/caqueta/ganaderia/Loop-ganaderia_hugy34.mp4'
+import abajo from "../../../assets/generales/abajo.png";
+const videoSrc =
+  "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267084/caqueta/ganaderia/Loop-ganaderia_hugy34.mp4";
 
 import "./GanaderiaF4.css";
 
 const GanaderiaF4 = () => {
   const dispatch = useDispatch();
 
-  const vId = 'ganaderia-video'
+  const vId = "ganaderia-video";
 
   useEffect(() => {
     dispatch(changeVideo(vId));
-    dispatch(establecerMostrarAbajo(true));
   }, []);
 
   return (
     <>
       <div className="ganaderia-f4">
-      <div className="ganaderia-f4-video">
+        <div className="ganaderia-f4-video">
           <video id={vId} loop playsInline muted src={videoSrc} />
         </div>
       </div>
@@ -40,6 +41,9 @@ const GanaderiaF4 = () => {
                 titulo="“Lo que se propone son sistemas agroforestales para regenerar los suelos degradados”."
                 autor="· José Alejandro Bermeo"
               />
+            </div>
+            <div className="canal-b-abajo">
+              <img src={abajo} alt="abajo" />
             </div>
           </div>
         </div>

@@ -25,14 +25,14 @@ const BonanzasF3 = () => {
                             <Audio
                                 id='audio-coca-disney'
                                 titulo='“Cuando se creció más el Raudal, fue cuando hubo coca. Creíamos que eso nunca se iba a acabar”.'
-                                autor='- Disney Ardila'
+                                autor='· Disney Ardila'
                             />
                         </div>
                         <div className='bonanzas-audio-contenedor2'>
                             <Audio
                                 id='audio-coca-ivan'
                                 titulo='“Los que compraban la mercancía eran los ‘Chichipatos’. Cuando ellos llegaban, yo ayudaba a sacar las lonas de plata”.'
-                                autor='- Iván Ramírez'
+                                autor='· Iván Ramírez'
                             />
                         </div>
                     </div>

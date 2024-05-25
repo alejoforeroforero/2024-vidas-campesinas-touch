@@ -1,11 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import {
-  changeVideo,
-  establecerMostrarAbajo,
-} from "../../../Redux/states/managerSlice";
+import { changeVideo } from "../../../Redux/states/managerSlice";
 import Audio from "../../../components/Audio";
 import grafica from "../../../assets/caqueta/agroecologia/nino.png";
+import abajo from "../../../assets/generales/abajo.png";
 const videoSrc =
   "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267080/caqueta/agroecologia/loop-agroecologia_qgrkyi.mp4";
 
@@ -18,7 +16,6 @@ const AgroecologiaF5 = () => {
 
   useEffect(() => {
     dispatch(changeVideo(vId));
-    dispatch(establecerMostrarAbajo(true));
   }, []);
 
   return (
@@ -40,10 +37,13 @@ const AgroecologiaF5 = () => {
             </div>
             <div className="agroecologia-f5-audio-contenedor2">
               <Audio
-                id="audio-guardianes-2"
+                id="audio-agroecologia-3"
                 titulo="“Los jóvenes deben regresar al campo para seguir sacándolo adelante. Porque sin campo, no hay ciudad”."
-                autor="- Yolanda Triana"
+                autor="· Yolanda Triana"
               />
+            </div>
+            <div className="canal-b-abajo">
+              <img src={abajo} alt="abajo" />
             </div>
           </div>
         </div>

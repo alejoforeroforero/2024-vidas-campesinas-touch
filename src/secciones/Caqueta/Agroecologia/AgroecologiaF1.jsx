@@ -2,8 +2,6 @@ import { useDispatch } from 'react-redux';
 import { establecerMostrarAbajo } from '../../../Redux/states/managerSlice';
 import './AgroecologiaF1.css';
 import maiz from '../../../assets/caqueta/agroecologia/maiz.png';
-// import danta from '../../../assets/guaviare/agroecologia/jaguar2.png';
-// import hojaB from '../../../assets/guaviare/agroecologia/hoja2.png';
 import { useEffect } from 'react';
 
 const AgroecologiaF1 = () => {

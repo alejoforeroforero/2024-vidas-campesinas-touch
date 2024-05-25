@@ -13,9 +13,14 @@ import solLuna from "../../../assets/caqueta/cierre/sol-luna.png";
 const relatosVideo =
   "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716486447/caqueta/cierre/Video_cierre_Caqueta_ok_p_e68rvx.mp4";
 const susurros =
-  "https://res.cloudinary.com/dhz9jfn78/image/upload/v1716489016/caqueta/cierre/Fotograma_Susurros_del_Caqueta%CC%81_ok_qghois.jpg";
+  "https://res.cloudinary.com/dhz9jfn78/image/upload/v1716608511/caqueta/cierre/susurros-play_tz37nk.jpg";
 const zapatillas =
-  "https://res.cloudinary.com/dhz9jfn78/image/upload/v1716489015/caqueta/cierre/Fotograma_Con_zapatillas_o_botas_recorte_a8xt6s.jpg";
+  "https://res.cloudinary.com/dhz9jfn78/image/upload/v1716608512/caqueta/cierre/zapatillas-play_hqhuyy.jpg";
+
+const susurros2 =
+"https://res.cloudinary.com/dhz9jfn78/image/upload/v1716489016/caqueta/cierre/Fotograma_Susurros_del_Caqueta%CC%81_ok_qghois.jpg";
+const zapatillas2 =
+"https://res.cloudinary.com/dhz9jfn78/image/upload/v1716489015/caqueta/cierre/Fotograma_Con_zapatillas_o_botas_recorte_a8xt6s.jpg";
 
 
 import "./Relatos.css";
@@ -70,7 +75,7 @@ const Relatos = () => {
         <YT
           refYoutubeFx={refYoutubeCarlos}
           youtubeVideoId="HxFZx2CuNrs" //MN_RlCT-WFQ  -9AvYOpalrk
-          imgThumbnail={susurros}
+          imgThumbnail={susurros2}
           id="youtube-suzurros"
         />
       </div>
@@ -83,7 +88,7 @@ const Relatos = () => {
         <YT
           refYoutubeFx={refYoutubeCarlos2}
           youtubeVideoId="rsDjPFyNwd8" //MN_RlCT-WFQ  -9AvYOpalrk
-          imgThumbnail={zapatillas}
+          imgThumbnail={zapatillas2}
           id="youtube-zapatillas"
         />
       </div>
@@ -121,10 +126,10 @@ const Relatos = () => {
               <img src={logoCierre} alt="" />
             </div>
             <div>
-              <h4>
+              <p>
                 Transformando la relación de las campesinas y campesinos
                 amazónicos con los ecosistemas que habitan.
-              </h4>
+              </p>
             </div>
           </div>
           <div className="cierre-extra-caqueta">

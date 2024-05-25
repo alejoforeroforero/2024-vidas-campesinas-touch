@@ -81,7 +81,8 @@ const audioAgroecologia1 =
   "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267080/caqueta/agroecologia/finca-guadalupe-1_iupg7u.mp3";
 const audioAgroecologia2 =
   "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267082/caqueta/agroecologia/finca-guadalupe-2_l0t47y.mp3";
-
+const audioAgroecologia3 =
+  "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267083/caqueta/agroecologia/finca-guadalupe-3_lvzhhe.mp3";
 import "./Audio.css";
 
 const Audio = ({ titulo, id, subTitulo = "", autor = "", popup = false }) => {
@@ -181,6 +182,8 @@ const Audio = ({ titulo, id, subTitulo = "", autor = "", popup = false }) => {
       return audioAgroecologia1;
     } else if (id == "audio-agroecologia-2") {
       return audioAgroecologia2;
+    }else if (id == "audio-agroecologia-3") {
+      return audioAgroecologia3;
     }
   };
 
@@ -353,7 +356,7 @@ const Audio = ({ titulo, id, subTitulo = "", autor = "", popup = false }) => {
   return (
     <div className="audio-contenedor">
       <div className="audio-contenedor-interior">
-        <div>
+        <div className="audio-contenedor-interior-icono">
           <img
             src={audioS ? audioOnImg : audioImg}
             onClick={() => {
@@ -361,7 +364,7 @@ const Audio = ({ titulo, id, subTitulo = "", autor = "", popup = false }) => {
             }}
           ></img>
         </div>
-        <div>
+        <div className="audio-contenedor-interior-info">
           <h3>{titulo}</h3>
           {subTitulo != "" && <p>{subTitulo}</p>}
         </div>

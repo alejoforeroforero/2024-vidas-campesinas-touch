@@ -1,28 +1,35 @@
-.betancourt-youtube-2{
-    background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1716267080/caqueta/betancourt/betancourt-youtube-2_nyjets.jpg");
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
+.betancourt-youtube-2 {
+  background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1716267080/caqueta/betancourt/betancourt-youtube-2_nyjets.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
 
-    h3{
-        transform: translate(0, -8vh);
-    }
+  h3 {
+    transform: translate(0, -8vh);
+  }
 }
 
-.betancourt-youtube-2-manos{
-    position: absolute;
-    text-align: center;
-    margin-top: 14vh;
-    left:0;
-    top:0;
-    width: 100%;
-
-    img{
-        width: 43%;
-        max-width: 180px;
+@media screen and (orientation: landscape) {
+  .betancourt-youtube-2 {
+    h3 {
+      transform: translate(0, 3vh);
     }
+  }
 }
 
+.betancourt-youtube-2-manos {
+  position: absolute;
+  text-align: center;
+  margin-top: 14vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  img {
+    width: 43%;
+    max-width: 180px;
+  }
+}

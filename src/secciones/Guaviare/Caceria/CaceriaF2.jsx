@@ -42,7 +42,7 @@ const CaceriaF2 = () => {
                             <Audio
                                 id='caceria'
                                 titulo='“En ese tiempo se trabajaba con las pieles del tigrillo y el cachirre”'
-                                autor='- Carlos Mancera'
+                                autor='· Carlos Mancera'
                             />
                         </div>
                     </div>
