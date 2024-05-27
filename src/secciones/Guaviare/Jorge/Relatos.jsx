@@ -26,9 +26,6 @@ const Relatos = () => {
     videoRef.current.play();
   }, []);
 
-  const handleOnClick = () => {
-    videoRef.current.pause();
-  };
 
   const pintarVideo = () => {
     return (
@@ -48,14 +45,19 @@ const Relatos = () => {
       {pintarVideo()}
       <div className="mask-general">
         <div className="contenido-general">
-          <div onClick={handleOnClick} className="jorge-relatos-audio">
+          <div className="jorge-relatos-audio">
             <div>
-              <Audio id="jorge2" titulo='"Cuando llegué al Raudal"' />
+              <Audio
+                id="jorge2"
+                titulo='"Cuando llegué al Raudal"'
+                video={videoRef}
+              />
             </div>
             <div>
               <Audio
                 id="jorge3"
                 titulo='"Somos nuestras propias ambulancias"'
+                video={videoRef}
               />
             </div>
           </div>

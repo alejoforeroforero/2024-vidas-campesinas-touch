@@ -1,0 +1,138 @@
+.cauca-intro {
+  background: url("https://res.cloudinary.com/dumlhmvts/image/upload/v1716738660/cauca/intro/Fotograma_Loop_INTRO_CAUCA_web_zey6o1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  animation: aparecer 1s ease-in forwards;
+}
+
+.cauca-video {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+
+  video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    opacity: 1;
+  }
+}
+
+.cauca-sol {
+  height: 12vh;
+  display: flex;
+  justify-content: left;
+  align-items: self-end;
+
+  img {
+    width: 20%;
+    max-width: 70px;
+    transform: translate(-6vw, 0);
+  }
+}
+
+.cauca-titulo {
+  height: 16vh;
+  display: flex;
+  justify-content: center;
+  animation: aparecer 2s;
+
+  h1 {
+    color: #bcad26;
+    width: 100%;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .cauca-titulo {
+    height: 20vh;
+  }
+}
+
+.cauca-descripcion {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+
+  .cauca-descripcion-luna{   
+      position: absolute;
+      top: -2%;
+      right: 10%;
+      width: 13%;
+      max-width: 50px;    
+  }
+  
+  h2 {
+    color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: left;
+    opacity: 0;
+    animation: aparecer 3s ease-in-out 1s forwards;
+  }
+
+  hr {
+    width: 40%;
+    height: 6px;
+    background-color: #bcad26;
+    border: 0px;
+    margin-top: 2vh;
+    opacity: 0;
+    animation: aparecer 3s ease-in-out 1s forwards;
+  }
+
+  .cauca-descripcion-p-contenedor {
+    position: relative;
+    height: 44vh;
+    width: 95%;
+    opacity: 0;
+    animation: aparecer 2s ease-in-out 3s forwards;
+  }
+
+  p {
+    position: absolute;
+    text-align: left;
+    margin-top: 2vh;
+  }
+
+  .cauca-descripcion-p1 {
+    visibility: hidden;
+  }
+
+  .cauca-descripcion-p2 {
+    visibility: hidden;
+  }
+}
+
+.cauca-intro-p1 {
+  animation: aparecerTxt 4s;
+}
+
+.cauca-intro-p1-des {
+  animation: desaparecerTxt 1s forwards;
+}
+
+.cauca-intro-scroll {
+  position: absolute;
+  bottom: 60px;
+  text-align: center;
+  width: 100%;
+  img {
+    width: 200px !important;
+  }
+}
+
+
+@media screen and (orientation: landscape) {
+  .cauca-intro-scroll {
+    bottom: 10px;
+  }
+}

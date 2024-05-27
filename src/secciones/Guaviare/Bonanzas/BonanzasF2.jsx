@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { changeVideo, establecerMostrarAbajo } from '../../../Redux/states/managerSlice'
 import Audio from '../../../components/Audio'
@@ -10,6 +10,7 @@ import './BonanzasF2.css';
 const BonanzasF2 = () => {
 
     const dispatch = useDispatch();
+    const videoRef = useRef(null)
 
     const vId = 'bonanzas-video'
 
@@ -28,6 +29,7 @@ const BonanzasF2 = () => {
                         playsInline
                         muted
                         src={videoSrc}
+                        ref={videoRef}
                     />
                 </div>
             </div>
@@ -43,6 +45,7 @@ const BonanzasF2 = () => {
                                 id='audio-marihuana'
                                 titulo='“El apogeo de la marihuana comenzó en el 79. Y ya en el 80 entró la coca”'
                                 autor='· Carlos Mancera'
+                                video={videoRef}
                             />
                         </div>
                     </div>

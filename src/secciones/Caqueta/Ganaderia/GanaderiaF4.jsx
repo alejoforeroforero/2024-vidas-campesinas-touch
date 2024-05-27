@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { changeVideo } from "../../../Redux/states/managerSlice";
 import Audio from "../../../components/Audio";
@@ -11,6 +11,7 @@ import "./GanaderiaF4.css";
 
 const GanaderiaF4 = () => {
   const dispatch = useDispatch();
+  const videoRef = useRef(null);
 
   const vId = "ganaderia-video";
 
@@ -22,7 +23,14 @@ const GanaderiaF4 = () => {
     <>
       <div className="ganaderia-f4">
         <div className="ganaderia-f4-video">
-          <video id={vId} loop playsInline muted src={videoSrc} />
+          <video
+            id={vId}
+            loop
+            playsInline
+            muted
+            src={videoSrc}
+            ref={videoRef}
+          />
         </div>
       </div>
       <div className="mask-general">
@@ -40,6 +48,7 @@ const GanaderiaF4 = () => {
                 id="audio-ganaderia-2"
                 titulo="“Lo que se propone son sistemas agroforestales para regenerar los suelos degradados”."
                 autor="· José Alejandro Bermeo"
+                video={videoRef}
               />
             </div>
             <div className="canal-b-abajo">

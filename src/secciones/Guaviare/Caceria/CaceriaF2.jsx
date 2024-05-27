@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { changeVideo, establecerMostrarAbajo } from '../../../Redux/states/managerSlice'
 import Audio from '../../../components/Audio'
@@ -10,6 +10,7 @@ import './CaceriaF2.css';
 const CaceriaF2 = () => {
 
     const dispatch = useDispatch();
+    const videoRef = useRef(null);
 
     const vId = 'caceria-video'
 
@@ -28,6 +29,7 @@ const CaceriaF2 = () => {
                         playsInline
                         muted
                         src={videoSrc}
+                        ref={videoRef}
                     />
                 </div>
             </div>
@@ -43,6 +45,7 @@ const CaceriaF2 = () => {
                                 id='caceria'
                                 titulo='“En ese tiempo se trabajaba con las pieles del tigrillo y el cachirre”'
                                 autor='· Carlos Mancera'
+                                video={videoRef}
                             />
                         </div>
                     </div>

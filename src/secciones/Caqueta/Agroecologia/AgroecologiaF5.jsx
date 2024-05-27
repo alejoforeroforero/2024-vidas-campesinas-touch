@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { changeVideo } from "../../../Redux/states/managerSlice";
 import Audio from "../../../components/Audio";
@@ -11,6 +11,7 @@ import "./AgroecologiaF5.css";
 
 const AgroecologiaF5 = () => {
   const dispatch = useDispatch();
+  const videoRef = useRef(null);
 
   const vId = "agroecologia-video";
 
@@ -22,7 +23,14 @@ const AgroecologiaF5 = () => {
     <>
       <div className="agroecologia-f5">
         <div className="agroecologia-f5-video">
-          <video id={vId} loop playsInline muted src={videoSrc} />
+          <video
+            id={vId}
+            loop
+            playsInline
+            muted
+            src={videoSrc}
+            ref={videoRef}
+          />
         </div>
       </div>
       <div className="mask-general">
@@ -40,6 +48,7 @@ const AgroecologiaF5 = () => {
                 id="audio-agroecologia-3"
                 titulo="“Los jóvenes deben regresar al campo para seguir sacándolo adelante. Porque sin campo, no hay ciudad”."
                 autor="· Yolanda Triana"
+                video={videoRef}
               />
             </div>
             <div className="canal-b-abajo">

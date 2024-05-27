@@ -25,9 +25,6 @@ const Relatos = () => {
     videoRef.current.play();
   }, []);
 
-  const handleOnClick = () => {
-    videoRef.current.pause();
-  };
 
   const pintarVideo = () => {
     return (
@@ -47,17 +44,19 @@ const Relatos = () => {
       {pintarVideo()}
       <div className="mask-general">
         <div className="contenido-general">
-          <div onClick={handleOnClick} className="caleno-relatos-audio">
+          <div className="caleno-relatos-audio">
             <div>
               <Audio
                 id="audio-caleno-1"
                 titulo="“Gracias a Dios la guerra se calmó y volvimos a levantar cabeza”"
+                video={videoRef}
               />
             </div>
             <div>
               <Audio
                 id="audio-caleno-2"
                 titulo="“El reto como familia es aprovechar lo que producimos en la finca”"
+                video={videoRef}
               />
             </div>
           </div>

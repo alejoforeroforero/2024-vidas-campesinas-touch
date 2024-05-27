@@ -84,8 +84,23 @@ const audioAgroecologia2 =
 const audioAgroecologia3 =
   "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267083/caqueta/agroecologia/finca-guadalupe-3_lvzhhe.mp3";
 import "./Audio.css";
+const audioGuardia1 =
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1716742662/cauca/guardia/Audio_1_Guardia_indi%CC%81gena_mwp6pf.mp3";
+const audioGuardia2 =
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1716743667/cauca/guardia/Audio_2_Guardia_indi%CC%81gena_bym5xt.mp3";
+const audioGuardia3 =
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1716766235/cauca/guardia/Audio_3_Guardia_indi%CC%81gena_ucbkbq.mp3";
+const audioGuardia4 =
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1716766235/cauca/guardia/Audio_4_Guardia_indi%CC%81gena_euwssk.mp3";
 
-const Audio = ({ titulo, id, subTitulo = "", autor = "", popup = false }) => {
+const Audio = ({
+  titulo,
+  id,
+  subTitulo = "",
+  autor = "",
+  popup = false,
+  video = null
+}) => {
   const cancionActual = useSelector(
     (state) => state.managerReducer.cancionActual
   );
@@ -182,8 +197,16 @@ const Audio = ({ titulo, id, subTitulo = "", autor = "", popup = false }) => {
       return audioAgroecologia1;
     } else if (id == "audio-agroecologia-2") {
       return audioAgroecologia2;
-    }else if (id == "audio-agroecologia-3") {
+    } else if (id == "audio-agroecologia-3") {
       return audioAgroecologia3;
+    } else if (id == "audio-guardia-1") {
+      return audioGuardia1;
+    } else if (id == "audio-guardia-2") {
+      return audioGuardia2;
+    } else if (id == "audio-guardia-3") {
+      return audioGuardia3;
+    } else if (id == "audio-guardia-4") {
+      return audioGuardia4;
     }
   };
 
@@ -262,6 +285,9 @@ const Audio = ({ titulo, id, subTitulo = "", autor = "", popup = false }) => {
 
   useEffect(() => {
     if (audioS) {
+      console.log("parar video")
+      video?.current.pause()
+
       frame1.current = requestAnimationFrame(animate1);
     } else {
       cancelAnimationFrame(frame1.current);
@@ -293,6 +319,9 @@ const Audio = ({ titulo, id, subTitulo = "", autor = "", popup = false }) => {
     dispatch(pararAudios());
     dispatch(establecerDuracion(0));
     setContadorReg(0);
+
+    console.log("poner video")
+    video?.current.play()
 
     if (cancionActual == id) {
       dispatch(cambiarCancion(null));

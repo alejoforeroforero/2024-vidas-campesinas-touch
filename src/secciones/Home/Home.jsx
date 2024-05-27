@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { cambiarSeccion } from '../../Redux/states/managerSlice';
 import HomeIntro from './Intro/Intro';
@@ -9,14 +9,34 @@ import HomeIntro5 from './Intro/Intro5';
 import HomeIntro6 from './Intro/Intro6';
 import HomeMenu from './Menu/Menu';
 
+const audioIntroGeneralFile = 'https://res.cloudinary.com/dumlhmvts/video/upload/v1716767086/home-general/musicas-campesinas-intro_k4rwme.mp3'
+
+
 const Home = () => {
+
+  const [audioIntroGeneral, setAudioIntroGeneral] = useState(null);
+
   const seccion = useSelector(state => state.managerReducer.seccion);
 
   const dispatch = useDispatch();
 
   useEffect(()=>{
     dispatch(cambiarSeccion('home-intro'));
+
+    const sonido = new Howl({
+      src: [audioIntroGeneralFile], // Replace with your audio source
+    });
+    setAudioIntroGeneral(sonido);
+
+    return () => {
+      sonido.unload(); 
+    }
   }, []);
+
+  useEffect(()=>{
+    audioIntroGeneral?.play();
+
+  }, [audioIntroGeneral])
 
   return (
     <div className='capitulo'>

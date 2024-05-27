@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { changeVideo, establecerMostrarAbajo } from '../../../Redux/states/managerSlice'
 import Audio from '../../../components/Audio'
@@ -8,6 +8,7 @@ const videoSrc = 'https://res.cloudinary.com/dbqfefibl/video/upload/v1713230574/
 import './GuayaberoF3.css';
 
 const GuayaberoF3 = () => {
+    const videoRef = useRef(null);
 
     useEffect(() => {
         dispatch(changeVideo(vId))
@@ -33,6 +34,7 @@ const GuayaberoF3 = () => {
                         playsInline
                         muted
                         src={videoSrc}
+                        ref={videoRef}
                     />
                 </div>
             </div>
@@ -45,6 +47,7 @@ const GuayaberoF3 = () => {
                                 id='audio-guayabero1'
                                 titulo='“Yo me acuerdo que en verano se escuchaba la cantidad de pescado subiendo el río”.'
                                 autor='· Disney Ardila'
+                                video={videoRef}
                             />
                         </div>
                         <div className='guayabero-f3-lancha'>
@@ -55,6 +58,7 @@ const GuayaberoF3 = () => {
                                 id='audio-guayabero2'
                                 titulo='“Uno en la noche pescaba 20 o 30 arrobas en dos horas”.'
                                 autor='· Carlos Mancera'
+                                video={videoRef}
                             />
                         </div>
                     </div>
