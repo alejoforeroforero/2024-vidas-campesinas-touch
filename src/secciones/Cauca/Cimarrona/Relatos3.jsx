@@ -13,7 +13,7 @@ const Relatos3 = () => {
   const videoRef = useRef();
   const elementRef = useRef();
 
-  const { handleTouchStart, handleTouchEnd } = useDelta('guardia-youtube-2', 'campesina-bio', elementRef);
+  const { handleTouchStart, handleTouchEnd } = useDelta('cimarrona-youtube-1', 'lazos-bio', elementRef);
 
   useEffect(()=>{
     dispatch(pararAudios());
@@ -39,17 +39,14 @@ const Relatos3 = () => {
   }
 
   return (
-    <div ref={elementRef} className='seccion guardia-relatos-3' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
+    <div ref={elementRef} className='seccion cimarrona-relatos-3' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
       {/* {pintarVideo()} */}
       <div className='mask-general'>
         <div className="contenido-general">
-          <div onClick={handleOnClick} className='guardia-relatos-audio-3'>
-            <Audio id='audio-guardia-3' titulo='“Tenemos que sembrar consciencia y no generar más violencia”' />
+          <div onClick={handleOnClick} className='cimarrona-relatos-audio-3'>
+            <Audio id='audio-cimarrona-3' titulo='“Siempre estamos buscando la unidad, estar en paz. Vivir con alegría y armonía”' />
           </div>
-          <div onClick={handleOnClick} className='guardia-relatos-audio-4'>
-            <Audio id='audio-guardia-4' titulo='“La guardia indígena ha sido como una escuela para las demás guardias”' />
-          </div>
-          {/* <div className='guardia-relatos-frase-3'>
+          {/* <div className='cimarrona-relatos-frase-3'>
             <h3>“Remedios con plantas naturales y de por aquí, de esta tierra…”</h3>
           </div> */}
         </div>

@@ -1,0 +1,37 @@
+.campesina-youtube{
+    background: url("https://res.cloudinary.com/dumlhmvts/image/upload/v1717034789/cauca/campesina/Guardia_regando_huerta_g5noz0.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+
+    h3{
+        transform: translate(0, 0vh);
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .campesina-youtube{    
+        h3{
+            transform: translate(0, -6vh);
+        }
+    }
+
+}
+
+.campesina-youtube-ave{
+    position: absolute;
+    text-align: center;
+    margin-top: 10vh;
+    left:0;
+    top:0;
+    width: 100%;
+
+    img{
+        width: 30%;
+        max-width: 130px;
+    }
+}
+

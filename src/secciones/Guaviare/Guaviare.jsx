@@ -125,8 +125,8 @@ const Guaviare = () => {
   }
 
   useEffect(()=>{
-    //dispatch(cambiarSeccion('guaviare-intro'));
-    dispatch(cambiarSeccion('jorge-youtube'));
+    dispatch(cambiarSeccion('guaviare-intro'));
+    // dispatch(cambiarSeccion('jorge-youtube'));
     const newSound = new Howl({
       src: [audioJorge1Howl], // Replace with your audio source
     });

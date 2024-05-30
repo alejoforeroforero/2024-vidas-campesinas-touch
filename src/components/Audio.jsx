@@ -92,6 +92,17 @@ const audioGuardia3 =
   "https://res.cloudinary.com/dumlhmvts/video/upload/v1716766235/cauca/guardia/Audio_3_Guardia_indi%CC%81gena_ucbkbq.mp3";
 const audioGuardia4 =
   "https://res.cloudinary.com/dumlhmvts/video/upload/v1716766235/cauca/guardia/Audio_4_Guardia_indi%CC%81gena_euwssk.mp3";
+const audioCampesina1 =
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1717034372/cauca/campesina/Audio_1_Guardia_campesina_f7zqn3.mp3";
+const audioCampesina2 =
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1717036014/cauca/campesina/Audio_2_Guardia_campesina_e287kb.mp3";
+const audioCimarrona1 =
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1717037177/cauca/cimarrona/Audio_1_Guardia_cimarrona_g3kd4t.mp3";
+const audioCimarrona2 =
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1717037491/cauca/cimarrona/Audio_2_Guardia_cimarrona_bj1g5v.mp3";
+const audioCimarrona3 =
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1717038186/cauca/cimarrona/Audio_3_Guardia_cimarrona_yycbsp.mp3";
+
 
 const Audio = ({
   titulo,
@@ -99,7 +110,7 @@ const Audio = ({
   subTitulo = "",
   autor = "",
   popup = false,
-  video = null
+  video = null,
 }) => {
   const cancionActual = useSelector(
     (state) => state.managerReducer.cancionActual
@@ -207,6 +218,16 @@ const Audio = ({
       return audioGuardia3;
     } else if (id == "audio-guardia-4") {
       return audioGuardia4;
+    } else if (id == "audio-campesina-1") {
+      return audioCampesina1;
+    } else if (id == "audio-campesina-2") {
+      return audioCampesina2;
+    } else if (id == "audio-cimarrona-1") {
+      return audioCimarrona1;
+    } else if (id == "audio-cimarrona-2") {
+      return audioCimarrona2;
+    } else if (id == "audio-cimarrona-3") {
+      return audioCimarrona3;
     }
   };
 
@@ -285,8 +306,8 @@ const Audio = ({
 
   useEffect(() => {
     if (audioS) {
-      console.log("parar video")
-      video?.current.pause()
+      console.log("parar video");
+      video?.current.pause();
 
       frame1.current = requestAnimationFrame(animate1);
     } else {
@@ -320,8 +341,8 @@ const Audio = ({
     dispatch(establecerDuracion(0));
     setContadorReg(0);
 
-    console.log("poner video")
-    video?.current.play()
+    console.log("poner video");
+    video?.current.play();
 
     if (cancionActual == id) {
       dispatch(cambiarCancion(null));

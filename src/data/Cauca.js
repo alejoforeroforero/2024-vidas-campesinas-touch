@@ -12,18 +12,18 @@ export const Guardia = {
   bio: "Moyano Trujillo Todos ellos buscan frenar la deforestación en las veredas, restaurar los bosques, Todos ellos buscan frenar la deforestación en las veredas, restaurar los bosques, Todos ellos buscan frenar la deforestación en las veredas, restaurar los bosques, Todos ellos buscan frenar la deforestación en las veredas, restaurar los bosques, Todos ellos buscan frenar la deforestación en las veredas, restaurar los bosques, Todos ellos buscan frenar la deforestación en las veredas, restaurar los bosques, ",
 };
 
-export const Betancourt = {
-  titulo: "Familia\nBetancourt\nSánchez",
-  subTitulo:'Finca Buenos Aires.\nVereda La Paz, Florencia.',
-  frase:'“El proyecto es hacer un vivero ecológico”',
-  bio: "Betancourt Sanchez",
+export const Campesina = {
+  titulo: "Guardia campesina",
+  subTitulo:'Asocordillera',
+  frase:'“Somos guardias y protegemos también el medio ambiente”',
+  bio: "Guardia campesina",
 };
 
-export const Caleno = {
-  titulo: "Familia\nCaleño\nOtavo",
-  subTitulo:'Finca Amazónica. \nLos Caraños.\nVereda La Paz, Florencia.',
-  frase:'“Tenemos un sistema agroforestal”',
-  bio: "Caleño Otavo",
+export const Cimarrona = {
+  titulo: "Guardia cimarrona",
+  subTitulo:'Kekelo Ri\nTielo Prieto',
+  frase:'“Las guardias son constructoras de paz”',
+  bio: "Guardia cimarrona",
 };
 
 
