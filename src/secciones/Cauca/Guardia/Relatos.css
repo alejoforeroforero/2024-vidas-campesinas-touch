@@ -9,11 +9,37 @@
   animation: aparecer 6s;
 }
 
+.guardia-relatos-grafica{
+  width:100%;
+  text-align: center;
+  margin-top: 30vh;
+  
+  img{
+    width: 60%;
+    max-width: 300px;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .guardia-relatos-grafica{
+    width:100%;
+    text-align: center;
+    margin-top: 42vh;
+    
+    img{
+      width: 60%;
+      max-width: 300px;
+    }
+  }
+}
+
 .guardia-relatos-audio {
   width: 100% !important;
   position: relative;
-  margin-top: 25vh;
+  margin-top: 3vh;
 }
+
+
 
 
 .guardia-relatos-frase {

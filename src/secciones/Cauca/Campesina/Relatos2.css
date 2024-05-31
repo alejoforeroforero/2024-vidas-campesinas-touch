@@ -12,31 +12,11 @@
 .campesina-relatos-audio-2 {
   width: 100% !important;
   position: relative;
-  margin-top: 25vh;
+  margin-top: 56vh;
 }
 
-
-.campesina-relatos-frase-2 {
-  width: 100% !important;
-  position: relative;
-  margin-top: 33vh;
-  padding: 0 0 0 45px;
-
-  h3{
-    text-align: left;
-    width: 100%;
+@media screen and (orientation: landscape) {
+  .campesina-relatos-audio-2 {
+    margin-top: 75vh;
   }
 }
-
-@media screen and (orientation: portrait) {
-  .campesina-relatos-frase-2 {
-    margin-top: 16vh;
-    padding: 0 0 0 45px;
-
-    h3{
-      text-align: left;
-      width: 100%;
-    }
-  }
-}
-

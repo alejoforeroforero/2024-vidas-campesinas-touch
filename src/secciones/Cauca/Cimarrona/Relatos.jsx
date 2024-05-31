@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { pararAudios } from '../../../Redux/states/managerSlice';
 import useDelta from '../../../hooks/useDelta';
 import Audio from '../../../components/Audio';
+import grafica from '../../../assets/cauca/cimarrona/ave.png'
 
 //const relatosVideo = 'https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267084/caqueta/moyano/loop-moyano_z0pbba.mp4';
 
@@ -43,12 +44,12 @@ const Relatos = () => {
       {/* {pintarVideo()} */}
       <div className='mask-general'>
         <div className="contenido-general">
+          <div className="cimarron-relatos-1-grafica">
+            <img src={grafica} alt="" />
+          </div>
           <div onClick={handleOnClick} className='cimarrona-relatos-audio'>
             <Audio id='audio-cimarrona-1' titulo='“Hacemos nuestro trabajo de corazón. Por la defensa de la vida”' />
           </div>
-          {/* <div className='cimarrona-relatos-frase'>
-            <h3>“Remedios con plantas naturales y de por aquí, de esta tierra…”</h3>
-          </div> */}
         </div>
       </div>
     </div>

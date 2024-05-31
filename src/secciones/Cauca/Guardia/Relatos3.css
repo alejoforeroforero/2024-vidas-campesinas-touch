@@ -12,7 +12,21 @@
 .guardia-relatos-audio-3 {
   width: 100% !important;
   position: relative;
-  margin-top: 25vh;
+  margin-top: 15vh;
+}
+
+.guardia-relatos-3-grafica{
+  width: 100% !important;
+  position: relative;
+  text-align: center;
+
+  img{
+    width: 30%;
+  }
+}
+
+.guardia-relatos-audio-4{
+  margin-top: 15vh;
 }
 
 
@@ -38,5 +52,10 @@
       width: 100%;
     }
   }
+
+  .guardia-relatos-audio-4{
+    margin-top: 7vh;
+  }
+  
 }
 

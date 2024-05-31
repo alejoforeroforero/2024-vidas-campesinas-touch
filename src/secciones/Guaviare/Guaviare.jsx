@@ -98,6 +98,7 @@ const Guaviare = () => {
   const personaje = useSelector(state => state.managerReducer.personaje);
   const descargando = useSelector(state => state.managerReducer.descargando);
   const mostrarLineasA = useSelector(state => state.managerReducer.mostrarLineasA);
+  const canalBOn = useSelector(state => state.managerReducer.canalBOn);
 
   const [sound, setSound] = useState(null);
   const [williamAudio1, setWilliamAudio1] = useState(null);
@@ -126,14 +127,14 @@ const Guaviare = () => {
 
   useEffect(()=>{
     dispatch(cambiarSeccion('guaviare-intro'));
-    // dispatch(cambiarSeccion('jorge-youtube'));
+
     const newSound = new Howl({
-      src: [audioJorge1Howl], // Replace with your audio source
+      src: [audioJorge1Howl], 
     });
     setSound(newSound);
 
     const newSound2 = new Howl({
-      src: [audioWilliam1], // Replace with your audio source
+      src: [audioWilliam1], 
     });
     setWilliamAudio1(newSound2);
 
@@ -146,7 +147,7 @@ const Guaviare = () => {
   useEffect(()=>{
     sound?.pause();
     williamAudio1?.pause();
-  }, [seccion])
+  }, [seccion, canalBOn])
 
 
   return (

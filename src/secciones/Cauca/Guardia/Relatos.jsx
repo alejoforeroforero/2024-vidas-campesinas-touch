@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { pararAudios } from '../../../Redux/states/managerSlice';
 import useDelta from '../../../hooks/useDelta';
 import Audio from '../../../components/Audio';
+import aves from '../../../assets/cauca/guardia/aves.png';
 
 //const relatosVideo = 'https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267084/caqueta/moyano/loop-moyano_z0pbba.mp4';
 
@@ -43,12 +44,12 @@ const Relatos = () => {
       {/* {pintarVideo()} */}
       <div className='mask-general'>
         <div className="contenido-general">
+          <div className='guardia-relatos-grafica'>
+            <img src={aves} alt="" />
+          </div>
           <div onClick={handleOnClick} className='guardia-relatos-audio'>
             <Audio id='audio-guardia-1' titulo='“Trabajamos por defender nuestro territorio y la madre tierra. Velamos por la armonía de la comunidad”' />
           </div>
-          {/* <div className='guardia-relatos-frase'>
-            <h3>“Remedios con plantas naturales y de por aquí, de esta tierra…”</h3>
-          </div> */}
         </div>
       </div>
     </div>

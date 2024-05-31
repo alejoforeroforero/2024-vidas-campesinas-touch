@@ -4,7 +4,7 @@ import { pararAudios, establecerMostrarFlechasCanales } from '../../../Redux/sta
 import YT from '../../../components/YT';
 import useDelta from '../../../hooks/useDelta';
 import playImg from '../../../assets/generales/play_video.png';
-import aveMariposa from '../../../assets/caqueta/moyano/ave-mariposa.png';
+import hojas from '../../../assets/cauca/guardia/hojas.png';
 
 const thumbnail = 'https://res.cloudinary.com/dumlhmvts/image/upload/v1716743260/cauca/guardia/Armonizacio%CC%81n_guardia_indi%CC%81gena_ok_xcfawb.jpg';
 import './Youtube.css'
@@ -53,7 +53,7 @@ const Youtube = () => {
         <div className='mask-general'>
           <div className="contenido-general">
             <div className="guardia-youtube-ave">
-              <img src={aveMariposa} alt="ave-mariposa" />
+              <img src={hojas} alt="ave-mariposa" />
             </div>
             <div className='youtube-contenido'>
               <div>

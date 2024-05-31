@@ -1,0 +1,34 @@
+.hermandad-relatos-2 {
+  background: url("https://res.cloudinary.com/dumlhmvts/image/upload/v1717102218/cauca/hermandad/Cimarrona_y_campesino_dnjxso.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: aparecer 6s;
+}
+
+.hermandad-relatos-2-grafica {
+  width: 100% !important;
+  position: relative;
+  margin-top: 40vh;
+  text-align: center;
+
+  img {
+    width: 80%;
+    max-width: 600px;
+  }
+}
+
+.hermandad-relatos-audio-2 {
+  width: 100% !important;
+  position: relative;
+  margin-top: 1vh;
+}
+
+@media screen and (orientation: landscape) {
+  .hermandad-relatos-audio-2 {
+    margin-top: 4vh;
+  }
+}

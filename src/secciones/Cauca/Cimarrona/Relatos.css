@@ -9,34 +9,26 @@
   animation: aparecer 6s;
 }
 
+.cimarron-relatos-1-grafica {
+  width: 100% !important;
+  position: relative;
+  margin-top: 45vh;
+  text-align: center;
+
+  img {
+    width: 60%;
+    max-width: 220px;
+  }
+}
+
 .cimarrona-relatos-audio {
   width: 100% !important;
   position: relative;
-  margin-top: 25vh;
+  margin-top: 0vh;
 }
 
-
-.cimarrona-relatos-frase {
-  width: 100% !important;
-  position: relative;
-  margin-top: 33vh;
-  padding: 0 0 0 45px;
-
-  h3{
-    text-align: left;
-    width: 100%;
+@media screen and (orientation: landscape) {
+  .cimarrona-relatos-audio {
+    margin-top: 10vh;
   }
 }
-
-@media screen and (orientation: portrait) {
-  .cimarrona-relatos-frase {
-    margin-top: 16vh;
-    padding: 0 0 0 45px;
-
-    h3{
-      text-align: left;
-      width: 100%;
-    }
-  }
-}
-

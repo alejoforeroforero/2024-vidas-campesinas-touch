@@ -4,7 +4,6 @@ import { pararAudios, establecerMostrarFlechasCanales } from '../../../Redux/sta
 import YT from '../../../components/YT';
 import useDelta from '../../../hooks/useDelta';
 import playImg from '../../../assets/generales/play_video.png';
-import aveMariposa from '../../../assets/caqueta/moyano/ave-mariposa.png';
 
 const thumbnail = 'https://res.cloudinary.com/dumlhmvts/image/upload/v1717037743/cauca/cimarrona/Pintando_mural_sfnmux.jpg';
 import './Youtube.css'
@@ -52,9 +51,6 @@ const Youtube = () => {
       <div ref={elementRef} className='seccion cimarrona-youtube' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
         <div className='mask-general'>
           <div className="contenido-general">
-            <div className="cimarrona-youtube-ave">
-              <img src={aveMariposa} alt="ave-mariposa" />
-            </div>
             <div className='youtube-contenido'>
               <div>
                 {mostrarPlay && <img onClick={handleOnClick} src={playImg} alt="play" />}

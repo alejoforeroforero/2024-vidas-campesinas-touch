@@ -12,7 +12,15 @@
 .guardia-relatos-audio-2 {
   width: 100% !important;
   position: relative;
-  margin-top: 25vh;
+  margin-top: 60vh;
+}
+
+@media screen and (orientation: landscape) {
+  .guardia-relatos-audio-2 {
+    width: 100% !important;
+    position: relative;
+    margin-top: 75vh;
+  }
 }
 
 

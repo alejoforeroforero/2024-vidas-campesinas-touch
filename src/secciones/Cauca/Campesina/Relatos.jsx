@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { pararAudios } from "../../../Redux/states/managerSlice";
 import useDelta from "../../../hooks/useDelta";
 import Audio from "../../../components/Audio";
+import grafica from '../../../assets/cauca/campesina/baston_2.png'
 
 const relatosVideo =
   "https://res.cloudinary.com/dumlhmvts/video/upload/v1717034295/cauca/campesina/Loop_20_de_julio_p_fiwaf1.mp4";
@@ -43,6 +44,9 @@ const Relatos = () => {
       {pintarVideo()}
       <div className="mask-general">
         <div className="contenido-general">
+          <div className="campesina-relatos-grafica">
+            <img src={grafica} alt="" />
+          </div>
           <div className="campesina-relatos-audio">
             <Audio
               id="audio-campesina-1"

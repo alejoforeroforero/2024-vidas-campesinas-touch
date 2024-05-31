@@ -45,7 +45,7 @@
   animation: aparecer 2s;
 
   h1 {
-    color: #bcad26;
+    color: #49a298;
     width: 100%;
   }
 }
@@ -82,7 +82,7 @@
   hr {
     width: 40%;
     height: 6px;
-    background-color: #bcad26;
+    background-color: #49a298;
     border: 0px;
     margin-top: 2vh;
     opacity: 0;

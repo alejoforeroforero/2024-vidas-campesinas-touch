@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { cambiarSeccion } from "../../Redux/states/managerSlice";
 import Cargando from "../../components/Cargando";
@@ -23,6 +23,20 @@ import CimarronaRelatos2 from "./Cimarrona/Relatos2";
 import CimarronaYoutube1 from "./Cimarrona/Youtube";
 import CimarronaRelatos3 from "./Cimarrona/Relatos3";
 
+import HermandadBio from "./Hermandad/Bio";
+import HermandadYoutube1 from "./Hermandad/Youtube";
+import HermandadRelatos1 from "./Hermandad/Relatos";
+import HermandadRelatos2 from "./Hermandad/Relatos2";
+import HermandadYoutube2 from "./Hermandad/Youtube2";
+
+import CaucaGaleria from "./Cierre/Galeria";
+import CaucaCierre from "./Cierre/Relatos";
+
+import { Howl } from "howler";
+
+const audioCaucaGaleria =
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1717172151/cauca/cierre/Audio_Galeria_cierre_Cauca_g6ss2r.mp3";
+
 const lineas = [
   {
     id: "linea-guardia",
@@ -39,12 +53,23 @@ const lineas = [
     titulo: "Guardia Cimarrona",
     navegacion: "cauca-cimarrona-navegacion",
   },
+  {
+    id: "linea-hermandad",
+    titulo: "Lazos de hermandad",
+    navegacion: "cauca-hermandad-navegacion",
+  },
+  {
+    id: "linea-galeria",
+    titulo: "Cauca Galeria",
+    navegacion: "cauca-galeria-navegacion",
+  },
 ];
 
 const Cauca = () => {
   const seccion = useSelector((state) => state.managerReducer.seccion);
   const personaje = useSelector((state) => state.managerReducer.personaje);
   const descargando = useSelector((state) => state.managerReducer.descargando);
+  const [sound, setSound] = useState(null);
   const mostrarLineasA = useSelector(
     (state) => state.managerReducer.mostrarLineasA
   );
@@ -58,13 +83,29 @@ const Cauca = () => {
       dispatch(cambiarSeccion("campesina-bio"));
     } else if (id == "cauca-cimarrona-navegacion") {
       dispatch(cambiarSeccion("cimarrona-bio"));
+    } else if (id == "cauca-hermandad-navegacion") {
+      dispatch(cambiarSeccion("hermandad-bio"));
+    } else if (id == "cauca-galeria-navegacion") {
+      dispatch(cambiarSeccion("cauca-galeria"));
     }
   };
 
   useEffect(() => {
-    //dispatch(cambiarSeccion("cauca-intro"));
-    dispatch(cambiarSeccion("campesina-youtube-2"));
+    dispatch(cambiarSeccion("cauca-intro"));
+
+    const newSound = new Howl({
+      src: [audioCaucaGaleria], // Replace with your audio source
+    });
+    setSound(newSound);
+
+    return () => {
+      newSound.unload();
+    };
   }, []);
+
+  useEffect(()=>{
+    sound?.pause();
+  }, [seccion])
 
   return (
     <div className="capitulo">
@@ -103,6 +144,13 @@ const Cauca = () => {
       {seccion == "cimarrona-relatos-2" && <CimarronaRelatos2 />}
       {seccion == "cimarrona-youtube-1" && <CimarronaYoutube1 />}
       {seccion == "cimarrona-relatos-3" && <CimarronaRelatos3 />}
+      {seccion == "hermandad-bio" && <HermandadBio />}
+      {seccion == "hermandad-youtube-1" && <HermandadYoutube1 />}
+      {seccion == "hermandad-relatos-1" && <HermandadRelatos1 />}
+      {seccion == "hermandad-relatos-2" && <HermandadRelatos2 />}
+      {seccion == "hermandad-youtube-2" && <HermandadYoutube2 />}
+      {seccion == "cauca-galeria" && <CaucaGaleria sound={sound} />}
+      {seccion == "cauca-cierre" && <CaucaCierre />}
     </div>
   );
 };

@@ -9,14 +9,8 @@
   color: #fff;
 
   h2 {
-    margin-top: 10vh;
+    margin-top: 40vh;
     margin-bottom: 5px;
-    padding-left: 5%;
-  }
-
-  h3 {
-    margin-top: 1vh;
-    text-align: left;
     padding-left: 5%;
   }
 
@@ -32,9 +26,19 @@
   }
 }
 
+@media screen and (orientation: landscape) {
+  .campesina-bio { 
+    h2 {
+      margin-top: 50vh;
+    }
+  }
+
+}
+
 .campesina-bio-frase {
   h3 {
-    margin-top: 32vh;
-    text-align: center;
+    margin-top: 8vh;
+    text-align: left;
+    padding-left: 5%;
   }
 }

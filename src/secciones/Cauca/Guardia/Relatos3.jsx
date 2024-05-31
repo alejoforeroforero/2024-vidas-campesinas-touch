@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { pararAudios } from '../../../Redux/states/managerSlice';
 import useDelta from '../../../hooks/useDelta';
 import Audio from '../../../components/Audio';
+import baston from '../../../assets/cauca/guardia/baston_1.png';
 
 //const relatosVideo = 'https://res.cloudinary.com/dhz9jfn78/video/upload/v1716267084/caqueta/moyano/loop-moyano_z0pbba.mp4';
 
@@ -45,6 +46,9 @@ const Relatos3 = () => {
         <div className="contenido-general">
           <div onClick={handleOnClick} className='guardia-relatos-audio-3'>
             <Audio id='audio-guardia-3' titulo='“Tenemos que sembrar consciencia y no generar más violencia”' />
+          </div>
+          <div className='guardia-relatos-3-grafica'>
+            <img src={baston} alt="" />
           </div>
           <div onClick={handleOnClick} className='guardia-relatos-audio-4'>
             <Audio id='audio-guardia-4' titulo='“La guardia indígena ha sido como una escuela para las demás guardias”' />

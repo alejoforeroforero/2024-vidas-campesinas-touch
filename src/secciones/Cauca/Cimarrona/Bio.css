@@ -34,7 +34,16 @@
 
 .cimarrona-bio-frase {
   h3 {
-    margin-top: 32vh;
+    margin-top: 34vh;
     text-align: center;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .cimarrona-bio-frase {
+    h3 {
+      margin-top: 44vh;
+      text-align: center;
+    }
   }
 }

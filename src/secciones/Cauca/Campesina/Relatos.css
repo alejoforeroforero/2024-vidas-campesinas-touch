@@ -9,10 +9,28 @@
   animation: aparecer 6s;
 }
 
+.campesina-relatos-grafica{
+  width: 100% !important;
+  position: relative;
+  text-align: center;
+  margin-top: 20vh;
+
+  img{
+    width: 50%;
+    max-width: 200px;
+  }
+}
+
 .campesina-relatos-audio {
   width: 100% !important;
   position: relative;
-  margin-top: 25vh;
+  margin-top: 2vh;
+}
+
+@media screen and (orientation: landscape) {
+  .campesina-relatos-audio {
+    margin-top: 12vh;
+  }
 }
 
 

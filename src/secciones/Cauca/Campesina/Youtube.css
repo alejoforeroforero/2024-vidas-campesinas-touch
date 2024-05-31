@@ -8,30 +8,18 @@
     position: absolute;
 
     h3{
-        transform: translate(0, 0vh);
+        transform: translate(0, 4vh);
     }
 }
 
 @media screen and (orientation: portrait) {
     .campesina-youtube{    
         h3{
-            transform: translate(0, -6vh);
+            transform: translate(0, -4vh);
         }
     }
 
 }
 
-.campesina-youtube-ave{
-    position: absolute;
-    text-align: center;
-    margin-top: 10vh;
-    left:0;
-    top:0;
-    width: 100%;
 
-    img{
-        width: 30%;
-        max-width: 130px;
-    }
-}
 

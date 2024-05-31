@@ -1,0 +1,37 @@
+.hermandad-youtube{
+    background: url("https://res.cloudinary.com/dumlhmvts/image/upload/v1717097633/cauca/hermandad/Mujer_Guardia_campesina_zgambt.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+
+    h3{
+        transform: translate(0, 0vh);
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .hermandad-youtube{    
+        h3{
+            transform: translate(0, -6vh);
+        }
+    }
+
+}
+
+.hermandad-youtube-ave{
+    position: absolute;
+    text-align: center;
+    margin-top: 10vh;
+    left:0;
+    top:0;
+    width: 100%;
+
+    img{
+        width: 30%;
+        max-width: 130px;
+    }
+}
+

@@ -1,0 +1,34 @@
+.hermandad-relatos {
+  background: url("https://res.cloudinary.com/dumlhmvts/image/upload/v1717157611/cauca/hermandad/Fotograma_Loop_danza_cimarrones_ok_mey2mo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: aparecer 6s;
+}
+
+.hermandad-relatos-grafica {
+  width: 100% !important;
+  position: relative;
+  margin-top: 22vh;
+  text-align: center;
+
+  img{
+    width: 60%;
+    max-width: 240px;
+  }
+}
+
+.hermandad-relatos-audio {
+  width: 100% !important;
+  position: relative;
+  margin-top: 2vh;
+}
+
+@media screen and (orientation: landscape) {
+  .hermandad-relatos-audio {
+    margin-top: 8vh;
+  }
+}

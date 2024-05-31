@@ -24,7 +24,8 @@ const Home = () => {
     dispatch(cambiarSeccion('home-intro'));
 
     const sonido = new Howl({
-      src: [audioIntroGeneralFile], // Replace with your audio source
+      src: [audioIntroGeneralFile],
+      loop: true
     });
     setAudioIntroGeneral(sonido);
 

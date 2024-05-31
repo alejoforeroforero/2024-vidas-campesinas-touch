@@ -52,9 +52,7 @@ const Youtube = () => {
       <div ref={elementRef} className='seccion campesina-youtube' onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>
         <div className='mask-general'>
           <div className="contenido-general">
-            <div className="campesina-youtube-ave">
-              <img src={aveMariposa} alt="ave-mariposa" />
-            </div>
+            
             <div className='youtube-contenido'>
               <div>
                 {mostrarPlay && <img onClick={handleOnClick} src={playImg} alt="play" />}

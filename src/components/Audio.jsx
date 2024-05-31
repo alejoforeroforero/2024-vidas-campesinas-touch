@@ -102,7 +102,10 @@ const audioCimarrona2 =
   "https://res.cloudinary.com/dumlhmvts/video/upload/v1717037491/cauca/cimarrona/Audio_2_Guardia_cimarrona_bj1g5v.mp3";
 const audioCimarrona3 =
   "https://res.cloudinary.com/dumlhmvts/video/upload/v1717038186/cauca/cimarrona/Audio_3_Guardia_cimarrona_yycbsp.mp3";
-
+const audioHermandad1 =
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1717158087/cauca/hermandad/Audio_1_lazos_rzavqw.mp3";
+const audioHermandad2 =
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1717158086/cauca/hermandad/Audio_2_lazos_hjiu7t.mp3";
 
 const Audio = ({
   titulo,
@@ -228,6 +231,10 @@ const Audio = ({
       return audioCimarrona2;
     } else if (id == "audio-cimarrona-3") {
       return audioCimarrona3;
+    }else if (id == "audio-hermandad-1") {
+      return audioHermandad1;
+    }else if (id == "audio-hermandad-2") {
+      return audioHermandad2;
     }
   };
 

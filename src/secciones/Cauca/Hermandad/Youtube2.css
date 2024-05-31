@@ -1,0 +1,35 @@
+.hermandad-youtube-2 {
+  background: url("https://res.cloudinary.com/dumlhmvts/image/upload/v1717102457/cauca/hermandad/Foto_1_mu%CC%81sicos_krw5xd.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+
+  h3 {
+    transform: translate(0, -8vh);
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .hermandad-youtube-2 {
+    h3 {
+      transform: translate(0, -2vh);
+    }
+  }
+}
+
+.hermandad-youtube-2-grafica {
+  position: absolute;
+  text-align: center;
+  margin-top: 4vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  img {
+    width: 53%;
+    max-width: 250px;
+  }
+}
