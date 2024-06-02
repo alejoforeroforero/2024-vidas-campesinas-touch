@@ -20,7 +20,6 @@ const Youtube = () => {
   const refYoutubeCarlos = (video) => {
     setYoutubeRef(video);
     dispatch(pararAudios());
-    dispatch(establecerMostrarFlechasCanales(true));
     setTimeout(()=>{
       setMostrarPlay(true);
     }, 1000);    

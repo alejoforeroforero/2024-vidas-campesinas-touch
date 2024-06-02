@@ -4,6 +4,7 @@ export const manager = createSlice({
   name: "Manager",
   initialState: {
     departamento: "null",
+    yaEmpezo:false,
     personaje:'',
     contador: 0,
     seccion:'',
@@ -19,6 +20,9 @@ export const manager = createSlice({
   reducers: {
     cambiarDepartamento: (state, action) => {
       state.personaje = action.payload;
+    },
+    activarYaEmpezo:(state, action) =>{
+      state.yaEmpezo = true;
     },
     establecerPersonaje(state, action) {
       state.personaje = action.payload;
@@ -89,6 +93,7 @@ export const manager = createSlice({
 
 export const {
   cambiarDepartamento,
+  activarYaEmpezo,
   establecerPersonaje,
   cambiarSeccion,
   establecerCanalBOn,

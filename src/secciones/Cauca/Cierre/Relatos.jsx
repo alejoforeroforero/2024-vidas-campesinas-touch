@@ -11,7 +11,7 @@ import useDelta from "../../../hooks/useDelta";
 
 import solLuna from "../../../assets/caqueta/cierre/sol-luna.png";
 const relatosVideo =
-  "https://res.cloudinary.com/dumlhmvts/video/upload/v1717164441/cauca/cierre/Video_cierre_Cauca_p_ecdxsx.mp4";
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1717300152/cauca/cierre/Video_cierre_Cauca__Solo_paisaje_SIN_SONIDO_p_de1hbl.mp4";
 const susurros =
   "https://res.cloudinary.com/dumlhmvts/image/upload/v1717165763/cauca/cierre/min_video_1_fdldgh.jpg";
 const zapatillas =
@@ -121,20 +121,13 @@ const Relatos = () => {
         {pintarYoutube2()}
         {pintarVideo()}
         <div className="contenido-general">
-          <div className="cierre-titulo-cauca">
-            <div className="cierre-extra-cauca-grafica">
+          <div className="cierre-grafica-cauca">            
               <img src={solLuna} alt="" />
-            </div>
-            <div>
-              <p>
-                Cuenten con nosotros para la paz, y nunca para la guerra
-              </p>
-            </div>
+          </div>
+          <div className="cierre-frase-cauca">
+            <h4>Cuenten con nosotros para la paz, y nunca para la guerra.</h4>
           </div>
           <div className="cierre-extra-cauca">
-            <div className="cierre-extra-cauca-grafica">
-              <img src={solLuna} alt="" />
-            </div>
             <div className="cierre-extra-cauca-thumbnail">
               <div>
                 <img src={susurros} onClick={handleOnClickOn1} alt="" />
@@ -152,7 +145,7 @@ const Relatos = () => {
               </div>
             </div>
           </div>
-          <div className="cierre-continuar">
+          <div className="cierre-cauca-continuar">
             <p>Continuar con otras regiones</p>
           </div>
         </div>

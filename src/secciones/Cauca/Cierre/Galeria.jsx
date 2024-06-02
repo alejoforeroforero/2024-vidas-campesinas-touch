@@ -57,8 +57,6 @@ const Galeria = ({sound}) => {
   useEffect(() => {
     dispatch(establecerPersonaje("linea-galeria"));
     dispatch(establecerMostrarLineasA(true));
-    dispatch(establecerMostrarFlechasCanales(true));
-
     sound?.play();
   }, []);
 

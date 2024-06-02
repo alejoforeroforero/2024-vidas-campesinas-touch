@@ -6,21 +6,21 @@ export const CaucaIntro = {
 };
 
 export const Guardia = {
-  titulo: "Guardia\nindígena\nKiwe Thegnas",
+  titulo: "Guardia\nindígena.\nKiwe Thegnas.",
   subTitulo:'',
   frase:'“Cuidamos la vida,\nen todo sentido.”',
   bio: "Moyano Trujillo Todos ellos buscan frenar la deforestación en las veredas, restaurar los bosques, Todos ellos buscan frenar la deforestación en las veredas, restaurar los bosques, Todos ellos buscan frenar la deforestación en las veredas, restaurar los bosques, Todos ellos buscan frenar la deforestación en las veredas, restaurar los bosques, Todos ellos buscan frenar la deforestación en las veredas, restaurar los bosques, Todos ellos buscan frenar la deforestación en las veredas, restaurar los bosques, ",
 };
 
 export const Campesina = {
-  titulo: "Guardia\ncampesina\nAsocordillera",
+  titulo: "Guardia\ncampesina.\nAsocordillera.",
   subTitulo:'',
   frase:'“Somos guardias y protegemos\ntambién el medio ambiente”',
   bio: "Guardia campesina",
 };
 
 export const Cimarrona = {
-  titulo: "Guardia\ncimarrona.\nKekelo Ri Tielo\nPrieto",
+  titulo: "Guardia\ncimarrona.\nKekelo Ri Tielo\nPrieto.",
   subTitulo:'',
   frase:'“Las guardias son constructoras \nde paz”',
   bio: "Guardia cimarrona",

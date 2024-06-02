@@ -26,7 +26,6 @@ const Bio = () => {
   useEffect(() => {
     dispatch(cambiarDescargando(true));
     dispatch(establecerMostrarLineasA(true));
-    dispatch(establecerMostrarFlechasCanales(true));
     dispatch(establecerMostrarAbajo(true));
     dispatch(establecerPersonaje('linea-campesina'));
     dispatch(pararAudios());

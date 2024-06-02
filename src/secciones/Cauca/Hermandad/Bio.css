@@ -40,7 +40,7 @@
 @media screen and (orientation: landscape) {
   .hermandad-bio {  
     h2 {
-      transform: translate(0, 0vh);
+      transform: translate(8vh, 0vh);
     }
   }
 }

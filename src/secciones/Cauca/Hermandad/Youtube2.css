@@ -33,3 +33,12 @@
     max-width: 250px;
   }
 }
+
+.hermandad-youtube-2-frase{
+  position: relative;
+  text-align: center;
+
+  h3{
+    text-align: center !important;
+  }
+}

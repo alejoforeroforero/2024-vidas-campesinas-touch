@@ -19,7 +19,6 @@ const Youtube = () => {
   const refYoutubeCarlos = (video) => {
     setYoutubeRef(video);
     dispatch(pararAudios());
-    dispatch(establecerMostrarFlechasCanales(true));
     setTimeout(()=>{
       setMostrarPlay(true);
     }, 1000);    
@@ -57,7 +56,7 @@ const Youtube = () => {
                 {!mostrarPlay && <p>Espera un momento...</p>}
               </div>
               <div>
-                <h3>“Los guardias nos protegen y enfrentan peligros, por eso deben estar bien armonizados.”</h3>
+                <h3>“Como guardias, no buscamos infundir temor sino respeto mutuo con la comunidad”</h3>
               </div>
             </div>
           </div>
