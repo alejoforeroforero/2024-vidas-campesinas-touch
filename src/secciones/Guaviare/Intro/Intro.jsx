@@ -10,20 +10,22 @@ import {
   pararAudios,
 } from "../../../Redux/states/managerSlice";
 const videoGuaviareM =
-  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713230577/assets/guaviare/home/guaviare_pnsy0u.mp4";
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1717466037/videos-musica/Video_Intro_Guaviare_OK_cambio_p_ckaqrx.mp4";
 import guaviareGrafica from "../../../assets/guaviare/home/pictograma.png";
 import guaviareLinea from "../../../assets/guaviare/home/linea-guaviare.png";
 import scroll from "../../../assets/generales/scroll.png";
+import playVideo from "../../../assets/generales/play_video.png";
 
 import { GuaviareIntro } from "../../../data/Guaviare";
 
 import "./Intro.css";
 
-const Intro = () => {
+const Intro = ({videoCierre}) => {
   const dispatch = useDispatch();
   const videoRef = useRef();
   const contenedorGRef = useRef();
   const [mostrar, setMostrar] = useState(false);
+  const [mostrarPlay, setMostrarPlay] = useState(false);
 
   useEffect(() => {
     dispatch(establecerMostrarLineasA(false));
@@ -34,7 +36,6 @@ const Intro = () => {
       dispatch(cambiarDescargando(false));
       dispatch(establecerMostrarAbajo(false));
       setMostrar(true);
-      videoRef.current.play();
     }, 1000);
 
     return () => clearTimeout(timer);
@@ -71,8 +72,9 @@ const Intro = () => {
 
         if (contador > 1) {
           dispatch(sumar(0));
-          dispatch(cambiarDescargando(true));
-          dispatch(cambiarSeccion("jorge-bio"));
+          setMostrar(false);
+          videoRef.current.play();
+          videoCierre.current.muted = false;
         } else {
           dispatch(sumar(contador));
         }
@@ -108,23 +110,38 @@ const Intro = () => {
 
     if (contador > 1) {
       dispatch(sumar(0));
-      dispatch(cambiarDescargando(true));
-      dispatch(cambiarSeccion("jorge-bio"));
+      setMostrar(false);
+      setMostrarPlay(true);
     } else {
       dispatch(sumar(contador));
     }
+  };
+
+  const handleOnVideoEnd = () => {
+    dispatch(cambiarDescargando(true));
+    dispatch(cambiarSeccion("jorge-bio"));
+  };
+
+  const handleOnClickVideoPlay = () => {
+    videoRef.current.play();
+    videoCierre.current.muted = false;
+    setMostrarPlay(false);
   };
 
   const pintarVideo = () => {
     return (
       <div className="guaviare-video">
         <video
-          ref={videoRef}
-          loop
           playsInline
-          muted
+          onEnded={handleOnVideoEnd}
+          ref={videoRef}
           src={videoGuaviareM}
         ></video>
+        {mostrarPlay && (
+          <div className="guaviare-video-play">
+            <img src={playVideo} onClick={handleOnClickVideoPlay} alt="" />
+          </div>
+        )}
       </div>
     );
   };

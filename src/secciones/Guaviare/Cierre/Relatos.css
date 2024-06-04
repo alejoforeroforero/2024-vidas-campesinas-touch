@@ -1,26 +1,21 @@
-.cierre-relatos {
-  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713447233/assets/guaviare/cierre/loop-guaviare-cierre_ejt9fz.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.cierre-relatos-guaviare {
   position: absolute;
   height: 100%;
   width: 100%;
-  animation: aparecer 6s;
 }
 
-.cierre-titulo {
+.cierre-titulo-guaviare {
   margin-top: 50vh;
   text-align: center;
   opacity: 0;
-  animation: aparecer-desaparecer 8s ease-in 3s forwards;
+  animation: aparecer-desaparecer 8s ease-in 0s forwards;
 
   h2 {
     font-size: 1.3rem;
   }
 }
 
-.cierre-extra {
+.cierre-extra-guaviare {
   position: absolute;
   left: 0;
   top: 0;
@@ -29,8 +24,8 @@
   margin-top: 20vh;
   opacity: 0;
   visibility: hidden;
-
-  animation: aparecer 8s ease-in 14s forwards;
+  text-align: center;
+  animation: aparecer 4s ease-in 0s forwards;
 
   h2 {
     font-size: 1.4rem;
@@ -102,36 +97,35 @@
   }
 }
 
-.youtube-animacion-interior-salida{
-    position: absolute;
-    right: 0;
-    top:0;
-    width: 60px;
-    cursor: pointer;
+.youtube-animacion-interior-salida {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  cursor: pointer;
 }
 
-.cierre-animacion-frase{
+.cierre-animacion-frase-guaviare{
   margin-top: 2vh;
-  max-width: 800px;
+  width: 100% !important;
   padding: 0 5%;
-
-  p{
+  p {
     font-size: 1rem;
   }
-} 
+}
 
-.cierre-continuar{
+.cierre-continuar-guaviare {
   position: absolute;
   left: 0;
   bottom: 0;
   height: 15vh;
   width: 100%;
   text-align: center;
+  animation: aparecer 6s ease-in 0s forwards;
 }
 
 @media screen and (orientation: portrait) {
-  .cierre-continuar{
+  .cierre-continuar {
     height: 25vh;
   }
 }
-

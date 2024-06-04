@@ -25,6 +25,24 @@
   }
 }
 
+.guaviare-video-play{
+  position: absolute;
+  left: 0px;
+  top:0px;
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+
+  img{
+    width: 120px;
+    cursor: pointer;
+  }
+}
+
 .guaviare-titulo {
   height: 24vh;
   display: flex;
