@@ -26,7 +26,6 @@ const Relatos = ({ videoCierre }) => {
   let mostrarTituloJs = false;
   let mostrarthumbsJs = false;
 
-  let hola = true;
 
   const { handleTouchStart, handleTouchEnd } = useDelta(
     "cierre-galeria",
