@@ -29,7 +29,6 @@ import "./CanalB.css";
 
 import GuaviareB from "./secciones/Guaviare/GuaviareB";
 import CaquetaB from "./secciones/Caqueta/CaquetaB";
-//const GuaviareB = React.lazy(() => import('./secciones/Guaviare/GuaviareB'));
 
 function App() {
   const location = useLocation();
@@ -68,7 +67,7 @@ function App() {
 
     setTimeout(() => {
       setYaEmpezo(true);
-    }, 3000);
+    }, 2000);
   };
 
   const handleShowingMenu = () => {

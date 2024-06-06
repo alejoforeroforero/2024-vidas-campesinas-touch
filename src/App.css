@@ -189,6 +189,20 @@
   }
 }
 
+@keyframes aparecer-linea {
+  0% {
+    opacity: 0;
+    width: 0;
+    visibility: visible;
+  
+  }
+  100% {
+    opacity: 1;
+    width: 40%;
+    visibility: visible;
+  }
+}
+
 @keyframes aparecer {
   0% {
     opacity: 0;
@@ -228,22 +242,18 @@
 @keyframes aparecerTxt {
   0% {
     opacity: 0;
-    transform: translate(0, 40px);
   }
   100% {
     opacity: 1;
-    transform: translate(0, 0);
   }
 }
 
 @keyframes desaparecerTxt {
   0% {
     opacity: 1;
-    transform: translate(0, 0);
   }
   100% {
     opacity: 0;
-    transform: translate(0, -40px);
   }
 }
 

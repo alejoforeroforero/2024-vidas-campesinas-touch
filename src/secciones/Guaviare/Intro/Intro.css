@@ -16,6 +16,8 @@
   top: 0px;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  animation: aparecer 1s ease-in forwards;
 
   video {
     height: 100vh;
@@ -25,30 +27,13 @@
   }
 }
 
-.guaviare-video-play{
-  position: absolute;
-  left: 0px;
-  top:0px;
-  width: 100vw;
-  height: 100vh;
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-
-  img{
-    width: 120px;
-    cursor: pointer;
-  }
-}
-
 .guaviare-titulo {
   height: 24vh;
   display: flex;
   justify-content: center;
   align-items: self-end;
-  animation: aparecer 2s; 
+  opacity: 0;
+  animation: aparecer 2s ease-in forwards;
 
   h1 {
     color: rgb(208, 81, 55);
@@ -73,55 +58,77 @@
     width: 100%;
     text-align: left;
     opacity: 0;
-    animation: aparecer 3s ease-in-out 1s forwards;
+    animation: aparecer 3s ease-in-out 3s forwards;
   }
 
-  hr {
+  img {
     width: 40%;
     height: 6px;
     background-color: rgb(208, 81, 55);
     border: 0px;
     margin-top: 2vh;
     opacity: 0;
-    animation: aparecer 3s ease-in-out 1s forwards;
+    animation: aparecer-linea 4s ease-in-out 1s forwards;
   }
+}
 
-  img {
-    width: 40%;
-  }
-
-  .guaviare-descripcion-p-contenedor {
-    position: relative;
-    height: 40vh;
-    width: 95%;
-    opacity: 0;
-    animation: aparecer 2s ease-in-out 3s forwards;
-  }
+.guaviare-descripcion-p-contenedor {
+  position: relative;
+  height: 22vh;
+  width: 95%;
+  opacity: 0;
+  animation: aparecer 2s ease-in-out 4s forwards;
 
   p {
     position: absolute;
     text-align: left;
     margin-top: 2vh;
-  }
-
-  .guaviare-descripcion-p1 {
-    visibility: hidden;
-  }
-
-  .guaviare-descripcion-p2 {
-    visibility: hidden;
+    opacity: 0;
   }
 }
 
-.guaviare-intro-p1 {
-  animation: aparecerTxt 4s;
+@media screen and (orientation: portrait) {
+  .guaviare-descripcion-p-contenedor {
+    height: 25vh;
+  }
 }
 
-.guaviare-intro-p1-des {
-  animation: desaparecerTxt 1s forwards;
+.guaviare-intro-p-aparecer {
+  animation: aparecerTxt 4s ease-in forwards;
 }
 
-.guaviare-descripcion-grafica {
+.guaviare-intro-p-desaparecer {
+  animation: desaparecerTxt 4s ease-in forwards;
+}
+
+.guaviare-intro-siguiente {
+  text-align:right;
+  opacity: 0;
+  animation: aparecer 2s ease-in 4s forwards;
+
+  img{
+    cursor: pointer;
+    width: 40px;
+    transform:translate(-8vw, 0);
+  }
+}
+
+.guaviare-intro-inciar {
+  text-align:center;
+  opacity: 0;
+
+  img{
+    cursor: pointer;
+    width: 180px;
+  }
+}
+
+.guaviare-inciar-aparecer {
+  animation: aparecerTxt 4s ease-in 3s forwards;
+}
+
+
+/* .guaviare-descripcion-grafica {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -131,6 +138,7 @@
   height: 40vh;
   justify-content: center;
   animation: aparecer 5s ease-in forwards;
+  border: 1px solid red;
 }
 
 .guaviare-descripcion-grafica-img {
@@ -144,13 +152,15 @@
     width: 30%;
     max-width: 200px;
   }
-}
+} */
 
 .guaviare-intro-scroll {
   position: absolute;
   bottom: 0vh;
   text-align: center;
   width: 100%;
+  opacity: 0;
+  animation: aparecer 4s ease-in 10s forwards;
   img {
     width: 200px !important;
   }
@@ -158,6 +168,6 @@
 
 @media screen and (orientation: portrait) {
   .guaviare-intro-scroll {
-    bottom: 10vh;
+    bottom: 0vh;
   }
 }

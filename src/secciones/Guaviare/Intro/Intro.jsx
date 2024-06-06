@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   cambiarSeccion,
-  sumar,
   cambiarDescargando,
   establecerMostrarAbajo,
   establecerMostrarLineasA,
@@ -14,36 +13,46 @@ const videoGuaviareM =
 import guaviareGrafica from "../../../assets/guaviare/home/pictograma.png";
 import guaviareLinea from "../../../assets/guaviare/home/linea-guaviare.png";
 import scroll from "../../../assets/generales/scroll.png";
-import playVideo from "../../../assets/generales/play_video.png";
+import siguiente from "../../../assets/generales/flecha-adelante.png";
+import iniciarCapBtn from "../../../assets/generales/iniciar-cap-btn.png";
+
+const audioAmbiente =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1717647113/assets/guaviare/audio/AMB_INTRO_GUAVIARE_15seg_MAY_24_waugc6.mp3";
 
 import { GuaviareIntro } from "../../../data/Guaviare";
-
 import "./Intro.css";
 
-const Intro = ({videoCierre}) => {
+const Intro = ({ videoCierre }) => {
   const dispatch = useDispatch();
   const videoRef = useRef();
   const contenedorGRef = useRef();
   const [mostrar, setMostrar] = useState(false);
-  const [mostrarPlay, setMostrarPlay] = useState(false);
+  const [contador, setContador] = useState(0);
+  const [mostrarScroll, setMostrarScroll] = useState(false);
+  const yaEmpezo = useSelector((state) => state.managerReducer.yaEmpezo);
+  const [audioIntro, setAudioIntro] = useState(null);
 
   useEffect(() => {
     dispatch(establecerMostrarLineasA(false));
     dispatch(establecerMostrarFlechasCanales(false));
+    dispatch(establecerMostrarAbajo(false));
+    dispatch(cambiarDescargando(false));
     dispatch(pararAudios());
 
-    const timer = setTimeout(() => {
-      dispatch(cambiarDescargando(false));
-      dispatch(establecerMostrarAbajo(false));
-      setMostrar(true);
-    }, 1000);
+    const sonido = new Howl({
+      src: [audioAmbiente],
+      loop: true,
+    });
+    setAudioIntro(sonido);
 
-    return () => clearTimeout(timer);
+    if (yaEmpezo) {
+      empezarCapitulo();
+    }
+
+    return () => {
+      sonido.unload();
+    };
   }, []);
-
-  let contador = useSelector((state) => state.managerReducer.contador);
-  const [startY, setStartY] = useState(null);
-  const [desaparecer, setDesaparecer] = useState(false);
 
   useEffect(() => {
     let isScrolling;
@@ -51,32 +60,16 @@ const Intro = ({videoCierre}) => {
     function handleScroll(event) {
       const direction = event.deltaY > 0 ? "down" : "up";
 
-      if (contador >= 0 && direction == "down") {
-        setDesaparecer(true);
-      }
-
       clearInterval(isScrolling);
 
       isScrolling = setTimeout(function () {
-        setDesaparecer(false);
-
-        if (direction == "up") {
-          contador--;
-        } else {
-          contador++;
-        }
-
-        if (contador < 0) {
-          contador = 0;
-        }
-
-        if (contador > 1) {
-          dispatch(sumar(0));
-          setMostrar(false);
-          videoRef.current.play();
-          videoCierre.current.muted = false;
-        } else {
-          dispatch(sumar(contador));
+        if (direction == "down") {
+          if (contador > 1) {
+            console.log("acaaaaaaa");
+            dispatch(cambiarSeccion("jorge-bio"));
+          } else {
+            console.log(contador);
+          }
         }
       }, 100);
     }
@@ -87,34 +80,22 @@ const Intro = ({videoCierre}) => {
         contenedorGRef.current.removeEventListener("wheel", handleScroll);
       }
     };
-  }, []);
+  }, [contador]);
 
-  const handleTouchStart = (event) => {
-    setStartY(event.touches[0].clientY);
-  };
+  useEffect(() => {
+    if (yaEmpezo) {
+      const timer = setTimeout(() => {
+        empezarCapitulo();
+      }, 3000);
 
-  const handleTouchEnd = (event) => {
-    const endY = event.changedTouches[0].clientY;
-    const deltaY = startY - endY;
+      audioIntro?.play();
 
-    if (deltaY > 0) {
-      contador++;
-    } else if (deltaY < 0) {
-      contador--;
-    } else {
+      return () => clearTimeout(timer);
     }
+  }, [yaEmpezo, audioIntro]);
 
-    if (contador < 0) {
-      contador = 0;
-    }
-
-    if (contador > 1) {
-      dispatch(sumar(0));
-      setMostrar(false);
-      setMostrarPlay(true);
-    } else {
-      dispatch(sumar(contador));
-    }
+  const empezarCapitulo = () => {
+    setMostrar(true);
   };
 
   const handleOnVideoEnd = () => {
@@ -122,10 +103,28 @@ const Intro = ({videoCierre}) => {
     dispatch(cambiarSeccion("jorge-bio"));
   };
 
-  const handleOnClickVideoPlay = () => {
+  const handleOnClickFlecha = () => {
+    setContador(contador + 1);
+  };
+
+  const handleOnClickStart = () => {
+    audioIntro?.pause();
+    setContador(contador + 1);
     videoRef.current.play();
     videoCierre.current.muted = false;
-    setMostrarPlay(false);
+  };
+
+  const handleTouchEnd = () => {
+    if (contador > 1) {
+      console.log("acaaaaaaa");
+      dispatch(cambiarSeccion("jorge-bio"));
+    } else {
+      console.log(contador);
+    }
+  };
+
+  const handleTouchStart = () => {
+    console.log("chao");
   };
 
   const pintarVideo = () => {
@@ -137,71 +136,98 @@ const Intro = ({videoCierre}) => {
           ref={videoRef}
           src={videoGuaviareM}
         ></video>
-        {mostrarPlay && (
-          <div className="guaviare-video-play">
-            <img src={playVideo} onClick={handleOnClickVideoPlay} alt="" />
+      </div>
+    );
+  };
+
+  const pintarIntro = () => {
+    return (
+      <div className="mask-general">
+        <div className="contenido-general">
+          <div
+            className={`${
+              contador < 2
+                ? "guaviare-titulo"
+                : "guaviare-titulo guaviare-intro-p-desaparecer"
+            }`}
+          >
+            <h1 className="guaviare-titulo-h1">{GuaviareIntro.titulo}</h1>
           </div>
-        )}
+          <div
+            className={`${
+              contador < 2
+                ? "guaviare-descripcion"
+                : "guaviare-descripcion guaviare-intro-p-desaparecer"
+            }`}
+          >
+            <h2 className="guaviare-descripcion-h2">
+              <pre>{GuaviareIntro.desc}</pre>
+            </h2>
+            <img src={guaviareLinea} alt="linea" />
+            <div className="guaviare-descripcion-p-contenedor">
+              <p
+                className={`${
+                  contador == 0
+                    ? "guaviare-intro-p-aparecer"
+                    : "guaviare-intro-p-desaparecer"
+                }`}
+              >
+                {GuaviareIntro.p1}
+              </p>
+              <p
+                className={`${
+                  contador == 1
+                    ? "guaviare-intro-p-aparecer"
+                    : "guaviare-intro-p-desaparecer"
+                }`}
+              >
+                {GuaviareIntro.p2}
+              </p>
+            </div>
+          </div>
+          {contador == 0 && (
+            <div className="guaviare-intro-siguiente">
+              <img src={siguiente} onClick={handleOnClickFlecha} alt="" />
+            </div>
+          )}
+          {contador == 1 && (
+            <div
+              className={`${
+                contador == 1
+                  ? "guaviare-intro-inciar guaviare-inciar-aparecer"
+                  : "guaviare-intro-inciar guaviare-intro-p-desaparecer"
+              }`}
+            >
+              <img src={iniciarCapBtn} onClick={handleOnClickStart} alt="" />
+            </div>
+          )}
+          {/* <div className="guaviare-descripcion-grafica">
+            <div className="guaviare-descripcion-grafica-img">
+              <img src={guaviareGrafica} alt="guaviare" />
+            </div>            
+          </div> */}
+        </div>
       </div>
     );
   };
 
   return (
-    <div
-      ref={contenedorGRef}
-      className="seccion guaviare-intro"
-      onTouchEnd={handleTouchEnd}
-      onTouchStart={handleTouchStart}
-    >
-      {pintarVideo()}
-      <div className="mask-general">
-        {mostrar && (
-          <div className="contenido-general">
-            <div className="guaviare-titulo">
-              <h1 className="guaviare-titulo-h1">{GuaviareIntro.titulo}</h1>
-            </div>
-            <div className="guaviare-descripcion">
-              <h2 className="guaviare-descripcion-h2">
-                <pre>{GuaviareIntro.desc}</pre>
-              </h2>
-              <img src={guaviareLinea} alt="linea" />
-              <div className="guaviare-descripcion-p-contenedor">
-                {contador == 0 && (
-                  <p
-                    className={
-                      desaparecer
-                        ? "guaviare-intro-p1-des"
-                        : "guaviare-intro-p1"
-                    }
-                  >
-                    {GuaviareIntro.p1}
-                  </p>
-                )}
-                {contador == 1 && (
-                  <p
-                    className={
-                      desaparecer
-                        ? "guaviare-intro-p1-des"
-                        : "guaviare-intro-p1"
-                    }
-                  >
-                    {GuaviareIntro.p2}
-                  </p>
-                )}
-              </div>
-            </div>
-            <div className="guaviare-descripcion-grafica">
-              <div className="guaviare-descripcion-grafica-img">
-                <img src={guaviareGrafica} alt="guaviare" />
-              </div>
-              <div className="guaviare-intro-scroll">
-                <img src={scroll} alt="" />
-              </div>
-            </div>
-          </div>
-        )}
+    <>
+      <div
+        ref={contenedorGRef}
+        className="{mostrar} ? 'seccion guaviare-intro' : ''"
+        onTouchEnd={handleTouchEnd}
+        onTouchStart={handleTouchStart}
+      >
+        {mostrar && pintarVideo()}
+        {mostrar && pintarIntro()}
       </div>
-    </div>
+      {contador > 1 && (
+        <div className="guaviare-intro-scroll">
+          <img src={scroll} alt="" />
+        </div>
+      )}
+    </>
   );
 };
 
