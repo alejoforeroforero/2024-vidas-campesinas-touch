@@ -51,7 +51,7 @@ const audioWilliam1 =
   "https://res.cloudinary.com/dbqfefibl/video/upload/v1713230488/assets/guaviare/william/william1_houzzx.mp3";
 
 const videoCierre =
-  "https://res.cloudinary.com/dumlhmvts/video/upload/v1717469345/videos-musica/video-cierre_guaviare_prueba_rlszkb.mp4";
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713230501/assets/guaviare/cierre/video-cierre_tfdzvy.mp4";
 
 const lineas = [
   {

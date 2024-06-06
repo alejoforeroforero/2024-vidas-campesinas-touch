@@ -8,9 +8,10 @@ import {
   establecerMostrarFlechasCanales,
   pararAudios,
 } from "../../../Redux/states/managerSlice";
+import { Howl } from "howler";
+
 const videoGuaviareM =
   "https://res.cloudinary.com/dumlhmvts/video/upload/v1717466037/videos-musica/Video_Intro_Guaviare_OK_cambio_p_ckaqrx.mp4";
-import guaviareGrafica from "../../../assets/guaviare/home/pictograma.png";
 import guaviareLinea from "../../../assets/guaviare/home/linea-guaviare.png";
 import scroll from "../../../assets/generales/scroll.png";
 import siguiente from "../../../assets/generales/flecha-adelante.png";
@@ -24,12 +25,11 @@ import "./Intro.css";
 
 const Intro = ({ videoCierre }) => {
   const dispatch = useDispatch();
+  const yaEmpezo = useSelector((state) => state.managerReducer.yaEmpezo);
   const videoRef = useRef();
   const contenedorGRef = useRef();
   const [mostrar, setMostrar] = useState(false);
   const [contador, setContador] = useState(0);
-  const [mostrarScroll, setMostrarScroll] = useState(false);
-  const yaEmpezo = useSelector((state) => state.managerReducer.yaEmpezo);
   const [audioIntro, setAudioIntro] = useState(null);
 
   useEffect(() => {
@@ -39,15 +39,15 @@ const Intro = ({ videoCierre }) => {
     dispatch(cambiarDescargando(false));
     dispatch(pararAudios());
 
+    if (yaEmpezo) {
+      empezarCapitulo();
+    }
+
     const sonido = new Howl({
       src: [audioAmbiente],
       loop: true,
     });
     setAudioIntro(sonido);
-
-    if (yaEmpezo) {
-      empezarCapitulo();
-    }
 
     return () => {
       sonido.unload();
@@ -55,31 +55,32 @@ const Intro = ({ videoCierre }) => {
   }, []);
 
   useEffect(() => {
-    let isScrolling;
+    if (contador > 1) {
+      let isScrolling;
 
-    function handleScroll(event) {
-      const direction = event.deltaY > 0 ? "down" : "up";
+      function handleScroll(event) {
+        const direction = event.deltaY > 0 ? "down" : "up";
 
-      clearInterval(isScrolling);
+        clearInterval(isScrolling);
 
-      isScrolling = setTimeout(function () {
-        if (direction == "down") {
-          if (contador > 1) {
-            console.log("acaaaaaaa");
-            dispatch(cambiarSeccion("jorge-bio"));
-          } else {
-            console.log(contador);
+        isScrolling = setTimeout(function () {
+          if (direction == "down") {
+            if (contador > 1) {
+              dispatch(cambiarSeccion("jorge-bio"));
+            } else {
+              console.log(contador);
+            }
           }
-        }
-      }, 100);
-    }
-    contenedorGRef.current.addEventListener("wheel", handleScroll);
-
-    return () => {
-      if (contenedorGRef.current) {
-        contenedorGRef.current.removeEventListener("wheel", handleScroll);
+        }, 100);
       }
-    };
+      contenedorGRef.current.addEventListener("wheel", handleScroll);
+
+      return () => {
+        if (contenedorGRef.current) {
+          contenedorGRef.current.removeEventListener("wheel", handleScroll);
+        }
+      };
+    }
   }, [contador]);
 
   useEffect(() => {
@@ -116,7 +117,6 @@ const Intro = ({ videoCierre }) => {
 
   const handleTouchEnd = () => {
     if (contador > 1) {
-      console.log("acaaaaaaa");
       dispatch(cambiarSeccion("jorge-bio"));
     } else {
       console.log(contador);
@@ -201,11 +201,6 @@ const Intro = ({ videoCierre }) => {
               <img src={iniciarCapBtn} onClick={handleOnClickStart} alt="" />
             </div>
           )}
-          {/* <div className="guaviare-descripcion-grafica">
-            <div className="guaviare-descripcion-grafica-img">
-              <img src={guaviareGrafica} alt="guaviare" />
-            </div>            
-          </div> */}
         </div>
       </div>
     );

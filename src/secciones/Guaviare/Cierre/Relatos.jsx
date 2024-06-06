@@ -7,11 +7,14 @@ import {
 } from "../../../Redux/states/managerSlice";
 import YT from "../../../components/YT";
 import useDelta from "../../../hooks/useDelta";
+import { Howl } from "howler";
 
 const animacion =
   "https://res.cloudinary.com/dbqfefibl/image/upload/v1713230337/assets/guaviare/cierre/animacion_iwn7lp.jpg";
 const jorgeThumbnail =
   "https://res.cloudinary.com/dbqfefibl/image/upload/v1713230337/assets/guaviare/cierre/animacion_iwn7lp.jpg";
+const audioAmbiente =
+  "https://res.cloudinary.com/dvtbfxkn9/video/upload/v1717676805/final_cierre_i9pcz2.mp3";
 
 import "./Relatos.css";
 
@@ -21,11 +24,36 @@ const Relatos = ({ videoCierre }) => {
   const elementRef = useRef();
   const [mostrarTitulo, setMostrarTitulo] = useState(false);
   const [mostrarThumbs, setMostrarThumbs] = useState(false);
-  const textoTiempo = 3;
-  const thumbsTiempo = 11;
+  const [audio, setAudio] = useState(null);
+  const textoTiempo = 10;
+  const thumbsTiempo = 22;
   let mostrarTituloJs = false;
   let mostrarthumbsJs = false;
 
+  useEffect(() => {
+    dispatch(pararAudios());
+    dispatch(establecerMostrarLineasA(false));
+    dispatch(establecerMostrarFlechasCanales(false));
+    videoCierre.current.style.visibility = "visible";
+    videoCierre.current.currentTime = 0;
+    videoCierre.current.play();
+    videoCierre.current.volume = 0;
+    videoCierre.current.addEventListener("timeupdate", handleTimeUpdate);
+
+    const sonido = new Howl({
+      src: [audioAmbiente],
+      loop: true,
+    });
+    setAudio(sonido);
+
+    return () => {
+      sonido.unload();
+    };
+  }, []);
+
+  useEffect(() => {
+    audio?.play();
+  }, [audio]);
 
   const { handleTouchStart, handleTouchEnd } = useDelta(
     "cierre-galeria",
@@ -34,8 +62,6 @@ const Relatos = ({ videoCierre }) => {
   );
 
   const handleTimeUpdate = () => {
-    console.log(videoCierre.current.currentTime);
-
     if (videoCierre.current.currentTime > textoTiempo) {
       if (!mostrarTituloJs) {
         mostrarTituloJs = true;
@@ -50,16 +76,6 @@ const Relatos = ({ videoCierre }) => {
       }
     }
   };
-
-  useEffect(() => {
-    dispatch(pararAudios());
-    dispatch(establecerMostrarLineasA(false));
-    dispatch(establecerMostrarFlechasCanales(false));
-    videoCierre.current.style.visibility = "visible";
-    videoCierre.current.currentTime = 0;
-    videoCierre.current.play();
-    videoCierre.current.addEventListener("timeupdate", handleTimeUpdate);
-  }, []);
 
   const refYoutube = (video) => {
     setYoutubeRef(video);
@@ -86,6 +102,7 @@ const Relatos = ({ videoCierre }) => {
     const div = document.getElementById("youtube-animacion");
     div.style.visibility = "visible";
     youtubeRef?.playVideo();
+    audio?.pause();
   };
 
   return (
