@@ -94,11 +94,11 @@
 }
 
 .guaviare-intro-p-aparecer {
-  animation: aparecerTxt 4s ease-in forwards;
+  animation: aparecerTxt 4s ease-in 3s forwards;
 }
 
 .guaviare-intro-p-desaparecer {
-  animation: desaparecerTxt 4s ease-in forwards;
+  animation: desaparecerTxt 2s ease-in forwards;
 }
 
 .guaviare-intro-siguiente {
@@ -124,7 +124,7 @@
 }
 
 .guaviare-inciar-aparecer {
-  animation: aparecerTxt 4s ease-in 3s forwards;
+  animation: aparecerTxt 4s ease-in 6s forwards;
 }
 
 

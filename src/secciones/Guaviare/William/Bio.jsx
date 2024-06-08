@@ -14,7 +14,7 @@ import { William } from '../../../data/Guaviare';
 
 import './Bio.css';
 
-const Bio = ({ williamAudio1 }) => {
+const Bio = ({ sound }) => {
   const dispatch = useDispatch();
   const elementRef = useRef();
 
@@ -27,7 +27,7 @@ const Bio = ({ williamAudio1 }) => {
     dispatch(pararAudios());
     const timer = setTimeout(() => {
       dispatch(cambiarDescargando(false));
-      williamAudio1.play();
+      sound.play();
     }, 1000)
 
     return () => clearTimeout(timer)

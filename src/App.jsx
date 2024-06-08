@@ -43,6 +43,9 @@ function App() {
   const mostrarHamburguesa = useSelector(
     (state) => state.managerReducer.mostrarHamburguesa
   );
+  const temaBActual = useSelector(
+    (state) => state.managerReducer.temaBActual
+  );
   const canalBOn = useSelector((state) => state.managerReducer.canalBOn);
   const [yaEmpezo, setYaEmpezo] = useState(false);
   const [showingMenu, setShowingMenu] = useState(false);

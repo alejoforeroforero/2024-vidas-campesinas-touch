@@ -4,13 +4,12 @@ import { pararAudios } from "../../../Redux/states/managerSlice";
 import useDelta from "../../../hooks/useDelta";
 import Audio from "../../../components/Audio";
 
-//import relatosVideo from '../../../assets/guaviare/jorge/loop-jorge.mp4';
 const relatosVideo =
   "https://res.cloudinary.com/dbqfefibl/video/upload/v1713448720/assets/guaviare/jorge/loop-jorge_c77hks.mp4";
 
 import "./Relatos.css";
 
-const Relatos = () => {
+const Relatos = ({ sound, audioFx }) => {
   const dispatch = useDispatch();
   const videoRef = useRef();
   const elementRef = useRef();
@@ -24,8 +23,16 @@ const Relatos = () => {
   useEffect(() => {
     dispatch(pararAudios());
     videoRef.current.play();
-  }, []);
+    const currentVolume = sound.volume();
 
+    if (currentVolume < 0.1) {
+      const acciones = {
+        tipo: "volumen",
+        valor: 1,
+      };
+      audioFx(acciones);
+    }
+  }, []);
 
   const pintarVideo = () => {
     return (
@@ -33,6 +40,15 @@ const Relatos = () => {
         <video ref={videoRef} loop playsInline muted src={relatosVideo}></video>
       </div>
     );
+  };
+
+  const audioGeneralFx = (bajarVolumen) => {
+    const acciones = {
+      tipo: "volumen",
+      valor: bajarVolumen ? 0 : 1,
+    };
+
+    audioFx(acciones);
   };
 
   return (
@@ -51,6 +67,7 @@ const Relatos = () => {
                 id="jorge2"
                 titulo='"Cuando llegué al Raudal"'
                 video={videoRef}
+                audioGeneralFx={audioGeneralFx}
               />
             </div>
             <div>

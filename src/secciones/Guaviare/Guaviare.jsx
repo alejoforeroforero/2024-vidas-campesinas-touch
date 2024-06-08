@@ -1,6 +1,9 @@
 import { useEffect, useState, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { cambiarSeccion } from "../../Redux/states/managerSlice";
+import {
+  cambiarSeccion,
+  cambiarTemaBActual,
+} from "../../Redux/states/managerSlice";
 import Cargando from "../../components/Cargando";
 
 import IntroGuaviare from "./Intro/Intro";
@@ -44,11 +47,17 @@ import { Howl } from "howler";
 
 import "./Guaviare.css";
 
-const audioJorge1Howl =
-  "https://res.cloudinary.com/dfwhzadxa/video/upload/v1713054256/vidas-campesinas/jorge/jorge1_p3qcvt.mp3";
+const p1P2Src =
+  "https://res.cloudinary.com/dvtbfxkn9/video/upload/v1717709241/Guaviare_Personaje_1_y_2_vfgizq.mp3";
 
-const audioWilliam1 =
-  "https://res.cloudinary.com/dbqfefibl/video/upload/v1713230488/assets/guaviare/william/william1_houzzx.mp3";
+const p3P4Src =
+  "https://res.cloudinary.com/dvtbfxkn9/video/upload/v1717802753/PERSONAJE_3_y_4_wnllxl.mp3";
+
+const p5P6Src =
+  "https://res.cloudinary.com/dvtbfxkn9/video/upload/v1717802753/Personaje_5_y_6_lf8vav.mp3";
+
+const p7P8Src =
+  "https://res.cloudinary.com/dvtbfxkn9/video/upload/v1717802753/PErsonaje_7_y_8_tgmjds.mp3";
 
 const videoCierre =
   "https://res.cloudinary.com/dbqfefibl/video/upload/v1713230501/assets/guaviare/cierre/video-cierre_tfdzvy.mp4";
@@ -104,12 +113,80 @@ const Guaviare = () => {
     (state) => state.managerReducer.mostrarLineasA
   );
   const canalBOn = useSelector((state) => state.managerReducer.canalBOn);
+
   const videoCierreRef = useRef(null);
 
-  const [sound, setSound] = useState(null);
-  const [williamAudio1, setWilliamAudio1] = useState(null);
+  const audioCap = useRef(null);
+  const [audioSrc, setAudioSrc] = useState(p1P2Src);
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(cambiarSeccion("guaviare-intro"));
+    //dispatch(cambiarSeccion("jorge-bio"));
+    dispatch(cambiarTemaBActual("caceria"));
+  }, []);
+
+  useEffect(() => {
+    if (canalBOn) {
+      audioCap.current?.pause();
+    }
+
+    if (seccion == "guaviare-intro") {
+      setAudioSrc("");
+    } else if (seccion == "jorge-bio") {
+      setAudioSrc(p1P2Src);
+    } else if (seccion == "jorge-youtube") {
+      setAudioSrc(p1P2Src);
+    } else if (seccion == "jorge-relatos") {
+      setAudioSrc(p1P2Src);
+    } else if (seccion == "jorge-galeria") {
+      setAudioSrc(p1P2Src);
+    } else if (seccion == "carlos-bio") {
+      setAudioSrc(p1P2Src);
+    } else if (seccion == "carlos-youtube") {
+      setAudioSrc(p1P2Src);
+    } else if (seccion == "carlos-relatos") {
+      setAudioSrc(p1P2Src);
+    } else if (seccion == "carlos-galeria") {
+      setAudioSrc(p1P2Src);
+    } else if (seccion == "dayana-bio") {
+      setAudioSrc(p3P4Src);
+    } else if (seccion == "dayana-youtube-1") {
+      setAudioSrc(p3P4Src);
+    } else if (seccion == "dayana-youtube-2") {
+      setAudioSrc(p3P4Src);
+    } else if (seccion == "dayana-galeria") {
+      setAudioSrc(p3P4Src);
+    } else {
+      setAudioSrc("");
+    }
+
+    if (!canalBOn) {
+      setTimeout(() => {
+        if (!audioCap.current?.playing()) {
+          audioCap.current?.play();
+        }
+      }, 800);
+    }
+
+    if (seccion != "cierre-video") {
+      videoCierreRef.current.pause();
+      videoCierreRef.current.style.visibility = "hidden";
+    }
+  }, [seccion, canalBOn]);
+
+  useEffect(() => {
+    audioCap.current = new Howl({
+      src: [audioSrc],
+      loop: true,
+      volume: 1,
+    });
+
+    return () => {
+      audioCap.current.unload();
+    };
+  }, [audioSrc]);
 
   const handleNavegacion = (id) => {
     if (id == "guaviare-jorge-navegacion") {
@@ -131,34 +208,29 @@ const Guaviare = () => {
     }
   };
 
-  useEffect(() => {
-    dispatch(cambiarSeccion("guaviare-intro"));
-    //dispatch(cambiarSeccion("cierre-galeria"));
-
-    const newSound = new Howl({
-      src: [audioJorge1Howl],
-    });
-    setSound(newSound);
-
-    const newSound2 = new Howl({
-      src: [audioWilliam1],
-    });
-    setWilliamAudio1(newSound2);
-
-    return () => {
-      newSound.unload();
-      newSound2.unload();
-    };
-  }, []);
-
-  useEffect(() => {
-    sound?.pause();
-    williamAudio1?.pause();
-    if(seccion != 'cierre-video'){
-      videoCierreRef.current.pause();
-      videoCierreRef.current.style.visibility = 'hidden';
+  const audioFx = (acciones) => {
+    if (acciones.tipo == "volumen") {
+      graduallyChangeVolume(acciones.valor, 3000);
     }
-  }, [seccion, canalBOn]);
+  };
+
+  const graduallyChangeVolume = (targetVolume, duration) => {
+    const currentVolume = audioCap.current.volume();
+    const step = (targetVolume - currentVolume) / (duration / 100);
+    let currentStep = 0;
+    const intervalId = setInterval(() => {
+      currentStep += 1;
+      const newVolume = currentVolume + step * currentStep;
+      audioCap.current.volume(newVolume);
+      if (
+        (step > 0 && newVolume >= targetVolume) ||
+        (step < 0 && newVolume <= targetVolume)
+      ) {
+        clearInterval(intervalId);
+        audioCap.current.volume(targetVolume); // Ensure exact target volume
+      }
+    }, 100);
+  };
 
   return (
     <div className="capitulo">
@@ -183,35 +255,93 @@ const Guaviare = () => {
         </div>
       )}
       {descargando && <Cargando />}
-      {seccion == "guaviare-intro" && <IntroGuaviare videoCierre={videoCierreRef}/>}
-      {seccion == "jorge-bio" && <JorgeBio sound={sound} />}
-      {seccion == "jorge-youtube" && <JorgeYoutube />}
-      {seccion == "jorge-relatos" && <JorgeRelatos />}
-      {seccion == "jorge-galeria" && <JorgeGaleria />}
-      {seccion == "carlos-bio" && <CarlosBio />}
-      {seccion == "carlos-youtube" && <CarlosYoutube />}
-      {seccion == "carlos-relatos" && <CarlosRelatos />}
-      {seccion == "carlos-galeria" && <CarlosGaleria />}
-      {seccion == "dayana-bio" && <DayanaBio />}
-      {seccion == "dayana-youtube-1" && <DayanaYoutube1 />}
-      {seccion == "dayana-youtube-2" && <DayanaYoutube2 />}
-      {seccion == "dayana-galeria" && <DayanaGaleria />}
-      {seccion == "william-bio" && <WilliamBio williamAudio1={williamAudio1} />}
-      {seccion == "william-youtube" && <WilliamYoutube />}
-      {seccion == "william-relatos" && <WilliamRelatos />}
-      {seccion == "william-galeria" && <WilliamGaleria />}
-      {seccion == "marisol-bio" && <MarisolBio />}
-      {seccion == "marisol-youtube" && <MarisolYoutube />}
-      {seccion == "marisol-galeria" && <MarisolGaleria />}
-      {seccion == "elias-bio" && <EliasBio />}
-      {seccion == "elias-youtube" && <EliasYoutube />}
-      {seccion == "elias-relatos" && <EliasRelatos />}
-      {seccion == "rodriguez-bio" && <RodriguezBio />}
-      {seccion == "rodriguez-youtube" && <RodriguezYoutube />}
-      {seccion == "rodriguez-relatos" && <RodriguezRelatos />}
-      {seccion == "rodriguez-youtube-2" && <RodriguezYoutube2 />}
-      {seccion == "cierre-galeria" && <CierreGaleria />}
-      {seccion == "cierre-video" && <CierreVideo videoCierre={videoCierreRef}/>}
+      {seccion == "guaviare-intro" && (
+        <IntroGuaviare videoCierre={videoCierreRef} />
+      )}
+      {seccion == "jorge-bio" && (
+        <JorgeBio sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "jorge-youtube" && (
+        <JorgeYoutube sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "jorge-relatos" && (
+        <JorgeRelatos sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "jorge-galeria" && (
+        <JorgeGaleria sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "carlos-bio" && (
+        <CarlosBio sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "carlos-youtube" && (
+        <CarlosYoutube sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "carlos-relatos" && (
+        <CarlosRelatos sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "carlos-galeria" && (
+        <CarlosGaleria sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "dayana-bio" && (
+        <DayanaBio sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "dayana-youtube-1" && (
+        <DayanaYoutube1 sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "dayana-youtube-2" && (
+        <DayanaYoutube2 sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "dayana-galeria" && (
+        <DayanaGaleria sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "william-bio" && (
+        <WilliamBio sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "william-youtube" && (
+        <WilliamYoutube sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "william-relatos" && (
+        <WilliamRelatos sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "william-galeria" && (
+        <WilliamGaleria sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "marisol-bio" && (
+        <MarisolBio sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "marisol-youtube" && (
+        <MarisolYoutube sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "marisol-galeria" && (
+        <MarisolGaleria sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "elias-bio" && (
+        <EliasBio sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "elias-youtube" && (
+        <EliasYoutube sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "elias-relatos" && (
+        <EliasRelatos sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "rodriguez-bio" && (
+        <RodriguezBio sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "rodriguez-youtube" && (
+        <RodriguezYoutube sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "rodriguez-relatos" && (
+        <RodriguezRelatos sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "rodriguez-youtube-2" && (
+        <RodriguezYoutube2 sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "cierre-galeria" && (
+        <CierreGaleria sound={audioCap.current} audioFx={audioFx} />
+      )}
+      {seccion == "cierre-video" && (
+        <CierreVideo videoCierre={videoCierreRef} />
+      )}
     </div>
   );
 };

@@ -9,12 +9,30 @@ import abajo from "../../../assets/generales/abajo.png";
 
 import "./CaceriaF3.css";
 
-const CaceriaF3 = () => {
+const CaceriaF3 = ({ sound, audioFx }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(changeVideo(null));
+    const currentVolume = sound?.volume();
+
+    if (currentVolume < 0.4) {
+      const acciones = {
+        tipo: "volumen",
+        valor: 1,
+      };
+      audioFx(acciones);
+    }
   }, []);
+
+  const audioGeneralFx = (bajarVolumen) => {
+    const acciones = {
+      tipo: "volumen",
+      valor: bajarVolumen ? 0 : 1,
+    };
+
+    audioFx(acciones);
+  };
 
   return (
     <div className="caceria-f3">
@@ -33,6 +51,7 @@ const CaceriaF3 = () => {
                 subTitulo="· Etnografía sonora ·"
                 autor=""
                 popup={true}
+                audioGeneralFx={audioGeneralFx}
               />
             </div>
             <p className="caceria-f3-p">

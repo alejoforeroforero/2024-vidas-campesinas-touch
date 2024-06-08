@@ -8,12 +8,30 @@ import abajo from "../../../assets/generales/abajo.png";
 
 import "./GuayaberoF4.css";
 
-const GuayaberoF4 = () => {
+const GuayaberoF4 = ({ sound, audioFx }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(changeVideo(null));
+    const currentVolume = sound?.volume();
+
+    if (currentVolume < 0.4) {
+      const acciones = {
+        tipo: "volumen",
+        valor: 1,
+      };
+      audioFx(acciones);
+    }
   }, []);
+
+  const audioGeneralFx = (bajarVolumen) => {
+    const acciones = {
+      tipo: "volumen",
+      valor: bajarVolumen ? 0.2 : 1,
+    };
+
+    audioFx(acciones);
+  };
 
   return (
     <div className="guayabero-f4">
@@ -35,6 +53,7 @@ const GuayaberoF4 = () => {
                 id="audio-toninas"
                 titulo="“Las Toninas se dispersaron por los otros ríos, como son territoriales”."
                 autor="· Jorge Cano"
+                audioGeneralFx={audioGeneralFx}
               />
             </div>
             <div className="canal-b-abajo">

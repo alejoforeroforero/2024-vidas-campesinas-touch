@@ -114,6 +114,7 @@ const Audio = ({
   autor = "",
   popup = false,
   video = null,
+  audioGeneralFx = null,
 }) => {
   const cancionActual = useSelector(
     (state) => state.managerReducer.cancionActual
@@ -231,9 +232,9 @@ const Audio = ({
       return audioCimarrona2;
     } else if (id == "audio-cimarrona-3") {
       return audioCimarrona3;
-    }else if (id == "audio-hermandad-1") {
+    } else if (id == "audio-hermandad-1") {
       return audioHermandad1;
-    }else if (id == "audio-hermandad-2") {
+    } else if (id == "audio-hermandad-2") {
       return audioHermandad2;
     }
   };
@@ -316,6 +317,10 @@ const Audio = ({
       console.log("parar video");
       video?.current.pause();
 
+      if (audioGeneralFx) {
+        audioGeneralFx(true);
+      }
+
       frame1.current = requestAnimationFrame(animate1);
     } else {
       cancelAnimationFrame(frame1.current);
@@ -350,6 +355,10 @@ const Audio = ({
 
     console.log("poner video");
     video?.current.play();
+
+    // if (audioGeneralFx) {
+    //   audioGeneralFx(false);
+    // }
 
     if (cancionActual == id) {
       dispatch(cambiarCancion(null));

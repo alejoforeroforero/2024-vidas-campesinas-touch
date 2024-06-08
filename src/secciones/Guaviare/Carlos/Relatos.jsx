@@ -9,7 +9,7 @@ const relatosVideo =
 
 import "./Relatos.css";
 
-const Relatos = () => {
+const Relatos = ({ sound, audioFx }) => {
   const dispatch = useDispatch();
   const videoRef = useRef();
   const elementRef = useRef();
@@ -23,7 +23,25 @@ const Relatos = () => {
   useEffect(() => {
     dispatch(pararAudios());
     videoRef.current.play();
+    const currentVolume = sound.volume();
+
+    if (currentVolume < 0.1) {
+      const acciones = {
+        tipo: "volumen",
+        valor: 1,
+      };
+      audioFx(acciones);
+    }
   }, []);
+
+  const audioGeneralFx = (bajarVolumen) => {
+    const acciones = {
+      tipo: "volumen",
+      valor: bajarVolumen ? 0.2 : 1,
+    };
+
+    audioFx(acciones);
+  };
 
   const pintarVideo = () => {
     return (
@@ -48,6 +66,7 @@ const Relatos = () => {
               id="carlos"
               titulo="“Llegamos a este territorio porque era muy productivo en Cacao”"
               video={videoRef}
+              audioGeneralFx={audioGeneralFx}
             />
           </div>
         </div>

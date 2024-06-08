@@ -100,7 +100,6 @@ const Intro = ({ videoCierre }) => {
   };
 
   const handleOnVideoEnd = () => {
-    dispatch(cambiarDescargando(true));
     dispatch(cambiarSeccion("jorge-bio"));
   };
 

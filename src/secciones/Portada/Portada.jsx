@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { activarYaEmpezo } from "../../Redux/states/managerSlice";
 import logo from "../../assets/generales/logo.png";
 import audifonos from "../../assets/generales/audifonos.png";

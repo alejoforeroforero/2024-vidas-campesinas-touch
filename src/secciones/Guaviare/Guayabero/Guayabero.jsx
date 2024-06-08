@@ -9,7 +9,7 @@ import flechaAdelante from '../../../assets/generales/flecha-adelante.png';
 import flechaAtras from '../../../assets/generales/flecha-atras.png';
 import './Guayabero.css'
 
-const Guayabero = () => {
+const Guayabero = ({ sound, audioFx }) => {
     const dispatch = useDispatch();
 
     const secciones = ['intro', 'video', 'audio1', 'audio2']
@@ -29,10 +29,10 @@ const Guayabero = () => {
     return (
         <div className='guaviare-caceria'>
             <div className="guaviare-caceria-contenido">
-                {currentImage == 0 && <GuayaberoF1 />}
-                {currentImage == 1 && <GuayaberoF2 />}
-                {currentImage == 2 && <GuayaberoF3 />}
-                {currentImage == 3 && <GuayaberoF4 />}
+                {currentImage == 0 && <GuayaberoF1 sound={sound} audioFx={audioFx}  />}
+                {currentImage == 1 && <GuayaberoF2 sound={sound} audioFx={audioFx}  />}
+                {currentImage == 2 && <GuayaberoF3 sound={sound} audioFx={audioFx}  />}
+                {currentImage == 3 && <GuayaberoF4 sound={sound} audioFx={audioFx}  />}
             </div>
             <div className='botones-flechas-b'>
                 <div>

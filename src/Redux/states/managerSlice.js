@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 export const manager = createSlice({
   name: "Manager",
   initialState: {
-    departamento: "null",
+    departamento: null,
+    temaBActual:null,
     yaEmpezo:false,
     personaje:'',
     contador: 0,
@@ -29,6 +30,9 @@ export const manager = createSlice({
     },
     cambiarSeccion: (state, action) => {
       state.seccion = action.payload;
+    },
+    cambiarTemaBActual:(state, action) =>{
+      state.temaBActual = action.payload;
     },
     sumar: (state, action) => {
       state.contador = action.payload;
@@ -97,6 +101,7 @@ export const {
   establecerPersonaje,
   cambiarSeccion,
   establecerCanalBOn,
+  cambiarTemaBActual,
   sumar,
   cambiarDescargando,
   cambiarCancion,
