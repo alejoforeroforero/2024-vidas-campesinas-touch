@@ -26,7 +26,7 @@ const Bio = () => {
   useEffect(() => {
     dispatch(cambiarDescargando(true));
     dispatch(establecerMostrarLineasA(true));
-    dispatch(establecerMostrarFlechasCanales(false));
+    dispatch(establecerMostrarFlechasCanales(true));
     dispatch(establecerMostrarAbajo(true));
     dispatch(establecerPersonaje('linea-guardia'));
     dispatch(pararAudios());

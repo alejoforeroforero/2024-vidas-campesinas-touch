@@ -1,0 +1,48 @@
+.grima-f2 {
+  background: url("https://res.cloudinary.com/dumlhmvts/image/upload/v1718070704/cauca/grima/Fotograma-videoclip-Grima_ujr8tl.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: fadeIn 4s;
+}
+
+.grima-f2-interior{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.grima-f2-grafica{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+
+  img{
+    height: 70%;
+    transform: translate(0, 6vh);
+  }
+
+}
+
+.grima-f2-play{
+  height: 18vh;
+  img{
+    width:120px;
+    cursor: pointer;
+  }
+}
+
+.grima-f2-frase{
+  margin-top: 4vh;
+  text-align: center;
+
+  h3{
+    font-size: 1.4rem;
+  }
+}

@@ -53,8 +53,6 @@ export const manager = createSlice({
         for(let i=0; i< audios.length; i++){
             const audio = audios[i];
             audio.pause();
-
-            console.log('llego a parar audio')
         }
     },
     changeVideo(state, action) {

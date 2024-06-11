@@ -106,6 +106,10 @@ const audioHermandad1 =
   "https://res.cloudinary.com/dumlhmvts/video/upload/v1717158087/cauca/hermandad/Audio_1_lazos_rzavqw.mp3";
 const audioHermandad2 =
   "https://res.cloudinary.com/dumlhmvts/video/upload/v1717158086/cauca/hermandad/Audio_2_lazos_hjiu7t.mp3";
+const audioGrima1 =
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1718073873/cauca/grima/Audio_1_Grima_wrdlqg.mp3";
+const audioGrima2 =
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1718073872/cauca/grima/Audio_2_Grima_qni5mt.mp3";
 
 const Audio = ({
   titulo,
@@ -236,6 +240,10 @@ const Audio = ({
       return audioHermandad1;
     } else if (id == "audio-hermandad-2") {
       return audioHermandad2;
+    } else if (id == "audio-grima-1") {
+      return audioGrima1;
+    } else if (id == "audio-grima-2") {
+      return audioGrima2;
     }
   };
 
@@ -356,9 +364,9 @@ const Audio = ({
     console.log("poner video");
     video?.current.play();
 
-    // if (audioGeneralFx) {
-    //   audioGeneralFx(false);
-    // }
+    if (audioGeneralFx) {
+      audioGeneralFx(false);
+    }
 
     if (cancionActual == id) {
       dispatch(cambiarCancion(null));

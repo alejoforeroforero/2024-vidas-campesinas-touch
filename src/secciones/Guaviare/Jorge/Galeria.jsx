@@ -42,7 +42,7 @@ const Galeria = ({ sound, audioFx }) => {
 
     const currentVolume = sound.volume();
 
-    if (currentVolume < 0.1) {
+    if (currentVolume < 0.3) {
       const acciones = {
         tipo: "volumen",
         valor: 1,

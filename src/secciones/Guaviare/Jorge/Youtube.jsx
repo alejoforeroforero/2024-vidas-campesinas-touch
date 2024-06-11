@@ -5,7 +5,7 @@ import YT from "../../../components/YT";
 import useDelta from "../../../hooks/useDelta";
 import playImg from "../../../assets/generales/play_video.png";
 
-//import jorgeThumbnail from '../../../assets/guaviare/jorge/fondo-video.jpg';
+
 const jorgeThumbnail =
   "https://res.cloudinary.com/dbqfefibl/image/upload/v1713230303/assets/guaviare/jorge/fondo-video_gpfnkz.jpg";
 import "./Youtube.css";
@@ -25,7 +25,7 @@ const Youtube = ({ sound, audioFx }) => {
   useEffect(() => {
     const currentVolume = sound.volume();
 
-    if (currentVolume < 0.1) {
+    if (currentVolume < 0.3) {
       const acciones = {
         tipo: "volumen",
         valor: 1,

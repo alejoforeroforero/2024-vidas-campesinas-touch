@@ -1,0 +1,38 @@
+.todos-f2 {
+  background: url("https://res.cloudinary.com/dumlhmvts/image/upload/v1718063529/cauca/todos/Fotograma-Mapa-de-colores_v9zomb.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: fadeIn 4s;
+
+  .todos-f2-interior{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    img{
+      width:120px;
+      cursor: pointer;
+    }
+  
+    .todos-f2-frase{
+      margin-top: 4vh;
+      text-align: center;
+
+      h3{
+        font-size: 1.4rem;
+      }
+
+      p{
+        font-size: 1rem;
+        margin-top: 40px;
+      }
+    }
+  }
+}

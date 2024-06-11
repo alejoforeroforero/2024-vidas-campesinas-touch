@@ -44,8 +44,8 @@ const Relatos = ({ sound, audioFx }) => {
 
   const audioGeneralFx = (bajarVolumen) => {
     const acciones = {
-      tipo: "volumen",
-      valor: bajarVolumen ? 0 : 1,
+      tipo: "reducirVolumen",
+      valor:bajarVolumen
     };
 
     audioFx(acciones);
@@ -75,6 +75,7 @@ const Relatos = ({ sound, audioFx }) => {
                 id="jorge3"
                 titulo='"Somos nuestras propias ambulancias"'
                 video={videoRef}
+                audioGeneralFx={audioGeneralFx}
               />
             </div>
           </div>

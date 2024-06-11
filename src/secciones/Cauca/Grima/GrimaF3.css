@@ -1,0 +1,66 @@
+.grima-f3 {
+  background: url("https://res.cloudinary.com/dumlhmvts/image/upload/v1718073723/cauca/grima/Fotograma-Loop-Grima_v6vcaf.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  animation: mymove 120s linear infinite alternate;
+}
+
+.grima-f3-ilustraciones {
+  position: absolute;
+  left: 0px;
+  top: 25vh;
+  cursor: pointer;
+  z-index: 300;
+  text-align: center;
+  width: 100%;
+  height: 20vh;
+  opacity: 0;
+  animation: aparecer 3s ease-in forwards;
+}
+
+@media screen and (orientation: landscape) {
+  .grima-f3-ilustraciones {
+    top: 18vh;
+  }
+}
+
+.grima-f3-grafica{
+  width: 30%;
+  max-width:140px;
+}
+
+
+.grima-f3-interior {
+  position: relative;
+  width: 100%;
+}
+
+.grima-f3-audio-contenedor1 {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 10vh;
+  cursor: pointer;
+  z-index: 300;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  animation: aparecer 3s ease-in-out 1s forwards;
+}
+
+.grima-f3-audio-contenedor2 {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 50vh;
+  cursor: pointer;
+  z-index: 300;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  animation: aparecer 3s ease-in-out 1s forwards;
+}

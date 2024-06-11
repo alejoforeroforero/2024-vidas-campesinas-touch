@@ -29,6 +29,7 @@ import "./CanalB.css";
 
 import GuaviareB from "./secciones/Guaviare/GuaviareB";
 import CaquetaB from "./secciones/Caqueta/CaquetaB";
+import CaucaB from "./secciones/Cauca/CaucaB";
 
 function App() {
   const location = useLocation();
@@ -128,6 +129,7 @@ function App() {
       <div className={canalBOn ? "canal-b canal-b-on" : "canal-b canal-b-off"}>
         {path == "/guaviare" && <GuaviareB />}
         {path == "/caqueta" && <CaquetaB />}
+        {path == "/cauca" && <CaucaB />}
       </div>
 
       {mostrarAbajo && (

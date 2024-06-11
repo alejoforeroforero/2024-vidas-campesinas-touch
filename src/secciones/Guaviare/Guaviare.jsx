@@ -122,8 +122,8 @@ const Guaviare = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(cambiarSeccion("guaviare-intro"));
-    //dispatch(cambiarSeccion("jorge-bio"));
+    //dispatch(cambiarSeccion("guaviare-intro"));
+    dispatch(cambiarSeccion("jorge-relatos"));
     dispatch(cambiarTemaBActual("caceria"));
   }, []);
 
@@ -211,6 +211,12 @@ const Guaviare = () => {
   const audioFx = (acciones) => {
     if (acciones.tipo == "volumen") {
       graduallyChangeVolume(acciones.valor, 3000);
+    } else if(acciones.tipo == "reducirVolumen"){
+      if(acciones.valor){
+        audioCap.current.volume(0.2);
+      }else{
+        audioCap.current.volume(1);  
+      }
     }
   };
 

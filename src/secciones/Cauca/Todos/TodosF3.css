@@ -1,0 +1,52 @@
+.todos-f3 {
+  background: url("https://res.cloudinary.com/dumlhmvts/image/upload/v1718064038/cauca/todos/Fotograma-Vivir-en-las-Brisas_koxmld.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: fadeIn 4s;
+}
+
+.todos-f3-interior{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.todos-f3-grafica{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+
+  img{
+    height: 90%;
+  }
+
+}
+
+.todos-f3-play{
+  height: 18vh;
+  img{
+    width:120px;
+    cursor: pointer;
+  }
+}
+
+.todos-f3-frase{
+  margin-top: 4vh;
+  text-align: center;
+
+  h3{
+    font-size: 1.4rem;
+  }
+
+  p{
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+}
