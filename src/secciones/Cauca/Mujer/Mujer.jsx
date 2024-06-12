@@ -1,19 +1,19 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { pararAudios } from "../../../Redux/states/managerSlice";
-import GrimaF1 from "./GrimaF1";
-import GrimaF2 from "./GrimaF2";
-import GrimaF3 from "./GrimaF3";
-import GrimaF4 from "./GrimaF4";
+import MujerF1 from "./MujerF1";
+import MujerF2 from "./MujerF2";
+import MujerF3 from "./MujerF3";
+import MujerF4 from "./MujerF4";
 import flechaAdelante from "../../../assets/generales/flecha-adelante.png";
 import flechaAtras from "../../../assets/generales/flecha-atras.png";
 
-import "./Grima.css";
+import "./Mujer.css";
 
-const Grima = ({ sound, audioFx }) => {
+const Mujer = ({ sound, audioFx }) => {
   const dispatch = useDispatch();
 
-  const secciones = ["intro", "grima1", "grima2", "grima3"];
+  const secciones = ["intro", "mujer1", "mujer2", "mujer3"];
 
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -28,12 +28,12 @@ const Grima = ({ sound, audioFx }) => {
   };
 
   return (
-    <div className="cauca-todos">
-      <div className="cauca-todos-contenido">
-        {currentImage == 0 && <GrimaF1 sound={sound} audioFx={audioFx} />}
-        {currentImage == 1 && <GrimaF2 sound={sound} audioFx={audioFx} />}
-        {currentImage == 2 && <GrimaF3 sound={sound} audioFx={audioFx} />}
-        {currentImage == 3 && <GrimaF4 sound={sound} audioFx={audioFx} />}
+    <div className="cauca-mujer">
+      <div className="cauca-mujer-contenido">
+        {currentImage == 0 && <MujerF1 sound={sound} audioFx={audioFx} />}
+        {currentImage == 1 && <MujerF2 sound={sound} audioFx={audioFx} />}
+        {currentImage == 2 && <MujerF3 sound={sound} audioFx={audioFx} />}
+        {currentImage == 3 && <MujerF4 sound={sound} audioFx={audioFx} />}
       </div>
       <div className="botones-flechas-b">
         <div>
@@ -58,4 +58,4 @@ const Grima = ({ sound, audioFx }) => {
   );
 };
 
-export default Grima;
+export default Mujer;

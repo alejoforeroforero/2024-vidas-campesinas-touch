@@ -8,19 +8,18 @@ import {
   establecerMostrarFlechasCanales,
   pararAudios,
 } from "../../../Redux/states/managerSlice";
+import { GuaviareIntro } from "../../../data/Guaviare";
 import { Howl } from "howler";
 
 const videoGuaviareM =
   "https://res.cloudinary.com/dumlhmvts/video/upload/v1717466037/videos-musica/Video_Intro_Guaviare_OK_cambio_p_ckaqrx.mp4";
+const audioAmbiente =
+  "https://res.cloudinary.com/dbqfefibl/video/upload/v1717647113/assets/guaviare/audio/AMB_INTRO_GUAVIARE_15seg_MAY_24_waugc6.mp3";
 import guaviareLinea from "../../../assets/guaviare/home/linea-guaviare.png";
 import scroll from "../../../assets/generales/scroll.png";
 import siguiente from "../../../assets/generales/flecha-adelante.png";
 import iniciarCapBtn from "../../../assets/generales/iniciar-cap-btn.png";
 
-const audioAmbiente =
-  "https://res.cloudinary.com/dbqfefibl/video/upload/v1717647113/assets/guaviare/audio/AMB_INTRO_GUAVIARE_15seg_MAY_24_waugc6.mp3";
-
-import { GuaviareIntro } from "../../../data/Guaviare";
 import "./Intro.css";
 
 const Intro = ({ videoCierre }) => {
@@ -89,7 +88,7 @@ const Intro = ({ videoCierre }) => {
         empezarCapitulo();
       }, 3000);
 
-      audioIntro?.play();
+      //audioIntro?.play();
 
       return () => clearTimeout(timer);
     }
@@ -209,7 +208,7 @@ const Intro = ({ videoCierre }) => {
     <>
       <div
         ref={contenedorGRef}
-        className="{mostrar} ? 'seccion guaviare-intro' : ''"
+        className={`seccion ${mostrar ? 'guaviare-intro' : ''}`}
         onTouchEnd={handleTouchEnd}
         onTouchStart={handleTouchStart}
       >

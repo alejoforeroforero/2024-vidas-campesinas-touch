@@ -155,7 +155,7 @@ const GuaviareB = () => {
   useEffect(() => {
     if (canalBOn) {
       if (!audioCapB.current?.playing()) {
-        audioCapB.current?.play();
+        //audioCapB.current?.play();
       }
     } else {
       audioCapB.current?.pause();
@@ -165,7 +165,7 @@ const GuaviareB = () => {
   useEffect(() => {
     if (canalBOn) {
       setTimeout(() => {
-        audioCapB.current?.play();
+        //audioCapB.current?.play();
       }, 400);
     }
   }, [temaBActual]);

@@ -110,6 +110,13 @@ const audioGrima1 =
   "https://res.cloudinary.com/dumlhmvts/video/upload/v1718073873/cauca/grima/Audio_1_Grima_wrdlqg.mp3";
 const audioGrima2 =
   "https://res.cloudinary.com/dumlhmvts/video/upload/v1718073872/cauca/grima/Audio_2_Grima_qni5mt.mp3";
+const audioMujer1 =
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1718107891/cauca/mujer/Audio_1_Omaria_cafe%CC%81_eet3f9.mp3";
+const vivirEtnografia =
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1718200112/cauca/vivir/Fragmento_Cultivo_de_alegri%CC%81a_qqztxi.mp3";
+const audioVivirF5 =
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1718202692/cauca/vivir/Audio_sobre_la_paz_qkv4a1.mp3";
+
 
 const Audio = ({
   titulo,
@@ -244,6 +251,12 @@ const Audio = ({
       return audioGrima1;
     } else if (id == "audio-grima-2") {
       return audioGrima2;
+    } else if (id == "audio-mujer-1") {
+      return audioMujer1;
+    } else if (id == "vivir-etnografia") {
+      return vivirEtnografia;
+    }else if (id == "audio-vivir-f5") {
+      return audioVivirF5;
     }
   };
 

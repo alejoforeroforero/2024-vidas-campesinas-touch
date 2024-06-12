@@ -5,17 +5,16 @@ import {
   establecerMostrarAbajo,
 } from "../../../Redux/states/managerSlice";
 import Audio from "../../../components/Audio";
-import grafica from "../../../assets/guaviare/guardianes/grafica.png";
 const videoSrc =
-  "https://res.cloudinary.com/dumlhmvts/video/upload/v1718073677/cauca/grima/Loop_Grima_p_apxt5z.mp4";
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1718107871/cauca/mujer/Loop_cogiendo_cafe%CC%81_p_xiiuer.mp4";
 
-import "./GrimaF3.css";
+import "./MujerF3.css";
 
-const GrimaF3 = ({ sound, audioFx }) => {
+const MujerF3 = ({ sound, audioFx }) => {
   const dispatch = useDispatch();
   const videoRef = useRef(null);
 
-  const vId = "grima-video";
+  const vId = "mujer-video";
 
   useEffect(() => {
     dispatch(changeVideo(vId));
@@ -39,11 +38,10 @@ const GrimaF3 = ({ sound, audioFx }) => {
 
     audioFx(acciones);
   };
-
   return (
     <>
-      <div className="grima-f3">
-        <div className="grima-f3-video">
+      <div className="mujer-f3">
+        <div className="mujer-f3-video">
           <video
             id={vId}
             loop
@@ -56,21 +54,12 @@ const GrimaF3 = ({ sound, audioFx }) => {
       </div>
       <div className="mask-general">
         <div className="contenido-general">
-          <div className="grima-f3-interior">
-            <div className="grima-f3-audio-contenedor1">
+          <div className="mujer-f3-interior">
+            <div className="mujer-f3-audio-contenedor1">
               <Audio
-                id="audio-grima-1"
-                titulo="“Somos agricultores, pero también trabajamos el arte de la Grima”"
-              />
-            </div>
-            {/* <div className="grima-f3-ilustraciones">
-              <img className="grima-f3-grafica" src={grafica} alt="grafica" />
-            </div> */}
-            <div className="grima-f3-audio-contenedor2">
-              <Audio
-                id="audio-grima-2"
-                titulo="“Queremos continuar con el legado de nuestros ancestros” &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-                autor="· Jacob Arboleda"
+                id="audio-mujer-1"
+                titulo="“Hay dos trabajos que me encantan: coger café y ‘minear’”"
+                autor="· Omaira Chocó."
               />
             </div>
           </div>
@@ -80,4 +69,4 @@ const GrimaF3 = ({ sound, audioFx }) => {
   );
 };
 
-export default GrimaF3;
+export default MujerF3;

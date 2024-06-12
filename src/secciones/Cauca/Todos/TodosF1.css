@@ -13,7 +13,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  animation: mymove 290s linear infinite alternate;
+
 }
 
 .todos-f1-contenedor{
@@ -88,9 +88,6 @@
     }
   }
 }
-
-
-
 
 @keyframes mymove {
   0% {

@@ -1,0 +1,116 @@
+.vivir-f5 {
+  width: 100%;
+  height: 100%;
+  opacity:0;
+  animation: aparecer 1s ease-in forwards;
+}
+
+.vivir-f5-fondo {
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  background-image: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713230414/assets/guaviare/guayabero/fondo-toninas_xehdup.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.vivir-f5-video {
+  position: absolute;
+  z-index: 5;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+
+  video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    opacity: 1;
+  }
+}
+
+.vivir-f5-interior {
+  position: relative;
+}
+
+.vivir-f5-ilustracion-1 {
+  position: absolute;
+  left: 0px;
+  top: 4vh;
+  cursor: pointer;
+  z-index: 300;
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  animation: aparecer 2s ease-in 1s forwards;
+
+  img {
+    left: 30%;
+    position: absolute;
+    width: 45%;
+    max-width: 150px;
+  }
+}
+
+
+.vivir-f5-frase {
+  position: absolute;
+  left: 0px;
+  top: 24vh;
+  cursor: pointer;
+  z-index: 300;
+  text-align: center;
+  width: 100%;
+  height: 25vh;
+  opacity: 0;
+  animation: aparecer 2s ease-in 1s forwards;
+
+  h4 {
+    width: 100%;
+    text-align: right;
+    transform: translate(-30px, 0);
+  }
+}
+
+.vivir-f5-ilustracion-2 {
+  position: absolute;
+  left: 0px;
+  top: 38vh;
+  cursor: pointer;
+  z-index: 300;
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  animation: aparecer 2s ease-in 1s forwards;
+
+  img {
+    width: 70%;
+  }
+}
+
+.vivir-audio-contenedor {
+  position: absolute;
+  left: 0px;
+  top: 58vh;
+  cursor: pointer;
+  z-index: 300;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  animation: aparecer 2s ease-in 2s forwards;
+  z-index: 400;
+}
+
+@media screen and (orientation: landscape) {
+  .vivir-audio-contenedor {
+    top: 70vh;
+    animation: aparecer 2s ease-in 2s forwards;
+  }
+}
+
+

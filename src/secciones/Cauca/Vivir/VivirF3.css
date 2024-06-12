@@ -1,0 +1,88 @@
+.vivir-f3 {
+  background: url("https://res.cloudinary.com/dumlhmvts/image/upload/v1718118614/cauca/vivir/Fotograma-nin%CC%83as_pxlxyn.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: fadeIn 4s;
+}
+
+.vivir-f3-interior {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    width: 120px;
+    cursor: pointer;
+  }
+}
+
+.vivir-f3-grafica{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  width: 100%;
+
+  img{
+    width: 40%;
+    max-width: 200px;
+  }
+  
+}
+
+.vivir-f3-play{
+ 
+}
+
+.vivir-f3-frase {
+  margin-top: 6vh;
+  text-align: center;
+
+  h3 {
+    text-align: left;
+  }
+
+  h4 {
+    margin-top: 20px;
+    text-align: right;
+    margin-right: 5vw;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .vivir-f3-grafica{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 100%;
+  
+    img{
+      width: 40%;
+      max-width: 200px;
+    }
+    
+  }
+
+  .vivir-f3-frase {
+    margin-top: 2vh;
+    text-align: center;
+  
+    h3 {
+      text-align: left;
+    }
+  
+    h4 {
+      margin-top: 10px;
+      text-align: right;
+      margin-right: 5vw;
+    }
+  }
+
+}

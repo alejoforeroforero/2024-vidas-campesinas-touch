@@ -1,69 +1,72 @@
 .bonanzas-f4 {
-    width: 100%;
-    height: 100%;
-    opacity:0;
-    animation: aparecer 1s ease-in forwards;
-  
-    .bonanzas-f4-fondo {
-      position: absolute;
-      background-color: rgb(0, 0, 0);
-      background-image: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713229892/assets/guaviare/bonanzas/fondo-bonanzas-f4_qy0mgx.jpg");
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      animation: bonanzasF3 45s linear infinite;
-    }
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: aparecer 1s ease-in forwards;
+}
+
+.bonanzas-f4-fondo {
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  background-image: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713229892/assets/guaviare/bonanzas/fondo-bonanzas-f4_qy0mgx.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: bonanzasF4 45s linear infinite;
+}
+
+.bonanzas-f4-interior {
+  position: relative;
+}
+
+.bonanzas-f4-ilustraciones {
+  position: absolute;
+  left: 0px;
+  top: 24vh;
+  cursor: pointer;
+  z-index: 300;
+  text-align: center;
+  width: 100%;
+  height: 25vh;
+  opacity: 0;
+  animation: aparecer 2s ease-in 1s forwards;
+
+  img {
+    width: 50%;
+    max-width: 220px;
   }
-  
-  .bonanzas-f4-ilustraciones {
-    position: absolute;
-    left: 0px;
-    top: 24vh;
-    cursor: pointer;
-    z-index: 300;
-    text-align: center;
-    width: 100%;
-    height: 25vh;
-    opacity: 0;
-    animation: aparecer 2s ease-in 1s forwards;
-  
-    img {
-      left: 30%;
-      position: absolute;
-      width: 35%;
-      max-width: 150px;
-    }
-  }
-  
+}
+
+.bonanzas-audio-contenedor {
+  position: absolute;
+  left: 0px;
+  top: 48vh;
+  cursor: pointer;
+  z-index: 300;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  animation: aparecer 2s ease-in 2s forwards;
+}
+
+@media screen and (orientation: landscape) {
   .bonanzas-audio-contenedor {
-    position: absolute;
-    left: 0px;
-    top: 48vh;
-    cursor: pointer;
-    z-index: 300;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    opacity: 0;
-    animation: aparecer 2s ease-in 2s forwards;
+    top: 58vh;
   }
-  
-  .bonanzas-f4-interior {
-    position: relative;
+}
+
+@keyframes bonanzasF4 {
+  0% {
+    transform: scale(1, 1) translate(0px, 0px);
   }
-  
-  @keyframes bonanzasF3 {
-    0% {
-      transform: scale(1, 1) translate(0px, 0px);
-    }
-    50% {
-      transform: scale(1.1, 1.1) translate(0px, 0px);
-    }
-    100% {
-      transform: scale(1, 1) translate(0px, 0px);
-    }
+  50% {
+    transform: scale(1.1, 1.1) translate(0px, 0px);
   }
-  
+  100% {
+    transform: scale(1, 1) translate(0px, 0px);
+  }
+}

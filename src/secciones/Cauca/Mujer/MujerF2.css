@@ -1,0 +1,39 @@
+.mujer-f2 {
+  background: url("https://res.cloudinary.com/dumlhmvts/image/upload/v1718106745/cauca/mujer/Foto-Laura-Biscue%CC%81_cbv1tb.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: fadeIn 4s;
+
+  .mujer-f2-interior {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+      width: 120px;
+      cursor: pointer;
+    }
+
+    .mujer-f2-frase {
+      margin-top: 6vh;
+      text-align: center;
+
+      h3 {
+        text-align: left;
+      }
+
+      h4 {
+        margin-top: 20px;
+        text-align: right;
+        margin-right: 5vw;
+      }
+    }
+  }
+}

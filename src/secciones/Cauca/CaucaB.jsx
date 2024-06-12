@@ -6,10 +6,9 @@ import {
 } from "../../Redux/states/managerSlice";
 import Todos from "./Todos/Todos";
 import Grima from "./Grima/Grima"
-// import Guayabero from "./Guayabero/Guayabero";
-// import Bonanzas from "./Bonanzas/Bonanzas";
-// import Paz from "./Paz/Paz";
-// import Guardianes from "./Guardianes/Guardianes";
+import Mujer from "./Mujer/Mujer";
+import Vivir from "./Vivir/Vivir";
+
 
 const caceriaSrc =
   "https://res.cloudinary.com/dvtbfxkn9/video/upload/v1717709248/Tiempos_caceria_MAY22_x0evfe.mp3";
@@ -38,6 +37,16 @@ const lineasB = [
     id: "linea-grima",
     titulo: "Grima",
     navegacion: "cauca-grima-navegacion",
+  },
+  {
+    id: "linea-mujer",
+    titulo: "Mujer",
+    navegacion: "cauca-mujer-navegacion",
+  },
+  {
+    id: "linea-vivir",
+    titulo: "Vivir",
+    navegacion: "cauca-vivir-navegacion",
   },
 ];
 
@@ -198,10 +207,10 @@ const CaucaB = () => {
         <Grima sound={audioCapB.current} audioFx={audioFx} /> 
       </div>
       <div ref={mujerRef}>
-        {/* <Bonanzas sound={audioCapB.current} audioFx={audioFx} /> */}
+        <Mujer sound={audioCapB.current} audioFx={audioFx} />
       </div>
       <div ref={vivirRef}>
-        {/* <Paz sound={audioCapB.current} audioFx={audioFx} /> */}
+        <Vivir sound={audioCapB.current} audioFx={audioFx} />
       </div>
     </div>
   );

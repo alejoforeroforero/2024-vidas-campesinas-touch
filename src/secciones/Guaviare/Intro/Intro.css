@@ -4,10 +4,10 @@
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 100vw;
+  width: 100vh;
   opacity: 0;
-  animation: aparecer 1s ease-in forwards;
+  animation: aparecer 1s ease-in 1s forwards;
 }
 
 .guaviare-video {
@@ -17,7 +17,7 @@
   width: 100%;
   height: 100%;
   opacity: 0;
-  animation: aparecer 1s ease-in forwards;
+  animation: aparecer 0.4s ease-in forwards;
 
   video {
     height: 100vh;
@@ -102,22 +102,22 @@
 }
 
 .guaviare-intro-siguiente {
-  text-align:right;
+  text-align: right;
   opacity: 0;
   animation: aparecer 2s ease-in 4s forwards;
 
-  img{
+  img {
     cursor: pointer;
     width: 40px;
-    transform:translate(-8vw, 0);
+    transform: translate(-8vw, 0);
   }
 }
 
 .guaviare-intro-inciar {
-  text-align:center;
+  text-align: center;
   opacity: 0;
 
-  img{
+  img {
     cursor: pointer;
     width: 180px;
   }
@@ -126,33 +126,6 @@
 .guaviare-inciar-aparecer {
   animation: aparecerTxt 4s ease-in 6s forwards;
 }
-
-
-/* .guaviare-descripcion-grafica {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  opacity: 0;
-  display: flex;
-  height: 40vh;
-  justify-content: center;
-  animation: aparecer 5s ease-in forwards;
-  border: 1px solid red;
-}
-
-.guaviare-descripcion-grafica-img {
-  height: 15vh;
-  width: 100%;
-  position: relative;
-
-  img {
-    position: absolute;
-    right: 0;
-    width: 30%;
-    max-width: 200px;
-  }
-} */
 
 .guaviare-intro-scroll {
   position: absolute;

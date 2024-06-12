@@ -41,11 +41,11 @@
 .grima-f4-frase{
   margin-top: 4vh;
   text-align: center;
-  padding: 0 2vw;
+  width: 60%;
 
   h3{
-    font-size: 1.4rem;
-  }
+    text-align: center;
+  } 
 
   h4{
     margin-top: 10px;

@@ -8,7 +8,6 @@ import BonanzasF4 from './BonanzasF4';
 import flechaAdelante from '../../../assets/generales/flecha-adelante.png';
 import flechaAtras from '../../../assets/generales/flecha-atras.png';
 
-
 import './Bonanzas.css'
 
 const Bonanzas = () => {

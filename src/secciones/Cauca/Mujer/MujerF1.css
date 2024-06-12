@@ -1,44 +1,48 @@
-.bonanzas-f1 {
+.mujer-f1 {
   width: 100%;
   height: 100%;
   opacity: 0;
   animation: aparecer 1s ease-in forwards;
 }
 
-.bonanzas-f1-fondo {
-  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713230263/assets/guaviare/bonanzas/fondo-bonanzas_ghxrzb.jpg");
+.mujer-f1-fondo {
+  background: url("https://res.cloudinary.com/dumlhmvts/image/upload/v1718105841/cauca/mujer/Portada-Mujeres_fotglf.jpg");
   width: 100%;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  animation: bonanzasAnimacion 50s linear infinite alternate;
+  animation: mymove 440s linear infinite alternate;
 }
 
-.bonanzas-f1-contenedor{
-  padding-top: 10vh;
+.mujer-f1-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
 }
 
-.bonanzas-f1-titulo {
+.mujer-f1-titulo {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: left;
   flex-direction: column;
   padding: 0 5%;
+  margin-top: 8vh;
 
   h2 {
-     text-align: left;
-    width: 80%;
-    color: #00fffe;
+    text-align: left;
+    width: 100%;
+    color: #caf1fd;
     font-weight: 100;
     margin-bottom: 16px;
     font-size: 2.2rem;
   }
 
   hr {
-    background-color: #00fffe;
+    background-color: #caf1fd;
     height: 6px;
     width: 150px;
     border: none;
@@ -47,39 +51,61 @@
   @media screen and (orientation: landscape) {
     h2 {
       font-size: 2.4rem;
-      width: 40%;
+      width: 60%;
     }
   }
 
   @media (min-width: 1600px) {
     h2 {
       font-size: 3.6rem;
-      width: 70%;
+      width: 100%;
     }
   }
 }
 
-
-.bonanzas-f1-bottom {
-  margin-top: 10%;
-  height: 22vh;
+.mujer-f1-centro {
   position: relative;
   width: 100%;
-  text-align: center;
-}
+  text-align: right;
 
-@media screen and (orientation: landscape) {
-  .bonanzas-f1-bottom  {
-    height: 24vh;
+  img {
+    width: 30%;
+    transform: translate(-12vw, 0);
   }
 }
 
-.bonanzas-f1-planta {
-  height: 100%;
-  max-height: 260px;
+@media screen and (orientation: landscape) {
+  .mujer-f1-centro {
+    img {
+      width: 25%;
+      transform: translate(-6vw, 0);
+    }
+  }
 }
 
-@keyframes bonanzasAnimacion {
+.mujer-f1-bottom {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top: 10vh;
+  bottom: 17vh;
+
+  img {
+    width: 50%;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .mujer-f1-bottom {
+    bottom: 20vh;
+
+    img {
+      width: 65%;
+    }
+  }
+}
+
+@keyframes mymove {
   0% {
     transform: scale(1, 1) translate(0px, 0px);
   }
