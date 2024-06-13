@@ -13,7 +13,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  animation: mymove 50s linear infinite alternate;
+  animation: caceriaF1 50s linear infinite alternate;
 }
 
 .caceria-f1-contenedor{
@@ -97,7 +97,7 @@
   max-width: 140px;
 }
 
-@keyframes mymove {
+@keyframes caceriaF1 {
   0% {
     transform: scale(1, 1) translate(0px, 0px);
   }

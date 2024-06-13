@@ -58,7 +58,7 @@ const EstigmaF2 = () => {
                 {!mostrarPlay && <p>Espera un momento...</p>}
               </div>
               <div className="estigma-f2-frase">
-                <h2>La mata no es quien mata</h2>
+                <h3>La mata no es quien mata</h3>
               </div>
             </div>
           </div>

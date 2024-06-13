@@ -47,10 +47,12 @@ const GuardianesF4 = () => {
         <div className="mask-general">
           <div className="contenido-general">
             <div className="guardianes-f4-interior">
-              {mostrarPlay && (
-                <img onClick={handleOnClick} src={playImg} alt="play" />
-              )}
-              {!mostrarPlay && <p>Espera un momento...</p>}
+              <div className="guardianes-f4-play">
+                {mostrarPlay && (
+                  <img onClick={handleOnClick} src={playImg} alt="play" />
+                )}
+                {!mostrarPlay && <p>Espera un momento...</p>}
+              </div>
               <div className="guardianes-f4-frase">
                 <h3>Raudal rupestre</h3>
                 <p>

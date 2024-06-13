@@ -31,8 +31,8 @@
   text-align: center;
   font-size: 0.9rem;
   left: 5%;
-  top: 62vh;
-  width: 95%;
+  top: 60vh;
+  width: 100%;
   margin: auto;
   opacity: 0;
   animation: aparecer 4s ease-out 2s forwards;
@@ -44,7 +44,8 @@
   }
 
   .vivir-f4-p {
-    padding: 0 10%;
+    padding: 0 5%;
     font-size: 1.1rem;
+    top: 64vh;
   }
 }

@@ -85,16 +85,33 @@
   width: 100%;
   opacity: 0;
   animation: aparecer 2s ease-in 1s forwards;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
     width: 70%;
   }
 }
 
+@media screen and (orientation: landscape) {
+  .vivir-f5-ilustracion-2 {
+    top: 33vh;
+    text-align: center;
+    height: 30vh;
+  
+    img {
+      width: 70%;
+      max-width: 400px;
+    }
+  }
+}
+
 .vivir-audio-contenedor {
   position: absolute;
   left: 0px;
-  top: 58vh;
+  top: 59vh;
   cursor: pointer;
   z-index: 300;
   width: 100%;
@@ -108,7 +125,7 @@
 
 @media screen and (orientation: landscape) {
   .vivir-audio-contenedor {
-    top: 70vh;
+    top: 63vh;
     animation: aparecer 2s ease-in 2s forwards;
   }
 }

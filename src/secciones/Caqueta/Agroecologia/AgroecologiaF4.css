@@ -18,41 +18,37 @@
   flex-direction: column;
 }
 
-.agroecologia-f4-img{
+.agroecologia-f4-img {
   text-align: center;
 
-  img{
-    width:58%;
+  img {
+    width: 58%;
     max-width: 400px;
     transform: translate(0, -10vh);
   }
 }
 
 @media screen and (orientation: portrait) {
-  .agroecologia-f4-img{
+  .agroecologia-f4-img {
     text-align: center;
-  
-    img{
-      width:58%;
+
+    img {
+      width: 58%;
       max-width: 400px;
       transform: translate(0, -2vh);
     }
   }
 }
 
-.agroecologia-f4-play{
-  img{
-    width:120px;
+.agroecologia-f4-play {
+  img {
+    width: 120px;
   }
 }
 
 .agroecologia-f4-frase {
   margin-top: 11vh;
   text-align: center;
-
-  h3 {
-    font-size: 1.1rem;
-  }
 }
 
 @media screen and (orientation: portrait) {

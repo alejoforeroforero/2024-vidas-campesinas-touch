@@ -58,7 +58,7 @@ const AgroecologiaF4 = () => {
                 {!mostrarPlay && <p>Espera un momento...</p>}
               </div>
               <div className="agroecologia-f4-frase">
-                <h2>La alternativa del biodigestor</h2>
+                <h3>La alternativa del biodigestor</h3>
               </div>
             </div>
           </div>

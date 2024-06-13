@@ -123,7 +123,7 @@ const Guaviare = () => {
 
   useEffect(() => {
     dispatch(cambiarSeccion("guaviare-intro"));
-    //dispatch(cambiarSeccion("jorge-relatos"));
+    //dispatch(cambiarSeccion("jorge-bio"));
     dispatch(cambiarTemaBActual("caceria"));
   }, []);
 
@@ -165,7 +165,7 @@ const Guaviare = () => {
     if (!canalBOn) {
       setTimeout(() => {
         if (!audioCap.current?.playing()) {
-          audioCap.current?.play();
+          //audioCap.current?.play();
         }
       }, 800);
     }

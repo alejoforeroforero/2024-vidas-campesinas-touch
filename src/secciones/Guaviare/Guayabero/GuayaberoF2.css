@@ -7,28 +7,31 @@
   background-repeat: no-repeat;
   position: absolute;
   animation: fadeIn 4s;
+}
 
-  .guayabero-f2-interior{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    img{
-      width:25%;
-      min-width: 80px;
-      max-width: 200px;
-      cursor: pointer;
-    }
-  
-    .guayabero-f2-frase{
-      margin-top: 10vh;
-  
-      p{
-        text-align: right;
-        transform: translate(25px, 0);
-      }
-    }
+.guayabero-f2-interior {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.guayabero-f2-play {
+  height: 140px;
+  img {
+    width: 120px;
+    cursor: pointer;
+  }
+}
+
+.guayabero-f2-frase {
+  margin-top: 10vh;
+  width: 100%;
+  text-align: center;
+
+  h4{
+    transform: translate(55px, 10px);
   }
 }

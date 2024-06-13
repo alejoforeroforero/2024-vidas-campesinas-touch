@@ -43,10 +43,16 @@
   }
 }
 
-.bonanzas-audio-contenedor-f2{
-  margin-top: 1vh;
+.bonanzas-audio-contenedor-f2 {
+  margin-top: 6vh;
   width: 100%;
   cursor: pointer;
   display: flex;
   justify-content: center;
+}
+
+@media screen and (orientation: portrait) {
+  .bonanzas-audio-contenedor-f2 {
+    margin-top: 1vh;
+  }
 }

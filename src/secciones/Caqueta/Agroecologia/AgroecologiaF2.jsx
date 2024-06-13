@@ -58,7 +58,7 @@ const AgroecologiaF2 = () => {
                 {!mostrarPlay && <p>Espera un momento...</p>}
               </div>
               <div className="agroecologia-f2-frase">
-                <h2>La huerta Lupe</h2>
+                <h3>La huerta Lupe</h3>
               </div>
             </div>
           </div>

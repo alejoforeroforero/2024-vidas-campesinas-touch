@@ -91,8 +91,8 @@ const Cauca = () => {
   };
 
   useEffect(() => {
-    //dispatch(cambiarSeccion("cauca-intro"));
-    dispatch(cambiarSeccion("cauca-guardia-bio"));
+    dispatch(cambiarSeccion("cauca-intro"));
+    //dispatch(cambiarSeccion("cauca-guardia-bio"));
 
     const newSound = new Howl({
       src: [audioCaucaGaleria], // Replace with your audio source

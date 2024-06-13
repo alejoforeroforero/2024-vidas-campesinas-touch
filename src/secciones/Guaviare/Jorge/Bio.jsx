@@ -34,7 +34,7 @@ const Bio = ({ sound, audioFx }) => {
     if (currentVolume < 0.3) {
       const acciones = {
         tipo: "volumen",
-        valor: 1,
+        valor: 0,
       };
       audioFx(acciones);
     }

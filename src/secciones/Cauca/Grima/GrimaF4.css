@@ -9,7 +9,7 @@
   animation: fadeIn 4s;
 }
 
-.grima-f4-interior{
+.grima-f4-interior {
   width: 100%;
   height: 100%;
   display: flex;
@@ -17,38 +17,51 @@
   flex-direction: column;
 }
 
-.grima-f4-grafica{
+.grima-f4-grafica {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 35vh;
 
-  img{
+  img {
     height: 85%;
     transform: translate(0, 3vh);
   }
-
 }
 
-.grima-f4-play{
+.grima-f4-play {
   height: 18vh;
-  img{
-    width:120px;
+  img {
+    width: 120px;
     cursor: pointer;
   }
 }
 
-.grima-f4-frase{
+.grima-f4-frase {
   margin-top: 4vh;
   text-align: center;
-  width: 60%;
+  width: 70%;
 
-  h3{
+  h3 {
     text-align: center;
-  } 
-
-  h4{
-    margin-top: 10px;
-    transform: translate(12vw, 0);
   }
+
+  h4 {
+    margin-top: 10px;
+    transform: translate(6vw, 0);
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .grima-f4-frase {
+    margin-top: 6vh;
+    width: 100%;
+
+    h4 {
+      margin-top: 10px;
+      transform: translate(18vw, 0);
+    }
+  }
+
+  
 }

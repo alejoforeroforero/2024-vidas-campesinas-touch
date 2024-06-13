@@ -7,32 +7,36 @@
   background-repeat: no-repeat;
   position: absolute;
   animation: fadeIn 4s;
+}
 
-  .todos-f2-interior{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    img{
-      width:120px;
-      cursor: pointer;
-    }
-  
-    .todos-f2-frase{
-      margin-top: 4vh;
-      text-align: center;
+.todos-f2-interior {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-      h3{
-        font-size: 1.4rem;
-      }
+.todos-f2-play{
+  height: 120px;
+  img {
+    width: 120px;
+    cursor: pointer;
+  }
 
-      p{
-        font-size: 1rem;
-        margin-top: 40px;
-      }
-    }
+}
+
+.todos-f2-frase {
+  margin-top: 4vh;
+  text-align: center;
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-top: 40px;
   }
 }

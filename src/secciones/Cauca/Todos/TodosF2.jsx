@@ -47,10 +47,12 @@ const TodosF2 = ({ sound, audioFx }) => {
         <div className="mask-general">
           <div className="contenido-general">
             <div className="todos-f2-interior">
-              {mostrarPlay && (
-                <img onClick={handleOnClick} src={playImg} alt="play" />
-              )}
-              {!mostrarPlay && <p>Espera un momento...</p>}
+              <div className="todos-f2-play">
+                {mostrarPlay && (
+                  <img onClick={handleOnClick} src={playImg} alt="play" />
+                )}
+                {!mostrarPlay && <p>Espera un momento...</p>}
+              </div>
               <div className="todos-f2-frase">
                 <h3>Mapa de colores</h3>
                 <p>

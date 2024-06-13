@@ -3,7 +3,8 @@ import { useDispatch } from "react-redux";
 import { pararAudios } from "../../../Redux/states/managerSlice";
 import YT from "../../../components/YT";
 import playImg from "../../../assets/generales/play_video.png";
-const grafica = 'https://res.cloudinary.com/dumlhmvts/image/upload/v1718070589/cauca/grima/Grima_zfexbj.png'
+const grafica =
+  "https://res.cloudinary.com/dumlhmvts/image/upload/v1718070589/cauca/grima/Grima_zfexbj.png";
 const guayaberoThumbnail =
   "https://res.cloudinary.com/dumlhmvts/image/upload/v1718070704/cauca/grima/Fotograma-videoclip-Grima_ujr8tl.jpg";
 import "./GrimaF2.css";
@@ -47,7 +48,7 @@ const GrimaF2 = ({ sound, audioFx }) => {
       <div className="grima-f2">
         <div className="mask-general">
           <div className="contenido-general">
-          <div className="grima-f2-interior">
+            <div className="grima-f2-interior">
               <div className="grima-f2-grafica">
                 <img src={grafica} alt="" />
               </div>

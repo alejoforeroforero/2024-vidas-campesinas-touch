@@ -43,18 +43,28 @@
 }
 
 @media screen and (orientation: portrait) {
-
+  .grima-f3-audio-contenedor1 {
+    top: 12vh;
+  }
 }
 
 .grima-f3-audio-contenedor2 {
   width: 100%;
   position: absolute;
   left: 0px;
-  top: 65vh;
+  top: 55vh;
   cursor: pointer;
   z-index: 300;
   display: flex;
   justify-content: center;
   opacity: 0;
   animation: aparecer 3s ease-in-out 1s forwards;
+}
+
+
+
+@media screen and (orientation: portrait) {
+  .grima-f3-audio-contenedor2 {
+    top: 52vh;
+  }
 }

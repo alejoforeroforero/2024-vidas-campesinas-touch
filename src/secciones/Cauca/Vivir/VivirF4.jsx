@@ -22,9 +22,6 @@ const VivirF4 = () => {
             <p className="vivir-f4-p">
             Fragmento de la etnografía sonora “Cultivo de alegría”. Entre risas y llamados, una polifonía de voces celebra el cuidado colectivo y la vida en comunidad.
             </p>
-            <div className="canal-b-abajo">
-              <img src={abajo} alt="abajo" />
-            </div>
           </div>
         </div>
       </div>

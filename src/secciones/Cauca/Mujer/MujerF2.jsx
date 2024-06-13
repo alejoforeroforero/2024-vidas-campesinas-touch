@@ -47,12 +47,17 @@ const MujerF2 = ({ sound, audioFx }) => {
         <div className="mask-general">
           <div className="contenido-general">
             <div className="mujer-f2-interior">
-              {mostrarPlay && (
-                <img onClick={handleOnClick} src={playImg} alt="play" />
-              )}
-              {!mostrarPlay && <p>Espera un momento...</p>}
+              <div className="mujer-f2-play">
+                {mostrarPlay && (
+                  <img onClick={handleOnClick} src={playImg} alt="play" />
+                )}
+                {!mostrarPlay && <p>Espera un momento...</p>}
+              </div>
               <div className="mujer-f2-frase">
-                <h3>“Las mujeres también podemos liderar procesos o trabajar en la finca”</h3>
+                <h3>
+                  “Las mujeres también podemos liderar procesos o trabajar en la
+                  finca”
+                </h3>
                 <h4>· Laura Biscué.</h4>
               </div>
             </div>

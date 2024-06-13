@@ -29,6 +29,8 @@
 }
 
 .estigma-f2-play {
+  height: 120px;
+
   img {
     width: 120px;
     transform: translate(0, -10vh);
@@ -38,8 +40,4 @@
 .estigma-f2-frase {
   margin-top: -4vh;
   text-align: center;
-
-  h3 {
-    font-size: 1.1rem;
-  }
 }

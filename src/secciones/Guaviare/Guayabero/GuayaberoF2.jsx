@@ -13,7 +13,6 @@ const GuayaberoF2 = ({ sound, audioFx }) => {
   const [mostrarPlay, setMostrarPlay] = useState(false);
 
   useEffect(() => {
-
     const currentVolume = sound?.volume();
 
     if (currentVolume < 0.4) {
@@ -76,10 +75,12 @@ const GuayaberoF2 = ({ sound, audioFx }) => {
         <div className="mask-general">
           <div className="contenido-general">
             <div className="guayabero-f2-interior">
-              {mostrarPlay && (
-                <img onClick={handleOnClick} src={playImg} alt="play" />
-              )}
-              {!mostrarPlay && <p>Espera un momento...</p>}
+              <div className="guayabero-f2-play">
+                {mostrarPlay && (
+                  <img onClick={handleOnClick} src={playImg} alt="play" />
+                )}
+                {!mostrarPlay && <p>Espera un momento...</p>}
+              </div>
               <div className="guayabero-f2-frase">
                 <h3>“El río es fuente de vida”.</h3>
                 <h4>· Antonio Molano</h4>

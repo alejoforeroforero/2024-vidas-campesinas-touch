@@ -9,7 +9,7 @@
   animation: fadeIn 4s;
 }
 
-.grima-f2-interior{
+.grima-f2-interior {
   width: 100%;
   height: 100%;
   display: flex;
@@ -17,32 +17,28 @@
   flex-direction: column;
 }
 
-.grima-f2-grafica{
+.grima-f2-grafica {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 35vh;
 
-  img{
+  img {
     height: 70%;
     transform: translate(0, 6vh);
   }
-
 }
 
-.grima-f2-play{
-  height: 18vh;
-  img{
-    width:120px;
+.grima-f2-play {
+  height: 120px;
+  
+  img {
+    width: 120px;
     cursor: pointer;
   }
 }
 
-.grima-f2-frase{
+.grima-f2-frase {
   margin-top: 4vh;
   text-align: center;
-
-  h3{
-    font-size: 1.4rem;
-  }
 }

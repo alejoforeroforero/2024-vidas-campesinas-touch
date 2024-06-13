@@ -15,11 +15,6 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-
-  img {
-    width: 120px;
-    cursor: pointer;
-  }
 }
 
 .vivir-f3-grafica{
@@ -37,6 +32,12 @@
 }
 
 .vivir-f3-play{
+  height: 120px;
+
+  img {
+    width: 120px;
+    cursor: pointer;
+  }
  
 }
 

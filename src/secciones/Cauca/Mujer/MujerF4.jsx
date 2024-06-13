@@ -48,10 +48,12 @@ const MujerF4 = ({ sound, audioFx }) => {
         <div className="mask-general">
           <div className="contenido-general">
             <div className="mujer-f4-interior">
-              {mostrarPlay && (
-                <img onClick={handleOnClick} src={playImg} alt="play" />
-              )}
-              {!mostrarPlay && <p>Espera un momento...</p>}
+              <div className="mujer-f4-play">
+                {mostrarPlay && (
+                  <img onClick={handleOnClick} src={playImg} alt="play" />
+                )}
+                {!mostrarPlay && <p>Espera un momento...</p>}
+              </div>
               <div className="mujer-f4-frase">
                 <h3>“El oro solo se muestra a personas de buen corazón”</h3>
                 <h4>· Omaira Chocó</h4>

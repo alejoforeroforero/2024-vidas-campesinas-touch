@@ -47,12 +47,17 @@ const VivirF2 = ({ sound, audioFx }) => {
         <div className="mask-general">
           <div className="contenido-general">
             <div className="vivir-f2-interior">
-              {mostrarPlay && (
-                <img onClick={handleOnClick} src={playImg} alt="play" />
-              )}
-              {!mostrarPlay && <p>Espera un momento...</p>}
+              <div className="vivir-f2-play">
+                {mostrarPlay && (
+                  <img onClick={handleOnClick} src={playImg} alt="play" />
+                )}
+                {!mostrarPlay && <p>Espera un momento...</p>}
+              </div>
               <div className="vivir-f2-frase">
-                <h3>“Se necesita que haya paz en el territorio. Unión y comprensión entre todos”</h3>
+                <h3>
+                  “Se necesita que haya paz en el territorio. Unión y
+                  comprensión entre todos”
+                </h3>
                 <h4>· Leonilde Ararat</h4>
               </div>
             </div>
