@@ -1,12 +1,7 @@
-.cierre-relatos {
-  background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1716593255/caqueta/cierre/video-cierre-caqueta_eyuvoc.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.cierre-relatos-caqueta {
   position: absolute;
   height: 100%;
   width: 100%;
-  animation: aparecer 6s;
 }
 
 .cierre-titulo-caqueta {
@@ -46,7 +41,7 @@
   opacity: 0;
   visibility: hidden;
 
-  animation: aparecer 10s ease-in 24s forwards;
+  animation: aparecer 2s ease-in 2s forwards;
 
   div {
     text-align: center;
@@ -101,80 +96,18 @@
 
 }
 
-.youtube-animacion {
-  position: absolute;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  background-color: black;
-  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713230337/assets/guaviare/cierre/animacion_iwn7lp.jpg");
-  width: 100vw;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 22;
-  overflow: hidden;
-}
-
-.youtube-animacion-interior {
-  position: relative;
-
-  div:first-child {
-    text-align: center;
-    margin-top: 40vh;
-    height: 10vh;
-
-    p {
-      font-size: 1rem;
-    }
-
-    img {
-      width: 80px;
-      cursor: pointer;
-      transition: 0.5s;
-
-      &&:hover {
-        transform: scale(1.05);
-      }
-    }
-  }
-
-  div:nth-child(2) {
-    text-align: center;
-    margin-top: 8vh;
-
-    h3 {
-      text-align: center;
-    }
-  }
-}
-
-.youtube-animacion-interior-salida{
-    position: absolute;
-    right: 0;
-    top:0;
-    width: 60px;
-    cursor: pointer;
-}
-
-.cierre-animacion-frase{
-  max-width: 800px;
-  padding: 0 5%;
-} 
-
-.cierre-continuar{
+.cierre-continuar-caqueta {
   position: absolute;
   left: 0;
   bottom: 0;
   height: 15vh;
   width: 100%;
   text-align: center;
+  animation: aparecer 6s ease-in 0s forwards;
 }
 
 @media screen and (orientation: portrait) {
-  .cierre-continuar{
+  .cierre-continuar {
     height: 25vh;
   }
 }
-

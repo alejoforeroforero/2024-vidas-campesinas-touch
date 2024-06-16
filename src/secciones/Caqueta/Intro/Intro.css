@@ -1,13 +1,13 @@
 .caqueta-intro {
-  background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1716592770/caqueta/home/loop-caqueta_hanjjg.jpg");
+  background: url("https://res.cloudinary.com/dhz9jfn78/image/upload/v1718568427/caqueta/home/Fotograma-Video-INTRO-Caqueta%CC%81-con-sonido_uw5aas.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 100vw;
+  width: 100vh;
   opacity: 0;
-  animation: aparecer 1s ease-in forwards;
+  animation: aparecer 1s ease-in 1s forwards;
 }
 
 .caqueta-video {
@@ -16,6 +16,8 @@
   top: 0px;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  animation: aparecer 0.4s ease-in forwards;
 
   video {
     height: 100vh;
@@ -38,11 +40,18 @@
   }
 }
 
+.caqueta-sol-desaparecer {
+  animation: desaparecerTxt 2s ease-in forwards;
+}
+
+
 .caqueta-titulo {
   height: 16vh;
   display: flex;
   justify-content: center;
-  animation: aparecer 2s;
+  align-items: self-end;
+  opacity: 0;
+  animation: aparecer 2s ease-in forwards;
 
   h1 {
     color: #bcad26;
@@ -52,7 +61,7 @@
 
 @media screen and (orientation: landscape) {
   .caqueta-titulo {
-    height: 20vh;
+   
   }
 }
 
@@ -63,76 +72,102 @@
   flex-direction: column;
   align-items: start;
 
-  .caqueta-descripcion-luna{   
-      position: absolute;
-      top: -2%;
-      right: 10%;
-      width: 13%;
-      max-width: 50px;    
-  }
-  
   h2 {
     color: rgb(255, 255, 255);
     width: 100%;
     text-align: left;
     opacity: 0;
-    animation: aparecer 3s ease-in-out 1s forwards;
+    animation: aparecer 3s ease-in-out 3s forwards;
   }
 
-  hr {
+  img {
     width: 40%;
-    height: 6px;
-    background-color: #bcad26;
     border: 0px;
     margin-top: 2vh;
     opacity: 0;
-    animation: aparecer 3s ease-in-out 1s forwards;
+    animation: aparecer-linea 4s ease-in-out 1s forwards;
   }
+}
 
-  .caqueta-descripcion-p-contenedor {
-    position: relative;
-    height: 44vh;
-    width: 95%;
-    opacity: 0;
-    animation: aparecer 2s ease-in-out 3s forwards;
-  }
+.caqueta-descripcion-luna{   
+  position: absolute;
+  margin-top: 0;
+  top: -2%;
+  right: 10%;
+  width: 13% !important;
+  max-width: 50px !important;  
+  animation: none; 
+}
+
+.caqueta-descripcion-p-contenedor {
+  position: relative;
+  height: 22vh;
+  width: 95%;
+  opacity: 0;
+  animation: aparecer 2s ease-in-out 4s forwards;
 
   p {
     position: absolute;
     text-align: left;
     margin-top: 2vh;
-  }
-
-  .caqueta-descripcion-p1 {
-    visibility: hidden;
-  }
-
-  .caqueta-descripcion-p2 {
-    visibility: hidden;
+    opacity: 0;
   }
 }
 
-.caqueta-intro-p1 {
-  animation: aparecerTxt 4s;
+@media screen and (orientation: portrait) {
+  .caqueta-descripcion-p-contenedor {
+    height: 25vh;
+  }
 }
 
-.caqueta-intro-p1-des {
-  animation: desaparecerTxt 1s forwards;
+.caqueta-intro-p-aparecer {
+  animation: aparecerTxt 4s ease-in 3s forwards;
+}
+
+.caqueta-intro-p-desaparecer {
+  animation: desaparecerTxt 2s ease-in forwards;
+}
+
+.caqueta-intro-siguiente {
+  text-align: right;
+  opacity: 0;
+  animation: aparecer 2s ease-in 4s forwards;
+
+  img {
+    cursor: pointer;
+    width: 40px;
+    transform: translate(-8vw, 0);
+  }
+}
+
+.caqueta-intro-inciar {
+  text-align: center;
+  opacity: 0;
+
+  img {
+    cursor: pointer;
+    width: 180px;
+  }
+}
+
+.caqueta-inciar-aparecer {
+  animation: aparecerTxt 4s ease-in 6s forwards;
 }
 
 .caqueta-intro-scroll {
   position: absolute;
-  bottom: 60px;
+  bottom: 0vh;
   text-align: center;
   width: 100%;
+  opacity: 0;
+  animation: aparecer 4s ease-in 10s forwards;
   img {
     width: 200px !important;
   }
 }
 
-
-@media screen and (orientation: landscape) {
+@media screen and (orientation: portrait) {
   .caqueta-intro-scroll {
-    bottom: 10px;
+    bottom: 0vh;
   }
 }

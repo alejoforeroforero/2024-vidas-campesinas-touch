@@ -1,6 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { cambiarSeccion } from "../../Redux/states/managerSlice";
+import {
+  cambiarSeccion,
+  cambiarTemaBActual,
+} from "../../Redux/states/managerSlice";
 import Cargando from "../../components/Cargando";
 
 import IntroCaqueta from "./Intro/Intro";
@@ -25,7 +28,26 @@ import Inserto2 from "./Insertos/Inserto2";
 import Inserto3 from "./Insertos/Inserto3";
 
 import Galeria from "./Cierre/Galeria";
-import CierreVideo from './Cierre/Relatos'
+import CierreVideo from "./Cierre/Relatos";
+
+import { Howl } from "howler";
+
+import "./Caqueta.css";
+
+const p1P2Src =
+  "https://res.cloudinary.com/dvtbfxkn9/video/upload/v1717709241/Guaviare_Personaje_1_y_2_vfgizq.mp3";
+
+const p3P4Src =
+  "https://res.cloudinary.com/dvtbfxkn9/video/upload/v1717802753/PERSONAJE_3_y_4_wnllxl.mp3";
+
+const p5P6Src =
+  "https://res.cloudinary.com/dvtbfxkn9/video/upload/v1717802753/Personaje_5_y_6_lf8vav.mp3";
+
+const p7P8Src =
+  "https://res.cloudinary.com/dvtbfxkn9/video/upload/v1717802753/PErsonaje_7_y_8_tgmjds.mp3";
+
+const videoCierre =
+  "https://res.cloudinary.com/dhz9jfn78/video/upload/v1716486447/caqueta/cierre/Video_cierre_Caqueta_ok_p_e68rvx.mp4";
 
 const lineas = [
   {
@@ -58,26 +80,100 @@ const Caqueta = () => {
     (state) => state.managerReducer.mostrarLineasA
   );
 
+  const canalBOn = useSelector((state) => state.managerReducer.canalBOn);
+
+  const videoCierreRef = useRef(null);
+
+  const audioCap = useRef(null);
+  const [audioSrc, setAudioSrc] = useState(p1P2Src);
+
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(cambiarSeccion("caqueta-intro"));
+    //dispatch(cambiarSeccion("caqueta-galeria"));
+    dispatch(cambiarTemaBActual("estigma"));
+  }, []);
+
+  useEffect(() => {
+    if (canalBOn) {
+      audioCap.current?.pause();
+    }
+
+    if (seccion == "caqueta-intro") {
+      setAudioSrc("");
+      // } else if (seccion == "jorge-bio") {
+      //   setAudioSrc(p1P2Src);
+      // } else if (seccion == "jorge-youtube") {
+      //   setAudioSrc(p1P2Src);
+      // } else if (seccion == "jorge-relatos") {
+      //   setAudioSrc(p1P2Src);
+      // } else if (seccion == "jorge-galeria") {
+      //   setAudioSrc(p1P2Src);
+      // } else if (seccion == "carlos-bio") {
+      //   setAudioSrc(p1P2Src);
+      // } else if (seccion == "carlos-youtube") {
+      //   setAudioSrc(p1P2Src);
+      // } else if (seccion == "carlos-relatos") {
+      //   setAudioSrc(p1P2Src);
+      // } else if (seccion == "carlos-galeria") {
+      //   setAudioSrc(p1P2Src);
+      // } else if (seccion == "dayana-bio") {
+      //   setAudioSrc(p3P4Src);
+      // } else if (seccion == "dayana-youtube-1") {
+      //   setAudioSrc(p3P4Src);
+      // } else if (seccion == "dayana-youtube-2") {
+      //   setAudioSrc(p3P4Src);
+      // } else if (seccion == "dayana-galeria") {
+      //   setAudioSrc(p3P4Src);
+    } else {
+      setAudioSrc("");
+    }
+
+    if (!canalBOn) {
+      setTimeout(() => {
+        if (!audioCap.current?.playing()) {
+          //audioCap.current?.play();
+        }
+      }, 800);
+    }
+
+    if (seccion != "caqueta-cierre") {
+      videoCierreRef.current.pause();
+      videoCierreRef.current.style.visibility = "hidden";
+    }
+  }, [seccion, canalBOn]);
+
+  useEffect(() => {
+    audioCap.current = new Howl({
+      src: [audioSrc],
+      loop: true,
+      volume: 1,
+    });
+
+    return () => {
+      audioCap.current.unload();
+    };
+  }, [audioSrc]);
 
   const handleNavegacion = (id) => {
     if (id == "caqueta-moyano-navegacion") {
       dispatch(cambiarSeccion("moyano-bio"));
     } else if (id == "caqueta-betancourt-navegacion") {
       dispatch(cambiarSeccion("betancourt-bio"));
-    }else if (id == "caqueta-caleno-navegacion") {
+    } else if (id == "caqueta-caleno-navegacion") {
       dispatch(cambiarSeccion("caleno-bio"));
-    }else if (id == "caqueta-cierre-navegacion") {
+    } else if (id == "caqueta-cierre-navegacion") {
       dispatch(cambiarSeccion("caqueta-galeria"));
     }
   };
 
-  useEffect(() => {
-    dispatch(cambiarSeccion("caqueta-intro"));
-  }, []);
-
   return (
     <div className="capitulo">
+      <div className="video-caqueta-cierre">
+        <video ref={videoCierreRef} playsInline muted src={videoCierre}></video>
+      </div>
+
       {mostrarLineasA && (
         <div className="lineas-a">
           {lineas.map((linea) => {
@@ -96,7 +192,9 @@ const Caqueta = () => {
         </div>
       )}
       {descargando && <Cargando />}
-      {seccion == "caqueta-intro" && <IntroCaqueta />}
+      {seccion == "caqueta-intro" && (
+        <IntroCaqueta videoCierre={videoCierreRef} />
+      )}
       {seccion == "moyano-bio" && <MoyanoBio />}
       {seccion == "moyano-youtube-1" && <MoyanoYoutube1 />}
       {seccion == "moyano-relatos" && <MoyanoRelatos />}
@@ -114,7 +212,9 @@ const Caqueta = () => {
       {seccion == "caleno-youtube-2" && <CalenoYoutube2 />}
       {seccion == "caqueta-inserto3" && <Inserto3 />}
       {seccion == "caqueta-galeria" && <Galeria />}
-      {seccion == 'caqueta-cierre' && <CierreVideo />}
+      {seccion == "caqueta-cierre" && (
+        <CierreVideo videoCierre={videoCierreRef} />
+      )}
     </div>
   );
 };

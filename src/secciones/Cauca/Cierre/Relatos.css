@@ -1,48 +1,37 @@
 .cierre-relatos-cauca {
-  background: url("https://res.cloudinary.com/dumlhmvts/image/upload/v1717293926/cauca/cierre/Fotograma_Video_cierre_Cauca_OK_gufhh3.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: absolute;
   height: 100%;
   width: 100%;
-  animation: aparecer 6s;
 }
 
-.cierre-cauca-mask{
-  left: 0;
-  top:0;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.3)
-}
-
-.cierre-grafica-cauca {
+.cierre-titulo-cauca {
   text-align: center;
-  margin-top: 5vh;
   opacity: 0;
-  animation: aparecer 10s ease-in 2s forwards; 
+  animation: aparecer-desaparecer 8s ease-in 1s forwards;
+}
 
-  img {
-    width: 50%;
-    max-width: 160px;
+.cierre-cauca-grafica{
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 8vh;
+  img{
+    width: 160px;
   }
+
+  animation: aparecer 4s ease-in 1s forwards;
 }
 
-.cierre-frase-cauca {
-  text-align: center;
-  margin-top: 6vh;
-  opacity: 0;
-
-  animation: aparecer-desaparecer 10s ease-in 2s forwards; 
-
-  h4 {
+.cierre-frase-cauca{
+  h4{
     font-size: 1.4rem;
   }
 }
 
 @media screen and (orientation: portrait) {
+  .cierre-titulo-cauca {
+  
+  }
 }
 
 .cierre-extra-cauca {
@@ -51,20 +40,21 @@
   top: 0;
   height: 100vh;
   width: 100%;
-  margin-top: 20vh;
-  opacity: 1;
+  margin-top: 0;
+  opacity: 0;
+  padding-top: 26vh;
   visibility: hidden;
 
-  animation: aparecer 10s ease-in 10s forwards; 
+  animation: aparecer 2s ease-in 2s forwards;
 
   div {
     text-align: center;
   }
 }
 
-.cierre-extra-cauca-thumbnail {
-  margin-top: 3vh;
-  img {
+.cierre-extra-cauca-thumbnail{
+  margin-top: 2vh;
+  img{
     width: 40%;
     max-width: 300px;
     cursor: pointer;
@@ -73,101 +63,40 @@
     padding: 8px;
   }
 
-  h4 {
+  h4{
     font-size: 1rem;
   }
 }
 
 @media screen and (orientation: portrait) {
-  .cierre-extra-cauca-thumbnail {
-    margin-top: 4vh;
 
-    img {
+  .cierre-extra-cauca-thumbnail{
+    margin-top: 4vh;
+  
+    img{
       width: 50%;
       max-width: 300px;
     }
 
-    h4 {
+    h4{
       font-size: 0.8rem;
     }
   }
+
 }
 
-.youtube-animacion {
-  position: absolute;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  background-color: black;
-  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713230337/assets/guaviare/cierre/animacion_iwn7lp.jpg");
-  width: 100vw;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 22;
-  overflow: hidden;
-}
-
-.youtube-animacion-interior {
-  position: relative;
-
-  div:first-child {
-    text-align: center;
-    margin-top: 40vh;
-    height: 10vh;
-
-    p {
-      font-size: 1rem;
-    }
-
-    img {
-      width: 80px;
-      cursor: pointer;
-      transition: 0.5s;
-
-      &&:hover {
-        transform: scale(1.05);
-      }
-    }
-  }
-
-  div:nth-child(2) {
-    text-align: center;
-    margin-top: 8vh;
-
-    h3 {
-      text-align: center;
-    }
-  }
-}
-
-.youtube-animacion-interior-salida {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 60px;
-  cursor: pointer;
-}
-
-.cierre-animacion-frase {
-  max-width: 800px;
-  padding: 0 5%;
-}
-
-.cierre-cauca-continuar {
+.cierre-continuar-cauca {
   position: absolute;
   left: 0;
   bottom: 0;
   height: 15vh;
   width: 100%;
   text-align: center;
-  opacity:0;
-  animation: aparecer 10s ease-in 4s forwards; 
+  animation: aparecer 6s ease-in 0s forwards;
 }
 
 @media screen and (orientation: portrait) {
-  .cierre-cauca-continuar {
+  .cierre-continuar {
     height: 25vh;
   }
 }

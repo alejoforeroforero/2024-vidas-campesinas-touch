@@ -1,16 +1,16 @@
-.caqueta {
-  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713362401/assets/caqueta/home/caqueta_ui4iiq.jpg");
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.video-caqueta-cierre {
   position: absolute;
-  color: #fafafa;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;  
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    opacity: 1;
+    visibility: hidden;
+  }
 }
-
 
