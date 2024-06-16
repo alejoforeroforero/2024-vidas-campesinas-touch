@@ -71,10 +71,10 @@ const Youtube = () => {
                 {!mostrarPlay && <p>Espera un momento...</p>}
               </div>
               <div className="hermandad-youtube-2-frase">
-                <img src="" alt="" className="hermandad-youtube-2-frase-n1"/>
-                <img src="" alt="" className="hermandad-youtube-2-frase-n2"/>
                 <h3>
-                  Negros, indios, campesinos en un solo corazón… Somos alegres,
+                  Negros, indios, campesinos <br></br>
+                  en un solo corazón <br></br>
+                  Somos alegres,<br></br>
                   esta es nuestra cultura
                 </h3>
               </div>

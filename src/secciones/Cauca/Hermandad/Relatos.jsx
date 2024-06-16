@@ -27,7 +27,7 @@ const Relatos = () => {
   }, []);
 
   const handleOnClick = () => {
-    videoRef.current.pause();
+    //videoRef.current.pause();
   };
 
   const pintarVideo = () => {

@@ -8,6 +8,17 @@
   position: absolute;
 }
 
+.grima-f3-video-mask{
+  position: absolute;
+  z-index: 6;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+
 .grima-f3-video {
   position: absolute;
   z-index: 5;

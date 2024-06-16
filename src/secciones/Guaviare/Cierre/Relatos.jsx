@@ -42,7 +42,7 @@ const Relatos = ({ videoCierre }) => {
 
     const sonido = new Howl({
       src: [audioAmbiente],
-      loop: true,
+      loop: false,
     });
     setAudio(sonido);
 

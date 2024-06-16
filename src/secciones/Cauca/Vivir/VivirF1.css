@@ -35,14 +35,14 @@
   h2 {
     text-align: left;
     width: 100%;
-    color: #eee252;
+    color: #f0e221;
     font-weight: 100;
     margin-bottom: 16px;
     font-size: 2.2rem;
   }
 
   hr {
-    background-color: #eee252;
+    background-color: #f0e221;
     height: 6px;
     width: 150px;
     border: none;
@@ -65,25 +65,23 @@
 
 
 .vivir-f1-bottom {
-  position: relative;
+  position: absolute;
   width: 100%;
   text-align: center;
-  margin-top: 14vh;
+  bottom: 25vh;
 
   img{
-    width: 70%;
+    width: 60%;
+    transform: translate(-20px, 0);
   }
 }
 
 @media screen and (orientation: landscape) {
   .vivir-f1-bottom {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    margin-top:14vh;
+    bottom: 22vh;
   
     img{
-      width: 60%;
+      width: 33%;
     }
   }
 }

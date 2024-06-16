@@ -36,7 +36,7 @@
   animation: aparecer 2s ease-in forwards;
 
   h1 {
-    color: rgb(208, 81, 55);
+    color: #c9532f;
     width: 100%;
   }
 }

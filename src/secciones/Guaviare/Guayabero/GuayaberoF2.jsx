@@ -58,7 +58,7 @@ const GuayaberoF2 = ({ sound, audioFx }) => {
       <div id="youtube-guayabero" className="youtube-video">
         <YT
           refYoutubeFx={refYoutubeJorge}
-          youtubeVideoId="MN_RlCT-WFQ" //MN_RlCT-WFQ  -9AvYOpalrk
+          youtubeVideoId="MN_RlCT-WFQ" 
           imgThumbnail={guayaberoThumbnail}
           id="youtube-guayabero"
           vertical={true}

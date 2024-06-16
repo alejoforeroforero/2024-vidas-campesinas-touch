@@ -40,5 +40,14 @@
 
   h3{
     text-align: center !important;
+    transform: translate(0, -6vh);
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .hermandad-youtube-2 {
+    h3 {
+      transform: translate(0, -2vh);
+    }
   }
 }

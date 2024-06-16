@@ -34,10 +34,10 @@ const VivirF3 = ({ sound, audioFx }) => {
       <div id="youtube-vivir-2" className="youtube-video">
         <YT
           refYoutubeFx={refYoutubeJorge}
-          youtubeVideoId="CS7dYVHJZF4"
+          youtubeVideoId="JnKgfaXDsIE" 
           imgThumbnail={guayaberoThumbnail}
-          vertical={true}
           id="youtube-vivir-2"
+          vertical={true}          
         />
       </div>
     );

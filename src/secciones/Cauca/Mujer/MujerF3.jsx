@@ -59,6 +59,7 @@ const MujerF3 = ({ sound, audioFx }) => {
               <Audio
                 id="audio-mujer-1"
                 titulo="“Hay dos trabajos que me encantan: coger café y ‘minear’”"
+                video={videoRef}
                 autor="· Omaira Chocó."
               />
             </div>

@@ -34,14 +34,14 @@
   h2 {
     text-align: left;
     width: 100%;
-    color: #75fbfd;
+    color: #00ffff;
     font-weight: 100;
     margin-bottom: 16px;
     font-size: 2.2rem;
   }
 
   hr {
-    background-color: #75fbfd;
+    background-color: #00ffff;
     height: 6px;
     width: 200px;
     border: none;

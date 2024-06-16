@@ -35,14 +35,14 @@
   h2 {
     text-align: left;
     width: 100%;
-    color: #caf1fd;
+    color: #c0f2ff;
     font-weight: 100;
     margin-bottom: 16px;
     font-size: 2.2rem;
   }
 
   hr {
-    background-color: #caf1fd;
+    background-color: #c0f2ff;
     height: 6px;
     width: 150px;
     border: none;
@@ -91,7 +91,7 @@
   bottom: 17vh;
 
   img {
-    width: 50%;
+    width: 40%;
   }
 }
 
@@ -100,7 +100,7 @@
     bottom: 20vh;
 
     img {
-      width: 65%;
+      width: 55%;
     }
   }
 }

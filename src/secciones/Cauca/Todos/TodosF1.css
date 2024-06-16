@@ -35,14 +35,14 @@
   h2 {
     text-align: left;
     width: 100%;
-    color: #75fbfd;
+    color: #00ffff;
     font-weight: 100;
     margin-bottom: 16px;
     font-size: 2.2rem;
   }
 
   hr {
-    background-color: #75fbfd;
+    background-color: #00ffff;
     height: 6px;
     width: 150px;
     border: none;
@@ -64,27 +64,23 @@
 }
 
 .todos-f1-bottom {
-  position: relative;
+  position: absolute;
   width: 100%;
   text-align: center;
-  padding-top: 5%;
-  margin-top: 20vh;
+  bottom: 20vh;
 
-  img{
-    width: 60%;
+  img {
+    width: 30%;
+    transform: translate(-15px, 0);
   }
 }
 
 @media screen and (orientation: landscape) {
   .todos-f1-bottom {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    padding-top: 5%;
-    margin-top: 26vh;
-  
-    img{
-      width: 40%;
+    bottom: 18vh;
+
+    img {
+      width: 25%;
     }
   }
 }

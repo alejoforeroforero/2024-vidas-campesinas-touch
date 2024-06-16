@@ -120,6 +120,9 @@ const Relatos = () => {
         {pintarYoutube1()}
         {pintarYoutube2()}
         {pintarVideo()}
+        <div className="cierre-cauca-mask">
+
+        </div>
         <div className="contenido-general">
           <div className="cierre-grafica-cauca">            
               <img src={solLuna} alt="" />

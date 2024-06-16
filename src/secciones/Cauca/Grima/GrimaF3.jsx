@@ -43,6 +43,7 @@ const GrimaF3 = ({ sound, audioFx }) => {
   return (
     <>
       <div className="grima-f3">
+        <div className="grima-f3-video-mask"></div>
         <div className="grima-f3-video">
           <video
             id={vId}
@@ -61,6 +62,7 @@ const GrimaF3 = ({ sound, audioFx }) => {
               <Audio
                 id="audio-grima-1"
                 titulo="“Somos agricultores, pero también trabajamos el arte de la Grima”"
+                video={videoRef}
               />
             </div>
             {/* <div className="grima-f3-ilustraciones">
@@ -71,6 +73,7 @@ const GrimaF3 = ({ sound, audioFx }) => {
                 id="audio-grima-2"
                 titulo="“Queremos continuar con el legado de nuestros ancestros” &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
                 autor="· Jacob Arboleda"
+                video={videoRef}
               />
             </div>
           </div>

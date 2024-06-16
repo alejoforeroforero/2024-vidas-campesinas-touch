@@ -6,8 +6,10 @@ import {
 } from "../../../Redux/states/managerSlice";
 import Audio from "../../../components/Audio";
 
-const grafica1 = "https://res.cloudinary.com/dumlhmvts/image/upload/v1718201532/cauca/vivir/naturaleza_gm7kvq.png";
-const grafica2 = "https://res.cloudinary.com/dumlhmvts/image/upload/v1718201533/cauca/vivir/Mula_Carga_z4doau.png";
+const grafica1 =
+  "https://res.cloudinary.com/dumlhmvts/image/upload/v1718201532/cauca/vivir/naturaleza_gm7kvq.png";
+const grafica2 =
+  "https://res.cloudinary.com/dumlhmvts/image/upload/v1718201533/cauca/vivir/Mula_Carga_z4doau.png";
 import abajo from "../../../assets/generales/abajo.png";
 const videoSrc =
   "https://res.cloudinary.com/dumlhmvts/video/upload/v1718201918/cauca/vivir/Loop_montan%CC%83as_2_ok_p_jnkwls.mp4";
@@ -46,6 +48,7 @@ const VivirF5 = ({ sound, audioFx }) => {
   return (
     <div className="vivir-f5">
       <div className="vivir-f5-fondo">
+        <div className="vivir-f5-video-mask"></div>
         <div className="vivir-f5-video">
           <video
             id={vId}
@@ -60,7 +63,7 @@ const VivirF5 = ({ sound, audioFx }) => {
       <div className="mask-general">
         <div className="contenido-general">
           <div className="vivir-f5-interior">
-          <div className="vivir-f5-ilustracion-1">
+            <div className="vivir-f5-ilustracion-1">
               <img src={grafica1} alt="grafica1" />
             </div>
             <div className="vivir-f5-frase">
@@ -75,6 +78,7 @@ const VivirF5 = ({ sound, audioFx }) => {
                 id="audio-vivir-f5"
                 titulo="“La paz se logra dialogando, no con armas”"
                 autor="· Leonardo Díaz"
+                video={videoRef}
                 audioGeneralFx={audioGeneralFx}
               />
             </div>
