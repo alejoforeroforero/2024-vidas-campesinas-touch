@@ -54,8 +54,11 @@ const p5P6Src =
 const p7P8Src =
   "https://res.cloudinary.com/dvtbfxkn9/video/upload/v1717802753/PErsonaje_7_y_8_tgmjds.mp3";
 
+// const videoCierre =
+//   "https://res.cloudinary.com/dumlhmvts/video/upload/v1718575832/cauca/cierre/Video_cierre_Cauca_ok_con_sonido_AJUSTE_luz_p_iihnsf.mp4";
+
 const videoCierre =
-  "https://res.cloudinary.com/dumlhmvts/video/upload/v1718575832/cauca/cierre/Video_cierre_Cauca_ok_con_sonido_AJUSTE_luz_p_iihnsf.mp4";
+"https://res.cloudinary.com/dvtbfxkn9/video/upload/v1718712347/Video_cierre_Cauca_final_p_18_junio_jucbka.mp4"
 
 const lineas = [
   {

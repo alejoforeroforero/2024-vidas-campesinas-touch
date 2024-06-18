@@ -121,17 +121,17 @@
 }
 
 .cauca-intro-p-aparecer {
-  animation: aparecerTxt 4s ease-in 3s forwards;
+  animation: aparecerTxt 3s ease-in 1s forwards;
 }
 
 .cauca-intro-p-desaparecer {
-  animation: desaparecerTxt 2s ease-in forwards;
+  animation: desaparecerTxt 1s ease-in forwards;
 }
 
 .cauca-intro-siguiente {
   text-align: right;
   opacity: 0;
-  animation: aparecer 2s ease-in 4s forwards;
+  animation: aparecer 2s ease-in 2s forwards;
 
   img {
     cursor: pointer;

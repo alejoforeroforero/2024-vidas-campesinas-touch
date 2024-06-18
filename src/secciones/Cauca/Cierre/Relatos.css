@@ -14,7 +14,7 @@
   opacity: 0;
   width: 100%;
   text-align: center;
-  margin-top: 8vh;
+  margin-top: 4vh;
   img{
     width: 160px;
   }
@@ -42,7 +42,7 @@
   width: 100%;
   margin-top: 0;
   opacity: 0;
-  padding-top: 26vh;
+  padding-top: 22vh;
   visibility: hidden;
 
   animation: aparecer 2s ease-in 2s forwards;
@@ -89,14 +89,14 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 15vh;
+  height: 12vh;
   width: 100%;
   text-align: center;
   animation: aparecer 6s ease-in 0s forwards;
 }
 
 @media screen and (orientation: portrait) {
-  .cierre-continuar {
-    height: 25vh;
+  .cierre-continuar-cauca {
+    height: 23vh;
   }
 }

@@ -55,8 +55,9 @@ const Youtube = () => {
                 {mostrarPlay && <img onClick={handleOnClick} src={playImg} alt="play" />}
                 {!mostrarPlay && <p>Espera un momento...</p>}
               </div>
-              <div>
-                <h3>“Yo quisiera vivir en el paraíso”</h3>
+              <div className='rodriguez-youtube-2-frase'>
+                <h3>Yo quisiera vivir en el paraíso</h3>
+                <p>Canción creada e interpretada por Licher Rodríguez.</p>
               </div>
             </div>
           </div>

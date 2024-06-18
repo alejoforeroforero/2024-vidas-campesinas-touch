@@ -11,8 +11,11 @@ const grafica1 =
 const grafica2 =
   "https://res.cloudinary.com/dumlhmvts/image/upload/v1718201533/cauca/vivir/Mula_Carga_z4doau.png";
 import abajo from "../../../assets/generales/abajo.png";
+// const videoSrc =
+//   "https://res.cloudinary.com/dumlhmvts/video/upload/v1718201918/cauca/vivir/Loop_montan%CC%83as_2_ok_p_jnkwls.mp4";
+
 const videoSrc =
-  "https://res.cloudinary.com/dumlhmvts/video/upload/v1718201918/cauca/vivir/Loop_montan%CC%83as_2_ok_p_jnkwls.mp4";
+  "https://res.cloudinary.com/dumlhmvts/video/upload/v1718713753/cauca/vivir/Loop_Vivir_en_armonia_ok_18_junio_p_oefroz.mp4";
 
 import "./VivirF5.css";
 

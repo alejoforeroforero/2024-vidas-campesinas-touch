@@ -1,10 +1,23 @@
-.rodriguez-youtube-2{
-    background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713230281/assets/guaviare/rodriguez/youtube2_b6wtse.jpg");
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
+.rodriguez-youtube-2 {
+  background: url("https://res.cloudinary.com/dbqfefibl/image/upload/v1713230281/assets/guaviare/rodriguez/youtube2_b6wtse.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
 }
 
+.rodriguez-youtube-2-frase {
+  text-align: center;
+
+  h3 {
+    text-align: center !important;
+    font-style: italic;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-top: 6px;
+  }
+}
