@@ -92,7 +92,7 @@
 .caqueta-descripcion-luna{   
   position: absolute;
   margin-top: 0;
-  top: -2%;
+  top: -15%;
   right: 10%;
   width: 13% !important;
   max-width: 50px !important;  
@@ -151,7 +151,7 @@
 }
 
 .caqueta-inciar-aparecer {
-  animation: aparecerTxt 4s ease-in 6s forwards;
+  animation: aparecerTxt 4s ease-in 3s forwards;
 }
 
 .caqueta-intro-scroll {

@@ -22,6 +22,15 @@
   animation: aparecer 4s ease-in 1s forwards;
 }
 
+@media screen and (orientation: portrait) {
+  .cierre-cauca-grafica{
+    opacity: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 2vh;
+  }
+}
+
 .cierre-frase-cauca{
   h4{
     font-size: 1.4rem;
@@ -42,7 +51,7 @@
   width: 100%;
   margin-top: 0;
   opacity: 0;
-  padding-top: 22vh;
+  padding-top: 20vh;
   visibility: hidden;
 
   animation: aparecer 2s ease-in 2s forwards;
