@@ -30,6 +30,19 @@
   opacity: 1;
 }
 
+.audio-tema-b{
+  position: absolute;
+  width: 40vw;
+  height: 10vh;
+  top: 0;
+  border:1px solid red;
+  cursor: pointer;
+
+  audio{
+    visibility: visible;
+  }
+}
+
 .botones-flechas-b {
   position: absolute;
   width: 100vw;

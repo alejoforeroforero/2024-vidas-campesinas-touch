@@ -1,15 +1,18 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { pararAudios } from "../../../Redux/states/managerSlice";
+import { cambiarSrc } from "../../../Redux/states/audioHowlerSlice";
 import CaceriaF1 from "./CaceriaF1";
 import CaceriaF2 from "./CaceriaF2";
 import CaceriaF3 from "./CaceriaF3";
 import flechaAdelante from "../../../assets/generales/flecha-adelante.png";
 import flechaAtras from "../../../assets/generales/flecha-atras.png";
+const caceriaSrc =
+  "https://res.cloudinary.com/dvtbfxkn9/video/upload/v1717709248/Tiempos_caceria_MAY22_x0evfe.mp3";
 
 import "./Caceria.css";
 
-const Caceria = ({ sound, audioFx }) => {
+const Caceria = () => {
   const dispatch = useDispatch();
 
   const secciones = ["intro", "audio1", "audio2"];
@@ -26,13 +29,18 @@ const Caceria = ({ sound, audioFx }) => {
     setCurrentImage((currentImage + 1) % secciones.length);
   };
 
+  const handleOnClickPlayAudioTema = ()=>{
+    dispatch(cambiarSrc(caceriaSrc))
+  }
+
   return (
     <div className="guaviare-caceria">
       <div className="guaviare-caceria-contenido">
-        {currentImage == 0 && <CaceriaF1 sound={sound} audioFx={audioFx} />}
-        {currentImage == 1 && <CaceriaF2 sound={sound} audioFx={audioFx} />}
-        {currentImage == 2 && <CaceriaF3 sound={sound} audioFx={audioFx} />}
+        {currentImage == 0 && <CaceriaF1 />}
+        {currentImage == 1 && <CaceriaF2 />}
+        {currentImage == 2 && <CaceriaF3 />}
       </div>
+      <div className="audio-tema-b" onClick={handleOnClickPlayAudioTema}></div>
       <div className="botones-flechas-b">
         <div>
           {currentImage != 0 && (

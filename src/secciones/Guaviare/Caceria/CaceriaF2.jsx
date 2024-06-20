@@ -11,7 +11,7 @@ import cocodriloImg from "../../../assets/guaviare/caceria/cocodrilo.png";
 
 import "./CaceriaF2.css";
 
-const CaceriaF2 = ({ sound, audioFx }) => {
+const CaceriaF2 = () => {
   const dispatch = useDispatch();
   const videoRef = useRef(null);
 
@@ -20,24 +20,10 @@ const CaceriaF2 = ({ sound, audioFx }) => {
   useEffect(() => {
     dispatch(changeVideo(vId));
     dispatch(establecerMostrarAbajo(false));
-    const currentVolume = sound?.volume();
-
-    if (currentVolume < 0.4) {
-      const acciones = {
-        tipo: "volumen",
-        valor: 1,
-      };
-      audioFx(acciones);
-    }
   }, []);
 
-  const audioGeneralFx = (bajarVolumen) => {
-    const acciones = {
-      tipo: "volumen",
-      valor: bajarVolumen ? 0.2 : 1,
-    };
+  const audioGeneralFx = (valor) => {
 
-    audioFx(acciones);
   };
 
   return (

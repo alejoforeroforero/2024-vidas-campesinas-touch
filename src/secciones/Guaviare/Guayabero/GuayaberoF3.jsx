@@ -11,7 +11,7 @@ const videoSrc =
 
 import "./GuayaberoF3.css";
 
-const GuayaberoF3 = ({ sound, audioFx }) => {
+const GuayaberoF3 = () => {
   const dispatch = useDispatch();
   const videoRef = useRef(null);
   const vId = "guyabero-video";
@@ -19,24 +19,10 @@ const GuayaberoF3 = ({ sound, audioFx }) => {
   useEffect(() => {
     dispatch(changeVideo(vId));
     dispatch(establecerMostrarAbajo(false));
-    const currentVolume = sound?.volume();
-
-    if (currentVolume < 0.4) {
-      const acciones = {
-        tipo: "volumen",
-        valor: 1,
-      };
-      audioFx(acciones);
-    }
   }, []);
 
   const audioGeneralFx = (bajarVolumen) => {
-    const acciones = {
-      tipo: "volumen",
-      valor: bajarVolumen ? 0.2 : 1,
-    };
 
-    audioFx(acciones);
   };
 
   return (

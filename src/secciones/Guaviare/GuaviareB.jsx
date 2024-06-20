@@ -4,14 +4,12 @@ import {
   establecerMostrarAbajo,
   cambiarTemaBActual,
 } from "../../Redux/states/managerSlice";
+import { cambiarSrc } from "../../Redux/states/audioHowlerSlice";
 import Caceria from "./Caceria/Caceria";
 import Guayabero from "./Guayabero/Guayabero";
 import Bonanzas from "./Bonanzas/Bonanzas";
 import Paz from "./Paz/Paz";
 import Guardianes from "./Guardianes/Guardianes";
-
-const caceriaSrc =
-  "https://res.cloudinary.com/dvtbfxkn9/video/upload/v1717709248/Tiempos_caceria_MAY22_x0evfe.mp3";
 
 const guayaberoSrc =
   "https://res.cloudinary.com/dvtbfxkn9/video/upload/v1717801226/RIO_GUAYABERO_MAY11_csdqlf.mp3";
@@ -58,11 +56,7 @@ const lineasB = [
 const GuaviareB = () => {
   const canalBOn = useSelector((state) => state.managerReducer.canalBOn);
   const temaBActual = useSelector((state) => state.managerReducer.temaBActual);
-
   const dispatch = useDispatch();
-
-  const audioCapB = useRef(null);
-  const [audioSrc, setAudioSrc] = useState(caceriaSrc);
 
   const [lineaS, setLineaS] = useState("linea-caceria");
   const divRef = useRef(null);
@@ -96,105 +90,45 @@ const GuaviareB = () => {
           dispatch(establecerMostrarAbajo(false));
           setLineaS("linea-caceria");
           dispatch(cambiarTemaBActual("caceria"));
-          setAudioSrc(caceriaSrc);
+          dispatch(cambiarSrc(''));
         }
 
         if (top2 < windowHeight / 2 && bottom2 >= 0) {
           dispatch(establecerMostrarAbajo(false));
           setLineaS("linea-guayabero");
           dispatch(cambiarTemaBActual("guayabero"));
-          setAudioSrc(guayaberoSrc);
+          dispatch(cambiarSrc(''));
         }
 
         if (top3 < windowHeight / 2 && bottom3 >= 0) {
           dispatch(establecerMostrarAbajo(false));
           setLineaS("linea-bonanzas");
           dispatch(cambiarTemaBActual("bonanzas"));
-          setAudioSrc(bonanzasSrc);
+          dispatch(cambiarSrc(''));
         }
 
         if (top4 < windowHeight / 2 && bottom4 >= 0) {
           dispatch(establecerMostrarAbajo(false));
           setLineaS("linea-paz");
           dispatch(cambiarTemaBActual("paz"));
-          setAudioSrc(pazSrc);
+          dispatch(cambiarSrc(''));
         }
 
         if (top5 < windowHeight / 2 && bottom5 >= 0) {
           dispatch(establecerMostrarAbajo(false));
           setLineaS("linea-guardianes");
           dispatch(cambiarTemaBActual("guardianes"));
-          setAudioSrc(guardianesSrc);
+          dispatch(cambiarSrc(''));
         }
       }
     };
 
     divRef.current.addEventListener("scroll", handleScroll);
+
     return () => {
       divRef.current?.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  useEffect(() => {
-
-    if (audioCapB.current) {
-      audioCapB.current.unload();
-    }
-
-    audioCapB.current = new Howl({
-      src: [audioSrc],
-      loop: true,
-      volume: 1,
-    });
-
-    return () => {
-      audioCapB.current.unload();
-    };
-  }, [audioSrc]);
-
-  useEffect(() => {
-    if (canalBOn) {
-      if (!audioCapB.current?.playing()) {
-        //audioCapB.current?.play();
-      }
-    } else {
-      audioCapB.current?.pause();
-    }
-  }, [canalBOn]);
-
-  useEffect(() => {
-    if (canalBOn) {
-      setTimeout(() => {
-        //audioCapB.current?.play();
-      }, 400);
-    }
-  }, [temaBActual]);
-
-  const audioFx = (acciones) => {
-  
-    if (acciones.tipo == "volumen") {
-      //graduallyChangeVolume(acciones.valor, 3000);
-      audioCapB.current.volume(acciones.valor);
-    }
-  };
-
-  const graduallyChangeVolume = (targetVolume, duration) => {
-    const currentVolume = audioCapB.current.volume();
-    const step = (targetVolume - currentVolume) / (duration / 100);
-    let currentStep = 0;
-    const intervalId = setInterval(() => {
-      currentStep += 1;
-      const newVolume = currentVolume + step * currentStep;
-      audioCapB.current.volume(newVolume);
-      if (
-        (step > 0 && newVolume >= targetVolume) ||
-        (step < 0 && newVolume <= targetVolume)
-      ) {
-        clearInterval(intervalId);
-        audioCapB.current.volume(targetVolume); // Ensure exact target volume
-      }
-    }, 100);
-  };
 
   return (
     <div ref={divRef} className="guaviare-b">
@@ -213,19 +147,19 @@ const GuaviareB = () => {
         </div>
       )}
       <div ref={caceriaRef}>
-        <Caceria sound={audioCapB.current} audioFx={audioFx} />
+        <Caceria />
       </div>
       <div ref={guayaberoRef}>
-        <Guayabero sound={audioCapB.current} audioFx={audioFx} />
+        <Guayabero />
       </div>
       <div ref={bonanzasRef}>
-        <Bonanzas sound={audioCapB.current} audioFx={audioFx} />
+        <Bonanzas />
       </div>
       <div ref={pazRef}>
-        <Paz sound={audioCapB.current} audioFx={audioFx} />
+        <Paz />
       </div>
       <div ref={guardianesRef}>
-        <Guardianes sound={audioCapB.current} audioFx={audioFx} />
+        <Guardianes />
       </div>
     </div>
   );

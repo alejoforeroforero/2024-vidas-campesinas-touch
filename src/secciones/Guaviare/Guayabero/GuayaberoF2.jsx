@@ -7,22 +7,11 @@ const guayaberoThumbnail =
   "https://res.cloudinary.com/dbqfefibl/image/upload/v1713230403/assets/guaviare/guayabero/guayabero-fondo-video_pezpmb.jpg";
 import "./GuayaberoF2.css";
 
-const GuayaberoF2 = ({ sound, audioFx }) => {
+const GuayaberoF2 = () => {
   const dispatch = useDispatch();
   const [jorgeYoutubeRef, setJorgeYoutubeRef] = useState(null);
   const [mostrarPlay, setMostrarPlay] = useState(false);
 
-  useEffect(() => {
-    const currentVolume = sound?.volume();
-
-    if (currentVolume < 0.4) {
-      const acciones = {
-        tipo: "volumen",
-        valor: 1,
-      };
-      audioFx(acciones);
-    }
-  }, []);
 
   const refYoutubeJorge = (video) => {
     setJorgeYoutubeRef(video);
@@ -33,24 +22,13 @@ const GuayaberoF2 = ({ sound, audioFx }) => {
   };
 
   const handleOnClick = () => {
-    const acciones = {
-      tipo: "volumen",
-      valor: 0,
-    };
-
-    audioFx(acciones);
     const div = document.getElementById("youtube-guayabero");
     div.style.visibility = "visible";
     jorgeYoutubeRef?.playVideo();
   };
 
   const alCerrarYoutubeFx = () => {
-    const acciones = {
-      tipo: "volumen",
-      valor: 1,
-    };
 
-    audioFx(acciones);
   };
 
   const pintarVideo = () => {

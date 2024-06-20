@@ -7,6 +7,9 @@ import {
   establecerCanalBOn,
   establecerMostrarFlechasCanales,
 } from "./Redux/states/managerSlice";
+import { cambiarSrc } from "./Redux/states/audioHowlerSlice";
+
+import AudioHowler from "./components/AudioHowler";
 
 import Portada from "./secciones/Portada/Portada";
 import Creditos from "./secciones/Creditos/Creditos";
@@ -44,9 +47,7 @@ function App() {
   const mostrarHamburguesa = useSelector(
     (state) => state.managerReducer.mostrarHamburguesa
   );
-  const temaBActual = useSelector(
-    (state) => state.managerReducer.temaBActual
-  );
+  const temaBActual = useSelector((state) => state.managerReducer.temaBActual);
   const canalBOn = useSelector((state) => state.managerReducer.canalBOn);
   const [yaEmpezo, setYaEmpezo] = useState(false);
   const [showingMenu, setShowingMenu] = useState(false);
@@ -58,12 +59,14 @@ function App() {
     dispatch(pararAudios());
     dispatch(establecerMostrarAbajo(false));
     dispatch(establecerCanalBOn(true));
+
   };
 
   const hideCanalB = () => {
     dispatch(pararAudios());
     dispatch(establecerMostrarAbajo(true));
     dispatch(establecerCanalBOn(false));
+    dispatch(cambiarSrc(''))
   };
 
   const handleEmpezar = () => {
@@ -82,6 +85,9 @@ function App() {
 
   return (
     <>
+      <div className="audio-howler-general">
+        <AudioHowler />
+      </div>
       {!yaEmpezo && (
         <section ref={PortadaRef} className="portada-bg">
           <Portada handleEmpezar={handleEmpezar} />

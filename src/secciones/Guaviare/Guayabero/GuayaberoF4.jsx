@@ -8,29 +8,15 @@ import abajo from "../../../assets/generales/abajo.png";
 
 import "./GuayaberoF4.css";
 
-const GuayaberoF4 = ({ sound, audioFx }) => {
+const GuayaberoF4 = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(changeVideo(null));
-    const currentVolume = sound?.volume();
-
-    if (currentVolume < 0.4) {
-      const acciones = {
-        tipo: "volumen",
-        valor: 1,
-      };
-      audioFx(acciones);
-    }
   }, []);
 
   const audioGeneralFx = (bajarVolumen) => {
-    const acciones = {
-      tipo: "volumen",
-      valor: bajarVolumen ? 0.2 : 1,
-    };
 
-    audioFx(acciones);
   };
 
   return (

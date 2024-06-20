@@ -4,18 +4,7 @@ import ramaImg from "../../../assets/guaviare/guayabero/rama.png";
 import pezImg from "../../../assets/guaviare/guayabero/pez.png";
 import "./GuayaberoF1.css";
 
-const GuayaberoF1 = ({ sound, audioFx }) => {
-  useEffect(() => {
-    const currentVolume = sound?.volume();
-
-    if (currentVolume < 0.4) {
-      const acciones = {
-        tipo: "volumen",
-        valor: 1,
-      };
-      audioFx(acciones);
-    }
-  }, []);
+const GuayaberoF1 = () => {  
 
   return (
     <div className="guayabero-f1">

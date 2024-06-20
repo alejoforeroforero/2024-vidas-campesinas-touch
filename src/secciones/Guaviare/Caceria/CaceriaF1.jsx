@@ -6,20 +6,11 @@ import danta from "../../../assets/guaviare/caceria/jaguar2.png";
 import hojaB from "../../../assets/guaviare/caceria/hoja2.png";
 import { useEffect } from "react";
 
-const CaceriaF1 = ({ sound, audioFx }) => {
+const CaceriaF1 = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(establecerMostrarAbajo(false));
-    const currentVolume = sound?.volume();
-
-    if (currentVolume < 0.4) {
-      const acciones = {
-        tipo: "volumen",
-        valor: 1,
-      };
-      audioFx(acciones);
-    }
   }, []);
 
   return (
